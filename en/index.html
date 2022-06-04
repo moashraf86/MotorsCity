@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap-5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- Swiper Slider js -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <title>Motores City</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0" href="#">
+              <img src="../dist/assets/images/logo.png" alt="MotoresCity-logo">
+            </a>
+            <!-- Menu Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav items -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sell/Trade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Financing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Why MotorsCity
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Recources
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="navbar-nav register gap-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Log in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link signup" href="#">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- END HEADER -->
+
+      <!-- START HOME -->
+      <section id="home">
+        <div class="container-fluid container-xxl">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-6 col-xxl-6 order-1 order-lg-0">
+              <div class="home-content text-center text-lg-start">
+                <div class="logo-pattern d-none d-lg-block">
+                  <img src="../dist/assets/images/logo-pattern.png" alt="logo-pattern">
+                </div>
+                <h1>
+                  <span>You choose</span> <br class="d-xl-none">the car you want, <br>  
+                  <span> we take care</span> <br class="d-xl-none">of the rest!
+                </h1>
+                <p>Buy your car online and have it delivered to your doorstep in under 24 hours</p>
+                <div class="btn-group flex-column flex-lg-row gap-4 gap-xl-5">
+                  <a href="#">
+                    <button type="button" class="btn btn-primary">Shop New</button>
+                  </a>
+                  <a href="#">
+                    <button type="button" class="btn btn-secondary">
+                      <span class="bg">
+                        <span class="text">Shop Used</span>
+                      </span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xxl-6">
+              <div class="home-img" style="max-width: 700px; margin: auto;">
+                <!-- <img class="mobile d-xl-none"  src="../dist/assets/images/hero-2x@2x.png" alt="home-img"> -->
+                <img class="dexktop d-xl-block d-xxl-none" src="../dist/assets/images/hero-2x@2x.png" alt="home-img">
+                <img class="dexktop d-none d-xxl-block" src="../dist/assets/images/hero-img.png" alt="home-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END HOME -->
+
+      <!-- START HOW-IT-WORKS -->
+      <section id="how-it-works">
+        <div class="container-fluid container-xxl text-center">
+          <h2>How it works</h2>
+          <p>You won’t just love our cars, you’ll love the way you buy them</p>
+          <div class="steps">
+            <div class="row gap-lg-5">
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="step">
+                  <div class="step-img">
+                    <img class="w-100" src="../dist/assets/images/choose-from.png" alt="choose-from">
+                  </div>
+                  <div class="step-info">
+                    <h4>Choose From the Best Pre-owned Cars</h4>
+                    <p>5000+ fully inspected cars online.  Buy with money back guarant</p>
+                    <a href="#">View All Cars</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="step mb-2">
+                  <div class="step-img">
+                    <img class="w-10 mw-100" src="../dist/assets/images/buying.png" alt="buying">
+                  </div>
+                  <h4>Buying Cash or Finance</h4>
+                  <p>Whither buying cash or looking for affordable monthly payment plane, we can help you find the best deal in the market</p>
+                  <a href="#">Contact Us</a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="step mb-0">
+                  <div class="step-img">
+                    <img class="w-100" src="../dist/assets/images/online-payment.png" alt="online-payment">
+                  </div>
+                  <h4>Online Payment. Doorstep Delivery</h4>
+                  <p>Contactless transaction 5-day money back guarantee.</p>
+                  <a href="#">Buy a Car</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <button class="btn btn-primary" type="button">Watch how it works</button>
+          </a>
+        </div>
+      </section>
+      <!-- END HOW-IT-WORKS -->
+
+      <!-- START TESTEMONIALS -->
+      <section id="testimonials">
+        <div class="container-fluid container-xxl">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="review">
+                  <h4 class="review-title d-flex align-items-start mb-4">
+                    <img src="../dist/assets/images/quote@1.5x.png" alt="">
+                    <span>Great customer service</span>
+                  </h4>
+                    <p class="review-content mb-4">Great customer service. Great delivery of the car. Very convenient to pick the car you want and have it delivered to your doorstep with little issues.</p>
+                    <span class="client">- Jason M.</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <h4 class="review-title d-flex align-items-start mb-4">
+                    <img src="../dist/assets/images/quote@1.5x.png" alt="">
+                    <span>Great customer service</span>
+                  </h4>
+                    <p class="review-content mb-4">Great customer service. Great delivery of the car. Very convenient to pick the car you want and have it delivered to your doorstep with little issues.</p>
+                    <span class="client">- Jason M.</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <h4 class="review-title d-flex align-items-start mb-4">
+                    <img src="../dist/assets/images/quote@1.5x.png" alt="">
+                    <span>Great customer service</span>
+                  </h4>
+                    <p class="review-content mb-4">Great customer service. Great delivery of the car. Very convenient to pick the car you want and have it delivered to your doorstep with little issues.</p>
+                    <span class="client">- Jason M.</span>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+        </div>
+      </section>
+      <!-- END TESTEMONIALS -->
+
+      <!-- START FIND CARS  -->
+      <section id="find-cars">
+        <div class="">
+          <div class="card">
+            <h3 class="mb-5 text-center"> Find cars any budget will love </h3>
+            <div class="select-cars">
+              <h5 class="mb-4">What kinds of cars do you want?</h5>
+              <div class="cars">
+                <form action="">
+                  <div class="row flex-nowrap justify-content-between">
+                    <div class="col">
+                      <label for="sedan">
+                        <input type="radio" name="car" id="sedan">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/sedan.png" alt="sedan">
+                          <p >Sedan</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="suv">
+                        <input type="radio" name="car" id="suv">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/suv.png" alt="suv">
+                          <p>suv</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="truck">
+                        <input type="radio" name="car" id="truck">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/truck.png" alt="truck">
+                          <p >Sedan</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="hatchback">
+                        <input type="radio" name="car" id="hatchback">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/hatchback.png" alt="hatchback">
+                          <p>hatchback</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="coupe">
+                        <input type="radio" name="car" id="coupe">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/coupe.png" alt="coupe">
+                          <p>coupe</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="convertible">
+                        <input type="radio" name="car" id="convertible">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/convertible.png" alt="convertible">
+                          <p>convertible</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="minivan">
+                        <input type="radio" name="car" id="minivan">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/minivan.png" alt="minivan">
+                          <p>minivan</p>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col">
+                      <label for="wagon">
+                        <input type="radio" name="car" id="wagon">
+                        <div class="car text-center">
+                          <img src="../dist/assets/images/cars/wagon.png" alt="wagon">
+                          <p>wagon</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="estimate">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-8">
+                  <h5 class="mb-4">What do your finances look like?</h5>
+                  <form>
+                    <div class="form-group d-flex justify-content-between align-items-center gap-2 gap-md-5">
+                      <div class="d-flex flex-column gap-2 flex-grow-1">
+                        <label for="monthly-payment" class="form-label">Monthly Payment</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="basic-addon1">$</span>
+                          <input type="number" class="form-control" id="monthly-payment" value="400">
+                        </div>
+                        <input type="range" name="rang" id="monthly-range">
+                      </div>
+                      <div class="d-flex flex-column gap-2 flex-grow-1">
+                        <label for="cash-down" class="form-label">Cash Down</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="basic-addon1">$</span>
+                          <input type="number" class="form-control" id="cash-down" value="400">
+                        </div>
+                        <input type="range" name="range" id="cash-range">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="score">
+                    Credit Scores
+                    <a href="#">Fair (580-669 FICO® Score)</a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="estimated-budget text-center mt-5 mt-md-0">
+                    <h4 >Estimated budget</h4>
+                    <div class="value">$20,510</div>
+                    <a href="#">
+                      <button class="btn btn-primary">Shop with budget</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!-- END FIND CARS  -->
+    </div>
+    <script>
+      const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: false,
+      spaceBetween: 10,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+    </script>
+    <!-- Bootstrap-5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Jquery 3.6 min -->
+    <script src="../dist/plugins/js/jquery-3.6-min.js"></script>
+    
+    
+    <!-- Custom Js -->
+    <script src="../dist/js/main.js"></script>
+
+  </body>
+</html>
