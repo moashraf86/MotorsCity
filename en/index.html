@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap-5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--  Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- Font type -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,18 +26,18 @@
       <header id="header">
         <div class="container-fluid">
           <!-- navbar -->
-          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-5">
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3">
             <!-- LOGO -->
-            <a class="navbar-brand me-0" href="#">
-              <img src="../dist/assets/images/logo.png" alt="MotoresCity-logo">
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
+              <img src="../dist/assets/images/header-logo.png" alt="MotoresCity-logo">
             </a>
             <!-- Menu Toggler Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <i class="bi bi-list navbar-toggler-icon"></i>
             </button>
             <!-- Nav items -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+            <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
                 </li>
@@ -52,7 +54,6 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </li>
@@ -63,7 +64,6 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </li>
@@ -84,10 +84,10 @@
 
       <!-- START HOME -->
       <section id="home">
-        <div class="container-fluid container-xxl">
+        <div class="container-fluid container-xl">
           <div class="row align-items-center">
             <div class="col-12 col-lg-6 col-xxl-6 order-1 order-lg-0">
-              <div class="home-content text-center text-lg-start">
+              <div class="home-content text-center text-lg-start gap-1 gap-lg-5">
                 <div class="logo-pattern d-none d-lg-block">
                   <img src="../dist/assets/images/logo-pattern.png" alt="logo-pattern">
                 </div>
@@ -111,7 +111,7 @@
               </div>
             </div>
             <div class="col-12 col-lg-6 col-xxl-6">
-              <div class="home-img" style="max-width: 700px; margin: auto;">
+              <div class="home-img">
                 <!-- <img class="mobile d-xl-none"  src="../dist/assets/images/hero-2x@2x.png" alt="home-img"> -->
                 <img class="dexktop d-xl-block d-xxl-none" src="../dist/assets/images/hero-2x@2x.png" alt="home-img">
                 <img class="dexktop d-none d-xxl-block" src="../dist/assets/images/hero-img.png" alt="home-img">
@@ -124,7 +124,7 @@
 
       <!-- START HOW-IT-WORKS -->
       <section id="how-it-works">
-        <div class="container-fluid container-xxl text-center">
+        <div class="container-fluid container-xl text-center">
           <h2>How it works</h2>
           <p>You won’t just love our cars, you’ll love the way you buy them</p>
           <div class="steps">
@@ -216,13 +216,7 @@
             <div class="swiper-button-next"></div>
 
           </div>
-        </div>
-      </section>
-      <!-- END TESTEMONIALS -->
-
-      <!-- START FIND CARS  -->
-      <section id="find-cars">
-        <div class="card">
+            <div class="card">
           <h3 class="mb-5 text-center"> Find cars any budget will love </h3>
           <div class="select-cars">
             <h5 class="mb-4">What kinds of cars do you want?</h5>
@@ -346,6 +340,13 @@
             </div>
           </div>
         </div>
+        </div>
+      </section>
+      <!-- END TESTEMONIALS -->
+
+      <!-- START FIND CARS  -->
+      <section id="find-cars">
+      
       </section>
       <!-- END FIND CARS  -->
 
@@ -432,7 +433,7 @@
                     <div class="row align-items-center gap-5">
                       <div class="col-12 col-lg">
                         <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/guides-img-3.png" alt="slider-img">
+                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
                         </div>
                       </div>
                       <div class="col-12 col-lg">
@@ -528,7 +529,7 @@
                     <div class="row align-items-center gap-5">
                       <div class="col-12 col-lg">
                         <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/guides-img-3.png" alt="slider-img">
+                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
                         </div>
                       </div>
                       <div class="col-12 col-lg">
@@ -819,8 +820,114 @@
       <!-- END BRANDS-->
 
       <!-- START SELL YOUR CAR -->
-      <section id="sell"></section>
+      <section id="sell">
+        <div class="container-fluid container-xl">
+          <div class="row gap-5 align-items-center">
+            <div class="col-12 col-lg-7 d-none d-xl-block">
+              <div class="sell-img">
+                <img class="w-100" src="../dist/assets/images/sell-img.png" alt="sell-img">
+              </div>
+            </div>
+            <div class="col-12 col-lg">
+              <div class="sell-content">
+                <h2 class="mb-5">Sell your car for the best price</h2>
+                <ul class="list-unstyled mb-5 text-start">
+                  <li>
+                    <img src="../dist/assets/icons/quote.png" alt="Online-quote">
+                    <span>Get instant online quote</span>
+                  </li>
+                  <li>
+                    <img src="../dist/assets/icons/free.png" alt="free doorstep">
+                    <span>Free Doorstep Evaluation</span>
+                  </li>
+                  <li>
+                    <img src="../dist/assets/icons/payment.png" alt="payment">
+                    <span>Same Day Payment</span>
+                  </li>
+                </ul>
+                <a href="#">
+                  <button class="btn btn-primary">Get Price</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- END SELL YOUR CAR -->
+
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row gap-xl-5">
+              <div class="col-12 col-xl-2 mb-5 mb-xl-0">
+                <div class="footer-logo text-center">
+                  <img src="../dist/assets/images/logo-pattern.png" alt="LOGO">
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="footer-nav d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 px-lg-0">
+                  <ul class="location mb-3 mb-lg-0">
+                    <li>
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>12039 Smith Avenue <br> Santa Fe Springs, CA 90670</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="contact">
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Toll-free 0877 338 0999 </span>
+                      </a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Fax 562 236 9429</span>
+                      </a>
+                    </li>
+                    <li class="mb-5 mb-lg-0">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-envelope"></i>
+                        <span>Info@motorscity.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="sign-up text-center text-md-start">
+                    <h6 class="mb-4">Join our Email Club </h6>
+                    <form>
+                      <input type="email" name="signup" id="signup" placeholder="Email.." class="form-control mb-4">
+                      <button class="btn btn-secondary">
+                        <span class="bg">
+                          <span class="text">Sign Up</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 Copyright. All rights reserved.</p>
+            <ul class="social-icons d-flex align-items-center gap-4">
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
     </div>
 
 

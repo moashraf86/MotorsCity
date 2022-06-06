@@ -66,6 +66,12 @@ h4 {
 h5 {
   font-size: 20px;
 }
+ul {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .btn {
   color: var(--white);
@@ -135,14 +141,49 @@ h5 {
   color: var(--white);
   border-radius: 50px;
   padding: 8px 20px;
+  display: inline-block;
 }
 
+#header .navbar-nav .dropdown-menu {
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+}
+
+#header .navbar-nav .dropdown-menu .dropdown-item{
+  font-weight: 600;
+}
+
+#header .navbar-nav .dropdown-menu .dropdown-item:hover{
+  background-color: #e7e8f3;
+  color: var(--dark-grey);
+}
+
+#header .navbar-nav .dropdown-menu .dropdown-item:active{
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+#header .navbar-light .navbar-toggler {
+  border: none;
+}
+
+#header .navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#header .navbar-light .navbar-toggler-icon {
+  background-image: none;
+  width: auto;
+  height: auto;
+  font-size: 36px;
+  color: var(--purple);
+}
 /********** [ 2 ] HOME **********/
 
 #home {
   position: relative;
   background-color: var(--white-100);
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 74px);
   display: flex;
   align-items: center;
   background: url('../assets/images/home-bg.png') no-repeat;
@@ -154,25 +195,32 @@ h5 {
 #home .home-content {
   position: relative;
   z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
+
 #home .home-content .logo-pattern {
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 #home .home-content h1 {
   font-size: 30px;
-  margin-bottom: 40px;
 }
 
 #home .home-content h1 span {
-  font-size: 60px
+  font-size: 50px
 }
 
 #home .home-content p {
   font-size: 20px;
-  margin-bottom: 100px;
 }
 
+#home .home-img {
+  max-width: 700px;
+  margin: auto;
+}
 /******[ 3 ] HOW IT WORKS ******/
 #how-it-works {
   padding: 100px 0;
@@ -213,6 +261,7 @@ h5 {
   background-size: cover;
   padding: 80px 0;
   min-height: 750px;
+  max-height: 800px;
 }
 
 #testimonials .swiper
@@ -284,140 +333,139 @@ h5 {
 }
 
 /*******[ 5 ] FIND-CARS *******/
-#find-cars {
-  background-color: var(--white-100);
-}
 
-#find-cars .card {
+
+#testimonials .card {
   border: none;
   border-radius: 10px;
   box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 5%);
-  transform: translateY(-50%);
+  transform: translateY(15%);
   max-width: 1300px;
   margin: auto;
+  z-index: 100;
 }
 
-#find-cars .card h3 {
+#testimonials .card h3 {
   padding: 60px 90px 0 90px;
 }
 
 
-#find-cars .select-cars{
+#testimonials .select-cars{
   padding: 0 90px;
 }
 
-#find-cars .select-cars h5 {
+#testimonials .select-cars h5 {
   text-align: left;
 }
 
-#find-cars .select-cars form {
+#testimonials .select-cars form {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 20px;
   cursor: grab;
 }
 
-#find-cars .select-cars form::-webkit-scrollbar,
+#testimonials .select-cars form::-webkit-scrollbar,
 #body-style .row::-webkit-scrollbar,
 #brands .row::-webkit-scrollbar {
   height: 4px;
 }
 
-#find-cars .select-cars form::-webkit-scrollbar-track ,
+#testimonials .select-cars form::-webkit-scrollbar-track ,
 #body-style .row::-webkit-scrollbar-track,
 #brands .row::-webkit-scrollbar-track {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-#find-cars .select-cars form::-webkit-scrollbar-thumb,
+#testimonials .select-cars form::-webkit-scrollbar-thumb,
 #body-style .row::-webkit-scrollbar-thumb,
 #brands .row::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, var(--green), var(--sky), var(--purple));
   cursor: pointer;
 }
 
-#find-cars .cars {
+#testimonials .cars {
   margin-bottom: 60px;
 }
 
-#find-cars .cars .car{
+#testimonials .cars .car{
   padding: 26px 16px 10px 16px;
   border: 2px solid #ededed;
   border-radius: 4px;
 }
 
-#find-cars .cars .car:hover{
+#testimonials .cars .car:hover{
   cursor: pointer;
   border-color: var(--sky);
 }
 
-#find-cars .cars input[name=car]:checked + .car{
+#testimonials .cars input[name=car]:checked + .car{
   border-color: var(--sky);
 }
 
-#find-cars .cars input{
+#testimonials .cars input{
   display: none;
 }
 
-#find-cars .cars .car img{
+#testimonials .cars .car img{
   margin-bottom: 16px;
   height: 30px;
   width: 85px;
   object-fit: contain;
 }
 
-#find-cars .cars .car p{
+#testimonials .cars .car p{
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 500;
 }
 
-#find-cars .estimate {
+#testimonials .estimate {
   padding: 0 90px 90px;
 } 
 
-#find-cars .estimate .form-label {
+#testimonials .estimate .form-label {
   font-weight: 400;
 } 
 
-#find-cars .estimate .input-group-text{
+#testimonials .estimate .input-group-text{
   background-color: transparent;
   border: none;
 } 
 
-#find-cars .estimate .form-control{
+#testimonials .estimate .form-control{
   border: none;
   border-radius: 4px;
   padding: 15px 5px;
 } 
 
-#find-cars .estimate .input-group{
+#testimonials .estimate .input-group{
   border: 1px solid #ededed;
   border-radius: 4px;
   margin-bottom: 16px;
 }
 
-#find-cars .estimate .score a{
+#testimonials .estimate .score a{
   color: var(--sky);
 }
 
-#find-cars .estimate input[type=range]{
+#testimonials .estimate input[type=range]{
   margin-bottom: 40px;
 } 
 
-#find-cars .estimated-budget h4{
+#testimonials .estimated-budget h4{
   font-size: 26px;
   margin-bottom: 30px;
 } 
 
-#find-cars .estimated-budget .value{
+#testimonials .estimated-budget .value{
   font-size: 56px;
   font-weight: 800;
   color: var(--dark-grey);
   margin-bottom: 30px;
 } 
 
-#find-cars .estimated-budget .btn{
+#testimonials .estimated-budget .btn{
   padding: 16px 25px;
   width: 100%;
 } 
@@ -425,8 +473,9 @@ h5 {
 
 /******* [ 6 ] Driver Seat ****** */
 #driver-seat  {
-  padding-top: 80px;
-  transform: translateY(-40%);
+  padding-top: 360px;
+  background-color: var(--white-100);
+  /* transform: translateY(-40%); */
 }
 
 #driver-seat .head {
@@ -538,6 +587,7 @@ h5 {
   position: relative;
   background-color: var(--purple);
   padding: 100px 0;
+  /* transform: translateY(-70%); */
 }
 
 #mockup::before {
@@ -595,6 +645,7 @@ h5 {
   color: var(--white);
   border-radius: 25px;
 }
+
 
 #tips .tip h5{
   color:var(--white);
@@ -685,6 +736,109 @@ h5 {
   text-transform: capitalize;
 }
 
+/******** [ 11 ] Sell *********/
+#sell {
+  position: relative;
+  padding: 50px 0;
+  background-image: linear-gradient(65deg, var(--green) 0%, var(--sky) 40%, var(--purple) 80%);
+  overflow: clip;
+}
+
+#sell::after {
+  position: absolute;
+  content: '';
+  bottom: -60px;
+  right: 20px;
+  width: 700px;
+  height: 300px;
+  background: url('../assets/images/logo-pattern-lg.png') no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+#sell .row {
+  position: relative;
+  z-index: 1;
+}
+#sell h2,
+#sell li {
+  color: var(--white);
+}
+
+#sell li {
+  margin-bottom: 16px;
+}
+
+#sell li img{
+  width: 40px;
+  object-fit: contain;
+  margin-right: 24px;
+}
+
+#sell .btn {
+  padding: 10px 70px;
+  background: none;
+  background-color:  transparent;
+  border: 2px solid var(--green);
+  filter: none;
+}
+
+/* Footer */
+footer {
+  padding: 100px 0 0;
+  background-color: var(--white);
+}
+
+footer .gap-wide {
+  column-gap: 150px;
+}
+
+footer .footer-nav li a{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+footer .footer-nav .location span{
+  line-height: 30px;
+}
+
+footer .footer-nav .bi {
+  font-size: 18px;
+  color: var(--purple);
+}
+
+footer .sign-up .form-control {
+  border: none;
+  border-bottom: 1px solid #ededed;
+  border-radius: 0;
+  min-width: 250px;
+}
+
+footer .sign-up .form-control:focus-visible {
+  box-shadow: none;
+  border-bottom-color: var(--purple);
+}
+
+footer .sign-up .btn {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+footer .sign-up .btn .bg {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+footer .footer-top {
+  margin-bottom: 100px;
+}
+
+footer .footer-copyright {
+  padding: 40px 0;
+  border-top: 1px solid #ededed;
+}
+
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%; 
@@ -770,6 +924,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 /* TABLET */
 @media screen  and (max-width: 1200px){
 
+  #header .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
   #driver-seat .tab-content .finance .swiper-slide h3{
     font-size: 30px;
   }
@@ -783,10 +941,28 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #brands .row{
     grid-template-columns: repeat(6, 1fr)
   }
+
+  #sell {
+    padding-bottom: 100px;
+    text-align: center;
+  }
+
+  #sell ul {
+    max-width: fit-content;
+    margin: auto;
+  }
+
+  #sell::after {
+    width: 470px;
+    height: 200px;
+    bottom: -25px;
+    right: -70px;
+  }
+
 }
 
 
-/* MOBILE */
+/* MOBILE & tablet */
 @media screen  and (max-width: 992px){
   
   h2 {
@@ -797,6 +973,23 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     font-size: 20px;
   }
 
+  #header .navbar-collapse {
+    position: absolute;
+    top: 58px;
+    left: -12px;
+    right: -12px;
+    background: rgb(255, 255, 255);
+    padding: 0 20px;
+    border-top: 1px solid #ededed;
+  }
+  #header .navbar-collapse .navbar-nav.register{
+    margin-bottom: 20px;
+  }
+
+  #header .navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: none
+  }
   #home {
     padding-bottom: 60px;
   }
@@ -830,28 +1023,27 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #testimonials .swiper .review-content {
     max-width: 100%;
   }
-  #find-cars .card {
-    transform: translateY(-40%);
+  #testimonials .card {
     margin: 0 12px;
   }
-  #find-cars .card h3 {
+  #testimonials .card h3 {
     padding: 60px 30px 0 30px;
   }
 
-  #find-cars .card .estimate {
+  #testimonials .card .estimate {
     padding: 0 30px 60px;
   }
 
-  #find-cars .card .select-cars {
+  #testimonials .card .select-cars {
     padding: 0
   }
 
-  #find-cars .card .select-cars h5{
-    text-align: center;
+  #testimonials .card .select-cars .cars{
+    padding-left: 30px;
   }
 
-  #driver-seat  {
-    transform: translateY(-30%);
+  #testimonials .card .select-cars h5{
+    text-align: center;
   }
 
   #driver-seat .head {
@@ -881,7 +1073,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
 
   #driver-seat .tab-content .tab-pane.active .swiper {
-    min-height: 680px;
+    min-height: 750px;
   }
 
   #driver-seat .tab-content .swiper .swiper-button-prev,
@@ -898,13 +1090,17 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #brands .row{
     grid-template-columns: repeat(4, 1fr)
   }
+
+  footer .sign-up  {
+    width: 100%;
+  }
 }
 
 
 @media screen and (max-width: 768px) {
   #home .home-content h1 {
     font-size: 25px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
 
   #home .home-content h1 span {
@@ -912,11 +1108,20 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
 
   #home .home-content p {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
   }
 
-  #find-cars .card {
-    transform: translateY(-35%);
+  #home .home-img {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  #testimonials .card {
+    transform: translateY(5%);
+  }
+
+  #driver-seat {
+    padding-top: 600px;
   }
 
   #mockup {
@@ -926,7 +1131,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #mockup .mockup-img {
     position: relative;
     right: 0;
-    bottom: -160px;
+    bottom: -100px;
     margin: auto;
   }
 
@@ -950,12 +1155,30 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     padding: 20px;
   }
 
+  footer .sign-up .btn {
+    width: 100%;
+  }
 }
 
+@media  screen  and (max-width: 560px) {
+  #home .home-content {
+    gap: 0px;
+  }
 
+  #home .home-img {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+/* only TABLET */
+@media (min-width:992px)  {
+  footer .footer-nav .btn {
+    width: 100%;
+  }
+}
 
 /* only TABLET */
-@media (min-width:992px)  and (max-width: 1024px){
+@media (min-width:992px)  and (max-width: 1200px){
   .btn, .btn-secondary span.bg {
     padding: 15px 50px;
   }
@@ -964,11 +1187,15 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     padding: 2px
   }
 
+  #header .navbar-brand img {
+    max-width: 200px;
+    object-fit: contain;
+  }
 }
 
 /* only Labtop */
 @media screen  and (min-width: 1360px){
-  #find-cars .select-cars form {
+  #testimonials .select-cars form {
     overflow-x: inherit;
     scroll-behavior: smooth;
     padding-bottom: 0;
