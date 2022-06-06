@@ -27,10 +27,20 @@ html {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+html[dir=rtl],
+html[dir=rtl] body {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--gray);
   height: 4000px;
+}
+
+body .wrapper {
+  overflow-x: clip;
 }
 
 a {
@@ -49,6 +59,7 @@ h5,
 h6 {
   color: var(--dark-grey);
   font-weight: 800;
+  line-height: 1.5;
 }
 
 h2 {
@@ -117,6 +128,9 @@ ul {
   color: var(--green);
 }
 
+input {
+  margin-left: 0 !important;
+}
 /********** [ 1 ] HEADER **********/
 #header {
   position: sticky;
@@ -129,6 +143,10 @@ ul {
 #header .navbar-nav .nav-link {
   font-weight: 800;
   color: var(--dark-grey)
+}
+
+html[dir=rtl] #header .navbar-nav .nav-link {
+  font-size: 14px;
 }
 
 #header .navbar-nav .nav-link:hover,
@@ -186,10 +204,15 @@ ul {
   min-height: calc(100vh - 74px);
   display: flex;
   align-items: center;
-  background: url('../assets/images/home-bg.png') no-repeat;
+  background-image: url('../assets/images/home-bg.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   overflow: hidden;
+}
+
+html[dir=rtl] #home {
+  background-image: url('../assets/images/home-bg-ar.png');
 }
 
 #home .home-content {
@@ -221,6 +244,10 @@ ul {
   max-width: 700px;
   margin: auto;
 }
+
+html[dir=rtl] #home .home-img img{
+  transform: scaleX(-1);
+}
 /******[ 3 ] HOW IT WORKS ******/
 #how-it-works {
   padding: 100px 0;
@@ -230,7 +257,7 @@ ul {
 }
 
 #how-it-works .steps{
-  margin: 140px 0 70px;
+  margin: 140px 0 0;
 }
 
 #how-it-works .step .step-img{
@@ -274,6 +301,10 @@ ul {
   padding-left: 5rem;
 }
 
+html[dir=rtl] #testimonials .swiper .review {
+  padding-right: 5rem;
+}
+
 #testimonials .swiper .review-title,
 #testimonials .swiper .review-content,
 #testimonials .swiper .client
@@ -283,6 +314,10 @@ ul {
 
 #testimonials .swiper .review-title img {
   margin-right: 40px;
+}
+
+html[dir=rtl] #testimonials .swiper .review-title img {
+  transform: scaleX(-1);
 }
 
 #testimonials .swiper .review-title span {
@@ -356,6 +391,10 @@ ul {
 
 #testimonials .select-cars h5 {
   text-align: left;
+}
+
+html[dir=rtl] #testimonials .select-cars h5 {
+  text-align: right;
 }
 
 #testimonials .select-cars form {
@@ -475,7 +514,6 @@ ul {
 #driver-seat  {
   padding-top: 360px;
   background-color: var(--white-100);
-  /* transform: translateY(-40%); */
 }
 
 #driver-seat .head {
@@ -630,6 +668,11 @@ ul {
   z-index: 100;
 }
 
+html[dir=rtl] #mockup .mockup-img {
+  left: 10%;
+  right: initial;
+}
+
 
 /****** [ 8 ] Tips *******/
 #tips {
@@ -644,6 +687,10 @@ ul {
   text-align: left;
   color: var(--white);
   border-radius: 25px;
+}
+
+html[dir=rtl] #tips .tip {
+  text-align: right;
 }
 
 
@@ -773,6 +820,10 @@ ul {
   width: 40px;
   object-fit: contain;
   margin-right: 24px;
+}
+
+html[dir=rtl] #sell li img{
+  margin-left: 24px;
 }
 
 #sell .btn {
@@ -959,6 +1010,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     right: -70px;
   }
 
+  html[dir=rtl] #header .navbar-nav .nav-link {
+    font-size: 12px;
+  }
 }
 
 
@@ -966,22 +1020,31 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 @media screen  and (max-width: 992px){
   
   h2 {
-    font-size: 36px;
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
   }
 
   h4 {
     font-size: 20px;
   }
 
+  #header {
+    padding: 10px 0;
+  }
+
   #header .navbar-collapse {
     position: absolute;
-    top: 58px;
+    top: 54px;
     left: -12px;
     right: -12px;
     background: rgb(255, 255, 255);
     padding: 0 20px;
     border-top: 1px solid #ededed;
   }
+
   #header .navbar-collapse .navbar-nav.register{
     margin-bottom: 20px;
   }
@@ -990,6 +1053,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     border: none;
     box-shadow: none
   }
+
+  #header .navbar-brand img {
+    max-width: 150px;
+  }
+
   #home {
     padding-bottom: 60px;
   }
@@ -1004,6 +1072,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     margin-bottom: 80px;
     text-align: left;
   }
+  html[dir=rtl] #how-it-works .step {
+    text-align: right;
+  }
   #how-it-works .step .step-img{
     margin: 0;
     margin-bottom: 40px;
@@ -1012,7 +1083,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     margin-bottom: 30px
   }
 
-  #testimonials .swiper .review {
+  #testimonials .swiper .review,
+  html[dir=rtl] #testimonials .swiper .review {
     padding:0  2rem;
   }
 
@@ -1042,6 +1114,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     padding-left: 30px;
   }
 
+  html[dir=rtl] #testimonials .card .select-cars h5,
   #testimonials .card .select-cars h5{
     text-align: center;
   }
@@ -1090,9 +1163,13 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #brands .row{
     grid-template-columns: repeat(4, 1fr)
   }
-
+  
   footer .sign-up  {
     width: 100%;
+  }
+
+  html[dir=rtl] .swiper .btn {
+    padding: 15px 45px;
   }
 }
 
@@ -1100,11 +1177,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 @media screen and (max-width: 768px) {
   #home .home-content h1 {
     font-size: 25px;
-    /* margin-bottom: 40px; */
   }
 
   #home .home-content h1 span {
-    font-size: 45px
+    font-size: 36px
   }
 
   #home .home-content p {
@@ -1122,6 +1198,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
   #driver-seat {
     padding-top: 600px;
+  }
+
+  html[dir=rtl] #driver-seat {
+    padding-top: 900px;
   }
 
   #mockup {
