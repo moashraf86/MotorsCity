@@ -754,6 +754,16 @@ html[dir=rtl] #tips .tip {
   text-align: center;
 }
 
+#brands .brand{
+  transition:  all 300ms linear;
+}
+
+#brands .brand:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / .12);
+  transition:  all 200ms linear;
+}
+
 #brands h2{
   margin-bottom: 100px;
 }
