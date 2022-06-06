@@ -107,6 +107,9 @@ h5 {
   -webkit-text-fill-color: transparent;
 }
 
+.show-all a {
+  color: var(--green);
+}
 
 /********** [ 1 ] HEADER **********/
 #header {
@@ -276,13 +279,13 @@ h5 {
   display: none;
 }
 
-#testimonials .swiper .swiper-pagination{
+.swiper .swiper-pagination{
   bottom: 0;
 }
 
 /*******[ 5 ] FIND-CARS *******/
 #find-cars {
-
+  background-color: var(--white-100);
 }
 
 #find-cars .card {
@@ -314,15 +317,21 @@ h5 {
   cursor: grab;
 }
 
-#find-cars .select-cars form::-webkit-scrollbar {
+#find-cars .select-cars form::-webkit-scrollbar,
+#body-style .row::-webkit-scrollbar,
+#brands .row::-webkit-scrollbar {
   height: 4px;
 }
 
-#find-cars .select-cars form::-webkit-scrollbar-track {
+#find-cars .select-cars form::-webkit-scrollbar-track ,
+#body-style .row::-webkit-scrollbar-track,
+#brands .row::-webkit-scrollbar-track {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-#find-cars .select-cars form::-webkit-scrollbar-thumb {
+#find-cars .select-cars form::-webkit-scrollbar-thumb,
+#body-style .row::-webkit-scrollbar-thumb,
+#brands .row::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, var(--green), var(--sky), var(--purple));
   cursor: pointer;
 }
@@ -414,6 +423,268 @@ h5 {
 } 
 
 
+/******* [ 6 ] Driver Seat ****** */
+#driver-seat  {
+  padding-top: 80px;
+  transform: translateY(-40%);
+}
+
+#driver-seat .head {
+  padding-top: 80px;
+  background-color: var(--white-100);
+}
+
+#driver-seat .logo-pattern {
+  margin-bottom: 80px;
+}
+
+.nav-tabs{
+  justify-content: center;
+  border-bottom: 0;
+  gap: 40px;
+}
+
+.nav-tabs .nav-link {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-grey);
+  border: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.nav-tabs .nav-link:hover {
+  border: none;
+  color: var(--purple);
+}
+
+.nav-tabs .nav-link.active {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--purple);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--purple);
+}
+
+#driver-seat .tab-content {
+  background-color: var(--white);
+  position: relative;
+}
+
+#driver-seat .tab-content .container-fluid{
+  padding: 100px 0;
+}
+
+#driver-seat .tab-content::after {
+  position: absolute;
+  content: '';
+  background: url('../assets/images/bg-pattern-3.png') no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 26%;
+  width: 500px;
+  bottom: 0;
+  z-index: 0;
+}
+
+#driver-seat .tab-content  .swiper-slide .row {
+  max-width: 85%;
+  margin: auto
+}
+
+#driver-seat .tab-content  .swiper-slide .feat-img img{
+  max-height: 370px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 30px;
+}
+
+#driver-seat .tab-content .tab-pane.active .swiper {
+  min-height: 400px;
+}
+
+#driver-seat .tab-content .tab-pane:not(.active) .swiper {
+  display: none;
+}
+
+#driver-seat .swiper .swiper-pagination-bullet {
+  background-color: var(--green);
+  transition: all 300ms ease-in-out;
+}
+
+#driver-seat .swiper .swiper-pagination-bullet-active {
+  background-color: var(--green);
+  width: 20px;
+  border-radius: 5px;
+}
+
+#driver-seat .tab-content .swiper .swiper-button-prev::after,
+#driver-seat .tab-content .swiper .swiper-button-next::after{
+  font-size: 12px;
+  color: var(--white);
+}
+
+#driver-seat .tab-content .swiper .swiper-button-prev,
+#driver-seat .tab-content .swiper .swiper-button-next{
+  background-color: var(--purple);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/******** [ 7 ] Mockup *********/
+#mockup {
+  position: relative;
+  background-color: var(--purple);
+  padding: 100px 0;
+}
+
+#mockup::before {
+  position: absolute;
+  content: '';
+  top: 50px;
+  left: 0;
+  width: 500px;
+  height: 300px;
+  background: url('../assets/images/bg-pattern-4.png') no-repeat;
+  background-size: contain;
+  z-index: 999;
+}
+#mockup::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 0;
+  width: 500px;
+  height: 300px;
+  margin-top: -150px;
+  background: url('../assets/images/bg-pattern-5.png') no-repeat;
+  background-size: cover;
+  z-index: 999;
+}
+
+#mockup h2,
+#mockup p{
+  color: var(--white);
+}
+
+#mockup h2 span {
+  font-size: 40px;
+}
+
+#mockup .mockup-img {
+  position: absolute;
+  top: -100px;
+  right: 10%;
+  z-index: 100;
+}
+
+
+/****** [ 8 ] Tips *******/
+#tips {
+  padding: 150px 0;
+}
+
+#tips .tip {
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 20px 35px;
+  text-align: left;
+  color: var(--white);
+  border-radius: 25px;
+}
+
+#tips .tip h5{
+  color:var(--white);
+}
+
+#tips .tip .btn{
+  filter: none;
+  font-size: 14px;
+  padding: 12px 30px;
+}
+
+#tips .tip[num=one] {
+  background-image: url('../assets/images/tips-img-1.png');
+}
+#tips .tip[num=two] {
+  background-position: top;
+  background-image: url('../assets/images/tips-img-2.png');
+}
+#tips .tip[num=three] {
+  background-image: url('../assets/images/tips-img-3.png');
+}
+#tips .tip[num=four] {
+  background-position: initial;
+  background-image: url('../assets/images/tips-img-4.png');
+} 
+
+/******** [ 9 ] Body Style *********/
+#body-style {
+  position: relative;
+  text-align: center;
+}
+
+#body-style h2{
+  margin-bottom: 100px;
+}
+
+#body-style .car{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#body-style::before {
+  position: absolute;
+  content: '';
+  top: -50px;
+  left: 0;
+  width: 500px;
+  height: 300px;
+  background: url('../assets/images/logo-pattern-2.png') no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+/******** [ 10 ] Brands *********/
+#brands{
+  padding: 100px 0;
+  text-align: center;
+}
+
+#brands h2{
+  margin-bottom: 100px;
+}
+
+
+#brands .row{
+  grid-template-columns: repeat(8, 1fr)
+}
+
+#brands .brand{
+  padding: 40px 20px;
+  background-color: var(--white-100);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+#brands .brand img{
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+#brands span{
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%; 
@@ -482,15 +753,15 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 
 
-
-
-
-
-
 /* LAPTOP */
 @media (max-width: 1400px){
   #home .home-img img {
     width: 100%;
+  }
+
+  #mockup .mockup-img {
+    top: 0;
+    max-width: 500px;
   }
 
 }
@@ -499,7 +770,19 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 /* TABLET */
 @media screen  and (max-width: 1200px){
 
+  #driver-seat .tab-content .finance .swiper-slide h3{
+    font-size: 30px;
+  }
 
+  #mockup .mockup-img {
+    top: 5%;
+    right: 1rem;
+    max-width: 400px;
+  }
+
+  #brands .row{
+    grid-template-columns: repeat(6, 1fr)
+  }
 }
 
 
@@ -507,8 +790,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 @media screen  and (max-width: 992px){
   
   h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
+
   h4 {
     font-size: 20px;
   }
@@ -566,6 +850,54 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     text-align: center;
   }
 
+  #driver-seat  {
+    transform: translateY(-30%);
+  }
+
+  #driver-seat .head {
+    padding-top: 60px;
+  }
+
+  #driver-seat .logo-pattern {
+    margin-bottom: 60px;
+  }
+
+  #driver-seat .tab-content .swiper-slide .row{
+    max-width: 100%;
+    margin: auto
+  }
+
+  #driver-seat .nav-tabs {
+    gap: 20px;
+    padding: 0 12px;
+  }
+
+  #driver-seat .tab-content::after{
+    display: none;
+  }
+
+  #driver-seat .tab-content .container-fluid{
+    padding: 50px 0;
+  }
+
+  #driver-seat .tab-content .tab-pane.active .swiper {
+    min-height: 680px;
+  }
+
+  #driver-seat .tab-content .swiper .swiper-button-prev,
+  #driver-seat .tab-content .swiper .swiper-button-next{
+    display: none;
+  }
+  #mockup h2 span {
+    font-size: 24px;
+  }
+  #mockup::before {
+    width: 300px;
+  }
+
+  #brands .row{
+    grid-template-columns: repeat(4, 1fr)
+  }
 }
 
 
@@ -586,6 +918,38 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #find-cars .card {
     transform: translateY(-35%);
   }
+
+  #mockup {
+    padding: 50px 0 0 ;
+  }
+  
+  #mockup .mockup-img {
+    position: relative;
+    right: 0;
+    bottom: -160px;
+    margin: auto;
+  }
+
+  #mockup::after {
+    display: none;
+  }
+
+  
+  #body-style::before {
+    top: -20px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+
+  #brands .row{
+    grid-template-columns: repeat(16, 1fr)
+  }
+
+  #brands .brand{
+    padding: 20px;
+  }
+
 }
 
 
