@@ -909,6 +909,11 @@ html[dir=rtl] #tips .tip {
   color: var(--white);
 }
 
+#sell .sell-content ul li {
+  display: flex;
+  align-items: center;
+}
+
 #sell li {
   margin-bottom: 16px;
 }
