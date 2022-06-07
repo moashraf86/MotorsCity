@@ -1,5 +1,4 @@
-// $('.swiper-pagination').find('.swiper-pagination-bullet[aria-label="Go to slide 1"]')
-
+// Make Driver Seats Slider works when click on nav-tabs
 $('#driver-seat .nav-tabs .nav-link').each(function() {
   $(this).on('click', function() {
     if($(this).attr('data-toggle') == 'Go to slide 1') {
@@ -13,7 +12,6 @@ $('#driver-seat .nav-tabs .nav-link').each(function() {
     $(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active')
   })
 })
-
 $('.swiper-pagination .swiper-pagination-bullet').each(function() {
   $(this).on('click', function() {
     if($(this).attr('aria-label') == 'Go to slide 1') {
@@ -30,3 +28,18 @@ $('.swiper-pagination .swiper-pagination-bullet').each(function() {
     // $(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active')
   })
 })
+
+//Set initial Values to Monthly Payment & Cash-down based on the range value
+let monthlyInitVal = $('.estimate input[data-type=monthly-payment]').val();
+let cashInitVal    = $('.estimate input[data-type=cash-down]').val();
+$('.estimate #monthly-payment').val(monthlyInitVal);
+$('.estimate #cash-down').val(cashInitVal);
+
+// /Chanage Monthly Payment & Cash-down when user change range type
+
+$('.estimate input[type=range]').on('input', function() {
+  let target = `#${$(this).attr('data-type')}`;
+  $(target).val($(this).val())
+})
+
+

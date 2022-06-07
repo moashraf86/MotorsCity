@@ -94,7 +94,7 @@
                 <h1>
                   
                   <span>إختر</span> <br class="d-xl-none">السيارة اللي تناسبك, <br>  
-                  <span> وخلي الباقي علينا</span> <br>ولا تشيل هم
+                  <span> وخلي الباقي علينا</span> <br>"لا تشيل هم"
                 </h1>
                 <p>إدفع أونلاين, و توصلك السيارة لباب البيت (مفحوصة,مضمونة,  وبأحلى سعر)</p>
                 <div class="btn-group flex-column flex-lg-row gap-4 gap-xl-5">
@@ -129,36 +129,40 @@
           <p>سهلناها عليك كل السيارات في تطبيق واحد, لا ومفحوصة ومضمونة</p>
           <div class="steps">
             <div class="row gap-lg-5">
-              <div class="col-12 col-sm-6 col-lg">
+              <div class="col-12 col-md-6 col-lg">
                 <div class="step">
                   <div class="step-img">
                     <img class="w-100" src="../dist/assets/images/choose-from.png" alt="choose-from">
                   </div>
                   <div class="step-info">
-                    <h4>سيارات جديدة ومستعملة</h4>
+                    <h4>السيارة المناسبة لك "عندنا"</h4>
                     <p>أكثر من 5000 سيارة معروضة للبيع من جميع أنحاء المملكة جديدة ومستعملة</p>
                     <a href="#">شوف كل السيارات</a>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg">
-                <div class="step mb-2">
-                  <div class="step-img">
+              <div class="col-12 col-md-6 col-lg">
+                <div class="step mb-md-2">
+                  <div class="step-img order-1" >
                     <img class="w-10 mw-100" src="../dist/assets/images/buying.png" alt="buying">
                   </div>
-                  <h4>تشتري كاش أو تمويل ؟</h4>
-                  <p>كاش أو تمويل, نقدر نساعدك تلاقي السعر الأفضل والتمويل اللي ناسبك من البنوك والجهات التمويلية المرخصة والمعتمدة</p>
-                  <a href="#">تواصل معنا</a>
+                  <div class="step-info order-0">
+                    <h4>تفكر تشتري كاش أو تمويل ؟ </h4>
+                    <p>كاش أو تمويل, نقدر نساعدك تلاقي السعر الأفضل والتمويل اللي يناسبك  </p>
+                    <a href="#">تواصل معنا</a>
+                  </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg">
+              <div class="col-12 col-md-6 col-lg">
                 <div class="step mb-0">
                   <div class="step-img">
                     <img class="w-100" src="../dist/assets/images/online-payment.png" alt="online-payment">
                   </div>
-                  <h4>إدفع أونلاين, و توصلك لباب البيت</h4>
-                  <p>إدفع بأمان من خلال قنوات الدفع الإلكتروني أو بحوالة بنكية, ونوصلك السيارة للبيت</p>
-                  <a href="#">إشتري سيارتك الآن</a>
+                  <div class="step-info">
+                    <h4>إدفع أونلاين, و توصلك لباب البيت</h4>
+                    <p>إدفع بأمان من خلال قنوات الدفع الإلكتروني أو بحوالة بنكية</p>
+                    <a href="#">إشتري سيارتك الآن</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -309,17 +313,17 @@
                       <label for="monthly-payment" class="form-label">القسط الشهري</label>
                       <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">﷼</span>
-                        <input type="number" class="form-control" id="monthly-payment" value="400">
+                        <input type="number" class="form-control" id="monthly-payment" value="">
                       </div>
-                      <input type="range" name="rang" id="monthly-range">
+                      <input type="range" id="monthly-range" value="400" min="0" max="4000" data-type="monthly-payment">
                     </div>
                     <div class="d-flex flex-column gap-2 flex-grow-1">
                       <label for="cash-down" class="form-label">الدفعة الأولى</label>
                       <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">﷼</span>
-                        <input type="number" class="form-control" id="cash-down" value="400">
+                        <input type="number" class="form-control" id="cash-down" value="">
                       </div>
-                      <input type="range" name="range" id="cash-range">
+                      <input type="range" id="cash-range" value="400" min="0" max="4000" data-type="cash-down">
                     </div>
                   </div>
                 </form>
@@ -331,7 +335,7 @@
               <div class="col-12 col-md-6 col-lg-4">
                 <div class="estimated-budget text-center mt-5 mt-md-0">
                   <h4>سعر السيارة التقريبي </h4>
-                  <div class="value">$20,510</div>
+                  <div class="value">20,510 ﷼ </div>
                   <a href="#">
                     <button class="btn btn-primary">سيارات بهذا السعر </button>
                   </a>
@@ -352,7 +356,7 @@
               <img src="../dist/assets/images/logo-pattern.png" alt="logo-pattern">
             </div>
             <h2 class="mb-lg-4">كلها اللي تحتاجة نوفره لك.. وأكثر </h2>
-            <p class="mb-5">أينما كنت تسافر ، نحن هنا لمساعدتك على التنقل</p>
+            <p class="mb-5">منصة واحدة لكل اللي تحتاجه عن السيارات, نحن هنا لمساعدتك </p>
           </div>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -379,7 +383,10 @@
                     <div class="row align-items-center gap-5">
                       <div class="col-12 col-lg">
                         <div class="content text-end">
-                          <h3 class="mb-4">أحصل على موافقة فورية لتمويل السيارة المناسبه </h3>
+                          <h3 class="mb-4"> موافقة فورية لتمويل السيارة المناسبه </h3>
+                          <div class="slider-img mb-4 d-lg-none">
+                            <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
+                          </div>
                           <ul class="mb-5">
                             <li class="mb-2">
                               <i class="bi bi-check2"></i>
@@ -403,7 +410,7 @@
                         </div>
                       </div>
                       <div class="col-12 col-lg">
-                        <div class="feat-img">
+                        <div class="slider-img d-none d-lg-block">
                           <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
                         </div>
                       </div>
@@ -414,7 +421,10 @@
                     <div class="row align-items-center gap-5">
                       <div class="col-12 col-lg">
                         <div class="content text-end">
-                          <h3 class="mb-4">شوف كل السيارات من كل المعارض السيارات في المملكة</h3>
+                          <h3 class="mb-4">شوف سيارات من كل المعارض في المملكة</h3>
+                          <div class="slider-img mb-4 d-lg-none">
+                            <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
+                          </div>
                           <ul class="mb-5">
                             <li class="mb-2 ">
                               <i class="bi bi-check2"></i>
@@ -438,7 +448,7 @@
                         </div>
                       </div>
                       <div class="col-12 col-lg">
-                        <div class="feat-img">
+                        <div class="slider-img d-none d-lg-block">
                           <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
                         </div>
                       </div>
@@ -450,22 +460,21 @@
                       <div class="col-12 col-lg">
                         <div class="content text-end">
                           <h3 class="mb-4">صيانة سيارتك صارت أسهل </h3>
+                          <div class="slider-img mb-4 d-lg-none">
+                            <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
+                          </div>
                           <ul class="mb-5">
                             <li class="mb-2 d-flex gap-1">
                               <i class="bi bi-check2"></i>
-                              <span>وقت ما تحتاج للصيانة, أطلب خدمة الصيانة وحدد الوقت اللي يناسبك </span>
+                              <span> أطلب خدمة الصيانة وحدد الوقت اللي يناسبك </span>
                             </li>
                             <li class="mb-2 d-flex gap-1">
                               <i class="bi bi-check2"></i>
-                              <span>فريق فني بخبرات متميزة في صيانة السيارات راح يجيك ويخدمك</span>
+                              <span>فريق فني بخبرات متميزة راح يجيك ويخدمك</span>
                             </li>
                             <li class="d-flex gap-1">
                               <i class="bi bi-check2"></i>
                               <span>نعمل الفحص في الموقع,  أو نأخذها لمركز صيانة معتمد</span>
-                            </li>
-                            <li class="d-flex gap-1">
-                              <i class="bi bi-check2"></i>
-                              <span>نوفر لك سيارة بديلة عند الحاجة</span>
                             </li>
                           </ul>
                           <div class="d-flex align-items-center gap-3">
@@ -476,7 +485,7 @@
                         </div>
                       </div>
                       <div class="col-12 col-lg">
-                        <div class="feat-img">
+                        <div class="slider-img d-none d-lg-block">
                           <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
                         </div>
                       </div>
@@ -490,152 +499,7 @@
                 <div class="swiper-button-next"></div>
               </div>
             </div>
-            <!-- WILL BE REMOVED -->
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row align-items-center gap-5">
-                      <div class="col-12 col-lg">
-                        <div class="feat-img">
-                          <img class="w-100" src="../dist/assets/images/slider-img.png" alt="slider-img">
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg">
-                        <div class="content text-start">
-                          <h3 class="mb-4">Choose from the best pre-owned cars</h3>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                          <a href="#">
-                            <button class="btn btn-primary">Watch how it works </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-            <!-- WILL BE REMOVED -->
+            
           </div>
         </div>
       </section>
@@ -722,55 +586,55 @@
       <!-- START BODY STYLE -->
       <section id="body-style">
         <div class="container">
-          <h2>فئات السيارات</h2>
+          <h2>تصفح بحسب الفئة</h2>
           <div class="row flex-nowrap flex-md-wrap overflow-auto justify-content-between gap-4 gap-md-0">
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/sedan.png" alt="سيدان">
                 <span>سيدان</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5 ">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/suv.png" alt="عائلية ">
                 <span>عائلية </span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5 ">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/truck.png" alt="هاتشباك">
                 <span>هاتشباك</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/hatchback.png" alt="هاتشباك">
                 <span>هاتشباك</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/coupe.png" alt="كوبية">
                 <span>كوبية</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/convertible.png" alt="مكشوفة">
                 <span>مكشوفة</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/minivan.png" alt="ميني فان">
                 <span>ميني فان</span>
-              </div>
+              </a>
             </div>
             <div class="col-3 mb-5">
-              <div class="car">
+              <a class="car" href="#">
                 <img src="../dist/assets/images/cars/wagon.png" alt="واجن">
                 <span>واجن</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -780,102 +644,102 @@
       <!-- START BRANDS -->
       <section id="brands">
         <div class="container">
-          <h2>ماركات مشهورة</h2>
+          <h2> تصفح بحسب الماركة</h2>
           <div class="row d-grid overflow-auto justify-content-between gap-3 gap-md-0">
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/toyota.png" alt="toyota">
-              </div>
+              </a>
               <span>تويوتا</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/ford.png" alt="ford">
-              </div>
+              </a>
               <span>فورد</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/honda.png" alt="honda">
-              </div>
+              </a>
               <span>هوندا</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/nissan.png" alt="nissan">
-              </div>
+              </a>
               <span>نيسان</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/jeep.png" alt="jeep">
-              </div>
+              </a>
               <span>جييب</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/chevorlet.png" alt="chevorlet">
-              </div>
+              </a>
               <span>شيفروليه</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/hyundai.png" alt="hyundai">
-              </div>
+              </a>
               <span>هيونداي</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/mercedes.png" alt="mercedes">
-              </div>
+              </a>
               <span>مرسيدس-بنز</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/bmw.png" alt="bmw">
-              </div>
+              </a>
               <span>بي إم دبليو</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/lexus.png" alt="lexus">
-              </div>
+              </a>
               <span>لكزس</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/audi.png" alt="audi">
-              </div>
+              </a>
               <span>أودي</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/cadillac.png" alt="cadillac">
-              </div>
+              </a>
               <span>cadillac</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/kia.png" alt="kia">
-              </div>
+              </a>
               <span>كاديلاك</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/volvo.png" alt="volvo">
-              </div>
+              </a>
               <span>فولفو</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/mazda.png" alt="mazda">
-              </div>
+              </a>
               <span>مازدا</span>
             </div>
             <div class="col mb-5">
-              <div class="brand">
+              <a class="brand d-block" href="#">
                 <img src="../dist/assets/images/cars/logos/lincolen.png" alt="lincolen">
-              </div>
+              </a>
               <span>لينكولن</span>
             </div>
           </div>
@@ -912,7 +776,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-12 col-lg-7 d-none d-xl-block">
+            <div class="col-12 col-lg-6 d-none d-xl-block">
               <div class="sell-img">
                 <img class="w-100" src="../dist/assets/images/sell-img.png" alt="sell-img">
               </div>

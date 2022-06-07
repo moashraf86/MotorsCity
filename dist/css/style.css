@@ -224,10 +224,6 @@ html[dir=rtl] #home {
   gap: 40px;
 }
 
-#home .home-content .logo-pattern {
-  /* margin-bottom: 100px; */
-}
-
 #home .home-content h1 {
   font-size: 30px;
 }
@@ -268,6 +264,20 @@ html[dir=rtl] #home .home-img img{
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#how-it-works .step .step-img[num=one]{
+  background-image: url('../assets/images/choose-from.png');
+}
+#how-it-works .step .step-img[num=two]{
+  background-image: url('../assets/images/buying.png');
+  background-size: contain;
+}
+#how-it-works .step .step-img[num=three]{
+  background-image: url('../assets/images/online-payment.png');
 }
 
 #how-it-works .step h4{
@@ -580,7 +590,7 @@ html[dir=rtl] #testimonials .select-cars h5 {
   margin: auto
 }
 
-#driver-seat .tab-content  .swiper-slide .feat-img img{
+#driver-seat .tab-content  .swiper-slide .slider-img img{
   max-height: 370px;
   object-fit: cover;
   object-position: top;
@@ -736,6 +746,11 @@ html[dir=rtl] #tips .tip {
   gap: 10px;
 }
 
+#body-style .car:hover{
+  color: var(--purple);
+}
+
+
 #body-style::before {
   position: absolute;
   content: '';
@@ -791,6 +806,7 @@ html[dir=rtl] #tips .tip {
   font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
+  color: var(--dark-grey);
 }
 
 /******** [ 11 ] Sell *********/
@@ -934,13 +950,14 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-  border: 1px solid var(--sky);
+  border: 2px solid var(--sky);
   height: 20px;
   width: 20px;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
 }
+
 
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
@@ -970,6 +987,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 /* LAPTOP */
 @media (max-width: 1400px){
+  
+  #home .home-img {
+    max-width: 450px;
+    margin: auto;
+  }
+
   #home .home-img img {
     width: 100%;
   }
@@ -1198,21 +1221,37 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     font-size: 36px
   }
 
-  #home .home-content p {
-    /* margin-bottom: 25px; */
-  }
-
   #home .home-img {
     max-width: 400px;
     margin: auto;
   }
 
+  #how-it-works .steps .step{
+    display: flex;
+    gap: 20px;
+  }
+
+  #how-it-works .steps .step h4{
+    margin-bottom: 10px;
+  }
+
+  #how-it-works .steps .step .step-img{
+    flex-basis: 40%;
+    align-items: start;
+    min-height: initial;
+  }
+
+  #how-it-works .steps .step .step-info {
+    flex-basis: 60%;
+    align-items: center;
+  }
+    
   #testimonials .card {
     transform: translateY(5%);
   }
 
   #driver-seat {
-    padding-top: 600px;
+    padding-top: 800px;
   }
 
   html[dir=rtl] #driver-seat {
