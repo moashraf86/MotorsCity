@@ -35,11 +35,14 @@ let cashInitVal    = $('.estimate input[data-type=cash-down]').val();
 $('.estimate #monthly-payment').val(monthlyInitVal);
 $('.estimate #cash-down').val(cashInitVal);
 
-// /Chanage Monthly Payment & Cash-down when user change range type
-
+// /Chanage Monthly Payment & Cash-down when user change range type and visa versa
 $('.estimate input[type=range]').on('input', function() {
   let target = `#${$(this).attr('data-type')}`;
   $(target).val($(this).val())
+});
+$('.estimate input[type=number]').on('input', function() {
+  let target = `${$(this).attr('id')}`;
+  $(`[data-type=${target}]`).val($(this).val())
 })
 
 
