@@ -82,6 +82,14 @@
         <div id="search-result-wrapper">
           <aside class="filter">
             <div class="sidebar-filter px-3 pt-4">
+              <!-- Head -->
+              <div class="position-relative filter-head d-flex d-lg-none justify-content-center align-items-center mb-4">
+                <h6 class="mb-0">Filter</h6>
+                <span class="icon">
+                  <i class="bi bi-x"></i>
+                </span>
+              </div>
+              <!-- Head -->
               <!-- Group Buttons -->
               <form class="form-group d-flex align-items-center justify-content-between mb-3">
                 <label for="used">
@@ -108,12 +116,12 @@
                     <form id="payment">
                       <div class="d-flex justify-content-between flex-wrap align-items-center gap-2">
                         <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
-                          <label for="monthly-payment" class="form-label">Min Payment</label>
+                          <label for="min-payment" class="form-label">Min Payment</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">$</span>
-                            <input type="number" class="form-control" id="monthly-payment" value="" >
+                            <input type="number" class="form-control" id="min-payment" value="" >
                           </div>
-                          <input type="range" id="monthly-range" value="400" min="0" max="4000" data-type="monthly-payment">
+                          <input type="range" id="monthly-range" value="400" min="0" max="4000" data-type="min-payment">
                         </div>
                         <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
                           <label for="cash-down" class="form-label">Max Payment</label>
@@ -137,181 +145,492 @@
                     <div class="refine-search">
                       <h6>Refine Your Search</h6>
                       <div class="accordion" id="accordionExample">
-                        <!-- Trim -->
+                        <!-- Make & Model -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Trim
+                              Make & Model
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="238i">
-                                  238i (23)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="238i">
+                              <div class="make">
+                                <h6>Make</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="toyota">
+                                    Toyota (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="toyota">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="ford">
+                                    Ford (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="ford">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="honda">
+                                    Honda (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="honda">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="nissan">
+                                    Nissan (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="nissan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="jeep">
+                                    Jeep (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="jeep">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="chevorlet">
+                                    Chevorlet (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="chevorlet">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hyundai">
+                                    Hyundai (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="hyundai">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="mercedes-benz">
+                                    Mercedes-Benz (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="mercedes-benz">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="bmw">
+                                    Bmw (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="bmw">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="lexus">
+                                    Lexus (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="lexus">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="audi">
+                                    Audi (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="audi">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="cadillac">
+                                    Cadillac (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="cadillac">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="kia">
+                                    Kia (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="kia">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="volvo">
+                                    Volvo (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="volvo">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="mazda">
+                                    Mazda (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="mazda">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="lincolen">
+                                    Lincolen (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="lincolen">
+                                </div>
                               </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="330i">
-                                  330i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="330i">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="238i-x-drive">
-                                  238i X Drive (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="238i-x-drive">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="320i">
-                                  320i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="320i">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="335i">
-                                  335i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="335i">
+                              <div class="model d-none">
+                                <h6>Model</h6>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a3">
+                                    A3 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a3" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a4">
+                                    A4 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a4" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a5">
+                                    A5 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a5" >
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- Mileage -->
+                        <!--  Body Style & Color -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Mileage
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                              Body Style & Color
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div id="mileage">
-                                <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="mileage">140,000</span>
+                              <div class="body-style">
+                                <h6>Body Style</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-style">
+                                    <span>All</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-style" checked>
                                 </div>
-                                <input type="range" id="mileage" value="400" min="0" max="150000" data-type="mileage">
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="sedan">
+                                    <img src="../dist/assets/images/cars/sedan.png" alt="sedan">
+                                    <span>Sedan</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="sedan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="suv">
+                                    <img src="../dist/assets/images/cars/suv.png" alt="suv">
+                                    <span>SUV</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="suv">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="truck">
+                                    <img src="../dist/assets/images/cars/truck.png" alt="truck">
+                                    <span>Truck</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="truck">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hatchback">
+                                    <img src="../dist/assets/images/cars/hatchback.png" alt="hatchback">
+                                    <span>Hatchback</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="hatchback">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="coupe">
+                                    <img src="../dist/assets/images/cars/coupe.png" alt="coupe">
+                                    <span>Coupe</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="coupe">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/convertible.png" alt="convertible">
+                                    <span>Convertible</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="convertible">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/minivan.png" alt="minivan">
+                                    <span>Minivan</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="minivan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/wagon.png" alt="wagon">
+                                    <span>Wagon</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="wagon">
+                                </div>
+                              </div>
+                              <div class="color">
+                                <h6>Color</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-color">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-color" checked >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="white">
+                                    <span class="white"></span>
+                                    White
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="white" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="black">
+                                    <span class="black"></span>
+                                    Black
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="black" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="gray">
+                                    <span class="gray"></span>
+                                    Gray
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="gray" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="blue">
+                                    <span class="blue"></span>
+                                    Blue
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="blue" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="silver">
+                                    <span class="silver"></span>
+                                    Silver
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="silver" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="red">
+                                    <span class="red"></span>
+                                    Red
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="red" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="green">
+                                    <span class="green"></span>
+                                    Green
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="green" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="brown">
+                                    <span class="brown"></span>
+                                    Brwon
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="brown" >
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- Drivetrain -->
+                        <!-- Year & Mileage -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                              Drivetrain
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Year & Mileage
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="front-wheel-drive">
-                                  Front Wheel Drive (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="front-wheel-drive">
+                              <div id="year" class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                  <span>Year</span>
+                                  <span class="range-val">2019</span>
+                                </div>
+                                <input type="range" id="mileage" value="2019" min="2015" max="2025" step="1" data-type="mileage">
                               </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="four-wheel-drive">
-                                  Four Wheel Drive 4 x 4 (8)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="four-wheel-drive">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Features -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                              Features
-                            </button>
-                          </h2>
-                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="alloy-wheel">
-                                  Alloy Wheels (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="alloy-wheel">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="auto-dimming">
-                                  Auto Dimming (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="four-wheel-drive">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="back-camera">
-                                  Back Camera (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="back-camera">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="blind-spot">
-                                  Blind Spot monitors (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="blind-spot">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Colors -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                              Colors
-                            </button>
-                          </h2>
-                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="white">
-                                  White (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="white">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="black">
-                                  Black (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="black">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="gray">
-                                  Gray (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="gray">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="red">
-                                  Red (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="red">
+                              <div id="mileage">
+                                <div class="d-flex justify-content-between">
+                                  <span>Max Mileage</span>
+                                  <span class="range-val">140,000</span>
+                                </div>
+                                <input type="range" id="mileage" value="400" min="0" max="150000" step="1000" data-type="mileage">
                               </div>
                             </div>
                           </div>
                         </div>
                         <!-- Fuel Type -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                               Fuel Type 
                             </button>
                           </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="gasoline">
-                                  Gasoline (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="gasoline">
+                              <div class="fuel-type">
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-fuel-type">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-fuel-type" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="gasoline">
+                                    Gasoline (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="gasoline">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hybrid-electric">
+                                    Hybrid Electric (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="hybrid-electric">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="plug-in-hybrid">
+                                    Plug-in Hybrid (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="plug-in-hybrid">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="battery-electric">
+                                    Battery Electric (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="battery-electric">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="diesel">
+                                    Diesel (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="diesel">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="fuel-efficient">
+                                    Fuel Efficient (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="fuel-efficient">
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <!-- Drive Type & Engine -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                              Drive Type & Engine 
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="fuel-type mb-4">
+                                <h6>Fuel Type</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-fuel-type">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-fuel-type" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="4WD">
+                                    Four-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="4WD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="AWD">
+                                    All-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="AWD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="FWD">
+                                    Front-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="FWD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="RWD">
+                                    Rear-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="RWD">
+                                </div>
+                              </div>
+                              <div class="transmission mb-4">
+                                <h6>Transmission</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="automatic">
+                                    Automatic
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="automatic" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="manual">
+                                    Manual
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="manual">
+                                </div>
+                              </div>
+                              <div class="cylinders mb-4">
+                                <h6>Cylinders</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="4-cylinder">
+                                    4 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="4-cylinder" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="6-cylinder">
+                                    6 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="6-cylinder" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="8-cylinder">
+                                    8 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="8-cylinder" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="12-cylinder">
+                                    12 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="12-cylinder" >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Features -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                              Features
+                            </button>
+                          </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="form-check d-flex justify-content-between active">
+                                <label class="form-check-label" for="alloy-wheel">
+                                  Alloy Wheels (3)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="alloy-wheel" checked>
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="auto-dimming">
+                                  Auto Dimming (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="four-wheel-drive">
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="back-camera">
+                                  Back Camera (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="back-camera">
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="blind-spot">
+                                  Blind Spot monitors (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="blind-spot">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
                         <!-- Other Filters -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingSeven">
@@ -323,26 +642,26 @@
                             <div class="accordion-body">
                               <div id="min-seat-cap" class="mb-3">
                                 <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="min-seat-cap">140,000</span>
+                                  <span>Min Seat Capacity</span>
+                                  <span class="range-val">2</span>
                                 </div>
-                                <input type="range" value="400" min="0" max="150000" data-type="min-ceat-cap">
+                                <input type="range" value="2" min="2" max="8" data-type="min-ceat-cap">
                               </div>
                               <div id="max-seat-cap" class="mb-4">
                                 <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="max-seat-cap">140,000</span>
+                                  <span>Max Seat Capacity</span>
+                                  <span class="range-val">11</span>
                                 </div>
-                                <input type="range" value="400" min="0" max="150000" data-type="max-seat-cap">
+                                <input type="range" value="11" min="0" max="12" data-type="max-seat-cap">
                               </div>
                               <div class="owner mb-3">
-                                <div class="form-check form-switch px-0 d-flex justify-content-between">
+                                <div class="form-check form-switch px-0 py-0 d-flex justify-content-between border-0">
                                   <label class="form-check-label" for="owner">Single Owner</label>
                                   <input class="form-check-input" type="checkbox" role="switch" id="owner">
                                 </div>
                               </div>
                               <div class="accindent">
-                                <div class="form-check form-switch px-0 d-flex justify-content-between">
+                                <div class="form-check form-switch px-0 py-0 border-0 d-flex justify-content-between">
                                   <label class="form-check-label" for="accindent">No Accidents</label>
                                   <input class="form-check-input" type="checkbox" role="switch" id="accindent">
                                 </div>
@@ -358,12 +677,12 @@
                     <form id="payment">
                       <div class="d-flex justify-content-between flex-wrap align-items-center gap-2">
                         <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
-                          <label for="monthly-payment" class="form-label">Min Payment</label>
+                          <label for="min-payment" class="form-label">Min Payment</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">$</span>
-                            <input type="number" class="form-control" id="monthly-payment" value="" >
+                            <input type="number" class="form-control" id="min-payment" value="" >
                           </div>
-                          <input type="range" id="monthly-range" value="400" min="0" max="4000" data-type="monthly-payment">
+                          <input type="range" id="monthly-range" value="400" min="0" max="4000" data-type="min-payment">
                         </div>
                         <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
                           <label for="cash-down" class="form-label">Max Payment</label>
@@ -387,181 +706,492 @@
                     <div class="refine-search">
                       <h6>Refine Your Search</h6>
                       <div class="accordion" id="accordionExample">
-                        <!-- Trim -->
+                        <!-- Make & Model -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Trim
+                              Make & Model
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="238i">
-                                  238i (23)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="238i">
+                              <div class="make">
+                                <h6>Make</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="toyota">
+                                    Toyota (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="toyota">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="ford">
+                                    Ford (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="ford">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="honda">
+                                    Honda (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="honda">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="nissan">
+                                    Nissan (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="nissan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="jeep">
+                                    Jeep (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="jeep">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="chevorlet">
+                                    Chevorlet (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="chevorlet">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hyundai">
+                                    Hyundai (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="hyundai">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="mercedes-benz">
+                                    Mercedes-Benz (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="mercedes-benz">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="bmw">
+                                    Bmw (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="bmw">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="lexus">
+                                    Lexus (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="lexus">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="audi">
+                                    Audi (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="audi">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="cadillac">
+                                    Cadillac (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="cadillac">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="kia">
+                                    Kia (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="kia">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="volvo">
+                                    Volvo (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="volvo">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="mazda">
+                                    Mazda (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="mazda">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="lincolen">
+                                    Lincolen (10)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" value="" id="lincolen">
+                                </div>
                               </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="330i">
-                                  330i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="330i">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="238i-x-drive">
-                                  238i X Drive (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="238i-x-drive">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="320i">
-                                  320i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="320i">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="335i">
-                                  335i (6)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="335i">
+                              <div class="model d-none">
+                                <h6>Model</h6>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a3">
+                                    A3 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a3" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a4">
+                                    A4 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a4" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="a5">
+                                    A5 (4)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="a5" >
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- Mileage -->
+                        <!--  Body Style & Color -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Mileage
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                              Body Style & Color
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div id="mileage">
-                                <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="mileage">140,000</span>
+                              <div class="body-style">
+                                <h6>Body Style</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-style">
+                                    <span>All</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-style" checked>
                                 </div>
-                                <input type="range" id="mileage" value="400" min="0" max="150000" data-type="mileage">
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="sedan">
+                                    <img src="../dist/assets/images/cars/sedan.png" alt="sedan">
+                                    <span>Sedan</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="sedan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="suv">
+                                    <img src="../dist/assets/images/cars/suv.png" alt="suv">
+                                    <span>SUV</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="suv">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="truck">
+                                    <img src="../dist/assets/images/cars/truck.png" alt="truck">
+                                    <span>Truck</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="truck">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hatchback">
+                                    <img src="../dist/assets/images/cars/hatchback.png" alt="hatchback">
+                                    <span>Hatchback</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="hatchback">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="coupe">
+                                    <img src="../dist/assets/images/cars/coupe.png" alt="coupe">
+                                    <span>Coupe</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="coupe">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/convertible.png" alt="convertible">
+                                    <span>Convertible</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="convertible">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/minivan.png" alt="minivan">
+                                    <span>Minivan</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="minivan">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="convertible">
+                                    <img src="../dist/assets/images/cars/wagon.png" alt="wagon">
+                                    <span>Wagon</span>
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="wagon">
+                                </div>
+                              </div>
+                              <div class="color">
+                                <h6>Color</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-color">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-color" checked >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="white">
+                                    <span class="white"></span>
+                                    White
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="white" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="black">
+                                    <span class="black"></span>
+                                    Black
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="black" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="gray">
+                                    <span class="gray"></span>
+                                    Gray
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="gray" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="blue">
+                                    <span class="blue"></span>
+                                    Blue
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="blue" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="silver">
+                                    <span class="silver"></span>
+                                    Silver
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="silver" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="red">
+                                    <span class="red"></span>
+                                    Red
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="red" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="green">
+                                    <span class="green"></span>
+                                    Green
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="green" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="brown">
+                                    <span class="brown"></span>
+                                    Brwon
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="brown" >
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- Drivetrain -->
+                        <!-- Year & Mileage -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                              Drivetrain
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Year & Mileage
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="front-wheel-drive">
-                                  Front Wheel Drive (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="front-wheel-drive">
+                              <div id="year" class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                  <span>Year</span>
+                                  <span class="range-val">2019</span>
+                                </div>
+                                <input type="range" id="mileage" value="2019" min="2015" max="2025" step="1" data-type="mileage">
                               </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="four-wheel-drive">
-                                  Four Wheel Drive 4 x 4 (8)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="four-wheel-drive">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Features -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                              Features
-                            </button>
-                          </h2>
-                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="alloy-wheel">
-                                  Alloy Wheels (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="alloy-wheel">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="auto-dimming">
-                                  Auto Dimming (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="four-wheel-drive">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="back-camera">
-                                  Back Camera (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="back-camera">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="blind-spot">
-                                  Blind Spot monitors (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="blind-spot">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Colors -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                              Colors
-                            </button>
-                          </h2>
-                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="white">
-                                  White (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="white">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="black">
-                                  Black (3)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="black">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="gray">
-                                  Gray (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="gray">
-                              </div>
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="red">
-                                  Red (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="red">
+                              <div id="mileage">
+                                <div class="d-flex justify-content-between">
+                                  <span>Max Mileage</span>
+                                  <span class="range-val">140,000</span>
+                                </div>
+                                <input type="range" id="mileage" value="400" min="0" max="150000" step="1000" data-type="mileage">
                               </div>
                             </div>
                           </div>
                         </div>
                         <!-- Fuel Type -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                               Fuel Type 
                             </button>
                           </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <div class="form-check d-flex justify-content-between px-0 py-1">
-                                <label class="form-check-label" for="gasoline">
-                                  Gasoline (5)
-                                </label>
-                                <input class="form-check-input" type="checkbox" value="" id="gasoline">
+                              <div class="fuel-type">
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-fuel-type">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-fuel-type" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="gasoline">
+                                    Gasoline (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="gasoline">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="hybrid-electric">
+                                    Hybrid Electric (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="hybrid-electric">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="plug-in-hybrid">
+                                    Plug-in Hybrid (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="plug-in-hybrid">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="battery-electric">
+                                    Battery Electric (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="battery-electric">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="diesel">
+                                    Diesel (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="diesel">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="fuel-efficient">
+                                    Fuel Efficient (5)
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="fuel-efficient">
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <!-- Drive Type & Engine -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                              Drive Type & Engine 
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="fuel-type mb-4">
+                                <h6>Fuel Type</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="all-fuel-type">
+                                    All
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="all-fuel-type" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="4WD">
+                                    Four-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="4WD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="AWD">
+                                    All-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="AWD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="FWD">
+                                    Front-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="FWD">
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="RWD">
+                                    Rear-wheel Drive
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="RWD">
+                                </div>
+                              </div>
+                              <div class="transmission mb-4">
+                                <h6>Transmission</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="automatic">
+                                    Automatic
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="automatic" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="manual">
+                                    Manual
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="manual">
+                                </div>
+                              </div>
+                              <div class="cylinders mb-4">
+                                <h6>Cylinders</h6>
+                                <div class="form-check d-flex justify-content-between active">
+                                  <label class="form-check-label" for="4-cylinder">
+                                    4 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="4-cylinder" checked>
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="6-cylinder">
+                                    6 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="6-cylinder" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="8-cylinder">
+                                    8 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="8-cylinder" >
+                                </div>
+                                <div class="form-check d-flex justify-content-between">
+                                  <label class="form-check-label" for="12-cylinder">
+                                    12 Cylinder
+                                  </label>
+                                  <input class="form-check-input" type="checkbox" id="12-cylinder" >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Features -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                              Features
+                            </button>
+                          </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="form-check d-flex justify-content-between active">
+                                <label class="form-check-label" for="alloy-wheel">
+                                  Alloy Wheels (3)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="alloy-wheel" checked>
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="auto-dimming">
+                                  Auto Dimming (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="four-wheel-drive">
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="back-camera">
+                                  Back Camera (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="back-camera">
+                              </div>
+                              <div class="form-check d-flex justify-content-between">
+                                <label class="form-check-label" for="blind-spot">
+                                  Blind Spot monitors (5)
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="blind-spot">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
                         <!-- Other Filters -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingSeven">
@@ -573,26 +1203,26 @@
                             <div class="accordion-body">
                               <div id="min-seat-cap" class="mb-3">
                                 <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="min-seat-cap">140,000</span>
+                                  <span>Min Seat Capacity</span>
+                                  <span class="range-val">2</span>
                                 </div>
-                                <input type="range" value="400" min="0" max="150000" data-type="min-ceat-cap">
+                                <input type="range" value="2" min="2" max="8" data-type="min-ceat-cap">
                               </div>
                               <div id="max-seat-cap" class="mb-4">
                                 <div class="d-flex justify-content-between">
-                                  <span>Max Mileage</span>
-                                  <span class="max-seat-cap">140,000</span>
+                                  <span>Max Seat Capacity</span>
+                                  <span class="range-val">11</span>
                                 </div>
-                                <input type="range" value="400" min="0" max="150000" data-type="max-seat-cap">
+                                <input type="range" value="11" min="0" max="12" data-type="max-seat-cap">
                               </div>
                               <div class="owner mb-3">
-                                <div class="form-check form-switch px-0 d-flex justify-content-between">
+                                <div class="form-check form-switch px-0 py-0 d-flex justify-content-between border-0">
                                   <label class="form-check-label" for="owner">Single Owner</label>
                                   <input class="form-check-input" type="checkbox" role="switch" id="owner">
                                 </div>
                               </div>
                               <div class="accindent">
-                                <div class="form-check form-switch px-0 d-flex justify-content-between">
+                                <div class="form-check form-switch px-0 py-0 border-0 d-flex justify-content-between">
                                   <label class="form-check-label" for="accindent">No Accidents</label>
                                   <input class="form-check-input" type="checkbox" role="switch" id="accindent">
                                 </div>
@@ -603,6 +1233,7 @@
                       </div>
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -611,31 +1242,79 @@
             <div class="search-result-main">
               <!-- Top Section -->
               <div class="top-search-section  py-4">
-                <div class="container-fluid d-flex justify-content-between align-items-center">
-                  <div class="input-group flex-nowrap mb-0">
-                    <input type="search" class="form-control px-4" placeholder="serach by make, model or keyword" aria-label="search" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping">
-                      <i class="bi bi-search"></i>
-                    </span>
-                  </div>
-                  <div class="test-drive d-none d-md-block">
-                    <div class="form-check form-switch px-0 d-flex justify-content-between align-items-center">
-                      <label class="form-check-label" for="test-drive">Test drive available</label>
-                      <input class="form-check-input" type="checkbox" role="switch" id="test-drive">
+                <div class="container-fluid ">
+                  <div class="d-flex justify-content-between align-items-center mb-4 mb-lg-0">
+                    <div class="input-group flex-nowrap mb-0">
+                      <input type="search" class="form-control px-4" placeholder="serach by make, model or keyword" aria-label="search" aria-describedby="addon-wrapping">
+                      <span class="input-group-text" id="addon-wrapping">
+                        <i class="bi bi-search"></i>
+                      </span>
+                    </div>
+                    <div class="test-drive d-none d-lg-block">
+                      <div class="form-check form-switch px-0 d-flex justify-content-between align-items-center">
+                        <label class="form-check-label" for="test-drive">Test drive available</label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="test-drive">
+                      </div>
                     </div>
                   </div>
+                  <!-- Mobile Filter & sort -->
+                  <div class="mobile-filter gap-2 d-flex d-lg-none justify-content-between align-items-center">
+                    <span id="filter" class="d-flex items-center justify-content-center gap-2">
+                      <i class="bi bi-sliders"></i>
+                      Filters
+                    </span>
+                    <div class="dropdown p-0">
+                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Recommened</a></li>
+                        <li><a class="dropdown-item" href="#">Low to high</a></li>
+                        <li><a class="dropdown-item" href="#">High to low</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Mobile Filter & sort -->
                 </div>
               </div>
               <!-- Result -->
               <div class="results-section">
                 <div class="container-fluid">
                   <!-- Filter results -->
-                  <div class="filter-results py-4"></div>
+                  <div id="filter-results" class="d-flex align-items-center justify-content-between py-4 flex-wrap gap-3 gap-lg-0">
+                    <div class="filters-name align-items-center justify-content-between  gap-3 d-flex">
+                      <div class="filter">
+                        <span>SUV</span>
+                        <span><i class="bi bi-x"></i></span>
+                      </div>
+                      <div class="filter">
+                        <span>pickup</span>
+                        <span><i class="bi bi-x"></i></span>
+                      </div>
+                      <div class="clear-all flex-grow-1">
+                        <span>Clear All</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="results-number">
+                        <span class="number">25,370</span> Used Car For Sale
+                      </div>
+                      <div class="sort d-none d-lg-flex align-items-center">
+                        <span>Sort:</span>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Recommened</option>
+                          <option value="1">Low to high</option>
+                          <option value="2">High to low</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- Filter results -->
                   <div id="results">
                     <div class="row">
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -716,7 +1395,7 @@
                         </a>
                       </div>
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -797,7 +1476,7 @@
                         </a>
                       </div>
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -876,7 +1555,7 @@
                         </a>
                       </div>
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -955,7 +1634,7 @@
                         </a>
                       </div>
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -1034,7 +1713,7 @@
                         </a>
                       </div>
                       <!-- card -->
-                      <div class="col-6 col-xl-4 mb-3">
+                      <div class="col-12 col-sm-6 col-xl-4 mb-4">
                         <a href="#">
                           <div class="card">
                             <div class="card-head">
@@ -1112,6 +1791,18 @@
                           </div>
                         </a>
                       </div>
+                    </div>
+                  </div>
+                  <!-- Pagination -->
+                  <div class="results-pagination d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                    <div class="d-flex align-items-center gap-2">
+                      <span> <i class="bi bi-chevron-left"></i>  First</span>
+                      <span> <i class="bi bi-chevron-left"></i> Prev</span>
+                    </div>
+                    <p class="mb-0 order-2 order-sm-0 mt-3 mt-sm-0 text-center w-100">45-65 of 25,370 results</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <span>Next <i class="bi bi-chevron-right"></i></span>
+                      <span>Last <i class="bi bi-chevron-right"></i></span>
                     </div>
                   </div>
                 </div>

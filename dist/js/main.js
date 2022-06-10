@@ -30,20 +30,53 @@ $('.swiper-pagination .swiper-pagination-bullet').each(function() {
 })
 
 //Set initial Values to Monthly Payment & Cash-down based on the range value
-let monthlyInitVal = $('.estimate input[data-type=monthly-payment]').val();
-let cashInitVal    = $('.estimate input[data-type=cash-down]').val();
-$('.estimate #monthly-payment').val(monthlyInitVal);
-$('.estimate #cash-down').val(cashInitVal);
+// let monthlyInitVal = $('.estimate input[data-type=monthly-payment]').val();
+// let cashInitVal    = $('.estimate input[data-type=cash-down]').val();
+// $('.estimate #monthly-payment').val(monthlyInitVal);
+// $('.estimate #cash-down').val(cashInitVal);
 
-// /Chanage Monthly Payment & Cash-down when user change range type and visa versa
-$('.estimate input[type=range]').on('input', function() {
-  let target = `#${$(this).attr('data-type')}`;
-  $(target).val($(this).val())
-});
-$('.estimate input[type=number]').on('input', function() {
-  let target = `${$(this).attr('id')}`;
-  $(`[data-type=${target}]`).val($(this).val())
+// // /Chanage Monthly Payment & Cash-down when user change range type and visa versa
+// $('.estimate input[type=range]').on('input', function() {
+//   let target = `#${$(this).attr('data-type')}`;
+//   $(target).val($(this).val())
+// });
+// $('.estimate input[type=number]').on('input', function() {
+//   let target = `${$(this).attr('id')}`;
+//   $(`[data-type=${target}]`).val($(this).val())
+// })
+
+// SET INITAIL VALUES FOR INPUT BASED ON INPUT RANGE VALUE
+$('input[type=number]').each(function() {
+  let intialVal = $(this).parent().siblings('input[type=range]').val();
+  $(this).attr('value', intialVal)
 })
+$('.range-val').each(function() {
+  let intialVal = $(this).parent().siblings('input[type=range]').val();
+  $(this).text(intialVal);
+})
+
+
+// Change input number when changing range value
+$('input[type=number]').parents().siblings('input[type=range]').each(function() {
+  $(this).on('input', function() {
+    $(this).siblings().find('input[type=number]').val($(this).val())
+  })
+})
+$('.range-val').parents().siblings('input[type=range]').each(function() {
+  $(this).on('input', function() {
+    $(this).siblings().find('.range-val').text($(this).val())
+  })
+})
+
+  $('aside .form-check').on('click', function(e) {
+    if($(this).find('input').attr('checked')) {
+      $(this).find('input').removeAttr('checked');
+      $(this).removeClass('active')
+    } else {
+      $(this).find('input').attr('checked', 'checked');
+      $(this).addClass('active')
+    }
+  })
 
 // Show & hide adjust terms box
 $('#results .card .adjust-terms').on('click', function(e) {
@@ -53,6 +86,17 @@ $('#results .card .adjust-terms').on('click', function(e) {
 $('#results .card .terms-box .arrow-down').on('click', function(e) {
   e.preventDefault()
   $(this).parents('.terms-box').removeClass('show')
+});
+
+// Show mobile filter when clicking on "filter button"
+$('.mobile-filter #filter').on('click', function() {
+  $('aside.filter').addClass('show');
+  $('html, body').css('overflow-y', 'hidden')
+})
+// Hide mobile filter when clicking on "X" icon
+$('aside.filter .filter-head .icon').on('click', function() {
+  $('aside.filter').removeClass('show');
+  $('html, body').css('overflow-y', 'auto')
 })
 
 

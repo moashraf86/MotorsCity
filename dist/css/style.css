@@ -490,15 +490,24 @@ html[dir=rtl] #testimonials .select-cars h5 {
   height: 4px;
 }
 
+#search-result-wrapper aside.filter::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track ,
 #testimonials .select-cars form::-webkit-scrollbar-track ,
 #body-style .row::-webkit-scrollbar-track,
-#brands .row::-webkit-scrollbar-track {
+#brands .row::-webkit-scrollbar-track,
+#search-result-wrapper aside.filter::-webkit-scrollbar-track {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+body::-webkit-scrollbar-thumb,
 #testimonials .select-cars form::-webkit-scrollbar-thumb,
 #body-style .row::-webkit-scrollbar-thumb,
-#brands .row::-webkit-scrollbar-thumb {
+#brands .row::-webkit-scrollbar-thumb,
+#search-result-wrapper aside.filter::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, var(--green), var(--sky), var(--purple));
   cursor: pointer;
 }
@@ -941,8 +950,16 @@ html[dir=rtl] #sell li img{
 /*******[ 1 ] side-bar filter **********/
 #search-result-wrapper {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
 }
+#search-result-wrapper aside.filter {
+  flex: 1 0 350px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
 #search-result-wrapper aside.filter {
   flex: 1 0 350px;
   position: sticky;
@@ -1009,6 +1026,7 @@ html[dir=rtl] #sell li img{
 
 .sidebar-filter .tab-content .accordion .accordion-item{
   border: none;
+  border-bottom: 1px solid #ededed;
 }
 
 .sidebar-filter .tab-content .accordion .accordion-button,
@@ -1053,6 +1071,81 @@ html[dir=rtl] #sell li img{
   border: none;
 }
 
+.sidebar-filter .refine-search .form-check {
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar-filter .refine-search .form-check.active {
+  border-color: var(--sky);
+  background-color: rgb(130 172 212 / .33)
+}
+
+.sidebar-filter .refine-search .form-check label{
+  color: black;
+  pointer-events: none;
+}
+
+.sidebar-filter .refine-search .body-style label img {
+  width: 60px;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.sidebar-filter .refine-search .color label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar-filter .refine-search .color label span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  display: block;
+}
+
+.sidebar-filter .refine-search .color label span.white {
+  background-color: var(--white);
+}
+
+.sidebar-filter .refine-search .color label span.black {
+  background-color: black;
+}
+
+.sidebar-filter .refine-search .color label span.gray {
+  background-color: gray;
+}
+
+.sidebar-filter .refine-search .color label span.blue {
+  background-color: blue;
+}
+
+.sidebar-filter .refine-search .color label span.silver {
+  background-color: silver;
+}
+
+.sidebar-filter .refine-search .color label span.red {
+  background-color: red;
+}
+.sidebar-filter .refine-search .color label span.green {
+  background-color: green;
+}
+.sidebar-filter .refine-search .color label span.brown {
+  background-color: brown;
+}
+
+.sidebar-filter .refine-search .owner .form-check.active,
+.sidebar-filter .refine-search .accindent .form-check.active {
+  background-color: var(--white);
+  border: none;
+}
+
 .search-result-main .top-search-section {
   background-color: var(--white-100);
 }
@@ -1063,12 +1156,13 @@ html[dir=rtl] #sell li img{
 
 .search-result-main .test-drive {
   width: 250px;
+  min-width: max-content;
   margin-left: 30px;
 }
 
 .search-result-main #results .card{
-  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 11%);
-  border-radius: 20px;
+  box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 15%);
+  border-radius: 10px;
   border: none;
   overflow: hidden;
 }
@@ -1088,11 +1182,6 @@ html[dir=rtl] #sell li img{
 .search-result-main #results .card .specifications{
   font-size: 12px;
   color: var(--dark-grey);
-}
-
-.search-result-main #results .card label.compare {
-  /* display: flex; */
-  /* align-items: cent/er; */
 }
 
 .search-result-main #results .card .compare .text{
@@ -1127,6 +1216,7 @@ html[dir=rtl] #sell li img{
 .search-result-main #results .card .price .total {
   font-size: 20px;
   font-weight: 800;
+  color: var(--dark-grey);
 }
 
 .search-result-main #results .card .price .monthly {
@@ -1175,8 +1265,10 @@ html[dir=rtl] #sell li img{
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   transform: translateY(100%);
-  opacity: .5;
+  opacity: 0;
   transition: all 300ms ease-in-out;
 }
 
@@ -1273,6 +1365,102 @@ html[dir=rtl] #sell li img{
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
+}
+
+.search-result-main .results-pagination span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
+  color: var(--purple);
+  padding: 5px 15px;
+  font-weight: 600;
+  transition:  all 300ms ease-in-out;
+}
+.search-result-main .results-pagination span:hover{
+  color: var(--white);
+  background-color: var(--purple);
+  cursor: pointer;
+}
+
+.search-result-main .results-pagination span .bi::before{
+  font-weight: 600 !important;
+  font-size: 14px;
+}
+.search-result-main .results-pagination p{
+  font-weight: 600;
+}
+
+.search-result-main #filter-results .filter {
+  background-color: var(--white-100);
+  padding: 5px 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.search-result-main #filter-results .filter .bi{
+  font-size: 20px;
+}
+
+.search-result-main #filter-results .clear-all span{
+  color: var(--green);
+  font-weight: 600;
+}
+
+.search-result-main #filter-results .sort select{
+  color: var(--purple);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.search-result-main #filter-results .sort select:focus{
+  box-shadow: none;
+}
+
+.search-result-main #filter-results .sort select option{
+  color: var(--dark-grey);
+}
+
+.search-result-main .mobile-filter {
+  border: 1px solid #ededed;
+  border-right: 0;
+  border-left: 0;
+}
+
+.search-result-main .mobile-filter span,
+.search-result-main .mobile-filter .dropdown{
+  display: block;
+  flex: 1 0 calc(50% - .5rem);
+  text-align: center;
+  padding: 10px 0;
+  color: var(--purple);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
+  border: none;
+}
+
+.search-result-main .mobile-filter span#filter{
+  border-right: 1px solid #ededed;
+}
+
+.search-result-main .mobile-filter .dropdown button{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  color: var(--purple);
+}
+.search-result-main .mobile-filter .dropdown .dropdown-menu{
+  min-width: 100%;
 }
 
 
@@ -1563,7 +1751,62 @@ footer .footer-copyright {
   }
   
   #search-result-wrapper aside.filter {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -450px;
+    bottom: 0;
+    max-width: 450px;
+    background-color: #fff;
+    z-index: 9999;
+    transition: left 300ms ease-in-out;
+  }
+
+  #search-result-wrapper aside.filter.show {
+    left: 0;
+  }
+
+  #search-result-wrapper aside .sidebar-filter {
+    position: relative;
+    transition:  opacity 300ms ease-in-out;
+  }
+
+  #search-result-wrapper aside .sidebar-filter::after {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 450px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -10;
+    opacity: 0;
+    width: 0;
+    transition:  opacity 300ms ease-in-out;
+  }
+
+  #search-result-wrapper aside.show .sidebar-filter::after {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 450px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999;
+    opacity: 1;
+    width: 100%;
+    transition:  opacity 300ms ease-in-out;
+  }
+
+  #search-result-wrapper aside.filter .filter-head .icon {
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #search-result-wrapper aside.filter .filter-head .icon .bi::before{
+    font-weight: 600 !important;
   }
 
   footer .sign-up  {
