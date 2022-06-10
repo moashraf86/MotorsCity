@@ -1763,21 +1763,22 @@ footer .footer-copyright {
     position: fixed;
     top: 0;
     left: -450px;
-    bottom: 0;
+    bottom: auto;
+    width: 100%;
     max-width: 450px;
     background-color: #fff;
     z-index: 9999;
-    min-height: 100%;
+    height: -webkit-fill-available;
+    min-height: max-content;
     transition: left 300ms ease-in-out;
+    overflow-y: scroll;
   }
-
   #search-result-wrapper aside.filter.show {
     left: 0;
   }
 
   #search-result-wrapper aside .sidebar-filter {
     position: relative;
-    transition:  opacity 300ms ease-in-out;
   }
 
   #search-result-wrapper aside .sidebar-filter::after {
@@ -1791,7 +1792,6 @@ footer .footer-copyright {
     z-index: -10;
     opacity: 0;
     width: 0;
-    transition:  opacity 300ms ease-in-out;
   }
 
   #search-result-wrapper aside.show .sidebar-filter::after {
