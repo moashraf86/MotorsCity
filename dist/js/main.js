@@ -45,4 +45,14 @@ $('.estimate input[type=number]').on('input', function() {
   $(`[data-type=${target}]`).val($(this).val())
 })
 
+// Show & hide adjust terms box
+$('#results .card .adjust-terms').on('click', function(e) {
+  e.preventDefault()
+  $(this).parents('.card-body').find('.terms-box').addClass('show')
+})
+$('#results .card .terms-box .arrow-down').on('click', function(e) {
+  e.preventDefault()
+  $(this).parents('.terms-box').removeClass('show')
+})
+
 

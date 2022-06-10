@@ -36,7 +36,6 @@ html[dir=rtl] body {
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--gray);
-  height: 4000px;
 }
 
 body .wrapper {
@@ -937,6 +936,350 @@ html[dir=rtl] #sell li img{
   filter: none;
 }
 
+/*****************  Search result page *****************/
+
+/*******[ 1 ] side-bar filter **********/
+#search-result-wrapper {
+  display: flex;
+  gap: 30px;
+}
+#search-result-wrapper aside.filter {
+  flex: 1 0 350px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+#search-result-wrapper section.result {
+  flex: 1 1 auto
+}
+
+#search-result-wrapper .sidebar-filter .form-group {
+  background-color: var(--white-100);
+  border-radius: 50px;
+  padding: 5px;
+}
+
+#search-result-wrapper .sidebar-filter .form-group label{
+  flex-grow: 1;
+  text-align: center;
+}
+
+#search-result-wrapper .sidebar-filter .form-group label span,
+.sidebar-filter .nav-tabs .nav-link {
+  background-color: transparent;
+  color: var(--dark-grey);
+  display: block;
+  font-size: 16px;
+  padding: 6px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+#search-result-wrapper .sidebar-filter .form-group label input[type=radio]:checked + span {
+  background-color: var(--white);
+  color: var(--purple);
+  font-size: 16px;
+}
+
+#search-result-wrapper .input-group-text{
+  background-color: var(--white);
+  border: none;
+}
+#search-result-wrapper .sidebar-filter .tab-content form .form-control,
+#search-result-wrapper .search-result-main .top-search-section .form-control {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 5px;
+}
+
+#search-result-wrapper .sidebar-filter .tab-content form .input-group,
+.search-result-main .top-search-section .input-group  {
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.sidebar-filter .tab-content p.desc{
+  font-size: 12px;
+}
+
+.sidebar-filter .tab-content .accordion .accordion-item{
+  border: none;
+}
+
+.sidebar-filter .tab-content .accordion .accordion-button,
+.sidebar-filter .tab-content .accordion .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar-filter .tab-content .accordion .accordion-button:not(.collapsed){
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.sidebar-filter .tab-content .accordion .accordion-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.form-switch .form-check-input {
+  width: 45px;
+  height: 25px;
+}
+
+.sidebar-filter .nav-tabs {
+  background-color: var(--white-100);
+  border-radius: 45px;
+  padding: 5px;
+}
+
+.sidebar-filter .nav-tabs .nav-link.active{
+  background-color: var(--white);
+  color: var(--purple);
+  border: none;
+}
+
+.sidebar-filter .nav-tabs .nav-link.active{
+  background-color: var(--white);
+  color: var(--purple);
+  border: none;
+}
+
+.search-result-main .top-search-section {
+  background-color: var(--white-100);
+}
+
+.search-result-main .top-search-section .form-control  {
+  border: none;
+}
+
+.search-result-main .test-drive {
+  width: 250px;
+  margin-left: 30px;
+}
+
+.search-result-main #results .card{
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 11%);
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.search-result-main #results .card .card-head{
+  background: url('../assets/images/cars/hyundai.png') no-repeat;
+  background-position: top;
+  padding: 50%;
+  background-size: cover;
+}
+
+.search-result-main #results .col-6 a:hover{
+  color: var(--dark-grey);
+}
+
+.search-result-main #results .card .year,
+.search-result-main #results .card .specifications{
+  font-size: 12px;
+  color: var(--dark-grey);
+}
+
+.search-result-main #results .card label.compare {
+  /* display: flex; */
+  /* align-items: cent/er; */
+}
+
+.search-result-main #results .card .compare .text{
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.search-result-main #results .card .compare input[type=checkbox] + span {
+  width: 12px;
+  height: 12px;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  position: relative;
+}
+
+.search-result-main #results .card .compare input[type=checkbox]:checked + span::after {
+  position: absolute;
+  content: '';
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: var(--sky);
+}
+
+.search-result-main #results .card .specifications {
+  border-bottom: 1px solid #ededed;
+}
+
+.search-result-main #results .card .price .total {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.search-result-main #results .card .price .monthly {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.search-result-main #results .card .price .cash {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.search-result-main #results .card .adjust-terms {
+  background-color: var(--white-100);
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--purple);
+}
+
+.search-result-main #results .card .adjust-terms {
+  background-color: var(--white-100);
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--purple);
+}
+
+.search-result-main #results .card label.favorite {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.search-result-main #results .card label.favorite input[type=checkbox]:checked + .bi-heart::before {
+  content: "\f415";
+  color: var(--purple)
+}
+
+.search-result-main #results .card .terms-box {
+  background-color: var(--purple);
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  opacity: .5;
+  transition: all 300ms ease-in-out;
+}
+
+.search-result-main #results .card .terms-box.show {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.search-result-main #results .card .terms-box h6{
+  font-weight: 400;
+  color: var(--white);
+}
+
+.search-result-main #results .card .terms-box .cash{
+  font-weight: 400;
+  color: rgb(255 255 255 / 80%);
+  font-size: 12px;
+}
+
+.search-result-main #results .card .terms-box p.tiny{
+  font-weight: 300;
+  color: rgb(255 255 255 / 40%);
+  font-size: 12px;
+}
+
+.search-result-main #results .card .terms-box label span{
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 7px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  background-color: var(--purple);
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-result-main #results .card .terms-box label input[type=radio]:checked + span{
+  background-color: #787cb8
+}
+
+
+.search-result-main #results .card .terms-box .months {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search-result-main #results .card .terms-box .months::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 1px;
+  background-color: rgb(255 255 255 / 40%);
+  z-index: 1;
+}
+
+.search-result-main #results .card .terms-box .btn {
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  text-align: center;
+  border: 2px solid var(--white); 
+  width: 100%;
+  transition: all 300ms ease-in-out;
+}
+
+.search-result-main #results .card .terms-box .btn:hover {
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.search-result-main #results .card .terms-box .arrow-down {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+.search-result-main #results .card .terms-box .arrow-down::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid var(--white);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+
+
+
+
+
 /* Footer */
 footer {
   padding: 100px 0 0;
@@ -1219,6 +1562,10 @@ footer .footer-copyright {
     grid-template-columns: repeat(4, 1fr)
   }
   
+  #search-result-wrapper aside.filter {
+    display: none;
+  }
+
   footer .sign-up  {
     width: 100%;
   }
