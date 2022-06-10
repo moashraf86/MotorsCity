@@ -1758,6 +1758,7 @@ footer .footer-copyright {
     max-width: 450px;
     background-color: #fff;
     z-index: 9999;
+    min-height: 100%;
     transition: left 300ms ease-in-out;
   }
 
