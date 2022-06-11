@@ -36,6 +36,7 @@ html[dir=rtl] body {
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--gray);
+  overflow-y: scroll;
 }
 
 body .wrapper {
@@ -1768,8 +1769,8 @@ footer .footer-copyright {
     max-width: 450px;
     background-color: #fff;
     z-index: 9999;
-    height: -webkit-fill-available;
-    min-height: max-content;
+    height: -auto;
+    max-height: 100%;
     transition: left 300ms ease-in-out;
     overflow-y: scroll;
     padding-bottom: 2rem;

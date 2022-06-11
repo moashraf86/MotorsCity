@@ -91,12 +91,12 @@ $('#results .card .terms-box .arrow-down').on('click', function(e) {
 // Show mobile filter when clicking on "filter button"
 $('.mobile-filter #filter').on('click', function() {
   $('aside.filter').addClass('show');
-  // $('html, body').css('overflow-y', 'hidden')
+  $('html, body').css('overflow', 'hidden')
 })
 // Hide mobile filter when clicking on "X" icon
 $('aside.filter .filter-head .icon').on('click', function() {
   $('aside.filter').removeClass('show');
-  // $('html, body').css('overflow-y', 'auto')
+  $('html, body').css('overflow-y', 'scroll')
 })
 
 
