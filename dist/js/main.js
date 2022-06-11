@@ -68,15 +68,23 @@ $('.range-val').parents().siblings('input[type=range]').each(function() {
   })
 })
 
-  $('aside .form-check').on('click', function(e) {
-    if($(this).find('input').attr('checked')) {
-      $(this).find('input').removeAttr('checked');
-      $(this).removeClass('active')
-    } else {
-      $(this).find('input').attr('checked', 'checked');
-      $(this).addClass('active')
-    }
+//change range input when hardcode input value
+$('input[type=number]').each(function() {
+  $(this).on('input', function() {
+    $(this).parents().siblings('input[type=range]').val($(this).val())
   })
+}) 
+
+// Add Class Active to to checkbox container 
+$('aside .form-check').on('click', function(e) {
+  if($(this).find('input').attr('checked')) {
+    $(this).find('input').removeAttr('checked');
+    $(this).removeClass('active')
+  } else {
+    $(this).find('input').attr('checked', 'checked');
+    $(this).addClass('active')
+  }
+})
 
 // Show & hide adjust terms box
 $('#results .card .adjust-terms').on('click', function(e) {
