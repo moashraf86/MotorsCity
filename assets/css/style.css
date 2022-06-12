@@ -1410,7 +1410,7 @@ html[dir=rtl] .search-result-main .test-drive {
   border-right-color: transparent;
 }
 
-.search-result-main .results-pagination span{
+.search-result-main .results-pagination div.pag{
   display: flex;
   align-items: center;
   justify-content: space-between;
