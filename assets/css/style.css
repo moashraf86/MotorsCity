@@ -1508,7 +1508,243 @@ html[dir=rtl] .search-result-main .test-drive {
 }
 
 
+/************* [ 2 ] Car Detail Page  ***************/
+#car-details #hero{
+  background-color: #F6F6F6;
+}s
 
+#car-details #hero .back-btn{
+  color: var(--purple);
+}
+
+#car-details #hero .thumbs .swiper-wrapper{
+  height: 100px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+#car-details #hero .slider-control-buttons .slider-btn{
+  border: 1px solid var(--purple);
+  background-color: var(--white);
+  flex-grow: 1;
+  padding: 15px 10px;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#car-details #hero .slider-control-buttons .slider-btn img {
+  width: 20px;
+  object-fit: contain;
+}
+
+#car-details #hero h3 span {
+  font-size: 20px;
+}
+
+#car-details #hero .prices,
+#car-details #hero .features,
+#car-details #hero .btn-group,
+#car-details #hero .refund {
+  border-bottom: 1px solid #ededed;
+}
+
+#car-details #hero .prices .dropdown-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+#car-details #hero .prices .total  {
+  position: relative;
+}
+
+#car-details #hero .prices .total::after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  bottom: 5px;
+  top: 5px;
+  width: 1px;
+  background-color: var(--gray);
+}
+
+#car-details #hero .prices .total span {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+#car-details #hero .prices .monthly .dropdown-toggle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+#car-details #hero .prices .monthly .dropdown-toggle sub{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#car-details #hero .prices .total .dropdown-toggle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+#car-details #hero .features li {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+#car-details #hero .features li img{
+  width: 25px;
+  object-fit: contain;
+}
+
+#car-details #hero .features li .green{
+  color: var(--green);
+}
+
+#car-details #hero .return span{
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+
+#car-details #hero .btn-group .btn-primary,
+#car-details #hero .btn-secondary span.bg{
+  padding: 15px 45px;
+}
+
+#car-details #hero .refund span,
+#car-details #hero .social-links span{
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+#car-details #hero .refund a{
+  color: var(--green);
+}
+
+#car-details #hero .social-links a{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  background: linear-gradient(78.7deg, #4FB5AE 6.66%, #007CC2 93.34%, #595CA9 93.34%);
+}
+
+
+#car-details #vehicle-nav {
+  background-color: var(--white);
+}
+
+#car-details #vehicle-nav a.active{
+  color: var(--purple);
+}
+
+#car-details #vehicle-nav a:hover{
+  color: var(--purple);
+}
+
+#car-details #overview {
+  padding-top: 100px;
+  text-align: center;
+}
+
+#car-details #overview .row{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ededed;
+}
+
+#car-details #overview .title{
+  color: #A9A9A9;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#car-details #overview .value{
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+
+#car-details #overview .row[num=last]{
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+#car-details #overview .row[num=last] .overview-item{
+  background-color: var(--white-100);
+  padding: 15px ;
+  border-radius: 10px;
+}
+
+#car-details #report {
+  padding-top: 80px;
+  text-align: center;
+}
+
+#car-details #report .report-content ul img {
+  width: 40px;
+  object-fit: contain;
+}
+
+#car-details #report .report-content ul span {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-grey);
+  position: relative;
+}
+
+
+#car-details #report .report-content ul .bi {
+  font-size: 20px;
+    background: -webkit-linear-gradient(var(--sky), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+#car-details #report .btn {
+  margin-top: 60px;
+}
+
+/* #car-details #hero .thumbs .swiper-wrapper .swiper-slide{
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=one]{
+  background-image: url('../img/cars/toyota-raize.webp');
+}
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=two]{
+  background-image: url('../img/cars/toyota-raize-2.webp');
+}
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=three]{
+  background-image: url('../img/cars/toyota-raize-3.webp');
+}
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=four]{
+  background-image: url('../img/cars/toyota-raize-4.webp');
+}
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=five]{
+  background-image: url('../img/cars/toyota-raize-5.webp');
+}
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide[num=six]{
+  background-image: url('../img/cars/toyota-raize-6.webp') ;
+} */
+
+#car-details #hero .thumbs .swiper-wrapper .swiper-slide.col{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 
 
 
