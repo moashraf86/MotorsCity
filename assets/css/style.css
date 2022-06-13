@@ -1424,7 +1424,7 @@ html[dir=rtl] .search-result-main .test-drive {
   font-weight: 600;
   transition:  all 300ms ease-in-out;
 }
-.search-result-main .results-pagination span:hover{
+.search-result-main .results-pagination .pag:hover{
   color: var(--white);
   background-color: var(--purple);
   cursor: pointer;
