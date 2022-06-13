@@ -1052,6 +1052,7 @@ html[dir=rtl] .sidebar-filter .nav-tabs .nav-link {
   margin-bottom: 16px;
 }
 
+
 .sidebar-filter .tab-content p.desc{
   font-size: 12px;
 }
@@ -1974,6 +1975,10 @@ footer .footer-copyright {
 
   #brands .brand{
     padding: 20px;
+  }
+
+  #search-result-wrapper .search-result-main .top-search-section input[type=search]::placeholder {
+    font-size: 12px;
   }
 
   .search-result-main #results .card .price .monthly {
