@@ -2277,7 +2277,7 @@ footer .footer-copyright {
     z-index: 9999;
     height: -auto;
     max-height: 100%;
-    transition: left, right 300ms ease-in-out;
+    transition: left 300ms ease-in-out;
     overflow-y: scroll;
   }
 
