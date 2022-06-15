@@ -109,7 +109,6 @@ $('aside.filter .filter-head .icon').on('click', function() {
 
 
 let initOffset  = $('#vehicle-nav').offset().top;
-let sectionIds  = ['#overview', '#report'];
 $(window).on('scroll', function() {
   // add class "active" to nav item when its associated section comes into view
   $('section').each(function() {
@@ -120,11 +119,10 @@ $(window).on('scroll', function() {
     }
   });
   // Give vehicle-nav style when it reaches the top of the page
-  let currentOffset  = $('#vehicle-nav').offset().top;
-  if(currentOffset == initOffset) {
-    $('#vehicle-nav').removeClass('active')
-  } else {
+  if($(window).scrollTop() >= initOffset - 1) {
     $('#vehicle-nav').addClass('active')
+  } else {
+    $('#vehicle-nav').removeClass('active')
   }
   
 });
