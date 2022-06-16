@@ -198,6 +198,20 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: var(--green)
 }
 
+.popover {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--dark-grey);
+  padding: 15px 10px;
+}
+.popover-header {
+  background-color: transparent;
+  border-bottom: 0;
+}
+.popover-body {
+  padding-top: .5rem;
+}
+
+
 html[dir=rtl] .accordion-button::after {
   margin-right: auto;
   margin-left: 0;
@@ -1683,7 +1697,20 @@ html[dir=rtl] .search-result-main .test-drive {
 }
 #car-details #vehicle-nav {
   background-color: var(--white);
-  z-index: 99;
+  z-index: 999;
+  width: 100%;
+  top: -300px;
+  filter: drop-shadow(0px 5px 10px rgb(0 0 0 / .1));
+  transition: top 300ms ease-in-out;
+}
+#car-details #vehicle-nav.show {
+  top: 0;
+}
+
+#car-details #vehicle-nav span {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark-grey);
 }
 #car-details #vehicle-nav.active {
   filter: drop-shadow(0px 5px 10px rgb(0 0 0 / .1))
@@ -1756,12 +1783,18 @@ html[dir=rtl] .search-result-main .test-drive {
 
 #car-details #report .report-content ul .bi {
   font-size: 20px;
-    background: -webkit-linear-gradient(var(--sky), var(--purple));
+  background: -webkit-linear-gradient(var(--sky), var(--purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
 }
-
+#car-details #report .report-content ul .bi.error {
+  background: -webkit-linear-gradient(#F76976, #F76976);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  
+}
 #car-details #report .btn,
 #car-details #features .btn {
   margin-top: 60px;
@@ -1820,16 +1853,17 @@ html[dir=rtl] .search-result-main .test-drive {
 
 #car-details #dent-map .map .defect{
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
   background-color: var(--green);
   color: var(--white);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 14px;
   text-align: center;
-  line-height: 20px;
+  line-height: 30px;
   cursor: pointer;
+  display: block;
 }
 
 #car-details #dent-map .map .defect[num=one] {
@@ -1884,12 +1918,13 @@ html[dir=rtl] .search-result-main .test-drive {
 }
 
 #car-details #calc-payment ul.providers li{
-  padding: 10px 20px;
+  padding: 0 20px;
   font-weight: 500;
   background-color: var(--white-100);
   border-radius: 5px;
   cursor: pointer;
 }
+
 #car-details #calc-payment ul.providers li:hover{
   background: linear-gradient(90deg, #007CC2 -7.19%, #595CA9 107.19%);
   color: var(--white);
@@ -1899,22 +1934,37 @@ html[dir=rtl] .search-result-main .test-drive {
   background: linear-gradient(90deg, #007CC2 -7.19%, #595CA9 107.19%);
   color: var(--white);
 }
-
+#car-details #calc-payment ul.providers li img {
+  width: 120px;
+  height: 60px;
+  object-fit: cover;
+}
+#car-details #calc-payment ul.providers li.active img,
+#car-details #calc-payment ul.providers li:hover img {
+  filter: invert(1) brightness(100);
+}
 #car-details #calc-payment .card {
-  padding: 70px;
-  background-color: var(--white-100);
-  border: none;
+  background-color: var(--white);
   border-radius: 20px;
 }
 
 #car-details #calc-payment .card  .btn-group .btn-primary {
-  border-radius: 50px;
+  border-radius: 0;
   font-size: 30px;
-  padding: 15px 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #007CC2 -7.19%, #595CA9 107.19%);;
+  background: var(--white-100);
+  color: var(--dark-grey);
+  border-bottom: 1px solid #ededed;
+  filter: none;
+}
+#car-details #calc-payment .card  .btn-group .btn-primary:first-child {
+  border-top-left-radius: 20px;
+}
+#car-details #calc-payment .card  .btn-group .btn-primary:last-child {
+  border-top-right-radius: 20px;
 }
 
 #car-details #calc-payment .card  .btn-group .btn-primary:hover {
@@ -1927,6 +1977,19 @@ html[dir=rtl] .search-result-main .test-drive {
   font-weight: normal;
 }
 
+#car-details #calc-payment .card form#payment{
+  padding: 0 20px;
+}
+
+#car-details #calc-payment .card .cash,
+#car-details #calc-payment .card .bottom {
+  flex: 1 0
+}
+
+#car-details #calc-payment .card .bottom {
+  padding-bottom: 20px;
+}
+
 #car-details #calc-payment form.months,
 #car-details #calc-payment p {
   position: relative;
@@ -1935,13 +1998,17 @@ html[dir=rtl] .search-result-main .test-drive {
 
 #car-details #calc-payment p {
   font-size: 14px;
+  padding: 20px;
 }
 
 #car-details #calc-payment p b {
   font-size: 16px;
 }
+#car-details #calc-payment .months {
+  border: none;
+}
 
-#car-details #calc-payment form.months span {
+#car-details #calc-payment .months span {
   font-size: 16px;
   font-weight: 600;
   width: 65px;
@@ -1957,7 +2024,7 @@ html[dir=rtl] .search-result-main .test-drive {
   cursor: pointer;
 }
 
-#car-details #calc-payment form.months::after {
+#car-details #calc-payment .months::after {
   position: absolute;
   content: '';
   top: 50%;
@@ -1969,11 +2036,19 @@ html[dir=rtl] .search-result-main .test-drive {
   z-index: 1;
 }
 
-#car-details #calc-payment form.months input:checked + span {
+#car-details #calc-payment .months input:checked + span {
   border-color: var(--purple);
   color: var(--purple);
 }
 
+#car-details #calc-payment .calc-result p {
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+#car-details #calc-payment .calc-result p span {
+  font-weight: 800;
+}
 
 /* Footer */
 footer {
@@ -2353,8 +2428,9 @@ footer .footer-copyright {
     font-weight: 600 !important;
   }
 
-  #car-details #calc-payment .card {
-    padding: 15px 10px;
+  #car-details #vehicle-nav span {
+    font-size: 18px;
+    font-weight: 800;
   }
 
   #car-details #calc-payment .card  .btn-group .btn-primary{
@@ -2376,7 +2452,7 @@ footer .footer-copyright {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  #car-details #calc-payment form.months span {
+  #car-details #calc-payment .months span {
     width: 45px;
     height: 45px;
     line-height: 40px;
@@ -2498,15 +2574,11 @@ footer .footer-copyright {
     width: 20px;
   }
 
-  #car-details #overview {
-    /* padding-top: 40px; */
-  }
-
   #car-details #features ul li{
     font-size: 14px;
   }
 
-  #car-details #calc-payment form.months span {
+  #car-details #calc-payment .months span {
     width: 30px;
     height: 30px;
     font-size: 12px;
@@ -2518,9 +2590,33 @@ footer .footer-copyright {
   }
 
   #car-details #calc-payment ul.providers li {
-    padding: 10px 15px;
+    padding: 0 10px;
+  }
+  
+  #car-details #calc-payment .card .cash,
+  #car-details #calc-payment .card .bottom {
+    flex: 1 1 auto
+  }
+  #car-details #calc-payment .calc-result {
+    position: fixed;
+    bottom: -300px;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    background: #fff;
+    z-index: 9999;
+    filter: drop-shadow(0px 5px 10px rgb(0 0 0 / .1));
+    transition: bottom 300ms ease-in-out;
   }
 
+  #car-details #calc-payment .calc-result.show {
+    bottom: 0;
+  }
+
+  #car-details #calc-payment .calc-result .btn {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
   footer .sign-up .btn {
     width: 100%;
   }
@@ -2563,7 +2659,10 @@ footer .footer-copyright {
   #car-details #hero .btn-secondary {
     width: 100%;
   }
-
+  #car-details #calc-payment ul.providers li img {
+    width: 100px;
+    height: 50px;
+  }
 }
 
 /* only TABLET */

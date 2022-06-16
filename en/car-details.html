@@ -251,11 +251,11 @@
                     <span>One Previous Owner</span>
                   </li>
                 </ul>
-                <div class="return d-flex align-items-center justify-content-center gap-3 mt-3">
+                <!-- <div class="return d-flex align-items-center justify-content-center gap-3 mt-3">
                   <img src="../assets/img/icons/dollar.svg" alt="dollar">
                   <span>7-Day Love It or Return It</span>
-                </div>
-                <div class="btn-group d-flex pt-5 pb-4 gap-3 gap-xl-4 justify-content-sm-center">
+                </div> -->
+                <div class="btn-group d-flex py-4 gap-3 gap-xl-4 justify-content-sm-center">
                   <a href="#" class="flex-grow-1 flex-sm-grow-0">
                     <button type="button" class="btn btn-primary d-flex flex-column gap-0 align-items-center">
                       <span>Book Now</span>
@@ -270,9 +270,7 @@
                     </button>
                   </a>
                 </div>
-                <div class="refund d-flex justify-content-center align-items-center py-4">
-                  
-                </div>
+                
                 <div class="social-links d-flex align-items-center justify-content-between pt-4 flex-wrap gap-4">
                   <div class="d-flex align-items-center gap-3">
                     <span>Share:</span>
@@ -305,8 +303,12 @@
       <!-- CAR HERO SECTION -->
 
       <!-- VEHICLE NAV -->
-      <section id="vehicle-nav" class="position-sticky top-0">
+      <section id="vehicle-nav" class="position-fixed">
         <div class="conatiner-fluid container-xl">
+          <div class="car-info d-flex justify-content-between align-items-center pt-3">
+            <h4>Toyota RAV4 XLE</h4>
+            <span>SR37,995</span>
+          </div>
           <nav class="d-flex align-items-center justify-content-between justify-content-sm-center gap-sm-4 py-3">
             <a href="#overview" class="active">Overview</a>
             <a href="#report">Report</a>
@@ -323,6 +325,15 @@
         <div class="container-fluid container-xl">
           <h4 class="mb-5 text-center">Car Overview</h4>
           <div class="row">
+            <div class="col-6 col-lg-3">
+              <div class="overview-item d-flex align-items-center gap-3">
+                <img src="../assets/img/icons/vin.svg" alt="vin">
+                <div class="d-flex flex-column">
+                  <span class="title">Stock No.</span>
+                  <span class="value">2TP!RFV5MW222585</span>
+                </div>
+              </div>
+            </div>
             <div class="col-6 col-lg-3 mb-5 mb-lg-0">
               <div class="overview-item d-flex align-items-center gap-3">
                 <img src="../assets/img/icons/calendar.svg" alt="calendar">
@@ -332,21 +343,41 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="col-6 col-lg-3">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/registration.svg" alt="registration">
+                <img src="../assets/img/icons/condition.png" alt="condition">
                 <div class="d-flex flex-column">
-                  <span class="title">Registration Year</span>
-                  <span class="value">Oct 2019</span>
+                  <span class="title">Condition</span>
+                  <span class="value">Excellent</span>
                 </div>
               </div>
             </div>
             <div class="col-6 col-lg-3">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/petrol-lg.svg" alt="petrol">
+                <img src="../assets/img/icons/speed-lg.svg" alt="speed">
                 <div class="d-flex flex-column">
-                  <span class="title">Fuel Type</span>
-                  <span class="value">Petrol</span>
+                  <span class="title">KM Driven</span>
+                  <span class="value">5971 Kms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-lg-3 mb-5 mb-lg-0">
+              <div class="overview-item d-flex align-items-center gap-3">
+                <img src="../assets/img/icons/validity.svg" alt="Trim">
+                <div class="d-flex flex-column">
+                  <span class="title">Trim</span>
+                  <span class="value">Manual</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="overview-item d-flex align-items-center gap-3">
+                <img src="../assets/img/icons/import.png" alt="import">
+                <div class="d-flex flex-column">
+                  <span class="title">Import</span>
+                  <span class="value">2nd Owner</span>
                 </div>
               </div>
             </div>
@@ -356,35 +387,6 @@
                 <div class="d-flex flex-column">
                   <span class="title">Exterlor Color</span>
                   <span class="value">Blue</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 col-lg-3 mb-5 mb-lg-0">
-              <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/speed-lg.svg" alt="speed">
-                <div class="d-flex flex-column">
-                  <span class="title">KM Driven</span>
-                  <span class="value">5971 Kms</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-5 mb-lg-0">
-              <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/transmission.svg" alt="transmission">
-                <div class="d-flex flex-column">
-                  <span class="title">Transmissin</span>
-                  <span class="value">Manual</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-lg-3">
-              <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/key-lg.svg" alt="Key">
-                <div class="d-flex flex-column">
-                  <span class="title">Fuel No. of Owner</span>
-                  <span class="value">2nd Owner</span>
                 </div>
               </div>
             </div>
@@ -401,40 +403,41 @@
           <div class="row">
             <div class="col-6 col-lg-3 mb-5 mb-lg-0">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/validity.svg" alt="validity">
+                <img src="../assets/img/icons/engine-size.png" alt="engine-size">
                 <div class="d-flex flex-column">
-                  <span class="title">Insurance Validity</span>
-                  <span class="value">May 2023</span>
+                  <span class="title">Engine Size</span>
+                  <span class="value">Large</span>
                 </div>
               </div>
             </div>
             <div class="col-6 col-lg-3 mb-5 mb-lg-0">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/insurance.svg" alt="insurance">
+                <img src="../assets/img/icons/transmission.svg" alt="transmission">
                 <div class="d-flex flex-column">
-                  <span class="title">Insurance Type</span>
-                  <span class="value">Comprehensive</span>
+                  <span class="title">Transmission</span>
+                  <span class="value">Manual</span>
                 </div>
               </div>
             </div>
             <div class="col-6 col-lg-3">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/rto.svg" alt="RTO">
+                <img src="../assets/img/icons/drive-type.png" alt="drive-type">
                 <div class="d-flex flex-column">
-                  <span class="title">Fuel Rto</span>
+                  <span class="title">Drive Type</span>
                   <span class="value">DL4C</span>
                 </div>
               </div>
             </div>
             <div class="col-6 col-lg-3">
               <div class="overview-item d-flex align-items-center gap-3">
-                <img src="../assets/img/icons/vin.svg" alt="vin">
+                <img src="../assets/img/icons/petrol-lg.svg" alt="petrol">
                 <div class="d-flex flex-column">
-                  <span class="title">Vin</span>
-                  <span class="value">2TP!RFV5MW222585</span>
+                  <span class="title">Fuel Type</span>
+                  <span class="value">Petrol</span>
                 </div>
               </div>
             </div>
+            
           </div>
           <div class="row" num="last">
             <div class="col-12">
@@ -471,14 +474,14 @@
                       <img src="../assets/img/icons/car.svg" alt="car">
                       <span>Exterior</span>
                     </div>
-                    <i class="bi bi-check-circle"></i>
+                    <i class="bi bi-check-circle-fill error"></i>
                   </li>
                   <li class="d-flex justify-content-between align-items-center mb-4">
                     <div class="item d-flex align-items-center gap-3">
                       <img src="../assets/img/icons/engine.svg" alt="engine">
                       <span>Engine</span>
                     </div>
-                    <i class="bi bi-check-circle"></i>
+                    <i class="bi bi-check-circle-fill error"></i>
                   </li>
                   <li class="d-flex justify-content-between align-items-center mb-4">
                     <div class="item d-flex align-items-center gap-3">
@@ -507,7 +510,7 @@
           </div>
           <button class="btn btn-secondary">
             <span class="bg">
-              <span class="text">View fill Details</span>
+              <span class="text">View full Details</span>
             </span>
           </button>
         </div>
@@ -664,7 +667,7 @@
           </div>
           <button class="btn btn-secondary d-flex mx-auto">
             <span class="bg">
-              <span class="text">View fill Details</span>
+              <span class="text">View full Details</span>
             </span>
           </button>
         </div>
@@ -687,33 +690,45 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
                 <ul class="providers">
-                  <li class="active" data-monthly="724" data-cash="5000">Provider #1</li>
-                  <li data-monthly="524" data-cash="4000">Provider #2</li>
-                  <li data-monthly="424" data-cash="3000">Provider #3</li>
+                  <li class="active" data-monthly="724" data-cash="5000">
+                    <img src="../assets/img/icons/al-rajhi-bank.svg" alt="">
+                  </li>
+                  <li data-monthly="524" data-cash="4000">
+                    <img src="../assets/img/icons/SNB.svg" alt="">
+                  </li>
+                  <li data-monthly="424" data-cash="3000">
+                    <img src="../assets/img/icons/al-rajhi-bank.svg" alt="">
+                  </li>
                 </ul>
                 <h4 class="mb-3">Calculate Your Payment</h4>
                 <div class="card">
-                  <div class="btn-group gap-lg-5 mb-5 ">
+                  <div class="btn-group mb-4 ">
                     <div class="btn btn-primary justify-content-center justify-content-sm-between">
-                      <span>SR. $<span id="monthly-value">724</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
-                      <i class="bi bi-question-circle d-none d-sm-block"></i>
+                      <span>SR. $<span data-value="monthly-value">724</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
+                      <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        data-bs-custom-class="custom-popover"
+                        title="Monthly Payment"
+                        data-bs-content="Your loan’s monthly payment is determined by the total amount you plan to borrow, the length of your loan and your credit score. Paying more up front, adding a trade-in credit or choosing a longer loan can help lower your monthly payment.">
+                      </i>
                     </div>
                     <div class="btn btn-primary justify-content-center justify-content-sm-between">
                       <span>SR. $<span id="cash-value">5000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
-                      <i class="bi bi-question-circle d-none d-sm-block"></i>
+                      <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        data-bs-custom-class="custom-popover"
+                        title="Down Payment"
+                        data-bs-content="Your down payment is a one-time cash payment you make towards your new vehicle at the time of purchase (not including a trade-in value).">
+                      </i>
                     </div>
                   </div>
                   <form id="payment">
                     <div class="d-flex justify-content-between flex-wrap align-items-center gap-3 gap-md-5">
-                      <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
-                        <label for="monthly-payment" class="form-label">Monthly Payment</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon1">SR</span>
-                          <input type="number" class="form-control" id="monthly-payment" >
-                        </div>
-                        <input type="range" id="monthly-range" value="724" min="0" max="4000" data-type="monthly-payment">
-                      </div>
-                      <div class="d-flex flex-column gap-2 flex-grow-1 mb-4">
+                      <div class="cash d-flex flex-column gap-2 mb-4 flex-grow-1">
                         <label for="cash-down" class="form-label">Cash Down</label>
                         <div class="input-group">
                           <span class="input-group-text" id="basic-addon1">SR</span>
@@ -721,43 +736,62 @@
                         </div>
                         <input type="range" id="cash-range" value="5000" min="0" max="10000" data-type="cash-down">
                       </div>
+                      <div class="bottom d-flex flex-column align-items-start flex-grow-1">
+                        <p class="mb-2"><b>Loan Length (months)</b> Choose how long you’d like your loan to be</p>
+                        <div class="input-group months d-flex items justify-content-between">
+                          <label for="12">
+                          <input type="radio" name="month" id="12" class="d-none">
+                          <span>12</span>
+                        </label>
+                        <label for="24">
+                          <input type="radio" name="month" id="24" class="d-none" checked>
+                          <span>24</span>
+                        </label>
+                        <label for="36">
+                          <input type="radio" name="month" id="36" class="d-none">
+                          <span>36</span>
+                        </label>
+                        <label for="48">
+                          <input type="radio" name="month" id="48" class="d-none">
+                          <span>48</span>
+                        </label>
+                        <label for="60">
+                          <input type="radio" name="month" id="60" class="d-none">
+                          <span>60</span>
+                        </label>
+                        </div>
+                        
+                      </div>
                     </div>
                   </form>
-                  <div class="d-flex flex-wrap flex-md-nowrap align-items-center gap-3 gap-md-5">
-                    <p class="mb-0"><b>Loan Length (months)</b> Choose how long you’d like your loan to be</p>
-                    <form class="months d-flex justify-content-between align-items-center">
-                      <label for="36">
-                        <input type="radio" name="month" id="36" class="d-none">
-                        <span>36</span>
-                      </label>
-                      <label for="48">
-                        <input type="radio" name="month" id="48" class="d-none" checked>
-                        <span>48</span>
-                      </label>
-                      <label for="30">
-                        <input type="radio" name="month" id="30" class="d-none">
-                        <span>30</span>
-                      </label>
-                      <label for="60">
-                        <input type="radio" name="month" id="60" class="d-none">
-                        <span>60</span>
-                      </label>
-                      <label for="66">
-                        <input type="radio" name="month" id="66" class="d-none">
-                        <span>66</span>
-                      </label>
-                      <label for="72">
-                        <input type="radio" name="month" id="72" class="d-none">
-                        <span>72</span>
-                      </label>
-                    </form>
-                  </div>
+                  
+                </div>
+                <div class="calc-result d-flex  align-items-center justify-content-between mt-4 px-3">
+                  <p class="mb-0 p-0">Finance for <span>SR.</span><span data-value="monthly-value">724</span><sub>/month</sub> </p>
+                  <button class="btn btn-primary">Purchase</button>
                 </div>
               </div>
               <div class="tab-pane fade" id="cash-tab-pane" role="tabpanel" aria-labelledby="cash-tab" tabindex="0">
                 <h4 class="my-3">Pay With Cash</h4>
                 <div class="card">
+                  <div class="btn-group ">
+                    <div class="btn btn-primary justify-content-center justify-content-sm-between">
+                      <span>SR. $<span id="cash-value">5000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
+                      <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                        data-bs-custom-class="custom-popover"
+                        title="Down Payment"
+                        data-bs-content="Your down payment is a one-time cash payment you make towards your new vehicle at the time of purchase (not including a trade-in value).">
+                      </i>
+                    </div>
+                  </div>
                   <p class="mb-0">You’ll be able to add care and protection plans and trade-in value at checkout, and see your final price.</p>
+                </div>
+                <div class="calc-result d-flex  align-items-center justify-content-between mt-4 px-3">
+                  <p class="mb-0 p-0">Purchase for <span>SR.</span><span data-value="cash-value">37,995</span></p>
+                  <button class="btn btn-primary">Purchase</button>
                 </div>
               </div>
             </div>

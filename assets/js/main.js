@@ -112,19 +112,26 @@ let initOffset  = $('#vehicle-nav').offset().top;
 $(window).on('scroll', function() {
   // add class "active" to nav item when its associated section comes into view
   $('section').each(function() {
-    if($(window).scrollTop() >= $(this).offset().top - 1) {
+    if($(window).scrollTop() >= $(this).offset().top - 100) {
       var bId = `${$(this).attr('id')}` ;
       $('#vehicle-nav a').removeClass('active');
       $('#vehicle-nav a[href="' + '#' + bId + '"]').addClass('active');
     }
   });
-  // Give vehicle-nav style when it reaches the top of the page
-  if($(window).scrollTop() >= initOffset - 1) {
-    $('#vehicle-nav').addClass('active')
+  // Show/hide vehicle-nav & car title on tob of the page
+  if($(this).scrollTop() >= $('#hero h3').offset().top - 1) {
+    $('#vehicle-nav').addClass('show')
   } else {
-    $('#vehicle-nav').removeClass('active')
+    $('#vehicle-nav').removeClass('show')
   }
-  
+
+  // Show/hide sticky "Purchase" button
+  if($(window).scrollTop() >= ( $('#calc-payment').offset().top -500) ) {
+    console.log('yes');
+    $('#car-details #calc-payment .calc-result').addClass('show')
+  } else {
+    $('#car-details #calc-payment .calc-result').removeClass('show')
+  }
 });
 
 // Select between Finance Providers 
@@ -133,11 +140,13 @@ $('.providers li').click( function() {
   let dataMonthly = $(this).attr('data-monthly');
   let dataCash = $(this).attr('data-cash');
   $(this).parent().siblings('.card').find('input#monthly-payment, input#monthly-range').val(dataMonthly)
-  $(this).parent().siblings('.card').find('span#monthly-value').text(dataMonthly);
+  $(this).parent().siblings('.card, .calc-result').find('span[data-value=monthly-value]').text(dataMonthly);
   $(this).parent().siblings('.card').find('input#cash-down, input#cash-range').val(dataCash)
   $(this).parent().siblings('.card').find('span#cash-value').text(dataCash)
 })
 
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 // Initialise Carousel
 const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
