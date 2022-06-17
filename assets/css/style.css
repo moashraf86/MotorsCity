@@ -27,12 +27,6 @@ html {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-html[dir=rtl],
-html[dir=rtl] body {
-  font-family: 'Noto Kufi Arabic', sans-serif;
-}
-
-
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--gray);
@@ -95,6 +89,11 @@ ul {
   transition: all 300ms ease-in-out;
 }
 
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .btn-primary {
   background: linear-gradient(to right, var(--green), var(--sky),  var(--purple));
   filter: drop-shadow(1px 1px #ccc);
@@ -119,7 +118,6 @@ ul {
 .btn-secondary span.text {
   display: block;
   width: 100%;
-  border-radius: 50px;
   background: -webkit-linear-gradient(var(--sky), var(--purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -211,19 +209,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   padding-top: .5rem;
 }
 
-
-html[dir=rtl] .accordion-button::after {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-html[dir=rtl] .dropdown-menu .dropdown-item{
-  text-align: right;
-}
-html[dir=rtl] .form-select{
-  background-position: left .75rem center;
-  padding: 0.375rem 0.75rem 0.375rem 2.25rem;
-}
 /********** [ 1 ] HEADER **********/
 #header {
   position: sticky;
@@ -240,10 +225,6 @@ html[dir=rtl] .form-select{
 #header .navbar-nav .nav-link {
   font-weight: 800;
   color: var(--dark-grey)
-}
-
-html[dir=rtl] #header .navbar-nav .nav-link {
-  font-size: 14px;
 }
 
 #header .navbar-nav .nav-link:hover,
@@ -309,10 +290,6 @@ html[dir=rtl] #header .navbar-nav .nav-link {
   overflow: hidden;
 }
 
-html[dir=rtl] #home {
-  background-image: url('../img/home-bg-ar.png');
-}
-
 #home .home-content {
   position: relative;
   z-index: 1;
@@ -339,9 +316,6 @@ html[dir=rtl] #home {
   margin: auto;
 }
 
-html[dir=rtl] #home .home-img img{
-  transform: scaleX(-1);
-}
 /******[ 3 ] HOW IT WORKS ******/
 #how-it-works {
   padding: 100px 0;
@@ -409,10 +383,6 @@ html[dir=rtl] #home .home-img img{
   padding-left: 5rem;
 }
 
-html[dir=rtl] #testimonials .swiper .review {
-  padding-right: 5rem;
-}
-
 #testimonials .swiper .review-title,
 #testimonials .swiper .review-content,
 #testimonials .swiper .client
@@ -422,10 +392,6 @@ html[dir=rtl] #testimonials .swiper .review {
 
 #testimonials .swiper .review-title img {
   margin-right: 40px;
-}
-
-html[dir=rtl] #testimonials .swiper .review-title img {
-  transform: scaleX(-1);
 }
 
 #testimonials .swiper .review-title span {
@@ -499,10 +465,6 @@ html[dir=rtl] #testimonials .swiper .review-title img {
 
 #testimonials .select-cars h5 {
   text-align: left;
-}
-
-html[dir=rtl] #testimonials .select-cars h5 {
-  text-align: right;
 }
 
 #testimonials .select-cars form {
@@ -697,6 +659,10 @@ body::-webkit-scrollbar-thumb,
   margin: auto
 }
 
+#driver-seat .tab-content  .swiper-slide .content {
+  text-align: left;
+}
+
 #driver-seat .tab-content  .swiper-slide .slider-img img{
   max-height: 370px;
   object-fit: cover;
@@ -785,12 +751,6 @@ body::-webkit-scrollbar-thumb,
   z-index: 100;
 }
 
-html[dir=rtl] #mockup .mockup-img {
-  left: 10%;
-  right: initial;
-}
-
-
 /****** [ 8 ] Tips *******/
 #tips {
   padding: 150px 0;
@@ -805,11 +765,6 @@ html[dir=rtl] #mockup .mockup-img {
   color: var(--white);
   border-radius: 25px;
 }
-
-html[dir=rtl] #tips .tip {
-  text-align: right;
-}
-
 
 #tips .tip h5{
   color:var(--white);
@@ -961,11 +916,6 @@ html[dir=rtl] #tips .tip {
   margin-right: 24px;
 }
 
-html[dir=rtl] #sell li img{
-  margin-right: 0;
-  margin-left: 24px;
-}
-
 #sell .btn {
   padding: 10px 70px;
   background: none;
@@ -1039,11 +989,6 @@ html[dir=rtl] #sell li img{
   cursor: pointer;
   font-weight: 600;
   flex-grow: 1;
-}
-
-html[dir=rtl] #search-result-wrapper .sidebar-filter .form-group label span,
-html[dir=rtl] .sidebar-filter .nav-tabs .nav-link {
-  padding: 6px 15px;
 }
 
 #search-result-wrapper .sidebar-filter .form-group label input[type=radio]:checked + span {
@@ -1150,12 +1095,6 @@ html[dir=rtl] .sidebar-filter .nav-tabs .nav-link {
   margin-right: 16px;
 }
 
-html[dir=rtl] .sidebar-filter .refine-search .body-style label img {
-  margin-right: 0;
-  margin-left: 15px;
-  transform: scaleX(-1);
-}
-
 .sidebar-filter .refine-search .color label {
   display: flex;
   align-items: center;
@@ -1218,11 +1157,6 @@ html[dir=rtl] .sidebar-filter .refine-search .body-style label img {
   width: 250px;
   min-width: max-content;
   margin-left: 30px;
-}
-
-html[dir=rtl] .search-result-main .test-drive {
-  margin-left: 0;
-  margin-right: 30px;
 }
 
 .search-result-main #results .card{
@@ -1687,8 +1621,10 @@ html[dir=rtl] .search-result-main .test-drive {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  line-height: 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(78.7deg, #4FB5AE 6.66%, #007CC2 93.34%, #595CA9 93.34%);
 }
 
@@ -1771,6 +1707,10 @@ html[dir=rtl] .search-result-main .test-drive {
 #car-details #report .report-content ul img {
   width: 40px;
   object-fit: contain;
+}
+
+#car-details #report .report-content p {
+  text-align: left;
 }
 
 #car-details #report .report-content ul span {
@@ -2115,9 +2055,115 @@ footer .footer-copyright {
 }
 
 
+/******************************* RTL STYLE *********************************/
+html[dir=rtl],
+html[dir=rtl] body,
+html[dir=rtl] .popover {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+}
 
+html[dir=rtl] #header .navbar-nav .nav-link {
+  font-size: 14px;
+}
 
+html[dir=rtl] #home {
+  background-image: url('../img/home-bg-ar.png');
+}
 
+html[dir=rtl] #home .home-img img{
+  transform: scaleX(-1);
+}
+
+html[dir=rtl] #testimonials .swiper .review {
+  padding-right: 5rem;
+}
+
+html[dir=rtl] #testimonials .swiper .review-title img {
+  transform: scaleX(-1);
+}
+
+html[dir=rtl] #testimonials .select-cars h5 {
+  text-align: right;
+}
+
+html[dir=rtl] #mockup .mockup-img {
+  left: 10%;
+  right: initial;
+}
+
+html[dir=rtl] #tips .tip {
+  text-align: right;
+}
+
+html[dir=rtl] #sell li img{
+  margin-right: 0;
+  margin-left: 24px;
+}
+
+html[dir=rtl] #driver-seat .tab-content  .swiper-slide .content {
+  text-align: right;
+}
+
+html[dir=rtl] #search-result-wrapper .sidebar-filter .form-group label span,
+html[dir=rtl] .sidebar-filter .nav-tabs .nav-link {
+  padding: 6px 15px;
+}
+
+html[dir=rtl] .sidebar-filter .refine-search .body-style label img {
+  margin-right: 0;
+  margin-left: 15px;
+  transform: scaleX(-1);
+}
+
+html[dir=rtl] .search-result-main .test-drive {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+html[dir=rtl] .accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+html[dir=rtl] .dropdown-menu .dropdown-item{
+  text-align: right;
+}
+
+html[dir=rtl] .form-select{
+  background-position: left .75rem center;
+  padding: 0.375rem 0.75rem 0.375rem 2.25rem;
+}
+
+html[dir=rtl] #car-details #hero .back-btn .bi {
+  order: 2;
+}
+
+html[dir=rtl] #car-details #hero .row .col-12:first-of-type {
+  order: 2;
+}
+
+html[dir=rtl] #car-details #hero .how-it-works .bi::before {
+  transform: rotateY(180deg);
+}
+
+html[dir=rtl] #car-details #report .report-content p {
+  text-align: right;
+}
+
+html[dir=rtl] #car-details #features ul {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+html[dir=rtl] #car-details #calc-payment .card .btn-group .btn-primary:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+}
+html[dir=rtl] #car-details #calc-payment .card .btn-group .btn-primary:last-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+}
+/******************************* MEDIA QUERR *********************************/
 
 /* LAPTOP */
 @media (max-width: 1400px){
@@ -2670,6 +2716,12 @@ footer .footer-copyright {
   #car-details #hero .prices .total {
     border-right:  1px solid #9e9e9e
   }
+
+  html[dir=rtl] #car-details #hero .prices .total {
+    border-left:  1px solid #9e9e9e;
+    border-right: 0;
+  }
+
   #car-details #hero .prices .monthly {
     display: flex;
     justify-content: end;
