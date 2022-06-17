@@ -2155,13 +2155,31 @@ html[dir=rtl] #car-details #features ul {
   margin-right: 1rem;
 }
 
+html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link {
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link {
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 html[dir=rtl] #car-details #calc-payment .card .btn-group .btn-primary:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 20px;
 }
+
 html[dir=rtl] #car-details #calc-payment .card .btn-group .btn-primary:last-child {
   border-top-left-radius: 20px;
   border-top-right-radius: 0;
+}
+
+html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-primary {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 /******************************* MEDIA QUERR *********************************/
 
