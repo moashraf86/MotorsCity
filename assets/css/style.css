@@ -12,6 +12,7 @@
 :root {
   --white     : #FFFFFF;
   --white-100 : #F5F5F5;
+  --white-200 : #F6F6F6;
   --gray      : #555555;
   --dark-grey : #353535;
   --green     : #4fb5ae;
@@ -125,6 +126,22 @@ ul {
 
 .show-all a {
   color: var(--green);
+}
+
+
+.input-group-text{
+  background-color: var(--white);
+  border: none;
+}
+.form-control {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 5px;
+}
+.input-group  {
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 16px;
 }
 
 input {
@@ -924,7 +941,7 @@ body::-webkit-scrollbar-thumb,
   filter: none;
 }
 
-/*****************  Search result page *****************/
+/***************** [ 2 ]  Search result page *****************/
 
 /*******[ 1 ] side-bar filter **********/
 #search-result-wrapper {
@@ -995,27 +1012,6 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--white);
   color: var(--purple);
   font-size: 16px;
-}
-
-#search-result-wrapper .input-group-text,
-#car-details .input-group-text{
-  background-color: var(--white);
-  border: none;
-}
-#search-result-wrapper .sidebar-filter .tab-content form .form-control,
-#car-details form .form-control,
-#search-result-wrapper .search-result-main .top-search-section .form-control {
-  border: none;
-  border-radius: 4px;
-  padding: 10px 5px;
-}
-
-#search-result-wrapper .sidebar-filter .tab-content form .input-group,
-#car-details form .input-group,
-.search-result-main .top-search-section .input-group  {
-  border: 1px solid #ededed;
-  border-radius: 4px;
-  margin-bottom: 16px;
 }
 
 
@@ -1463,7 +1459,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 
-/************* [ 2 ] Car Detail Page  ***************/
+/************* [ 3 ] Car Details Page  ***************/
 #car-details #hero{
   background-color: #F6F6F6;
 }
@@ -1759,17 +1755,6 @@ body::-webkit-scrollbar-thumb,
   visibility: hidden;
 }
 
-#car-details #dent-map #exterior-upsidedown,
-#car-details #dent-map #exterior-overview,
-#car-details #dent-map #exterior-side{
-  /* width: 250px; */
-}
-
-#car-details #dent-map #exterior-front,
-#car-details #dent-map #exterior-back{
-  /* width: 60px; */
-}
-
 #car-details #features {
   padding-top: 80px;
 }
@@ -1827,24 +1812,29 @@ body::-webkit-scrollbar-thumb,
   padding-top: 80px;
 }
 
-#car-details #calc-payment .nav-tabs .nav-link{
+#car-details #calc-payment .nav-tabs .nav-link,
+#payment-process #calc-payment .nav-tabs .nav-link{
   padding: 12px 50px;
   background-color: var(--white-100);
   border-radius: 5px;
 }
 
-#car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link{
+#car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
+#payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link{
+#car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
+#payment-process #calc-payment .nav-tabs .nav-item:last-child .nav-link{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 #car-details #calc-payment .nav-tabs .nav-link:hover,
-#car-details #calc-payment .nav-tabs .nav-link.active {
+#payment-process #calc-payment .nav-tabs .nav-link:hover,
+#car-details #calc-payment .nav-tabs .nav-link.active,
+#payment-process #calc-payment .nav-tabs .nav-link.active {
   background: linear-gradient(78.7deg, #4FB5AE 20%, #007CC2 80%, #595CA9 95%);
   border-bottom: none;
   color: var(--white);
@@ -1927,10 +1917,11 @@ body::-webkit-scrollbar-thumb,
 }
 
 #car-details #calc-payment .card .bottom {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 #car-details #calc-payment form.months,
+#payment-process #calc-payment form.months,
 #car-details #calc-payment p {
   position: relative;
   flex: 1 1 50%
@@ -1938,17 +1929,19 @@ body::-webkit-scrollbar-thumb,
 
 #car-details #calc-payment p {
   font-size: 14px;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
 }
 
 #car-details #calc-payment p b {
   font-size: 16px;
 }
-#car-details #calc-payment .months {
+#car-details #calc-payment .months,
+#payment-process #calc-payment .months {
   border: none;
 }
 
-#car-details #calc-payment .months span {
+#car-details #calc-payment .months span,
+#payment-process #calc-payment .months span {
   font-size: 16px;
   font-weight: 600;
   width: 65px;
@@ -1964,7 +1957,8 @@ body::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
-#car-details #calc-payment .months::after {
+#car-details #calc-payment .months::after,
+#payment-process #calc-payment .months::after {
   position: absolute;
   content: '';
   top: 50%;
@@ -1976,7 +1970,8 @@ body::-webkit-scrollbar-thumb,
   z-index: 1;
 }
 
-#car-details #calc-payment .months input:checked + span {
+#car-details #calc-payment .months input:checked + span,
+#payment-process #calc-payment .months input:checked + span {
   border-color: var(--purple);
   color: var(--purple);
 }
@@ -1990,7 +1985,260 @@ body::-webkit-scrollbar-thumb,
   font-weight: 800;
 }
 
-/* Footer */
+/************* [ 3 ] Payment Process Page  ***************/
+#payment-process {
+  background-color: var(--white-200);
+}
+
+#payment-process #calc-payment{
+  margin-bottom: 50px;
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#payment-process #car-overview {
+  max-width: 992px;
+  margin: auto;
+}
+
+#payment-process #car-overview .card {
+  margin-top: 70px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--white);
+  border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
+  flex-direction: row;
+}
+
+#payment-process #car-overview h5 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+
+#payment-process #car-overview img {
+  border-radius: 5px;
+}
+
+#payment-process #car-overview .price {
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+
+#payment-process #car-overview .price .cost {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-grey);
+}
+
+#payment-process #calc-payment .card{
+  padding: 30px
+}
+
+#payment-process #calc-payment .calc-tabs li{
+  padding: 15px 20px;
+  background-color: var(--white-100);
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--white-100);
+}
+
+#payment-process #calc-payment .calc-tabs li:hover {
+  border-color: var(--sky);
+}
+
+#payment-process #calc-payment .calc-tabs label input.checked + li {
+  border-color: var(--sky);
+}
+
+#payment-process #calc-payment .calc-tabs label input.checked + li span{
+  color: #000;
+}
+
+#payment-process #calc-payment .calc-tabs label input.checked + li span.icon .bi.plus{
+  display: none;
+}
+
+#payment-process #calc-payment .calc-tabs label input.checked + li span.icon .bi.check{
+  display: inline-block !important;
+}
+
+#payment-process #calc-payment .calc-tabs li span:not(.icon){
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-grey);
+  display: flex;
+  align-items: center;
+}
+
+#payment-process #calc-payment .calc-tabs li span .bi{
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--sky)
+}
+
+
+#payment-process #calc-payment .card{
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);;
+}
+
+#payment-process #calc-payment .card .btn-group{
+  width: 100%;
+}
+
+#payment-process #calc-payment .card .btn-group .btn-primary{
+  background: none;
+  filter: none;
+  background-color: var(--white-100);
+  color: var(--dark-grey);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#payment-process #calc-payment .card .btn-group .btn-primary sub{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#payment-process #calc-payment .card .btn-group .btn-primary:first-child{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#payment-process #calc-payment .card .btn-group .btn-primary:last-child{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#payment-process #calc-payment .card form#payment{
+  padding: 0 20px;
+}
+
+#payment-process #calc-payment .card form#payment .cash{
+  min-width: 60%;
+}
+
+#payment-process #calc-payment .card .vehicle-info li{
+  padding: 20px 0;
+  border-bottom: 1px solid var(--white-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-grey);
+}
+
+#payment-process #calc-payment .card .vehicle-info li .title{
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#payment-process #calc-payment .card .vehicle-info li.total {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+#payment-process #calc-payment .card  p.note {
+  text-align: center;
+}
+
+#payment-process #calc-payment   p.bottom-note {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  margin-top: 40px;
+}
+
+#payment-process  .modal select {
+  border: 1px solid #ededed;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #000;
+  font-weight: 600;
+}
+
+#payment-process  .modal select:invalid {
+  color: var(--gray);
+  font-weight: normal;
+}
+
+#payment-process  .modal label{
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  border: 2px solid var(--white-100);
+  background-color: var(--white-100);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+#payment-process  .modal#selectWarranty label:hover{
+  border-color: var(--sky);
+}
+
+#payment-process  .modal label.checked{
+  border-color: var(--sky);
+  color: #000;
+}
+
+#payment-process  .modal label.checked h6{
+  color: #000;
+}
+
+#payment-process  .modal#selectWarranty label span.month{
+  margin-bottom: 10px;
+}
+
+#payment-process  .modal#addOn label{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+#payment-process  .modal#addOn label.checked span.icon .circle{
+  display: none;
+}
+
+#payment-process  .modal#addOn label.checked span.icon .check{
+  display: inline-block !important;
+  color: var(--sky);
+}
+
+#payment-process  .modal#addOn label img{
+  width: 50px;
+  object-fit: contain;
+}
+
+#payment-process  .modal#addOn label .monthly{
+  color: var(--purple);
+}
+
+#payment-process  .value.danger{
+  color: red;
+}
+
+
+
+/********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
   background-color: var(--white);
@@ -2504,7 +2752,8 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
   #car-details #calc-payment .card  .btn-group .btn-primary span{
     line-height: 16px;
   }
-  #car-details #calc-payment .card  .btn-group .btn-primary sub{
+  #car-details #calc-payment .card  .btn-group .btn-primary sub,
+  #payment-process #calc-payment .card  .btn-group .btn-primary sub{
     font-size: 12px;
   }
 
@@ -2521,6 +2770,15 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
     height: 45px;
     line-height: 40px;
   }
+
+  #payment-process .calc-tabs label {
+    flex: 1 0 calc(50% - .5rem);
+  }
+
+  #payment-process #calc-payment   p.bottom-note {
+    font-size: 16px;
+  }
+  
   footer .sign-up  {
     width: 100%;
   }
@@ -2642,7 +2900,8 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
     font-size: 14px;
   }
 
-  #car-details #calc-payment .months span {
+  #car-details #calc-payment .months span,
+  #payment-process #calc-payment .months span {
     width: 30px;
     height: 30px;
     font-size: 12px;
@@ -2681,6 +2940,18 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
     padding: 10px 40px;
     font-size: 16px;
   }
+
+  #payment-process #calc-payment .card {
+    padding: 20px;
+  }
+
+  #payment-process .calc-tabs label {
+    flex: 1 0 100%;
+  }
+  #payment-process #calc-payment .card form#payment .cash {
+    width: 100%;
+  }
+
   footer .sign-up .btn {
     width: 100%;
   }

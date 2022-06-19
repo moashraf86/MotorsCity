@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap-5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--  Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Font type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Motores City</title>
+  </head>
+  <body>
+    <div class="wrapper" id="payment-process">
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
+              <img src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+            </a>
+            <!-- Menu Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <!-- Nav items -->
+            <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sell/Trade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Financing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Why MotorsCity
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Recources
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="navbar-nav register gap-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Log in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link signup" href="#">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>   
+        </div>
+      </header>
+      <!-- END HEADER -->
+
+      <!-- CAR OVERVIEW -->
+      <section id="car-overview" class="">
+        <div class="container-fluid container-xl">
+          <div class="card d-flex align-items-start justify-content-between flex-wrap gap-2 flex-lg-nowrap ">
+            <div class="info d-flex align-items-start gap-3">
+              <img src="../assets/img/cars/CAR-8.png" alt="chevrolet">
+              <div class="title">
+                <h5>2016 Jeep Renegade</h5>
+                <span class="driven">96,369 KM</span>
+              </div>
+            </div>
+            <div class="price flex-grow-1 flex-sm-grow-0">
+              <h5>Total Cost</h5>
+              <span class="cost">SR.25,748</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CAR OVERVIEW -->
+
+      <!-- CALC YOUR PAYMENT -->
+      <section id="calc-payment">
+        <div class="container-fluid container-xl">
+          <ul class="nav nav-tabs gap-0 my-5" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Finance</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cash-tab" data-bs-toggle="tab" data-bs-target="#cash-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Pay Cash</button>
+              </li>
+          </ul>
+          <div class="row">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+                <div class="card">
+                  <div class="row gap-3">
+                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch">
+                      <ul class="calc-tabs d-flex flex-wrap flex-lg-nowrap flex-lg-column w-100 gap-2 gap-lg-3">
+                        <label for="calc-delivery" data-bs-toggle="modal" data-bs-target="#calcDelivery">
+                          <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
+                          <li>
+                            <span>
+                              Calculate Delivery 
+                              <i class="bi bi-truck ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="provider" data-bs-toggle="modal" data-bs-target="#selectProvider">
+                          <input type="checkbox" name="provider" id="provider" class="d-none">
+                          <li>
+                            <span>
+                              Select Provider
+                              <i class="bi bi-bank ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="warranty" data-bs-toggle="modal" data-bs-target="#selectWarranty">
+                          <input type="checkbox" name="warranty" id="warranty" class="d-none">
+                          <li>
+                            <span>
+                              Select Warranty
+                              <i class="bi bi-shield-shaded ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="trade-in">
+                          <input type="checkbox" name="trade-in" id="trade-in" class="d-none" data-bs-toggle="modal" data-bs-target="#tradeIn">
+                          <li>
+                            <span>
+                              Apply Trade-In
+                              <i class="bi bi-box2 ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="add-on">
+                          <input type="checkbox" name="add-on" id="add-on" class="d-none" data-bs-toggle="modal" data-bs-target="#addOn">
+                          <li>
+                            <span>
+                              Apply Add On
+                              <i class="bi bi-plugin ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <div class="btn-group mb-4 ">
+                        <div class="btn btn-primary justify-content-center justify-content-sm-between">
+                          <span>SR.<span data-value="monthly-value">724</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
+                          <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
+                            data-bs-toggle="popover" 
+                            data-bs-placement="top"
+                            data-bs-trigger="focus"
+                            data-bs-custom-class="custom-popover"
+                            title="Monthly Payment"
+                            data-bs-content="Your loan’s monthly payment is determined by the total amount you plan to borrow, the length of your loan and your credit score. Paying more up front, adding a trade-in credit or choosing a longer loan can help lower your monthly payment.">
+                          </i>
+                        </div>
+                        <div class="btn btn-primary justify-content-center justify-content-sm-between">
+                          <span>SR.<span id="cash-value">5000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
+                          <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
+                            data-bs-toggle="popover" 
+                            data-bs-placement="top"
+                            data-bs-trigger="focus"
+                            data-bs-custom-class="custom-popover"
+                            title="Down Payment"
+                            data-bs-content="Your down payment is a one-time cash payment you make towards your new vehicle at the time of purchase (not including a trade-in value).">
+                          </i>
+                        </div>
+                      </div>
+                      <form id="payment">
+                        <div class="d-flex justify-content-between flex-column align-items-start gap-5">
+                          <div class="cash d-flex flex-column gap-2" >
+                            <label for="cash-down" class="form-label">Cash Down</label>
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1">SR</span>
+                              <input type="number" class="form-control" id="cash-down" >
+                            </div>
+                            <input type="range" id="cash-range" value="5000" min="0" max="10000" data-type="cash-down">
+                          </div>
+                          <div class="bottom d-flex flex-column align-items-start flex-grow-1">
+                            <p class="mb-2"><b>Loan Length (months)</b> Choose how long you’d like your loan to be</p>
+                            <div class="input-group months d-flex items justify-content-between">
+                              <label for="12">
+                              <input type="radio" name="month" id="12" class="d-none">
+                              <span>12</span>
+                            </label>
+                            <label for="24">
+                              <input type="radio" name="month" id="24" class="d-none" checked>
+                              <span>24</span>
+                            </label>
+                            <label for="36">
+                              <input type="radio" name="month" id="36" class="d-none">
+                              <span>36</span>
+                            </label>
+                            <label for="48">
+                              <input type="radio" name="month" id="48" class="d-none">
+                              <span>48</span>
+                            </label>
+                            <label for="60">
+                              <input type="radio" name="month" id="60" class="d-none">
+                              <span>60</span>
+                            </label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
+                  <button class="btn btn-primary" data-role="purchase">Purchase</button>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="cash-tab-pane" role="tabpanel" aria-labelledby="cash-tab" tabindex="0">
+                <div class="card">
+                  <div class="row gap-3">
+                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch">
+                      <ul class="calc-tabs d-flex flex-wrap flex-lg-nowrap flex-lg-column w-100 gap-2 gap-lg-3">
+                        <label for="calc-delivery">
+                          <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
+                          <li>
+                            <span>
+                              Calculate Delivery 
+                              <i class="bi bi-truck ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="warranty">
+                          <input type="checkbox" name="warranty" id="warranty" class="d-none">
+                          <li>
+                            <span>
+                              Select Warranty
+                              <i class="bi bi-shield-shaded ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="trade-in">
+                          <input type="checkbox" name="trade-in" id="trade-in" class="d-none">
+                          <li>
+                            <span>
+                              Apply Trade-In
+                              <i class="bi bi-box2 ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                        <label for="add-on">
+                          <input type="checkbox" name="add-on" id="add-on" class="d-none">
+                          <li>
+                            <span>
+                              Apply Add On
+                              <i class="bi bi-plugin ms-3"></i>
+                            </span>
+                            <span class="icon">
+                              <i class="bi bi-plus-circle plus"></i>
+                              <i class="bi bi-check-circle-fill check d-none"></i>
+                            </span>
+                          </li>
+                        </label>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <h5>Payment Calculation</h5>
+                      <ul class="vehicle-info">
+                        <li>
+                          <span class="title">Vehicle Price</span>
+                          <span class="value">SR.22,990.00</span>
+                        </li>
+                        <li data-value="delivery-cost">
+                          <span class="title">Delivery Cost</span>
+                          <span class="value">Required</span>
+                        </li>
+                        <li>
+                          <span class="title">Warranty Plan</span>
+                          <span class="value">--</span>
+                        </li>
+                        <li>
+                          <span class="title">Taxes</span>
+                          <span class="value">SR.2,758.80</span>
+                        </li>
+                        <li>
+                          <span class="title">Down Payment</span>
+                          <span class="value">SR.2,758.80</span>
+                        </li>
+                        <li class="total">
+                          <span class="title">Total Pice</span>
+                          <span class="value">SR.24,990.00</span>
+                        </li>
+                      </ul>
+                      <p class="mb-0 mt-4 note">*Licensing and delivery fees not included</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
+                  <button class="btn btn-primary" data-role="purchase">Purchase</button>
+                </div>
+              </div>
+            </div>
+            <p class="bottom-note">*Estimated monthly payment is based on 5.99% APR, 72 months financing and SR.0 down payment with taxes included. Financing requires credit approval. Cost of borrowing :SR.4,967.12.</p>
+          </div>
+        </div>
+      </section>
+      <!-- CALC YOUR PAYMENT -->
+
+      <!-- PAYMENT MODALS -->
+
+      <!-- Modal#1 - Calculate Delivery Cost -->
+      <div class="modal fade" id="calcDelivery" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="calcDeliveryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="calc-delivery">
+              <div class="modal-header">
+                <h5 class="modal-title" id="calcDeliveryLabel">Calculate Delivery Cost</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="header-img">
+                  <img class="w-100" src="../assets/img/delivery-img.png" alt="">
+                </div>
+                <div class="body">
+                  <p class="mt-4">Please enter the address where you would like us to deliver your vehicle.</p>
+                  <select class="form-control" name="city" id="city" required>
+                    <option value="">--City--</option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#2 - Select Provider  -->
+      <div class="modal fade" id="selectProvider" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="selectProviderLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="provider">
+              <div class="modal-header">
+                <h5 class="modal-title" id="calcDeliveryLabel">Protect Your Purchase</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="header-img">
+                  <img class="w-100" src="../assets/img/delivery-img.png" alt="">
+                </div>
+                <div class="body">
+                  <p class="mt-4">Please enter the address where you would like us to deliver your vehicle.</p>
+                  <select class="form-control" name="city" id="city" required>
+                    <option value="">--City--</option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#3 - Select Warranty -->
+      <div class="modal fade" id="selectWarranty" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="selectWarrantyLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="warranty">
+              <div class="modal-header">
+                <h5 class="modal-title" id="selectWarrantyLabel">Protect Your Purchase</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="dark">All Motorcity vehicles come with our 30 Day 1,500 km Warranty for no extra charge.</p>
+                <p class="light">An extended warranty keeps you covered from unexpected events so you don't have to worry about costly repairs and service.</p>
+                <div class="body">
+                  <label for="12-month">
+                    <input type="radio" name="month" id="12-month" required>
+                    <div>
+                      <span class="d-block month">12 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                    </div>
+                  </label>
+                  <label for="24-month">
+                    <input type="radio" name="month" id="24-month" required>
+                    <div>
+                      <span class="d-block month">24 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                    </div>
+                  </label>
+                  <label for="36-month">
+                    <input type="radio" name="month" id="36-month" required>
+                    <div>
+                      <span class="d-block month">36 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                    </div>
+                  </label>
+                  <label for="48-month">
+                    <input type="radio" name="month" id="48-month" required>
+                    <div>
+                      <span class="d-block month">48 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                    </div>
+                  </label>
+                  <p class="mt-4">*Monthly payment based on 5.99% APR and a term of 72 months.</p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#4 - Trade In -->
+      <div class="modal fade" id="tradeIn" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="tradeInLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="trade-in">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tradeInLabel">Trade in</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="body">
+                  <select class="form-control mb-3" name="year" id="year" required>
+                    <option value="">Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                  </select>
+                  <select class="form-control mb-3" name="make" id="make" required>
+                    <option value="">Make</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                  </select>
+                  <select class="form-control mb-3" name="model" id="model" required>
+                    <option value="">Model</option>
+                    <option value="1">model 1</option>
+                    <option value="2">model 2</option>
+                    <option value="3">model 3</option>
+                    <option value="4">model 4</option>
+                  </select>
+                </div>
+                <p class="light">The value provided is based on Canadian Black Book prices and the assumption that the information you have provided about your vehicle is correct.</p>
+                <p class="light">All trade-ins are manually reviewed for accuracy and trade value is subject to change upon the discovery of any incorrect information.</p>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#4 - Add On -->
+      <div class="modal fade" id="addOn" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="addOnLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="add-on">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addOnLabel">Protect Your Purchase</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="dark">All Motorcity vehicles come with our 30 Day 1,500 km Warranty for no extra charge.</p>
+                <p class="light">An extended warranty keeps you covered from unexpected events so you don't have to worry about costly repairs and service.</p>
+                <div class="body">
+                  <label for="vehicle-repair">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/vehicle-repair.svg" alt="vehicle-repair">
+                      <div>
+                        <h6>Title</h6>
+                        <span class="monthly me-3"><b>SR.38/mo</b></span>
+                        <span class="total">SR.2,294 total</span>
+                      </div>
+                    </div>
+                    <input type="radio" name="add-on" id="vehicle-repair" class="d-none" required>
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                  <label for="tire-wheeel-repair">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/tire-wheel-repair.svg" alt="tire-wheel-repair">
+                      <div>
+                        <h6>Tire & Wheel Repair</h6>
+                        <span class="monthly me-3"><b>SR.38/mo</b></span>
+                        <span class="total">SR.2,294 total</span>
+                      </div>
+                    </div>
+                    <input type="radio" name="add-on" id="tire-wheeel-repair" class="d-none" required>
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                  <label for="vehicle-loss-protection">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/vehicle-loss-protection.svg" alt="vehicle-loss-protection">
+                      <div>
+                        <h6>Vehicle Loss Protection</h6>
+                        <span class="monthly me-3"><b>SR.38/mo</b></span>
+                        <span class="total">SR.2,294 total</span>
+                      </div>
+                    </div>
+                    <input type="radio" name="add-on" id="vehicle-loss-protection" class="d-none" required>
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                  <label for="extended-warranty-coverage">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/extended-warranty-coverage.svg" alt="extended-warranty-coverage">
+                      <div>
+                        <h6>Extended Warranty Coverage</h6>
+                        <span class="monthly me-3"><b>SR.38/mo</b></span>
+                        <span class="total">SR.2,294 total</span>
+                      </div>
+                    </div>
+                    <input type="radio" name="add-on" id="extended-warranty-coverage" class="d-none" required>
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                  <label for="window-tinting">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/window-tinting.svg" alt="window-tinting">
+                      <div>
+                        <h6>Extended Warranty Coverage</h6>
+                        <span class="monthly me-3"><b>SR.38/mo</b></span>
+                        <span class="total">SR.2,294 total</span>
+                      </div>
+                    </div>
+                    <input type="radio" name="add-on" id="window-tinting" class="d-none" required>
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- PAYMENT MODALS -->
+
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row gap-xl-5">
+              <div class="col-12 col-xl-2 mb-5 mb-xl-0">
+                <div class="footer-logo text-center">
+                  <img src="../assets/img/logo-pattern.png" alt="LOGO">
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="footer-nav d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 px-lg-0">
+                  <ul class="location mb-3 mb-lg-0">
+                    <li>
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>12039 Smith Avenue <br> Santa Fe Springs, CA 90670</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="contact">
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Toll-free 0877 338 0999 </span>
+                      </a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Fax 562 236 9429</span>
+                      </a>
+                    </li>
+                    <li class="mb-5 mb-lg-0">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-envelope"></i>
+                        <span>Info@motorscity.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="sign-up text-center text-md-start">
+                    <h6 class="mb-4">Join our Email Club </h6>
+                    <form>
+                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="Email.." class="form-control mb-4">
+                      <button class="btn btn-secondary">
+                        <span class="bg">
+                          <span class="text">Sign Up</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 Copyright. All rights reserved.</p>
+            <ul class="social-icons d-flex align-items-center gap-4">
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </div>
+
+    <!-- Bootstrap-5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Jquery 3.6 min -->
+    <script src="../assets/plugins/js/jquery-3.6-min.js"></script>
+    <!-- Custom Js -->
+    <script src="../assets/js/main.js"></script>
+
+  </body>
+</html>

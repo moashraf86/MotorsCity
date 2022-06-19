@@ -107,8 +107,6 @@ $('aside.filter .filter-head .icon').on('click', function() {
   $('html, body').css('overflow-y', 'scroll')
 })
 
-
-let initOffset  = $('#vehicle-nav').offset().top;
 $(window).on('scroll', function() {
   // add class "active" to nav item when its associated section comes into view
   $('section').each(function() {
@@ -127,7 +125,6 @@ $(window).on('scroll', function() {
 
   // Show/hide sticky "Purchase" button
   if($(window).scrollTop() >= ( $('#calc-payment').offset().top -500) ) {
-    console.log('yes');
     $('#car-details #calc-payment .calc-result').addClass('show')
   } else {
     $('#car-details #calc-payment .calc-result').removeClass('show')
@@ -145,34 +142,62 @@ $('.providers li').click( function() {
   $(this).parent().siblings('.card').find('span#cash-value').text(dataCash)
 })
 
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
-// Initialise Carousel
-const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-  infinite: false,
-  Navigation: false,
+//check tabs when submitting the form on the modal
+$('.modal form').submit(function (e) { 
+  e.preventDefault();
+  $(this).find('[aria-label="Close"]').trigger('click');
+  let modalTab = $(`[name=${$(this).attr('data-check')}]`);
+  modalTab.addClass('checked');
 });
 
-// Initialise Fancybox
-Fancybox.bind('[data-fancybox="gallery"]', {
-  Carousel: {
-    on: {
-      change: (carousel, to) => {
-        // Sync Carousel slide
-        // ===
-        const $el = Fancybox.getInstance()
-          .getSlide()
-          .$trigger.closest(".carousel__slide");
 
-        const slide = mainCarousel.slides.find((slide) => {
-          return slide.$el === $el;
-        });
+//Add class checked to label when check it's input
+$('#payment-process .modal input[type=radio]').on('input', function() {
+  $(this).parents('label').addClass('checked')
+  $(this).parents('label').siblings('label').removeClass('checked')
+})
 
-        mainCarousel.slideTo(slide.index, {
-          friction: 0,
-        });
-      },
-    },
-  },
-});
+
+//show alert if the user didn't select a delivery location
+$(' [data-role=purchase]').click(function() {
+  if($('.calc-tabs input#calc-delivery').hasClass('checked')) {
+    $('.vehicle-info li[data-value=delivery-cost] .value').removeClass('danger')
+  } else {
+    $('.vehicle-info li[data-value=delivery-cost] .value').addClass('danger')
+  }
+
+})
+
+// ALYWAYS BE ON BOTOM OF THE PAGE
+// Initialize popovers
+// const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+// const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+// // Initialise Carousel
+// const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+//   infinite: false,
+//   Navigation: false,
+// });
+
+// // Initialise Fancybox
+// Fancybox.bind('[data-fancybox="gallery"]', {
+//   Carousel: {
+//     on: {
+//       change: (carousel, to) => {
+//         // Sync Carousel slide
+//         // ===
+//         const $el = Fancybox.getInstance()
+//           .getSlide()
+//           .$trigger.closest(".carousel__slide");
+
+//         const slide = mainCarousel.slides.find((slide) => {
+//           return slide.$el === $el;
+//         });
+
+//         mainCarousel.slideTo(slide.index, {
+//           friction: 0,
+//         });
+//       },
+//     },
+//   },
+// });
