@@ -1583,6 +1583,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 #car-details #hero .btn-group .btn-primary,
+#payment-process .btn-primary,
 #car-details #hero .btn-secondary span.bg{
   padding: 10px 45px;
   font-size: 14px;
@@ -1591,13 +1592,15 @@ body::-webkit-scrollbar-thumb,
 #car-details #hero .btn-secondary {
   height: 100%;
 }
+
 #car-details #hero .btn-secondary span.bg {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-#car-details #hero .btn-group .btn-primary .tiny {
+#car-details #hero .btn-group .btn-primary .tiny,
+#payment-process .btn-primary .tiny {
   font-size: 10px;
   font-weight: 500;
 }
@@ -2778,7 +2781,7 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
   #payment-process #calc-payment   p.bottom-note {
     font-size: 16px;
   }
-  
+
   footer .sign-up  {
     width: 100%;
   }

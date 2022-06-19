@@ -170,34 +170,34 @@ $(' [data-role=purchase]').click(function() {
 
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
-// const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-// const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 // // Initialise Carousel
-// const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-//   infinite: false,
-//   Navigation: false,
-// });
+const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+  infinite: false,
+  Navigation: false,
+});
 
-// // Initialise Fancybox
-// Fancybox.bind('[data-fancybox="gallery"]', {
-//   Carousel: {
-//     on: {
-//       change: (carousel, to) => {
-//         // Sync Carousel slide
-//         // ===
-//         const $el = Fancybox.getInstance()
-//           .getSlide()
-//           .$trigger.closest(".carousel__slide");
+// Initialise Fancybox
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Carousel: {
+    on: {
+      change: (carousel, to) => {
+        // Sync Carousel slide
+        // ===
+        const $el = Fancybox.getInstance()
+          .getSlide()
+          .$trigger.closest(".carousel__slide");
 
-//         const slide = mainCarousel.slides.find((slide) => {
-//           return slide.$el === $el;
-//         });
+        const slide = mainCarousel.slides.find((slide) => {
+          return slide.$el === $el;
+        });
 
-//         mainCarousel.slideTo(slide.index, {
-//           friction: 0,
-//         });
-//       },
-//     },
-//   },
-// });
+        mainCarousel.slideTo(slide.index, {
+          friction: 0,
+        });
+      },
+    },
+  },
+});

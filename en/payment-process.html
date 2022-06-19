@@ -186,7 +186,7 @@
                     <div class="col-12 col-lg">
                       <div class="btn-group mb-4 ">
                         <div class="btn btn-primary justify-content-center justify-content-sm-between">
-                          <span>SR.<span data-value="monthly-value">724</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
+                          <span>SR.<span data-value="monthly-value">1,100</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
                           <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                             data-bs-toggle="popover" 
                             data-bs-placement="top"
@@ -197,7 +197,7 @@
                           </i>
                         </div>
                         <div class="btn btn-primary justify-content-center justify-content-sm-between">
-                          <span>SR.<span id="cash-value">5000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
+                          <span>SR.<span id="cash-value">9000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
                           <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                             data-bs-toggle="popover" 
                             data-bs-placement="top"
@@ -208,49 +208,51 @@
                           </i>
                         </div>
                       </div>
-                      <form id="payment">
-                        <div class="d-flex justify-content-between flex-column align-items-start gap-5">
-                          <div class="cash d-flex flex-column gap-2" >
-                            <label for="cash-down" class="form-label">Cash Down</label>
-                            <div class="input-group">
-                              <span class="input-group-text" id="basic-addon1">SR</span>
-                              <input type="number" class="form-control" id="cash-down" >
-                            </div>
-                            <input type="range" id="cash-range" value="5000" min="0" max="10000" data-type="cash-down">
-                          </div>
-                          <div class="bottom d-flex flex-column align-items-start flex-grow-1">
-                            <p class="mb-2"><b>Loan Length (months)</b> Choose how long you’d like your loan to be</p>
-                            <div class="input-group months d-flex items justify-content-between">
-                              <label for="12">
-                              <input type="radio" name="month" id="12" class="d-none">
-                              <span>12</span>
-                            </label>
-                            <label for="24">
-                              <input type="radio" name="month" id="24" class="d-none" checked>
-                              <span>24</span>
-                            </label>
-                            <label for="36">
-                              <input type="radio" name="month" id="36" class="d-none">
-                              <span>36</span>
-                            </label>
-                            <label for="48">
-                              <input type="radio" name="month" id="48" class="d-none">
-                              <span>48</span>
-                            </label>
-                            <label for="60">
-                              <input type="radio" name="month" id="60" class="d-none">
-                              <span>60</span>
-                            </label>
-                            </div>
-                            
-                          </div>
-                        </div>
-                      </form>
+                      <ul class="vehicle-info">
+                        <li>
+                          <span class="title">Vehicle Price</span>
+                          <span class="value">SR.22,990.00</span>
+                        </li>
+                        <li data-value="delivery-cost">
+                          <span class="title">Delivery Cost</span>
+                          <span class="value">Required</span>
+                        </li>
+                        <li>
+                          <span class="title">Registration & Title Transfer </span>
+                          <span class="value">SR.500</span>
+                        </li>
+                        <li>
+                          <span class="title">Taxes</span>
+                          <span class="value">SR.5,699</span>
+                        </li>
+                        <li>
+                          <span class="title">Warranty Plan</span>
+                          <span class="value">SR.1000</span>
+                        </li>
+                        <li>
+                          <span class="title">APR%</span>
+                          <span class="value">11.45%</span>
+                        </li>
+                        <li>
+                          <span class="title">Amount Financed</span>
+                          <span class="value">SR.36,594</span>
+                        </li>
+                        <li class="total">
+                          <span class="title">Total Pice</span>
+                          <span class="value">SR.45.594</span>
+                        </li>
+                      </ul>
+                      <P class="mb-0 mt-4 note">Note: The book amount is 100% refundable if you decided not to continue with the vehicles purchase.</P>
                     </div>
                   </div>
                 </div>
                 <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
-                  <button class="btn btn-primary" data-role="purchase">Purchase</button>
+                  <a href="#" class="flex-grow-1 flex-sm-grow-0">
+                    <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
+                      <span>Book Now</span>
+                      <span class="tiny">For SR.150</span>
+                    </button>
+                  </a>
                 </div>
               </div>
               <div class="tab-pane fade" id="cash-tab-pane" role="tabpanel" aria-labelledby="cash-tab" tabindex="0">
@@ -324,28 +326,34 @@
                           <span class="value">Required</span>
                         </li>
                         <li>
-                          <span class="title">Warranty Plan</span>
-                          <span class="value">--</span>
+                          <span class="title">Registration & Title Transfer </span>
+                          <span class="value">SR.500</span>
                         </li>
                         <li>
                           <span class="title">Taxes</span>
-                          <span class="value">SR.2,758.80</span>
+                          <span class="value">SR.5,699</span>
                         </li>
                         <li>
-                          <span class="title">Down Payment</span>
-                          <span class="value">SR.2,758.80</span>
+                          <span class="title">Warranty Plan</span>
+                          <span class="value">SR.1000</span>
                         </li>
                         <li class="total">
                           <span class="title">Total Pice</span>
-                          <span class="value">SR.24,990.00</span>
+                          <span class="value">SR.45.594</span>
                         </li>
                       </ul>
-                      <p class="mb-0 mt-4 note">*Licensing and delivery fees not included</p>
+                      <p class="mb-0 mt-4 note">Note: 100% refundable if you decided not to continue with the vehicles purchase</p>
                     </div>
                   </div>
                 </div>
                 <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
-                  <button class="btn btn-primary" data-role="purchase">Purchase</button>
+                  <!-- <button class="btn btn-primary" data-role="purchase">Purchase</button> -->
+                  <a href="#" class="flex-grow-1 flex-sm-grow-0">
+                    <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
+                      <span>Book Now</span>
+                      <span class="tiny">For SR.150</span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
