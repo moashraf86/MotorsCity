@@ -148,22 +148,30 @@ $('.modal form').submit(function (e) {
   $(this).find('[aria-label="Close"]').trigger('click');
   let modalTab = $(`[name=${$(this).attr('data-check')}]`);
   modalTab.addClass('checked');
+  modalTab.removeClass('danger');
 });
 
+//Cancel form submit on Modal
+$('.modal button[data-role=cancel]').click(function() {
+  let modalTab = $(`[name=${$(this).parents('form').attr('data-check')}]`);
+  modalTab.removeClass('checked');
+  $(this).parents('form').find('input').prop('checked', false)
+  $(this).parents('form').find('label').removeClass('checked')
+  $(this).parents('form').find('select').val([])
+})
 
 //Add class checked to label when check it's input
-$('#payment-process .modal input[type=radio]').on('input', function() {
-  $(this).parents('label').addClass('checked')
-  $(this).parents('label').siblings('label').removeClass('checked')
+$('#payment-process .modal input[type=checkbox], #payment-process .modal input[type=radio]').on('input', function() {
+  $(this).parents('label').toggleClass('checked')
 })
 
 
 //show alert if the user didn't select a delivery location
 $(' [data-role=purchase]').click(function() {
   if($('.calc-tabs input#calc-delivery').hasClass('checked')) {
-    $('.vehicle-info li[data-value=delivery-cost] .value').removeClass('danger')
+    $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').removeClass('danger')
   } else {
-    $('.vehicle-info li[data-value=delivery-cost] .value').addClass('danger')
+    $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').addClass('danger')
   }
 
 })

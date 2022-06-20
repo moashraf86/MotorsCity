@@ -86,12 +86,13 @@
               <img src="../assets/img/cars/CAR-8.png" alt="chevrolet">
               <div class="title">
                 <h5>2016 Jeep Renegade</h5>
-                <span class="driven">96,369 KM</span>
+                <span class="d-block driven mb-1">96,369 KM</span>
+                <span class="ad">Ad Number: 1234</span>
               </div>
             </div>
             <div class="price flex-grow-1 flex-sm-grow-0">
-              <h5>Total Cost</h5>
-              <span class="cost">SR.25,748</span>
+              <h5>Vehicle Price</h5>
+              <span class="cost">SR.90,000</span>
             </div>
           </div>
         </div>
@@ -112,6 +113,17 @@
           <div class="row">
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+                <ul class="providers">
+                  <li class="active" data-monthly="724" data-cash="5000">
+                    <img src="../assets/img/icons/al-rajhi-bank.svg" alt="">
+                  </li>
+                  <li data-monthly="524" data-cash="4000">
+                    <img src="../assets/img/icons/SNB.svg" alt="">
+                  </li>
+                  <li data-monthly="424" data-cash="3000">
+                    <img src="../assets/img/icons/al-rajhi-bank.svg" alt="">
+                  </li>
+                </ul>
                 <div class="card">
                   <div class="row gap-3">
                     <div class="col-12 col-lg-4 d-flex align-content-lg-stretch">
@@ -120,21 +132,8 @@
                           <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-truck me-3"></i>
                               Calculate Delivery 
-                              <i class="bi bi-truck ms-3"></i>
-                            </span>
-                            <span class="icon">
-                              <i class="bi bi-plus-circle plus"></i>
-                              <i class="bi bi-check-circle-fill check d-none"></i>
-                            </span>
-                          </li>
-                        </label>
-                        <label for="provider" data-bs-toggle="modal" data-bs-target="#selectProvider">
-                          <input type="checkbox" name="provider" id="provider" class="d-none">
-                          <li>
-                            <span>
-                              Select Provider
-                              <i class="bi bi-bank ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -146,8 +145,8 @@
                           <input type="checkbox" name="warranty" id="warranty" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-shield-shaded me-3"></i>
                               Select Warranty
-                              <i class="bi bi-shield-shaded ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -159,8 +158,8 @@
                           <input type="checkbox" name="trade-in" id="trade-in" class="d-none" data-bs-toggle="modal" data-bs-target="#tradeIn">
                           <li>
                             <span>
+                              <i class="bi bi-box2 me-3"></i>
                               Apply Trade-In
-                              <i class="bi bi-box2 ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -172,8 +171,8 @@
                           <input type="checkbox" name="add-on" id="add-on" class="d-none" data-bs-toggle="modal" data-bs-target="#addOn">
                           <li>
                             <span>
+                              <i class="bi bi-plugin me-3"></i>
                               Apply Add On
-                              <i class="bi bi-plugin ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -211,7 +210,7 @@
                       <ul class="vehicle-info">
                         <li>
                           <span class="title">Vehicle Price</span>
-                          <span class="value">SR.22,990.00</span>
+                          <span class="value">SR.90.000</span>
                         </li>
                         <li data-value="delivery-cost">
                           <span class="title">Delivery Cost</span>
@@ -223,7 +222,7 @@
                         </li>
                         <li>
                           <span class="title">Taxes</span>
-                          <span class="value">SR.5,699</span>
+                          <span class="value">15%</span>
                         </li>
                         <li>
                           <span class="title">Warranty Plan</span>
@@ -242,7 +241,7 @@
                           <span class="value">SR.45.594</span>
                         </li>
                       </ul>
-                      <P class="mb-0 mt-4 note">Note: The book amount is 100% refundable if you decided not to continue with the vehicles purchase.</P>
+                      <P class="mb-0 mt-4 note">*Estimated monthly payment 72 months financing. Financing requires finance provider approval.</P>
                     </div>
                   </div>
                 </div>
@@ -250,7 +249,7 @@
                   <a href="#" class="flex-grow-1 flex-sm-grow-0">
                     <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
                       <span>Book Now</span>
-                      <span class="tiny">For SR.150</span>
+                      <span class="tiny">150 Saudi Riyal</span>
                     </button>
                   </a>
                 </div>
@@ -264,8 +263,8 @@
                           <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-truck me-3"></i>
                               Calculate Delivery 
-                              <i class="bi bi-truck ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -277,8 +276,8 @@
                           <input type="checkbox" name="warranty" id="warranty" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-shield-shaded me-3"></i>
                               Select Warranty
-                              <i class="bi bi-shield-shaded ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -290,8 +289,8 @@
                           <input type="checkbox" name="trade-in" id="trade-in" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-box2 me-3"></i>
                               Apply Trade-In
-                              <i class="bi bi-box2 ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -303,8 +302,8 @@
                           <input type="checkbox" name="add-on" id="add-on" class="d-none">
                           <li>
                             <span>
+                              <i class="bi bi-plugin me-3"></i>
                               Apply Add On
-                              <i class="bi bi-plugin ms-3"></i>
                             </span>
                             <span class="icon">
                               <i class="bi bi-plus-circle plus"></i>
@@ -319,7 +318,7 @@
                       <ul class="vehicle-info">
                         <li>
                           <span class="title">Vehicle Price</span>
-                          <span class="value">SR.22,990.00</span>
+                          <span class="value">SR.90.000</span>
                         </li>
                         <li data-value="delivery-cost">
                           <span class="title">Delivery Cost</span>
@@ -331,7 +330,7 @@
                         </li>
                         <li>
                           <span class="title">Taxes</span>
-                          <span class="value">SR.5,699</span>
+                          <span class="value">15%</span>
                         </li>
                         <li>
                           <span class="title">Warranty Plan</span>
@@ -342,7 +341,9 @@
                           <span class="value">SR.45.594</span>
                         </li>
                       </ul>
-                      <p class="mb-0 mt-4 note">Note: 100% refundable if you decided not to continue with the vehicles purchase</p>
+                      <p class="mb-0 mt-4 note">
+                        *Estimated monthly payment 72 months financing. Financing requires finance provider approval.
+                        </p>
                     </div>
                   </div>
                 </div>
@@ -351,13 +352,13 @@
                   <a href="#" class="flex-grow-1 flex-sm-grow-0">
                     <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
                       <span>Book Now</span>
-                      <span class="tiny">For SR.150</span>
+                      <span class="tiny">150 Saudi Riyal</span>
                     </button>
                   </a>
                 </div>
               </div>
             </div>
-            <p class="bottom-note">*Estimated monthly payment is based on 5.99% APR, 72 months financing and SR.0 down payment with taxes included. Financing requires credit approval. Cost of borrowing :SR.4,967.12.</p>
+            <p class="bottom-note text-center">Note: 100% refundable if you decided not to continue with the vehicles purchase</p>
           </div>
         </div>
       </section>
@@ -379,52 +380,26 @@
                   <img class="w-100" src="../assets/img/delivery-img.png" alt="">
                 </div>
                 <div class="body">
-                  <p class="mt-4">Please enter the address where you would like us to deliver your vehicle.</p>
+                  <p class="mt-4">Please enter the city where you would like us to deliver your vehicle.</p>
                   <select class="form-control" name="city" id="city" required>
-                    <option value="">--City--</option>
-                    <option value="1">one</option>
-                    <option value="2">two</option>
-                    <option value="3">three</option>
+                    <option value="" disabled selected>--City--</option>
+                    <option value="Riyadh">Riyadh</option>
+                    <option value="Jeddah">Jeddah</option>
+                    <option value="Dammam">Dammam</option>
+                    <option value="Al-Madinah">Al Madinah</option>
+                    <option value="Mekkah ">Mekkah</option>
+                    <option value="Abha">Abha</option>
                   </select>
                 </div>
               </div>
-              <div class="modal-footer border-0">
+              <div class="modal-footer border-0 justify-content-between">
                 <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <!-- Modal#2 - Select Provider  -->
-      <div class="modal fade" id="selectProvider" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="selectProviderLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <form data-check="provider">
-              <div class="modal-header">
-                <h5 class="modal-title" id="calcDeliveryLabel">Protect Your Purchase</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="header-img">
-                  <img class="w-100" src="../assets/img/delivery-img.png" alt="">
-                </div>
-                <div class="body">
-                  <p class="mt-4">Please enter the address where you would like us to deliver your vehicle.</p>
-                  <select class="form-control" name="city" id="city" required>
-                    <option value="">--City--</option>
-                    <option value="1">one</option>
-                    <option value="2">two</option>
-                    <option value="3">three</option>
-                  </select>
-                </div>
-              </div>
-              <div class="modal-footer border-0">
-                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+
       <!-- Modal#3 - Select Warranty -->
       <div class="modal fade" id="selectWarranty" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="selectWarrantyLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -442,35 +417,39 @@
                     <input type="radio" name="month" id="12-month" required>
                     <div>
                       <span class="d-block month">12 Months | 40,000 km</span>
-                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                      <span class="d-block price"><b>SR.2,295.00</b></span>
                     </div>
                   </label>
                   <label for="24-month">
                     <input type="radio" name="month" id="24-month" required>
                     <div>
                       <span class="d-block month">24 Months | 40,000 km</span>
-                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                      <span class="d-block price"><b>SR.2,295.00</b></span>
                     </div>
                   </label>
                   <label for="36-month">
                     <input type="radio" name="month" id="36-month" required>
                     <div>
                       <span class="d-block month">36 Months | 40,000 km</span>
-                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                      <span class="d-block price"><b>R.2,295.00</b></span>
                     </div>
                   </label>
                   <label for="48-month">
                     <input type="radio" name="month" id="48-month" required>
                     <div>
                       <span class="d-block month">48 Months | 40,000 km</span>
-                      <span class="d-block price"><b>SR.38.02 Monthly*</b> | SR.2,295.00</span>
+                      <span class="d-block price"><b>R.2,295.00</b></span>
                     </div>
                   </label>
-                  <p class="mt-4">*Monthly payment based on 5.99% APR and a term of 72 months.</p>
                 </div>
               </div>
               <div class="modal-footer border-0">
-                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+                <button type="button" class="btn btn-secondary" data-role="cancel">
+                  <span class="bg">
+                    <span class="text">Clear All</span>
+                  </span>
+                </button>
+                <button type="submit" role="button" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
@@ -514,7 +493,12 @@
                 <p class="light">All trade-ins are manually reviewed for accuracy and trade value is subject to change upon the discovery of any incorrect information.</p>
               </div>
               <div class="modal-footer border-0">
-                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+                <button type="button" class="btn btn-secondary" data-role="cancel">
+                  <span class="bg">
+                    <span class="text">Clear All</span>
+                  </span>
+                </button>
+                <button type="submit" role="button" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
@@ -537,12 +521,11 @@
                     <div class="d-flex align-items-center gap-3">
                       <img src="../assets/img/icons/vehicle-repair.svg" alt="vehicle-repair">
                       <div>
-                        <h6>Title</h6>
-                        <span class="monthly me-3"><b>SR.38/mo</b></span>
-                        <span class="total">SR.2,294 total</span>
+                        <h6>Vehicle Repair Coverage</h6>
+                        <span class="total"><b>SR.2,294</b></span>
                       </div>
                     </div>
-                    <input type="radio" name="add-on" id="vehicle-repair" class="d-none" required>
+                    <input type="checkbox" name="add-on" id="vehicle-repair" class="d-none" >
                     <span class="icon">
                       <i class="bi bi-circle circle"></i>
                       <i class="bi bi-check-circle-fill check d-none"></i>
@@ -553,11 +536,10 @@
                       <img src="../assets/img/icons/tire-wheel-repair.svg" alt="tire-wheel-repair">
                       <div>
                         <h6>Tire & Wheel Repair</h6>
-                        <span class="monthly me-3"><b>SR.38/mo</b></span>
-                        <span class="total">SR.2,294 total</span>
+                        <span class="total"><b>SR.2,294</b></span>
                       </div>
                     </div>
-                    <input type="radio" name="add-on" id="tire-wheeel-repair" class="d-none" required>
+                    <input type="checkbox" name="add-on" id="tire-wheeel-repair" class="d-none" >
                     <span class="icon">
                       <i class="bi bi-circle circle"></i>
                       <i class="bi bi-check-circle-fill check d-none"></i>
@@ -568,11 +550,10 @@
                       <img src="../assets/img/icons/vehicle-loss-protection.svg" alt="vehicle-loss-protection">
                       <div>
                         <h6>Vehicle Loss Protection</h6>
-                        <span class="monthly me-3"><b>SR.38/mo</b></span>
-                        <span class="total">SR.2,294 total</span>
+                        <span class="total"><b>SR.2,294</b></span>
                       </div>
                     </div>
-                    <input type="radio" name="add-on" id="vehicle-loss-protection" class="d-none" required>
+                    <input type="checkbox" name="add-on" id="vehicle-loss-protection" class="d-none" >
                     <span class="icon">
                       <i class="bi bi-circle circle"></i>
                       <i class="bi bi-check-circle-fill check d-none"></i>
@@ -582,27 +563,11 @@
                     <div class="d-flex align-items-center gap-3">
                       <img src="../assets/img/icons/extended-warranty-coverage.svg" alt="extended-warranty-coverage">
                       <div>
-                        <h6>Extended Warranty Coverage</h6>
-                        <span class="monthly me-3"><b>SR.38/mo</b></span>
-                        <span class="total">SR.2,294 total</span>
+                        <h6>Window Tinting</h6>
+                        <span class="total"><b>SR.2,294</b></span>
                       </div>
                     </div>
-                    <input type="radio" name="add-on" id="extended-warranty-coverage" class="d-none" required>
-                    <span class="icon">
-                      <i class="bi bi-circle circle"></i>
-                      <i class="bi bi-check-circle-fill check d-none"></i>
-                    </span>
-                  </label>
-                  <label for="window-tinting">
-                    <div class="d-flex align-items-center gap-3">
-                      <img src="../assets/img/icons/window-tinting.svg" alt="window-tinting">
-                      <div>
-                        <h6>Extended Warranty Coverage</h6>
-                        <span class="monthly me-3"><b>SR.38/mo</b></span>
-                        <span class="total">SR.2,294 total</span>
-                      </div>
-                    </div>
-                    <input type="radio" name="add-on" id="window-tinting" class="d-none" required>
+                    <input type="checkbox" name="add-on" id="extended-warranty-coverage" class="d-none" >
                     <span class="icon">
                       <i class="bi bi-circle circle"></i>
                       <i class="bi bi-check-circle-fill check d-none"></i>
@@ -611,7 +576,12 @@
                 </div>
               </div>
               <div class="modal-footer border-0">
-                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+                <button type="button" class="btn btn-secondary" data-role="cancel">
+                  <span class="bg">
+                    <span class="text">Clear All</span>
+                  </span>
+                </button>
+                <button type="submit" role="button" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>

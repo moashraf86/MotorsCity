@@ -18,6 +18,8 @@
   --green     : #4fb5ae;
   --sky       : #057ac1;
   --purple    : #595da9;
+  --danger    : rgb(245 66 54 / 80%);
+  --danger-l  : rgb(245 66 54 / 30%);
 }
 
 
@@ -1584,6 +1586,7 @@ body::-webkit-scrollbar-thumb,
 
 #car-details #hero .btn-group .btn-primary,
 #payment-process .btn-primary,
+#payment-process .btn-secondary span.bg,
 #car-details #hero .btn-secondary span.bg{
   padding: 10px 45px;
   font-size: 14px;
@@ -1843,39 +1846,41 @@ body::-webkit-scrollbar-thumb,
   color: var(--white);
 }
 
-#car-details #calc-payment ul.providers {
+#car-details #calc-payment ul.providers,
+#payment-process #calc-payment ul.providers {
   display: flex;
   justify-content: center;
   margin: 40px 0;
   gap: 24px;
 }
 
-#car-details #calc-payment ul.providers li{
+#car-details #calc-payment ul.providers li,
+#payment-process #calc-payment ul.providers li{
   padding: 0 20px;
   font-weight: 500;
   background-color: var(--white-100);
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid var(--white-100);
 }
 
-#car-details #calc-payment ul.providers li:hover{
-  background: linear-gradient(90deg, #007CC2 -7.19%, #595CA9 107.19%);
-  color: var(--white);
+#car-details #calc-payment ul.providers li:hover,
+#payment-process #calc-payment ul.providers li:hover{
+  border-color: var(--purple);
 }
 
-#car-details #calc-payment ul.providers li.active{
-  background: linear-gradient(90deg, #007CC2 -7.19%, #595CA9 107.19%);
-  color: var(--white);
+#car-details #calc-payment ul.providers li.active,
+#payment-process #calc-payment ul.providers li.active{
+  border-color: var(--purple);
 }
-#car-details #calc-payment ul.providers li img {
+
+#car-details #calc-payment ul.providers li img,
+#payment-process #calc-payment ul.providers li img {
   width: 120px;
   height: 60px;
   object-fit: cover;
 }
-#car-details #calc-payment ul.providers li.active img,
-#car-details #calc-payment ul.providers li:hover img {
-  filter: invert(1) brightness(100);
-}
+
 #car-details #calc-payment .card {
   background-color: var(--white);
   border-radius: 20px;
@@ -2005,6 +2010,10 @@ body::-webkit-scrollbar-thumb,
   margin: auto;
 }
 
+#payment-process #car-overview .price h5 {
+  font-weight: 500;
+}
+
 #payment-process #car-overview .card {
   margin-top: 70px;
   padding: 20px;
@@ -2040,6 +2049,21 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
+#payment-process #calc-payment .nav-tabs .nav-link{
+  background-color: var(--white);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.02);
+}
+
+
+#payment-process #calc-payment ul.providers{
+  margin-top: 0;
+}
+
+#payment-process #calc-payment ul.providers li{
+  background-color: var(--white);
+}
+
+
 #payment-process #calc-payment .card{
   padding: 30px
 }
@@ -2056,6 +2080,11 @@ body::-webkit-scrollbar-thumb,
   cursor: pointer;
   border: 2px solid var(--white-100);
 }
+
+#payment-process #calc-payment .calc-tabs input.danger + li{
+  background-color: var(--danger-l);
+  border-color: var(--danger)
+} 
 
 #payment-process #calc-payment .calc-tabs li:hover {
   border-color: var(--sky);
@@ -2091,6 +2120,9 @@ body::-webkit-scrollbar-thumb,
   color: var(--sky)
 }
 
+#payment-process #calc-payment .calc-tabs input.danger + li span .bi {
+  color: var(--danger);
+}
 
 #payment-process #calc-payment .card{
   border-radius: 10px;
@@ -2104,7 +2136,7 @@ body::-webkit-scrollbar-thumb,
 #payment-process #calc-payment .card .btn-group .btn-primary{
   background: none;
   filter: none;
-  background-color: var(--white-100);
+  background-color: rgb(5 122 193 / 20%);
   color: var(--dark-grey);
   border-radius: 5px;
   display: flex;
@@ -2231,12 +2263,12 @@ body::-webkit-scrollbar-thumb,
   object-fit: contain;
 }
 
-#payment-process  .modal#addOn label .monthly{
+#payment-process  .modal#addOn label .total{
   color: var(--purple);
 }
 
 #payment-process  .value.danger{
-  color: red;
+  color: var(--danger)
 }
 
 
@@ -2911,11 +2943,13 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
     line-height: 30px;
   }
 
-  #car-details #calc-payment ul.providers {
+  #car-details #calc-payment ul.providers,
+  #payment-process #calc-payment ul.providers {
     gap: 2px;
   }
 
-  #car-details #calc-payment ul.providers li {
+  #car-details #calc-payment ul.providers li,
+  #payment-process #calc-payment ul.providers li {
     padding: 0 10px;
   }
   
@@ -2942,6 +2976,26 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
   #car-details #calc-payment .calc-result .btn {
     padding: 10px 40px;
     font-size: 16px;
+  }
+
+  #payment-process #car-overview .info {
+    flex: 1 0 100%;
+    padding-bottom: 10px
+  }
+
+  #payment-process #car-overview .price {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+    padding-top: 10px;
+    border-radius: 0;
+    border-top: 1px solid var(--white-200);
+  }
+  #payment-process #car-overview .price h5{
+    margin-bottom: 0;
   }
 
   #payment-process #calc-payment .card {
@@ -2994,10 +3048,13 @@ html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-pr
     padding: 10px;
     width: 100%;
   }
+
   #car-details #hero .btn-secondary {
     width: 100%;
   }
-  #car-details #calc-payment ul.providers li img {
+
+  #car-details #calc-payment ul.providers li img,
+  #payment-process #calc-payment ul.providers li img {
     width: 100px;
     height: 50px;
   }
