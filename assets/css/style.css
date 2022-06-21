@@ -2117,7 +2117,8 @@ body::-webkit-scrollbar-thumb,
 #payment-process #calc-payment .calc-tabs li span .bi{
   font-size: 24px;
   font-weight: 600;
-  color: var(--sky)
+  color: var(--sky);
+  margin-right: 16px;
 }
 
 #payment-process #calc-payment .calc-tabs input.danger + li span .bi {
@@ -2215,6 +2216,7 @@ body::-webkit-scrollbar-thumb,
 #payment-process  .modal label{
   display: flex;
   align-items: start;
+  justify-content: space-between;
   gap: 20px;
   border: 2px solid var(--white-100);
   background-color: var(--white-100);
@@ -2421,10 +2423,6 @@ html[dir=rtl] #car-details #hero .back-btn .bi {
   order: 2;
 }
 
-html[dir=rtl] #car-details #hero .row .col-12:first-of-type {
-  order: 2;
-}
-
 html[dir=rtl] #car-details #hero .how-it-works .bi::before {
   transform: rotateY(180deg);
 }
@@ -2438,13 +2436,17 @@ html[dir=rtl] #car-details #features ul {
   margin-right: 1rem;
 }
 
-html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link {
+html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
+html[dir=rtl] #payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
+html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:first-child {
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link {
+html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
+html[dir=rtl] #payment-process  #calc-payment .nav-tabs .nav-item:last-child .nav-link,
+html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:last-child {
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -2463,6 +2465,16 @@ html[dir=rtl] #car-details #calc-payment .card .btn-group .btn-primary:last-chil
 html[dir=rtl] #car-details #calc-payment #cash-tab-pane .card .btn-group .btn-primary {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+html[dir=rtl]  .modal-header .btn-close{
+  margin: -.5rem  auto -.5rem -.5rem;
+}
+
+html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
+  margin-left: 16px;
+  margin-right: 0;
+  transform: scaleX(-1);
 }
 /******************************* MEDIA QUERR *********************************/
 

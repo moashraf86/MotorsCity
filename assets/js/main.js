@@ -161,10 +161,9 @@ $('.modal button[data-role=cancel]').click(function() {
 })
 
 //Add class checked to label when check it's input
-$('#payment-process .modal input[type=checkbox], #payment-process .modal input[type=radio]').on('input', function() {
+$('#payment-process .modal input[type=checkbox]').on('input', function() {
   $(this).parents('label').toggleClass('checked')
 })
-
 
 //show alert if the user didn't select a delivery location
 $(' [data-role=purchase]').click(function() {
@@ -173,8 +172,21 @@ $(' [data-role=purchase]').click(function() {
   } else {
     $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').addClass('danger')
   }
-
 })
+
+// Move Monthly-Payment & Down Payment to top of the card on mobile
+let target = $('#calc-payment .btn-group');
+if($(window).innerWidth() <= 768) {
+  target.prependTo('#calc-payment .host');
+}
+
+$(window).resize(function () { 
+  if($(this).innerWidth() <= 768) {
+    target.prependTo('#calc-payment .host');
+  } else {
+    target.prependTo('#calc-payment .home');
+  }
+});
 
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
