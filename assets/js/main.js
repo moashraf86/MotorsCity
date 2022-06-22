@@ -117,17 +117,24 @@ $(window).on('scroll', function() {
     }
   });
   // Show/hide vehicle-nav & car title on tob of the page
-  if($(this).scrollTop() >= $('#hero h3').offset().top - 1) {
-    $('#vehicle-nav').addClass('show')
-  } else {
-    $('#vehicle-nav').removeClass('show')
-  }
+  // if($(window).scrollTop() >= $('#hero h3').offset().top - 1) {
+  //   $('#vehicle-nav').addClass('show')
+  // } else {
+  //   $('#vehicle-nav').removeClass('show')
+  // }
 
   // Show/hide sticky "Purchase" button
-  if($(window).scrollTop() >= ( $('#calc-payment').offset().top -500) ) {
+  if($(window).scrollTop() >= ( $('#calc-payment').offset().top - 500) ) {
     $('#car-details #calc-payment .calc-result').addClass('show')
   } else {
     $('#car-details #calc-payment .calc-result').removeClass('show')
+  }
+
+  // Show & Hide Bottom "Book Now" Button
+  if($(window).scrollTop() > $('#calc-payment .card').offset().top ) {
+    $('#calc-payment .calc-result').addClass('show')
+  } else {
+    $('#calc-payment .calc-result').removeClass('show')
   }
 });
 

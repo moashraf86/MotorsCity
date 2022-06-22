@@ -3017,8 +3017,31 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
   #payment-process .calc-tabs label {
     flex: 1 0 100%;
   }
+
   #payment-process #calc-payment .card form#payment .cash {
     width: 100%;
+  }
+
+  #calc-payment .calc-result {
+    position: fixed;
+    bottom: -300px;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background: #FFF;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    transition: all 300ms ease-in-out;
+  }
+
+  #calc-payment .calc-result.show {
+    bottom: 0;
+    opacity: 1;
+  }
+  #calc-payment .calc-result .btn-primary{
+    width: 100%;
+    padding: 5px 45px ;
   }
 
   footer .sign-up .btn {

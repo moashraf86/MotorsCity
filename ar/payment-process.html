@@ -126,7 +126,7 @@
                 </ul>
                 <div class="card">
                   <div class="row gap-3">
-                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch">
+                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch d-none">
                       <ul class="calc-tabs d-flex flex-wrap flex-lg-nowrap flex-lg-column w-100 gap-2 gap-lg-3">
                         <label for="calc-delivery" data-bs-toggle="modal" data-bs-target="#calcDelivery">
                           <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
@@ -185,7 +185,7 @@
                     <div class="col-12 col-lg">
                       <div class="btn-group mb-4 ">
                         <div class="btn btn-primary justify-content-center justify-content-sm-between">
-                          <span>SR.<span data-value="monthly-value">1,100</span> <br class="d-sm-none"> <sub>Monthly Payment</sub></span>
+                          <span><span data-value="monthly-value">1,100</span>﷼ <br class="d-sm-none"> <sub>شهريا</sub></span>
                           <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                             data-bs-toggle="popover" 
                             data-bs-placement="top"
@@ -196,7 +196,7 @@
                           </i>
                         </div>
                         <div class="btn btn-primary justify-content-center justify-content-sm-between">
-                          <span>SR.<span id="cash-value">9000</span> <br class="d-sm-none"> <sub>Down Payment</sub></span>
+                          <span><span id="cash-value">9,000</span>﷼ <br class="d-sm-none"> <sub>دفعة أولى</sub></span>
                           <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                             data-bs-toggle="popover" 
                             data-bs-placement="top"
@@ -209,47 +209,51 @@
                       </div>
                       <ul class="vehicle-info">
                         <li>
-                          <span class="title">Vehicle Price</span>
-                          <span class="value">SR.90.000</span>
+                          <span class="title">سعر السيارة</span>
+                          <span class="value">90.000﷼</span>
                         </li>
                         <li data-value="delivery-cost">
-                          <span class="title">Delivery Cost</span>
-                          <span class="value">Required</span>
+                          <span class="title">تكلفة التوصيل</span>
+                          <span class="value">مطلوبة</span>
                         </li>
                         <li>
-                          <span class="title">Registration & Title Transfer </span>
-                          <span class="value">SR.500</span>
+                          <span class="title">التسجيل ونقل الملكية </span>
+                          <span class="value">500﷼</span>
                         </li>
                         <li>
-                          <span class="title">Taxes</span>
-                          <span class="value">15%</span>
-                        </li>
-                        <li>
-                          <span class="title">Warranty Plan</span>
-                          <span class="value">SR.1000</span>
+                          <span class="title">الضرائب(15%)</span>
+                          <span class="value">13,500</span>
                         </li>
                         <li>
                           <span class="title">APR%</span>
                           <span class="value">11.45%</span>
                         </li>
                         <li>
-                          <span class="title">Amount Financed</span>
-                          <span class="value">SR.36,594</span>
+                          <span class="title">المبلغ الممول</span>
+                          <span class="value">36,594﷼</span>
                         </li>
-                        <li class="total">
-                          <span class="title">Total Pice</span>
-                          <span class="value">SR.91.500</span>
+                        <li>
+                          <span class="title">عدد الأقساط</span>
+                          <span class="value">12 شهر</span>
+                        </li>
+                        <li>
+                          <span class="title">القسط الشهري</span>
+                          <span class="value">1,100﷼</span>
+                        </li>
+                        <li>
+                          <span class="title">الدفعة الأولي </span>
+                          <span class="value">9,000﷼</span>
                         </li>
                       </ul>
-                      <P class="mb-0 mt-4 note">*Estimated monthly payment 72 months financing. Financing requires finance provider approval.</P>
+                      <P class="mb-0 mt-4 note">* الدفعة الشهرية المقدرة 72 شهر تمويل. يتطلب التمويل موافقة مقدم التمويل.</P>
                     </div>
                   </div>
                 </div>
                 <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
-                  <a href="#" class="flex-grow-1 flex-sm-grow-0">
+                  <a href="#" class="flex-grow-1 flex-md-grow-0">
                     <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
-                      <span>Book Now</span>
-                      <span class="tiny">150 Saudi Riyal</span>
+                      <span>إحجز الآن</span>
+                      <span class="tiny">(150﷼)</span>
                     </button>
                   </a>
                 </div>
@@ -257,7 +261,7 @@
               <div class="tab-pane fade" id="cash-tab-pane" role="tabpanel" aria-labelledby="cash-tab" tabindex="0">
                 <div class="card">
                   <div class="row gap-3">
-                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch">
+                    <div class="col-12 col-lg-4 d-flex align-content-lg-stretch d-none">
                       <ul class="calc-tabs d-flex flex-wrap flex-lg-nowrap flex-lg-column w-100 gap-2 gap-lg-3">
                         <label for="calc-delivery">
                           <input type="checkbox" name="calc-delivery" id="calc-delivery" class="d-none">
@@ -314,51 +318,46 @@
                       </ul>
                     </div>
                     <div class="col-12 col-lg">
-                      <h5>Payment Calculation</h5>
+                      <h5>حساب التكلفة</h5>
                       <ul class="vehicle-info">
                         <li>
-                          <span class="title">Vehicle Price</span>
-                          <span class="value">SR.90.000</span>
+                          <span class="title">سعر السيارة</span>
+                          <span class="value">90.000﷼</span>
                         </li>
                         <li data-value="delivery-cost">
-                          <span class="title">Delivery Cost</span>
-                          <span class="value">Required</span>
+                          <span class="title">تكلفة التوصيل</span>
+                          <span class="value">مطلوبة</span>
                         </li>
                         <li>
-                          <span class="title">Registration & Title Transfer </span>
-                          <span class="value">SR.500</span>
+                          <span class="title">التسجيل ونقل الملكية </span>
+                          <span class="value">500﷼</span>
                         </li>
                         <li>
-                          <span class="title">Taxes</span>
-                          <span class="value">15%</span>
-                        </li>
-                        <li>
-                          <span class="title">Warranty Plan</span>
-                          <span class="value">SR.1000</span>
+                          <span class="title">الضرائب(15%)</span>
+                          <span class="value">13,500</span>
                         </li>
                         <li class="total">
-                          <span class="title">Total Pice</span>
-                          <span class="value">SR.91.500</span>
+                          <span class="title">إجمالى التكلفة</span>
+                          <span class="value">91.500﷼</span>
                         </li>
                       </ul>
                       <p class="mb-0 mt-4 note">
-                        *Estimated monthly payment 72 months financing. Financing requires finance provider approval.
+                        * الدفعة الشهرية المقدرة 72 شهر تمويل. يتطلب التمويل موافقة مقدم التمويل.
                         </p>
                     </div>
                   </div>
                 </div>
                 <div class="calc-result d-flex  align-items-center justify-content-end mt-4 px-3">
-                  <!-- <button class="btn btn-primary" data-role="purchase">Purchase</button> -->
                   <a href="#" class="flex-grow-1 flex-sm-grow-0">
                     <button type="button" data-role="purchase" class="btn btn-primary d-flex flex-column gap-0 align-items-center ms-auto">
-                      <span>Book Now</span>
-                      <span class="tiny">150 Saudi Riyal</span>
+                      <span>إحجز الآن</span>
+                      <span class="tiny">(150﷼)</span>
                     </button>
                   </a>
                 </div>
               </div>
             </div>
-            <p class="bottom-note text-center">Note: 100% refundable if you decided not to continue with the vehicles purchase</p>
+            <p class="bottom-note text-center">ملحوظة: قابلية استرداد بنسبة 100٪ إذا قررت عدم الاستمرار في شراء المركبات</p>
           </div>
         </div>
       </section>
