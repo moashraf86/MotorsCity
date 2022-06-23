@@ -123,12 +123,16 @@ $(window).on('scroll', function() {
   //   $('#vehicle-nav').removeClass('show')
   // }
 
-  // Show/hide sticky "Purchase" button
-  if($(window).scrollTop() >= ( $('#calc-payment').offset().top - 500) ) {
-    $('#car-details #calc-payment .calc-result').addClass('show')
-  } else {
-    $('#car-details #calc-payment .calc-result').removeClass('show')
-  }
+// Show/hide sticky "Purchase" button
+try {
+    if($(window).scrollTop() >= ( $('#calc-payment').offset().top - 500) ) {
+      $('#car-details #calc-payment .calc-result').addClass('show')
+    }   else {
+      $('#car-details #calc-payment .calc-result').removeClass('show')
+    }
+} catch (error) {
+  return null
+}
 
   // Show & Hide Bottom "Book Now" Button
   if($(window).scrollTop() > $('#calc-payment .card').offset().top ) {
@@ -187,6 +191,7 @@ if($(window).innerWidth() <= 768) {
   target.prependTo('#calc-payment .host');
 }
 
+// Change position of blue box containing "monthly-payment" & "down payment"
 $(window).resize(function () { 
   if($(this).innerWidth() <= 768) {
     target.prependTo('#calc-payment .host');
@@ -195,6 +200,14 @@ $(window).resize(function () {
   }
 });
 
+//Show car details when clicking th "show details button"
+$('.purchase-info .show-details').click(function() {
+  $('#checkout .payment-details').addClass('show')
+})
+//Hide car details when clicking the "close" icon
+$('#checkout .payment-details .close').click(function() {
+  $(this).parents('.payment-details').removeClass('show')
+})
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')

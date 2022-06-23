@@ -1819,28 +1819,33 @@ body::-webkit-scrollbar-thumb,
 }
 
 #car-details #calc-payment .nav-tabs .nav-link,
-#payment-process #calc-payment .nav-tabs .nav-link{
+#payment-process #calc-payment .nav-tabs .nav-link,
+#checkout .purchase-info .nav-tabs .nav-link{
   padding: 12px 50px;
   background-color: var(--white-100);
   border-radius: 5px;
 }
 
 #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
-#payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link{
+#payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
+#checkout .purchase-info .nav-tabs .nav-item:first-child .nav-link{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
-#payment-process #calc-payment .nav-tabs .nav-item:last-child .nav-link{
+#payment-process #calc-payment .nav-tabs .nav-item:last-child .nav-link,
+#checkout .purchase-info .nav-tabs .nav-item:last-child .nav-link{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 #car-details #calc-payment .nav-tabs .nav-link:hover,
 #payment-process #calc-payment .nav-tabs .nav-link:hover,
+#checkout .purchase-info .nav-tabs .nav-link:hover,
 #car-details #calc-payment .nav-tabs .nav-link.active,
-#payment-process #calc-payment .nav-tabs .nav-link.active {
+#payment-process #calc-payment .nav-tabs .nav-link.active,
+#checkout .purchase-info .nav-tabs .nav-link.active {
   background: linear-gradient(78.7deg, #4FB5AE 20%, #007CC2 80%, #595CA9 95%);
   border-bottom: none;
   color: var(--white);
@@ -2064,8 +2069,11 @@ body::-webkit-scrollbar-thumb,
 }
 
 
-#payment-process #calc-payment .card{
-  padding: 30px
+#payment-process #calc-payment .card,
+#checkout .card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
+  padding: 30px;
 }
 
 #payment-process #calc-payment .calc-tabs li{
@@ -2125,11 +2133,6 @@ body::-webkit-scrollbar-thumb,
   color: var(--danger);
 }
 
-#payment-process #calc-payment .card{
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);;
-}
-
 #payment-process #calc-payment .card .btn-group{
   width: 100%;
 }
@@ -2179,7 +2182,7 @@ body::-webkit-scrollbar-thumb,
 
 #payment-process #calc-payment .card .vehicle-info li .title{
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 #payment-process #calc-payment .card .vehicle-info li.total {
@@ -2275,6 +2278,140 @@ body::-webkit-scrollbar-thumb,
 
 
 
+/********************* Checkout page  ********************/
+#checkout .checkout-wrapper {
+  padding: 50px 0;
+}
+
+#checkout  .payment-details .card .title {
+  padding-bottom: 10px;
+}
+
+#checkout  .payment-details .card .title .close{
+  cursor: pointer;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkout  .payment-details .card .title .bi:before{
+  font-weight: 600 !important;
+  color: #000;
+}
+
+#checkout  .payment-details .card .head {
+  border-top: 1px solid var(--white-200);
+  border-bottom: 1px solid var(--white-200);
+}
+
+#checkout  .payment-details .card .head img{
+  border-radius: 5px;
+}
+
+#checkout   .card  ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--white-200);
+}
+
+#checkout   .card ul li:last-of-type{
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+#checkout  .card ul li .title{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+#checkout  .card ul li .value{
+  color: var(--dark-grey);
+}
+
+#checkout  .card ul li .value.unique{
+  color: var(--sky);
+  font-weight: 700;
+}
+
+#checkout  .purchase-info .nav-tabs .nav-item{
+  flex: 1 0;
+}
+
+#checkout  .purchase-info .nav-tabs .nav-link{
+  width: 100%;
+}
+
+#checkout  .purchase-info form.buyer-info label{
+  font-weight: 600;
+  color: var(--dark-grey);
+  margin-bottom: 5px;
+}
+
+#checkout  .purchase-info form.buyer-info input{
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#checkout  .purchase-info form.buyer-info select{
+  border: 1px solid #ededed;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+#checkout  .purchase-info form.buyer-info p.tiny{
+  font-size: 14px;
+  margin-bottom: 20px !important;
+}
+
+#checkout  .purchase-info form.buyer-info .promoCode{
+  padding: 8px 10px;
+  margin-bottom: 24px;
+}
+
+#checkout  .purchase-info form.buyer-info .promoCode input{
+  border: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+#checkout  .purchase-info form.buyer-info .promoCode input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+#checkout  .purchase-info form.buyer-info .promoCode .btn{
+  border-radius: 4px;
+  padding: 5px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  background-color: var(--white-100);
+  color: var(--gray);
+  filter: none;
+}
+
+#checkout  .purchase-info form.buyer-info button.submit {
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  margin-left: auto;
+}
+
+#checkout .exerpt-info  .card  ul li a.show-details {
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--sky);
+  color: var(--white);
+  border-radius: 4px;
+}
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -2826,6 +2963,11 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
     font-size: 16px;
   }
 
+  #checkout  .purchase-info .nav-tabs .nav-link{
+  font-size: 14px;
+  padding: 12px;
+  }
+
   footer .sign-up  {
     width: 100%;
   }
@@ -3042,6 +3184,43 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
   #calc-payment .calc-result .btn-primary{
     width: 100%;
     padding: 5px 45px ;
+  }
+
+  #checkout  .purchase-info .nav-tabs .nav-link{
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  #checkout  .payment-details {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(0 0 0 / .5);
+    /* opacity: 0; */
+    height: 0;
+  }
+
+  #checkout  .payment-details .card{
+    position: fixed;
+    bottom: -200vh;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: bottom 300ms ease-in-out ;
+  }
+  
+  #checkout  .payment-details.show {
+    height: 100vh;
+    /* opacity: 1; */
+  }
+
+  #checkout  .payment-details.show .card {
+    bottom: 0;
   }
 
   footer .sign-up .btn {
