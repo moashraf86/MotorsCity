@@ -155,7 +155,7 @@ $('.modal form').submit(function (e) {
   $(this).find('[aria-label="Close"]').trigger('click');
   let modalTab = $(`[name=${$(this).attr('data-check')}]`);
   modalTab.addClass('checked');
-  modalTab.removeClass('danger');
+  // modalTab.removeClass('danger');
 });
 
 //Cancel form submit on Modal
@@ -173,13 +173,13 @@ $('#payment-process .modal input[type=checkbox]').on('input', function() {
 })
 
 //show alert if the user didn't select a delivery location
-$(' [data-role=purchase]').click(function() {
-  if($('.calc-tabs input#calc-delivery').hasClass('checked')) {
-    $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').removeClass('danger')
-  } else {
-    $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').addClass('danger')
-  }
-})
+// $(' [data-role=purchase]').click(function() {
+//   if($('.calc-tabs input#calc-delivery').hasClass('checked')) {
+//     $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').removeClass('danger')
+//   } else {
+//     $('.vehicle-info li[data-value=delivery-cost] .value, .calc-tabs input[id=calc-delivery]').addClass('danger')
+//   }
+// })
 
 // Move Monthly-Payment & Down Payment to top of the card on mobile
 let target = $('#calc-payment .btn-group');
