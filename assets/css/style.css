@@ -2319,22 +2319,22 @@ body::-webkit-scrollbar-thumb,
   border-bottom: 1px solid var(--white-200);
 }
 
-#checkout   .card ul li:last-of-type{
+#checkout .card ul li:last-of-type{
   border-bottom: 0;
   padding-bottom: 0;
 }
 
-#checkout  .card ul li .title{
+#checkout .card ul li .title{
   font-size: 16px;
   font-weight: 600;
   color: var(--dark-grey);
 }
 
-#checkout  .card ul li .value{
+#checkout .card ul li .value{
   color: var(--dark-grey);
 }
 
-#checkout  .card ul li .value.unique{
+#checkout .card ul li .value.unique{
   color: var(--sky);
   font-weight: 700;
 }
@@ -2347,52 +2347,66 @@ body::-webkit-scrollbar-thumb,
   width: 100%;
 }
 
-#checkout  .purchase-info .nav-tabs .nav-link:disabled:hover {
+#checkout .purchase-info .nav-tabs .nav-link:disabled:hover {
   background: var(--white-100);
   color: var(--dark-grey);
 }
 
-#checkout  .purchase-info form.buyer-info label{
+#checkout .purchase-info form.buyer-info label{
   font-weight: 600;
   color: var(--dark-grey);
   margin-bottom: 5px;
 }
 
-#checkout  .purchase-info form.buyer-info input{
+#checkout .purchase-info form.buyer-info input{
   border: 1px solid #ededed;
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 20px;
+  color: var(--sky);
+  font-weight: 600;
 }
 
-#checkout  .purchase-info form.buyer-info select{
+#checkout .purchase-info form.buyer-info input::placeholder {
+  color: var(--gray);
+  font-weight: 300;
+}
+
+#checkout .purchase-info form.buyer-info select{
   border: 1px solid #ededed;
   margin-bottom: 10px;
   border-radius: 4px;
   padding: 10px;
+  color: var(--sky);
+  font-weight: 600;
 }
 
-#checkout  .purchase-info form.buyer-info p.tiny{
+#checkout .purchase-info form.buyer-info select:invalid {
+  color: var(--dark-grey);
+  font-weight: 300;
+}
+
+#checkout .purchase-info form.buyer-info p.tiny{
   font-size: 14px;
   margin-bottom: 20px !important;
 }
 
-#checkout  .purchase-info form.buyer-info .promoCode{
+#checkout .purchase-info form.buyer-info .promoCode{
   padding: 8px 10px;
   margin-bottom: 24px;
 }
 
-#checkout  .purchase-info form.buyer-info .promoCode input{
+#checkout .purchase-info form.buyer-info .promoCode input{
   border: none;
   margin-bottom: 0;
   padding: 0;
 }
-#checkout  .purchase-info form.buyer-info .promoCode input:focus{
+#checkout .purchase-info form.buyer-info .promoCode input:focus{
   outline: none;
   box-shadow: none;
 }
 
-#checkout  .purchase-info form.buyer-info .promoCode .btn{
+#checkout .purchase-info form.buyer-info .promoCode .btn{
   border-radius: 4px;
   padding: 5px 30px;
   font-size: 14px;
@@ -2401,6 +2415,11 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--white-100);
   color: var(--gray);
   filter: none;
+}
+
+#checkout  .purchase-info form.buyer-info .promoCode .btn.active {
+  background-color: var(--sky);
+  color: var(--white);
 }
 
 #checkout  .purchase-info form.buyer-info button.submit {
@@ -2463,6 +2482,24 @@ body::-webkit-scrollbar-thumb,
   font-size: 16px;
   font-weight: 600;
 }
+
+#checkout .exerpt-info  .card {
+  padding: 30px 0;
+}
+
+#checkout .exerpt-info  .card  ul li {
+  padding: 10px 30px;
+}
+
+#checkout .exerpt-info  .card  ul li.deposite {
+  background-color: #4fb5ae;
+}
+
+#checkout .exerpt-info  .card  ul li.deposite .title,
+#checkout .exerpt-info  .card  ul li.deposite .value{
+  color: #fff;
+}
+
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -2627,7 +2664,8 @@ html[dir=rtl] #car-details #features ul {
 
 html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 html[dir=rtl] #payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
-html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:first-child {
+html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:first-child,
+html[dir=rtl] #checkout .purchase-info .nav-tabs .nav-item:first-child .nav-link  {
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2635,7 +2673,8 @@ html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:first
 
 html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
 html[dir=rtl] #payment-process  #calc-payment .nav-tabs .nav-item:last-child .nav-link,
-html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:last-child {
+html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:last-child,
+html[dir=rtl] #checkout .purchase-info .nav-tabs .nav-item:last-child .nav-link {
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

@@ -216,6 +216,15 @@ $('.purchase-info form.buyer-info').submit(function(e) {
   $('.purchase-info .nav-tabs #pay-tab').trigger('click')
   $('.purchase-info .nav-tabs #yourInfo-tab').addClass('complete')
 })
+
+// Activate Promocode button when user add a promocode
+$('#promoCode').on('keyup', function() {
+  if($(this).val().length != 0) {
+    $(this).siblings('.btn').addClass('active')
+  } else {
+    $(this).siblings('.btn').removeClass('active')
+  }
+})
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
