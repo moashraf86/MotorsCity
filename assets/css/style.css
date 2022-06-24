@@ -2492,7 +2492,10 @@ body::-webkit-scrollbar-thumb,
 }
 
 #checkout .exerpt-info  .card  ul li.deposite {
-  background-color: #4fb5ae;
+  background-color: #00b362;
+  border: 12px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 #checkout .exerpt-info  .card  ul li.deposite .title,
