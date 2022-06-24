@@ -87,7 +87,7 @@
                     <button class="nav-link active" id="yourInfo-tab" data-bs-toggle="tab" data-bs-target="#yourInfo-tab-pane" type="button" role="tab" aria-controls="yourInfo-tab-pane" aria-selected="true">Add Your info</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pay-tab" data-bs-toggle="tab" data-bs-target="#pay-tab-pane" type="button" role="tab" aria-controls="pay-tab-pane" aria-selected="false">Pay</button>
+                    <button class="nav-link" id="pay-tab" data-bs-toggle="tab" data-bs-target="#pay-tab-pane" type="button" role="tab" aria-controls="pay-tab-pane" aria-selected="false" disabled>Pay</button>
                   </li>
                 </ul>
                 <div class="tab-content mt-5" id="myTabContent">
@@ -118,7 +118,7 @@
                       </div>
                       <div class="group">
                         <label for="phone">Phone Number</label>
-                        <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                        <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone Number" maxlength="10" required>
                       </div>
                       <div class="group">
                         <label for="city">City</label>
@@ -159,20 +159,22 @@
                                 <span class="input-group-text" id="basic-addon1">
                                   <i class="bi bi-credit-card-2-back"></i>
                                 </span>
-                                <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16">
+                                <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16" required>
                               </div>
                               <div class="form-group d-flex align-items-center gap-3">
                                 <div class="input-group">
-                                  <input type="month" class="form-control" id="month"  placeholder="Card Number" >
+                                  <input type="month" class="form-control" id="month"  placeholder="Card Number" required>
                                 </div>
                                 <div class="input-group">
                                   <span class="input-group-text" id="basic-addon1">
                                     <i class="bi bi-lock-fill"></i>
                                   </span>
-                                  <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3">
+                                  <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3" required>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn btn-primary">
+                                Complete the Payment <span>SR.150</span>
+                              </button>
                             </form>
                           </div>
                         </div>
@@ -190,20 +192,22 @@
                                 <span class="input-group-text" id="basic-addon1">
                                   <i class="bi bi-credit-card-2-back"></i>
                                 </span>
-                                <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16">
+                                <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16" required>
                               </div>
                               <div class="form-group d-flex align-items-center gap-3">
                                 <div class="input-group">
-                                  <input type="month" class="form-control" id="month"  placeholder="Card Number" >
+                                  <input type="month" class="form-control" id="month"  placeholder="Card Number" required>
                                 </div>
                                 <div class="input-group">
                                   <span class="input-group-text" id="basic-addon1">
                                     <i class="bi bi-lock-fill"></i>
                                   </span>
-                                  <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3">
+                                  <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3" required>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn btn-primary">
+                                Complete the Payment <span>SR.150</span>
+                              </button>
                             </form>
                           </div>
                         </div>

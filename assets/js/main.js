@@ -208,6 +208,14 @@ $('.purchase-info .show-details').click(function() {
 $('#checkout .payment-details .close').click(function() {
   $(this).parents('.payment-details').removeClass('show')
 })
+
+// Open "Pay" tab when submit the "add info form"
+$('.purchase-info form.buyer-info').submit(function(e) {
+  e.preventDefault();
+  $('.purchase-info .nav-tabs #pay-tab:disabled').removeAttr('disabled')
+  $('.purchase-info .nav-tabs #pay-tab').trigger('click')
+  $('.purchase-info .nav-tabs #yourInfo-tab').addClass('complete')
+})
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
