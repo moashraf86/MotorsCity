@@ -2071,7 +2071,8 @@ body::-webkit-scrollbar-thumb,
 
 
 #payment-process #calc-payment .card,
-#checkout .card {
+#checkout .card,
+#order-confirmed .card {
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
   padding: 30px;
@@ -2503,6 +2504,70 @@ body::-webkit-scrollbar-thumb,
   color: #fff;
 }
 
+/********************* Order-confirmed page  ********************/
+#order-confirmed #confirmed-message{
+  text-align: center;
+  padding: 50px 0;
+  position: relative;
+}
+#order-confirmed #confirmed-message::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background-color: var(--white-200);
+  z-index: -1;
+}
+
+#order-confirmed .card{
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 70px;
+  margin-bottom: 30px;
+}
+
+#order-confirmed .card img{
+  max-width: 40%;
+  margin: auto;
+}
+
+#order-confirmed .card .car-name{
+  color: var(--sky);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#order-confirmed .contact-info{
+  max-width: 600px;
+  margin: auto;
+  font-size: 14px;
+  text-align: left;
+}
+
+#order-confirmed .contact-info ul{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#order-confirmed .contact-info ul li{
+  flex: 1 0;
+}
+
+#order-confirmed .contact-info ul li h6,
+#order-confirmed .contact-info ul li a{
+  color: var(--sky);
+}
+
+#order-confirmed .contact-info ul span{
+  display: block;
+  margin-bottom: 10px;
+}
+
+
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -2510,11 +2575,14 @@ footer {
 }
 
 #search footer,
-#checkout footer {
+#checkout footer,
+#order-confirmed footer {
   background-color: var(--white-100);
 }
 
-#search footer .sign-up .form-control{
+#search footer .sign-up .form-control,
+#checkout footer .sign-up .form-control,
+#order-confirmed footer .sign-up .form-control{
   background-color: var(--white-100);
   border-bottom-color: #bcbcbc;
 }
@@ -2706,6 +2774,10 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
   margin-left: 16px;
   margin-right: 0;
   transform: scaleX(-1);
+}
+
+html[dir=rtl] #order-confirmed .contact-info ul {
+  text-align: right;
 }
 /******************************* MEDIA QUERR *********************************/
 
@@ -3368,6 +3440,19 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
 
   #checkout  .purchase-info .accordion .btn {
     font-size: 14px;
+  }
+
+  #order-confirmed .card,
+  #order-confirmed .contact-info {
+    max-width: 480px;
+  }
+
+  #order-confirmed .card {
+    padding: 30px;
+  }
+  
+  #order-confirmed .contact-info ul {
+    flex-direction: column;
   }
 }
 
