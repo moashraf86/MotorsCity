@@ -347,14 +347,20 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 #trusted .box:first-of-type {
-  border-right: 1px solid rgba(85, 85, 85, .1)
+  border-right: 1px solid rgba(85, 85, 85, .1);
+  text-align: center
 }
 
 #trusted .box img {
-  max-width: 200px;
+  width: 200px;
   height: 140px;
   object-fit: contain;
   filter: grayscale(10) opacity(0.4);
+}
+
+
+#trusted .box:first-of-type img{
+  object-fit: fill;
 }
 /******[ 3 ] HOW IT WORKS ******/
 #how-it-works {
@@ -2800,6 +2806,11 @@ html[dir=rtl] #payment-process #calc-payment .calc-tabs li span .bi {
 html[dir=rtl] #order-confirmed .contact-info ul {
   text-align: right;
 }
+
+html[dir=rtl] #trusted .box:first-of-type{
+  border-right: 0;
+  border-left: 1px solid rgb(85 85 85 / .1);
+}
 /******************************* MEDIA QUERR *********************************/
 
 /* LAPTOP */
@@ -3479,8 +3490,13 @@ html[dir=rtl] #order-confirmed .contact-info ul {
   #trusted .box {
     text-align: center;
   }
+
   #trusted .box:first-of-type {
-    border-right: none;
+    border-right: 0;
+  }
+
+  html[dir=rtl] #trusted .box:first-of-type {
+    border-left: 0;
   }
 }
 
