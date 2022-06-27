@@ -3489,10 +3489,19 @@ html[dir=rtl] #trusted .box:first-of-type{
 
   #trusted .box {
     text-align: center;
+    padding: 0;
   }
 
   #trusted .box:first-of-type {
     border-right: 0;
+  }
+
+  #trusted .box img{
+    width: 170px;
+  }
+
+  #trusted .box h5{
+    font-size: 14px;
   }
 
   html[dir=rtl] #trusted .box:first-of-type {
