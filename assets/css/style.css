@@ -149,6 +149,9 @@ ul {
 input {
   margin-left: 0 !important;
 }
+input::placeholder {
+  font-weight: normal;
+}
 
 input[type=range] {
   -webkit-appearance: none;
@@ -1847,7 +1850,7 @@ body::-webkit-scrollbar-thumb,
 
 #car-details #calc-payment .nav-tabs .nav-link,
 #payment-process #calc-payment .nav-tabs .nav-link,
-#checkout .purchase-info .nav-tabs .nav-link{
+#reservation .purchase-info .nav-tabs .nav-link{
   padding: 12px 50px;
   background-color: var(--white-100);
   border-radius: 5px;
@@ -1855,25 +1858,25 @@ body::-webkit-scrollbar-thumb,
 
 #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 #payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
-#checkout .purchase-info .nav-tabs .nav-item:first-child .nav-link{
+#reservation .purchase-info .nav-tabs .nav-item:first-child .nav-link{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
 #payment-process #calc-payment .nav-tabs .nav-item:last-child .nav-link,
-#checkout .purchase-info .nav-tabs .nav-item:last-child .nav-link{
+#reservation .purchase-info .nav-tabs .nav-item:last-child .nav-link{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 #car-details #calc-payment .nav-tabs .nav-link:hover,
 #payment-process #calc-payment .nav-tabs .nav-link:hover,
-#checkout .purchase-info .nav-tabs .nav-link:hover,
+#reservation .purchase-info .nav-tabs .nav-link:hover,
 #car-details #calc-payment .nav-tabs .nav-link.active,
 #payment-process #calc-payment .nav-tabs .nav-link.active,
-#checkout .purchase-info .nav-tabs .nav-link.active,
-#checkout .purchase-info .nav-tabs .nav-link.complete {
+#reservation .purchase-info .nav-tabs .nav-link.active,
+#reservation .purchase-info .nav-tabs .nav-link.complete {
   background: linear-gradient(78.7deg, #4FB5AE 20%, #007CC2 80%, #595CA9 95%);
   border-bottom: none;
   color: var(--white);
@@ -2098,8 +2101,9 @@ body::-webkit-scrollbar-thumb,
 
 
 #payment-process #calc-payment .card,
-#checkout .card,
-#order-confirmed .card {
+#reservation .card,
+#order-confirmed .card,
+#checkout .card {
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
   padding: 30px;
@@ -2283,15 +2287,6 @@ body::-webkit-scrollbar-thumb,
   padding: 10px 20px;
 }
 
-#payment-process  .modal#addOn label.checked span.icon .circle{
-  display: none;
-}
-
-#payment-process  .modal#addOn label.checked span.icon .check{
-  display: inline-block !important;
-  color: var(--sky);
-}
-
 #payment-process  .modal#addOn label img{
   width: 50px;
   object-fit: contain;
@@ -2307,15 +2302,17 @@ body::-webkit-scrollbar-thumb,
 
 
 
-/********************* Checkout page  ********************/
-#checkout .checkout-wrapper {
+/********************* Reservation page  ********************/
+#reservation .reservation-wrapper {
   padding: 50px 0;
 }
 
+#reservation  .payment-details .card .title,
 #checkout  .payment-details .card .title {
   padding-bottom: 10px;
 }
 
+#reservation  .payment-details .card .title .close,
 #checkout  .payment-details .card .title .close{
   cursor: pointer;
   display: flex;
@@ -2325,21 +2322,25 @@ body::-webkit-scrollbar-thumb,
   align-items: center;
 }
 
-#checkout  .payment-details .card .title .bi:before{
+#reservation  .payment-details .card .title .bi:before,
+#checkout .payment-details .card .title .bi:before{
   font-weight: 600 !important;
   color: #000;
 }
 
+#reservation  .payment-details .card .head,
 #checkout  .payment-details .card .head {
   border-top: 1px solid var(--white-200);
   border-bottom: 1px solid var(--white-200);
 }
 
+#reservation  .payment-details .card .head img,
 #checkout  .payment-details .card .head img{
   border-radius: 5px;
 }
 
-#checkout   .card  ul li {
+#reservation .card  ul li,
+#checkout .card  ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2347,46 +2348,50 @@ body::-webkit-scrollbar-thumb,
   border-bottom: 1px solid var(--white-200);
 }
 
+#reservation .card ul li:last-of-type,
 #checkout .card ul li:last-of-type{
   border-bottom: 0;
   padding-bottom: 0;
 }
 
+#reservation .card ul li .title,
 #checkout .card ul li .title{
   font-size: 16px;
   font-weight: 600;
   color: var(--dark-grey);
 }
 
+#reservation .card ul li .value,
 #checkout .card ul li .value{
   color: var(--dark-grey);
 }
 
+#reservation .card ul li .value.unique,
 #checkout .card ul li .value.unique{
   color: var(--sky);
   font-weight: 700;
 }
 
-#checkout  .purchase-info .nav-tabs .nav-item{
+#reservation  .purchase-info .nav-tabs .nav-item{
   flex: 1 0;
 }
 
-#checkout  .purchase-info .nav-tabs .nav-link{
+#reservation  .purchase-info .nav-tabs .nav-link{
   width: 100%;
 }
 
-#checkout .purchase-info .nav-tabs .nav-link:disabled:hover {
+#reservation .purchase-info .nav-tabs .nav-link:disabled:hover {
   background: var(--white-100);
   color: var(--dark-grey);
 }
 
-#checkout .purchase-info form.buyer-info label{
+#reservation .purchase-info form.buyer-info label{
   font-weight: 600;
   color: var(--dark-grey);
   margin-bottom: 5px;
 }
 
-#checkout .purchase-info form.buyer-info input{
+#reservation .purchase-info form.buyer-info input{
   border: 1px solid #ededed;
   border-radius: 4px;
   padding: 10px;
@@ -2395,12 +2400,12 @@ body::-webkit-scrollbar-thumb,
   font-weight: 600;
 }
 
-#checkout .purchase-info form.buyer-info input::placeholder {
+#reservation .purchase-info form.buyer-info input::placeholder {
   color: var(--gray);
   font-weight: 300;
 }
 
-#checkout .purchase-info form.buyer-info select{
+#reservation .purchase-info form.buyer-info select{
   border: 1px solid #ededed;
   margin-bottom: 10px;
   border-radius: 4px;
@@ -2409,32 +2414,32 @@ body::-webkit-scrollbar-thumb,
   font-weight: 600;
 }
 
-#checkout .purchase-info form.buyer-info select:invalid {
+#reservation .purchase-info form.buyer-info select:invalid {
   color: var(--dark-grey);
   font-weight: 300;
 }
 
-#checkout .purchase-info form.buyer-info p.tiny{
+#reservation .purchase-info form.buyer-info p.tiny{
   font-size: 14px;
   margin-bottom: 20px !important;
 }
 
-#checkout .purchase-info form.buyer-info .promoCode{
+#reservation .purchase-info form.buyer-info .promoCode{
   padding: 8px 10px;
   margin-bottom: 24px;
 }
 
-#checkout .purchase-info form.buyer-info .promoCode input{
+#reservation .purchase-info form.buyer-info .promoCode input{
   border: none;
   margin-bottom: 0;
   padding: 0;
 }
-#checkout .purchase-info form.buyer-info .promoCode input:focus{
+#reservation .purchase-info form.buyer-info .promoCode input:focus{
   outline: none;
   box-shadow: none;
 }
 
-#checkout .purchase-info form.buyer-info .promoCode .btn{
+#reservation .purchase-info form.buyer-info .promoCode .btn{
   border-radius: 4px;
   padding: 5px 30px;
   font-size: 14px;
@@ -2445,12 +2450,12 @@ body::-webkit-scrollbar-thumb,
   filter: none;
 }
 
-#checkout  .purchase-info form.buyer-info .promoCode .btn.active {
+#reservation  .purchase-info form.buyer-info .promoCode .btn.active {
   background-color: var(--sky);
   color: var(--white);
 }
 
-#checkout  .purchase-info form.buyer-info button.submit {
+#reservation  .purchase-info form.buyer-info button.submit {
   padding: 10px 30px;
   font-size: 16px;
   font-weight: 700;
@@ -2458,29 +2463,29 @@ body::-webkit-scrollbar-thumb,
   margin-left: auto;
 }
 
-#checkout  .purchase-info .accordion .accordion-button {
+#reservation  .purchase-info .accordion .accordion-button {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: .25rem;
 }
 
-#checkout  .purchase-info .accordion .accordion-button:focus{
+#reservation  .purchase-info .accordion .accordion-button:focus{
   box-shadow: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#checkout  .purchase-info .accordion-item:not(:first-of-type) {
+#reservation  .purchase-info .accordion-item:not(:first-of-type) {
   border-top: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
 }
 
-#checkout  .purchase-info .accordion .accordion-button::after {
+#reservation  .purchase-info .accordion .accordion-button::after {
   display: none;
 }
 
-#checkout  .purchase-info .accordion .btn {
+#reservation  .purchase-info .accordion .btn {
   background: none;
   filter: none;
   display: flex;
@@ -2488,8 +2493,8 @@ body::-webkit-scrollbar-thumb,
   justify-content: space-between;
 }
 
-#checkout  .purchase-info .paypal,
-#checkout  .purchase-info .googlePay {
+#reservation  .purchase-info .paypal,
+#reservation  .purchase-info .googlePay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2499,8 +2504,8 @@ body::-webkit-scrollbar-thumb,
   margin-bottom: 20px;
 }
 
-#checkout .exerpt-info  .card  ul li a.show-details,
-#checkout  .purchase-info .accordion .btn {
+#reservation .exerpt-info  .card  ul li a.show-details,
+#reservation  .purchase-info .accordion .btn {
   padding: 10px 20px;
   width: 100%;
   text-align: center;
@@ -2511,23 +2516,23 @@ body::-webkit-scrollbar-thumb,
   font-weight: 600;
 }
 
-#checkout .exerpt-info  .card {
+#reservation .exerpt-info  .card {
   padding: 30px 0;
 }
 
-#checkout .exerpt-info  .card  ul li {
+#reservation .exerpt-info  .card  ul li {
   padding: 10px 30px;
 }
 
-#checkout .exerpt-info  .card  ul li.deposite {
+#reservation .exerpt-info  .card  ul li.deposite {
   background-color: #00b362;
   border: 12px solid #fff;
   border-top: 0;
   border-bottom: 0;
 }
 
-#checkout .exerpt-info  .card  ul li.deposite .title,
-#checkout .exerpt-info  .card  ul li.deposite .value{
+#reservation .exerpt-info  .card  ul li.deposite .title,
+#reservation .exerpt-info  .card  ul li.deposite .value{
   color: #fff;
 }
 
@@ -2595,6 +2600,214 @@ body::-webkit-scrollbar-thumb,
 }
 
 
+/********************* Checkout page  ********************/
+#checkout .checkout-wrapper{
+  padding: 50px 0;
+}
+
+#checkout .checkout-process .card{
+  padding: 0;
+}
+
+#checkout .nav-tabs {
+  border-bottom: 1px solid #ededed;
+}
+
+#checkout .nav-tabs .nav-link {
+  font-size: 16px;
+  color: var(--gray);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0
+}
+
+#checkout .nav-tabs .nav-link span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: var(--white);
+  border: 1px solid #A6A6A6;
+  background-color: #A6A6A6;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+#checkout .nav-tabs .nav-link.active{
+  border-bottom: 0;
+  color: #000;
+}
+
+#checkout .nav-tabs .nav-link.active span{
+  background-color: var(--sky);
+  border-color: var(--sky);
+}
+
+#checkout .nav-tabs .nav-item{
+  padding: 0;
+}
+
+#checkout .checkout-process .tab-pane{
+  padding: 40px 70px;
+}
+
+#checkout .checkout-process .form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#checkout .checkout-process input[type=text]{
+  border: 1px solid #ededed;
+  padding: 10px 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#checkout .checkout-process label{
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--dark-grey);
+}
+
+#checkout .checkout-process .flag{
+  width: 30px;
+}
+
+#checkout .checkout-process .upload-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 2px dashed var(--sky);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#checkout .checkout-process .upload-box label{
+  text-align: center;
+}
+
+#checkout .checkout-process .upload-box span.upload{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--sky);
+  color: var(--sky);
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#checkout .checkout-process .upload-box .img {
+  max-width: 200px;
+}
+
+#checkout .checkout-process .delivery select{
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#checkout .checkout-process .delivery select:invalid{
+  font-weight: normal;
+}
+
+#checkout .checkout-process .delivery select + p {
+  color: var(--dark-grey);
+  font-size: 18px;
+  font-weight: 600;
+}
+#checkout .checkout-process .delivery select + p .value {
+  color: var(--sky);
+}
+
+#checkout .checkout-process .warranty .wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#checkout .checkout-process .warranty label
+{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex: 1 0 100%;
+  gap: 20px;
+  border: 2px solid var(--white-100);
+  background-color: var(--white-100);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 0;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+#checkout .checkout-process .warranty label .month {
+  margin-bottom: 8px;
+}
+
+#checkout .checkout-process .add-on label {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  border: 2px solid var(--white-100);
+  background-color: var(--white-100);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+#checkout .checkout-process .add-on label:last-of-type {
+  margin-bottom: 0;
+}
+
+#checkout .checkout-process .btn-wrapper{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+#checkout .checkout-process form label.checked{
+  border-color: var(--sky);
+}
+
+#checkout .checkout-process form label.checked .icon .circle{
+  display: none;
+}
+
+#checkout .checkout-process form label.checked .icon .check{
+  display: inline-block !important;
+  color: var(--sky);
+}
+
+#checkout .checkout-process .accordion .accordion-button span{
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+#checkout .checkout-process #checkout-tab-pane a.pay-by-bank{
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  color: var(--dark-grey);
+}
+
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -2602,13 +2815,13 @@ footer {
 }
 
 #search footer,
-#checkout footer,
+#reservation footer,
 #order-confirmed footer {
   background-color: var(--white-100);
 }
 
 #search footer .sign-up .form-control,
-#checkout footer .sign-up .form-control,
+#reservation footer .sign-up .form-control,
 #order-confirmed footer .sign-up .form-control{
   background-color: var(--white-100);
   border-bottom-color: #bcbcbc;
@@ -2763,7 +2976,7 @@ html[dir=rtl] #car-details #features ul {
 html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 html[dir=rtl] #payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:first-child,
-html[dir=rtl] #checkout .purchase-info .nav-tabs .nav-item:first-child .nav-link  {
+html[dir=rtl] #reservation .purchase-info .nav-tabs .nav-item:first-child .nav-link  {
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2772,7 +2985,7 @@ html[dir=rtl] #checkout .purchase-info .nav-tabs .nav-item:first-child .nav-link
 html[dir=rtl] #car-details #calc-payment .nav-tabs .nav-item:last-child .nav-link,
 html[dir=rtl] #payment-process  #calc-payment .nav-tabs .nav-item:last-child .nav-link,
 html[dir=rtl] #payment-process #calc-payment .card .btn-group .btn-primary:last-child,
-html[dir=rtl] #checkout .purchase-info .nav-tabs .nav-item:last-child .nav-link {
+html[dir=rtl] #reservation .purchase-info .nav-tabs .nav-item:last-child .nav-link {
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -3161,7 +3374,7 @@ html[dir=rtl] #trusted .box:first-of-type{
     font-size: 16px;
   }
 
-  #checkout  .purchase-info .nav-tabs .nav-link{
+  #reservation  .purchase-info .nav-tabs .nav-link{
   font-size: 14px;
   padding: 12px;
   }
@@ -3384,11 +3597,12 @@ html[dir=rtl] #trusted .box:first-of-type{
     padding: 5px 45px ;
   }
 
-  #checkout  .purchase-info .nav-tabs .nav-link{
+  #reservation  .purchase-info .nav-tabs .nav-link{
     font-size: 12px;
     padding: 12px;
   }
 
+  #reservation  .payment-details,
   #checkout  .payment-details {
     position: fixed;
     bottom: 0;
@@ -3400,6 +3614,7 @@ html[dir=rtl] #trusted .box:first-of-type{
     height: 0;
   }
 
+  #reservation  .payment-details .card,
   #checkout  .payment-details .card{
     position: fixed;
     bottom: -200vh;
@@ -3411,15 +3626,28 @@ html[dir=rtl] #trusted .box:first-of-type{
     transition: bottom 300ms ease-in-out ;
   }
   
+  #reservation  .payment-details.show,
   #checkout  .payment-details.show {
     height: 100vh;
     /* opacity: 1; */
   }
 
+  #reservation  .payment-details.show .card,
   #checkout  .payment-details.show .card {
     bottom: 0;
   }
 
+  #checkout .nav-tabs {
+    gap: 20px;
+  }
+
+  #checkout .nav-tabs .nav-link {
+    font-size: 12px;
+  }
+
+  #checkout .checkout-process .tab-pane {
+    padding: 20px;
+  }
   footer .sign-up .btn {
     width: 100%;
   }
@@ -3470,7 +3698,7 @@ html[dir=rtl] #trusted .box:first-of-type{
     height: 50px;
   }
 
-  #checkout  .purchase-info .accordion .btn {
+  #reservation  .purchase-info .accordion .btn {
     font-size: 14px;
   }
 
@@ -3502,6 +3730,24 @@ html[dir=rtl] #trusted .box:first-of-type{
 
   #trusted .box h5{
     font-size: 14px;
+  }
+
+  #checkout .checkout-process .upload-box {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #checkout .checkout-process .btn-wrapper {
+    flex-wrap: wrap;
+  }
+
+  #checkout .checkout-process .btn{
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  #checkout .checkout-process #checkout-tab-pane .accordion img{
+    width: 120px;
   }
 
   html[dir=rtl] #trusted .box:first-of-type {

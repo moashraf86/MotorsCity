@@ -172,8 +172,12 @@ $('.modal button[data-role=cancel]').click(function() {
 })
 
 //Add class checked to label when check it's input
-$('#payment-process .modal input[type=checkbox]').on('input', function() {
+$('#checkout form#delivery input[type=checkbox], #checkout form#delivery input[type=radio]').on('input', function() {
   $(this).parents('label').toggleClass('checked')
+})
+$('#checkout form#delivery input[type=radio]').on('input', function() {
+  $(this).parents('label').addClass('checked')
+  $(this).parents('label').siblings().removeClass('checked')
 })
 
 //show alert if the user didn't select a delivery location
