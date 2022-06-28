@@ -2620,7 +2620,7 @@ body::-webkit-scrollbar-thumb,
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 0
+  padding: 30px 0 15px
 }
 
 #checkout .nav-tabs .nav-link span{
@@ -2637,12 +2637,14 @@ body::-webkit-scrollbar-thumb,
   line-height: 25px;
 }
 
-#checkout .nav-tabs .nav-link.active{
+#checkout .nav-tabs .nav-link.active,
+#checkout .nav-tabs .nav-link.completed{
   border-bottom: 0;
   color: #000;
 }
 
-#checkout .nav-tabs .nav-link.active span{
+#checkout .nav-tabs .nav-link.active span,
+#checkout .nav-tabs .nav-link.completed span{
   background-color: var(--sky);
   border-color: var(--sky);
 }
@@ -2661,11 +2663,20 @@ body::-webkit-scrollbar-thumb,
   align-items: center;
 }
 
-#checkout .checkout-process input[type=text]{
+#checkout .checkout-process input[type=text],
+#checkout .checkout-process input[type=number]{
   border: 1px solid #ededed;
   padding: 10px 15px;
   font-weight: 600;
-  margin-bottom: 20px;
+}
+
+#checkout .checkout-process input[type=date]{
+  padding: 10px 15px;
+}
+
+#checkout .checkout-process input[type=date],
+#checkout .checkout-process input[type=tel]{
+  font-weight: 600;
 }
 
 #checkout .checkout-process label{
@@ -2710,7 +2721,18 @@ body::-webkit-scrollbar-thumb,
   max-width: 200px;
 }
 
-#checkout .checkout-process .delivery select{
+#checkout .checkout-process .upload-box .message.danger {
+  color: #F76976;
+  font-weight: 500;
+}
+
+
+#checkout .checkout-process .upload-box .message.success {
+  color: #00b362;
+  font-weight: 500;
+}
+
+#checkout  select{
   border: 1px solid #ededed;
   border-radius: 5px;
   padding: 10px 15px;
@@ -2718,7 +2740,7 @@ body::-webkit-scrollbar-thumb,
   margin-bottom: 20px;
 }
 
-#checkout .checkout-process .delivery select:invalid{
+#checkout  select:invalid{
   font-weight: normal;
 }
 
@@ -2727,18 +2749,17 @@ body::-webkit-scrollbar-thumb,
   font-size: 18px;
   font-weight: 600;
 }
+
 #checkout .checkout-process .delivery select + p .value {
   color: var(--sky);
 }
 
-#checkout .checkout-process .warranty .wrapper{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+#checkout .modal select {
+  border: 1px solid #ededed;
+  border-radius: 4px;
 }
 
-#checkout .checkout-process .warranty label
+#checkout .modal label
 {
   display: flex;
   align-items: start;
@@ -2749,12 +2770,12 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--white-100);
   border-radius: 5px;
   padding: 20px;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   line-height: 16px;
   cursor: pointer;
 }
 
-#checkout .checkout-process .warranty label .month {
+#checkout .modal label .month {
   margin-bottom: 8px;
 }
 
@@ -2781,15 +2802,27 @@ body::-webkit-scrollbar-thumb,
   gap: 20px;
 }
 
-#checkout .checkout-process form label.checked{
+#checkout .checkout-process .btn{
+  font-size: 16px;
+}
+
+#checkout .checkout-process .btn-wrapper .btn-secondary {
+  background: none;
+  background-color: var(--white);
+  color: var(--sky);
+  padding: 10px 30px;
+  border: 2px solid var(--sky);
+}
+
+#checkout  form label.checked{
   border-color: var(--sky);
 }
 
-#checkout .checkout-process form label.checked .icon .circle{
+#checkout .modal form label.checked .icon .circle{
   display: none;
 }
 
-#checkout .checkout-process form label.checked .icon .check{
+#checkout .modal form label.checked .icon .check{
   display: inline-block !important;
   color: var(--sky);
 }
@@ -2808,6 +2841,17 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
+#checkout .payment-details .vehicle-info .title a{
+  color: var(--sky);
+  font-size: 12px;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+#checkout .map {
+  width: 100%;
+  height: 400px;
+}
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;

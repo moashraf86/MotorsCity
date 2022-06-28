@@ -1,3 +1,5 @@
+
+
 // Make Driver Seats Slider works when click on nav-tabs
 $('#driver-seat .nav-tabs .nav-link').each(function() {
   $(this).on('click', function() {
@@ -157,9 +159,17 @@ $('.providers li').click( function() {
 $('.modal form').submit(function (e) { 
   e.preventDefault();
   $(this).find('[aria-label="Close"]').trigger('click');
-  let modalTab = $(`[name=${$(this).attr('data-check')}]`);
-  modalTab.addClass('checked');
-  // modalTab.removeClass('danger');
+  // let modalTab = $(`[name=${$(this).attr('data-check')}]`);
+  // modalTab.addClass('checked');
+
+  // let deliveryCost = $('.modal form select option:selected').attr('data-cost');
+  // let warrantyCost = $('.modal form input:checked').attr('data-cost');
+  // let addOnCost    = $('.modal form input:checked').attr('data-cost');
+  // $($(this).parents('.modal').attr('data-value')).text(deliveryCost);
+  // $($(this).parents('.modal').attr('data-value')).text(warrantyCost)
+  // $($(this).parents('.modal').attr('data-value')).text(addOnCost);
+  console.log(addOnCost);
+
 });
 
 //Cancel form submit on Modal
@@ -172,10 +182,11 @@ $('.modal button[data-role=cancel]').click(function() {
 })
 
 //Add class checked to label when check it's input
-$('#checkout form#delivery input[type=checkbox], #checkout form#delivery input[type=radio]').on('input', function() {
+$('#checkout .modal input[type=checkbox], #checkout .modal input[type=radio]').on('input', function() {
   $(this).parents('label').toggleClass('checked')
 })
-$('#checkout form#delivery input[type=radio]').on('input', function() {
+
+$('#checkout .modal input[type=radio]').on('input', function() {
   $(this).parents('label').addClass('checked')
   $(this).parents('label').siblings().removeClass('checked')
 })
@@ -228,7 +239,36 @@ $('#promoCode').on('keyup', function() {
   } else {
     $(this).siblings('.btn').removeClass('active')
   }
-})
+});
+
+// add "success" message under upload button
+$('input[name=upload]').on('change', function() {
+  $(this).parents('.upload-box').find('.message').text('File Uploaded Successfully').addClass('success');
+});
+
+// Move to next step when submitting the "Personal info" Form
+$('form#personal-info').on('submit', function(e) {
+  e.preventDefault();
+  if($(this).find('input[name=upload]').val() == '') {
+    $('.upload-box .message').text('You have to upload a file').addClass('danger')
+  } else {
+    $(this).parents('.card').find('#fin-delivery-tab, #cash-delivery-tab').removeAttr('disabled').trigger('click');
+    $(this).parents('.card').find('#app-tab, #ID-tab').addClass('completed');
+  }
+});
+
+// Move to next step when submitting the "Delivery" Form
+$('form#delivery').on('submit', function(e) {
+  e.preventDefault();
+  $(this).parents('.card').find('#document-tab, #checkout-tab').removeAttr('disabled').trigger('click');
+  $(this).parents('.card').find('#fin-delivery-tab, #cash-delivery-tab').addClass('completed')
+});
+
+// Move to next step when submitting the "Delivery" Form
+$('form#delivery select').on('change', function(e) {
+  $('span[data-value=delivery-cost]').text($(this).find('option:selected').attr('data-cost'))
+});
+
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -262,3 +302,4 @@ Fancybox.bind('[data-fancybox="gallery"]', {
     },
   },
 });
+

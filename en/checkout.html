@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Style.css -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <title>Motores City</title>
   </head>
   <body>
@@ -27,6 +28,7 @@
             <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
               <img src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
             </a>
+            <div id="timer"></div>
           </nav>   
         </div>
       </header>
@@ -34,199 +36,283 @@
       <section class="checkout-wrapper">
         <div class="container-fluid container-xl">
           <div class="row gap-2">
+            <!-- FINANCE & CASH TABS -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="true">
+                  Finance
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cash-tab" data-bs-toggle="tab" data-bs-target="#cash-tab-pane" type="button" role="tab" aria-controls="cash-tab-pane" aria-selected="false">
+                  Cash
+                </button>
+              </li>
+            </ul>
             <div class="col-12 col-lg">
               <!-- checkout Process -->
               <div class="checkout-process">
-                <div class="card">
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="personal-info-tab" data-bs-toggle="tab" data-bs-target="#personal-info-tab-pane" type="button" role="tab" aria-controls="personal-info-tab-pane" aria-selected="true">
-                        <span>1</span>
-                        ID Verification
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="delivery-tab" data-bs-toggle="tab" data-bs-target="#delivery-tab-pane" type="button" role="tab" aria-controls="delivery-tab-pane" aria-selected="false">
-                        <span>2</span>
-                        Delivery
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="checkout-tab" data-bs-toggle="tab" data-bs-target="#checkout-tab-pane" type="button" role="tab" aria-controls="checkout-tab-pane" aria-selected="false">
-                        <span>3</span>
-                        Checkout
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="personal-info-tab-pane" role="tabpanel" aria-labelledby="personal-info-tab" tabindex="0">
-                      <form id="personal-info">
-                        <h5>Contact Details</h5>
-                        <div class="form-group gap-3">
-                          <div class="group flex-grow-1">
-                            <label for="firstName">First Name</label>
-                            <input class="form-control" type="text" id="firstName" placeholder="First Name" value="Mohamed">
-                          </div>
-                          <div class="group flex-grow-1">
-                            <label for="lastName">Last Name</label>
-                            <input class="form-control" type="text" id="lastName" placeholder="Last Name" value="Zain">
-                          </div>
-                        </div>
-                        <label for="phone">Please verify your phone number to confirm your identity.</label>
-                        <div class="input-group mb-0">
-                          <span class="input-group-text" id="basic-addon1">
-                            <img class="flag" src="../assets/img/icons/saudi-arabia.svg" alt="">
-                          </span>
-                          <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
-                        </div>
-                        <p class="tiny">we'll text you a verification code.</p>
-                        <h5 class="mt-5">Upload your Driver's License</h5>
-                        <p>You'll need to verify your identity. Please upload a photo of the front of your driver's license.</p>
-                        <div class="upload-box">
-                          <div class="img">
-                            <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
-                          </div>
-                          <label for="upload-license">
-                            <input type="file" name="upload-license" id="upload-license" class="d-none">
-                            <span class="upload">
-                              <i class="bi bi-camera-fill"></i>
-                              Upload License
-                            </span>
-                            <span>No file choosen</span>
-                          </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary d-block ms-auto">Continue to Delivery</button>
-                      </form>
-                    </div>
-                    <div class="tab-pane fade" id="delivery-tab-pane" role="tabpanel" aria-labelledby="delivery-tab" tabindex="0">
-                      <form id="delivery">
-                        <div class="delivery mb-5">
-                          <h5>Delivery Address</h5>
-                          <select class="form-control" name="city" id="city" required>
-                            <option value="" disabled selected>--City--</option>
-                            <option value="Riyadh"     data-cost="500">Riyadh</option>
-                            <option value="Jeddah"     data-cost="700">Jeddah</option>
-                            <option value="Dammam"     data-cost="900">Dammam</option>
-                            <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
-                            <option value="Mekkah"     data-cost="1,300">Mekkah</option>
-                            <option value="Abha"       data-cost="1,500">Abha</option>
-                          </select>
-                          <p>Delivery Cost: SR.<span class="value">500</span></p>
-                        </div>
-                        <div class="warranty mb-5">
-                          <h5>Select Warranty</h5>
-                          <div class="wrapper">
-                            <label for="12-month">
-                              <div>
-                                <span class="d-block month">12 Months | 40,000 km</span>
-                                <span class="d-block price"><b>SR.2,295.00</b></span>
-                              </div>
-                              <input type="radio" name="month" id="12-month" >
-                            </label>
-                            <label for="24-month">
-                              <div>
-                                <span class="d-block month">24 Months | 40,000 km</span>
-                                <span class="d-block price"><b>SR.2,295.00</b></span>
-                              </div>
-                              <input type="radio" name="month" id="24-month" >
-                            </label>
-                            <label for="36-month">
-                              <div>
-                                <span class="d-block month">36 Months | 40,000 km</span>
-                                <span class="d-block price"><b>R.2,295.00</b></span>
-                              </div>
-                              <input type="radio" name="month" id="36-month" >
-                            </label>
-                            <label for="48-month">
-                              <div>
-                                <span class="d-block month">48 Months | 40,000 km</span>
-                                <span class="d-block price"><b>R.2,295.00</b></span>
-                              </div>
-                              <input type="radio" name="month" id="48-month" >
-                            </label>
-                          </div>
-                        </div>
-                        <div class="add-on">
-                          <h5>Apply Add-on</h5>
-                          <label for="vehicle-repair">
-                            <div class="d-flex align-items-center gap-3">
-                              <img src="../assets/img/icons/vehicle-repair.svg" alt="vehicle-repair">
-                              <div>
-                                <h6>Vehicle Repair Coverage</h6>
-                                <span class="total"><b>SR.2,294</b></span>
-                              </div>
-                            </div>
-                            <input type="checkbox" name="add-on" id="vehicle-repair" class="d-none">
-                            <span class="icon">
-                              <i class="bi bi-circle circle"></i>
-                              <i class="bi bi-check-circle-fill check d-none"></i>
-                            </span>
-                          </label>
-                          <label for="extended-warranty-coverage" class="checked">
-                            <div class="d-flex align-items-center gap-3">
-                              <img src="../assets/img/icons/window-tinting.svg" alt="window-tinting">
-                              <div>
-                                <h6>Window Tinting</h6>
-                                <span class="total"><b>SR.2,294</b></span>
-                              </div>
-                            </div>
-                            <input type="checkbox" name="add-on" id="extended-warranty-coverage" class="d-none">
-                            <span class="icon">
-                              <i class="bi bi-circle circle"></i>
-                              <i class="bi bi-check-circle-fill check d-none"></i>
-                            </span>
-                          </label>
-                        </div>
-                        <div class="btn-wrapper mt-4">
-                          <button type="button" class="back btn btn-secondary">
-                            <span class="bg">
-                              <span class="text">Back</span>
-                            </span>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active p-0" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+                    <!-- Finance -->
+                    <div class="card">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="app-tab" data-bs-toggle="tab" data-bs-target="#app-tab-pane" type="button" role="tab" aria-controls="app-tab-pane" aria-selected="true">
+                            <span>1</span>
+                            Application
                           </button>
-                          <button type="submit" class="btn btn-primary">Continue to Checkout</button>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="tab-pane fade" id="checkout-tab-pane" role="tabpanel" aria-labelledby="checkout-tab" tabindex="0">
-                      <div class="accordion" id="accordionExample">
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button gap-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              <span>Pay with Card</span>
-                              <img src="../assets/img/icons/visa-master-AMR.svg" alt="">
-                            </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <form id="mada">
-                                <div class="input-group">
-                                  <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-credit-card-2-back"></i>
-                                  </span>
-                                  <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16" required>
-                                </div>
-                                <div class="form-group d-flex align-items-center gap-3">
-                                  <div class="input-group">
-                                    <input type="month" class="form-control" id="month"  placeholder="mm/yy" required>
-                                  </div>
-                                  <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1">
-                                      <i class="bi bi-lock-fill"></i>
-                                    </span>
-                                    <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3" required>
-                                  </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">
-                                  Confirm and Pay</span>
-                                </button>
-                              </form>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="fin-delivery-tab" data-bs-toggle="tab" data-bs-target="#fin-delivery-tab-pane" type="button" role="tab" aria-controls="fin-delivery-tab-pane" aria-selected="false" disabled>
+                            <span>2</span>
+                            Delivery
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="document-tab" data-bs-toggle="tab" data-bs-target="#document-tab-pane" type="button" role="tab" aria-controls="document-tab-pane" aria-selected="false" disabled>
+                            <span>3</span>
+                            Document
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="app-tab-pane" role="tabpanel" aria-labelledby="app-tab" tabindex="0">
+                          <form id="personal-info">
+                            <h5>Contact Details</h5>
+                            <div class="form-group gap-3 mb-4">
+                              <div class="group flex-grow-1">
+                                <label for="firstName">First Name</label>
+                                <input class="form-control" type="text" id="firstName" placeholder="First Name" value="Mohamed" required>
+                              </div>
+                              <div class="group flex-grow-1">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control" type="text" id="lastName" placeholder="Last Name" value="Zain" required>
+                              </div>
                             </div>
-                          </div>
+                            <div class="date-of-birth mb-4">
+                              <label for="date">Date of Birth</label>
+                              <div class="input-group mb-0">
+                                <input type="date" id="date" class="form-control" placeholder="mm/dd/yy" >
+                              </div>
+                            </div>
+                            <div class="phone-number mb-4">
+                              <label for="phone">Please verify your phone number to confirm your identity.</label>
+                              <div class="input-group mb-0">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <img class="flag" src="../assets/img/icons/saudi-arabia.svg" alt="">
+                                </span>
+                                <input type="tel" id="phone" class="form-control" placeholder="050 000 0000" maxlength="10" >
+                              </div>
+                              <p class="tiny">we'll text you a verification code.</p>
+                            </div>
+                            <div class="form-group gap-3 mb-4">
+                              <div class="group flex-grow-1">
+                                <label for="employer">Employer</label>
+                                <input class="form-control" type="text" id="employer" placeholder="" >
+                              </div>
+                              <div class="group flex-grow-1">
+                                <label for="job-title">Job Title</label>
+                                <input class="form-control" type="text" id="job-title" placeholder="" >
+                              </div>
+                            </div>
+                            <h5>Financial Info</h5>
+                            <div class="form-group gap-3 mb-4">
+                              <div class="group flex-grow-1">
+                                <label for="monthly-income">Monthly Income (SR)</label>
+                                <input class="form-control" type="number" id="monthly-income" placeholder="">
+                              </div>
+                              <div class="group flex-grow-1">
+                                <label for="monthly-commitments">Monthly Commitments</label>
+                                <input class="form-control" type="number" id="monthly-commitments" placeholder="">
+                              </div>
+                            </div>
+                            <div class="form-group gap-3 mb-4">
+                              <div class="group flex-grow-1">
+                                <label for="salary-transfer">Salary Transfer</label>
+                                <input class="form-control" type="text" id="salary-transfer" placeholder="">
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary d-block ms-auto">Continue to Delivery</button>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade" id="fin-delivery-tab-pane" role="tabpanel" aria-labelledby="fin-delivery-tab" tabindex="0">
+                          <form id="delivery">
+                            <div class="delivery mb-5">
+                              <h5>Delivery Address</h5>
+                              <!--The div element for the map -->
+                              <div id="map-1" class="map"></div>
+                            </div>
+                            <div class="btn-wrapper mt-4">
+                              <!-- <button type="button" class="back btn btn-secondary">Back</button> -->
+                              <button type="submit" class="btn btn-primary">Continue to Checkout</button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade" id="document-tab-pane" role="tabpanel" aria-labelledby="document-tab" tabindex="0">
+                          <form>
+                            <div class="upload-box">
+                              <div class="img">
+                                <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
+                              </div>
+                              <label for="upload-salary">
+                                <input type="file" name="upload" id="upload-salary" class="d-none" >
+                                <span class="upload">
+                                  <i class="bi bi-camera-fill"></i>
+                                  Upload Salary Letter
+                                </span>
+                                <span class="message">No file choosen</span>
+                              </label>
+                            </div>
+                            <div class="upload-box">
+                              <div class="img">
+                                <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
+                              </div>
+                              <label for="upload-ID">
+                                <input type="file" name="upload-license" id="upload-ID" class="d-none" >
+                                <span class="upload">
+                                  <i class="bi bi-camera-fill"></i>
+                                  Upload ID Copy
+                                </span>
+                                <span class="message">No file choosen</span>
+                              </label>
+                            </div>
+                            <div class="upload-box">
+                              <div class="img">
+                                <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
+                              </div>
+                              <label for="upload-license-1">
+                                <input type="file" name="upload" id="upload-license-1" class="d-none" >
+                                <span class="upload">
+                                  <i class="bi bi-camera-fill"></i>
+                                  Upload License
+                                </span>
+                                <span class="message">No file choosen</span>
+                              </label>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <a href="#" class="pay-by-bank">
-                        Pay by bank
-                      </a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade p-0" id="cash-tab-pane" role="tabpanel" aria-labelledby="cash-tab" tabindex="0">
+                    <!-- Cash -->
+                    <div class="card">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="ID-tab" data-bs-toggle="tab" data-bs-target="#ID-tab-pane" type="button" role="tab" aria-controls="ID-tab-pane" aria-selected="true">
+                            <span>1</span>
+                            ID Verification
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="cash-delivery-tab" data-bs-toggle="tab" data-bs-target="#cash-delivery-tab-pane" type="button" role="tab" aria-controls="cash-delivery-tab-pane" aria-selected="false" disabled>
+                            <span>2</span>
+                            Delivery
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="checkout-tab" data-bs-toggle="tab" data-bs-target="#checkout-tab-pane" type="button" role="tab" aria-controls="checkout-tab-pane" aria-selected="false" disabled>
+                            <span>3</span>
+                            Checkout
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="ID-tab-pane" role="tabpanel" aria-labelledby="ID-tab" tabindex="0">
+                          <form id="personal-info">
+                            <h5>Contact Details</h5>
+                            <div class="form-group gap-3 mb-4">
+                              <div class="group flex-grow-1">
+                                <label for="firstName">First Name</label>
+                                <input class="form-control" type="text" id="firstName" placeholder="First Name" value="Mohamed" required>
+                              </div>
+                              <div class="group flex-grow-1">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control" type="text" id="lastName" placeholder="Last Name" value="Zain" required>
+                              </div>
+                            </div>
+                            <label for="phone">Please verify your phone number to confirm your identity.</label>
+                            <div class="input-group mb-0">
+                              <span class="input-group-text" id="basic-addon1">
+                                <img class="flag" src="../assets/img/icons/saudi-arabia.svg" alt="">
+                              </span>
+                              <input type="tel" id="phone" class="form-control" placeholder="050 000 0000" maxlength="10" required>
+                            </div>
+                            <p class="tiny">we'll text you a verification code.</p>
+                            <h5 class="mt-5">Upload your Driver's License</h5>
+                            <p>You'll need to verify your identity. Please upload a photo of the front of your driver's license.</p>
+                            <div class="upload-box">
+                              <div class="img">
+                                <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
+                              </div>
+                              <label for="upload-license-2">
+                                <input type="file" name="upload" id="upload-license-2" class="d-none" >
+                                <span class="upload">
+                                  <i class="bi bi-camera-fill"></i>
+                                  Upload License
+                                </span>
+                                <span class="message">No file choosen</span>
+                              </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary d-block ms-auto">Continue to Delivery</button>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade" id="cash-delivery-tab-pane" role="tabpanel" aria-labelledby="cash-delivery-tab" tabindex="0">
+                          <form id="delivery">
+                            <div class="delivery mb-5">
+                              <h5>Delivery Address</h5>
+                              <!--The div element for the map -->
+                              <div id="map-2" class="map"></div>
+                            </div>
+                            <div class="btn-wrapper mt-4">
+                              <!-- <button type="button" class="back btn btn-secondary">Back</button> -->
+                              <button type="submit" class="btn btn-primary">Continue to Checkout</button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade" id="checkout-tab-pane" role="tabpanel" aria-labelledby="checkout-tab" tabindex="0">
+                          <div class="accordion" id="accordionExample">
+                            <div class="accordion-item mb-3">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button gap-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <span>Pay with Card</span>
+                                  <img src="../assets/img/icons/visa-master-AMR.svg" alt="">
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <form id="mada">
+                                    <div class="input-group">
+                                      <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-credit-card-2-back"></i>
+                                      </span>
+                                      <input type="tel" inputmode="numeric" class="form-control" id="card-number" placeholder="Card Number" maxlength="16" required>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center gap-3">
+                                      <div class="input-group">
+                                        <input type="month" class="form-control" id="month"  placeholder="mm/yy" required>
+                                      </div>
+                                      <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                          <i class="bi bi-lock-fill"></i>
+                                        </span>
+                                        <input type="tel" inputmode="numeric" class="form-control" id="CVV" placeholder="CVV" maxlength="3" required>
+                                      </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                      Confirm and Pay</span>
+                                    </button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="pay-by-bank">
+                            Pay by bank
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -258,8 +344,25 @@
                         <span class="value">SR.<b>500</b></span>
                       </li>
                       <li>
-                        <span class="title">Delivery Cost</span>
-                        <span class="value unique">Free</span>
+                        <span class="title">
+                          Delivery
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#calcDelivery">Change</a>
+                        </span>
+                        <span class="value" id="deliveryCost" data-value="delivery-cost">Free</span>
+                      </li>
+                      <li>
+                        <span class="title">
+                          Warranty
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#selectWarranty">Change</a>
+                        </span>
+                        <span class="value" id="warrantyCost">Free</span>
+                      </li>
+                      <li>
+                        <span class="title">
+                          Add on
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#addOn">Change</a>
+                        </span>
+                        <span class="value" id="addOnCost">Free</span>
                       </li>
                       <li>
                         <span class="title">Taxes(15%)</span>
@@ -267,7 +370,7 @@
                       </li>
                       <li>
                         <span class="title">Paid deposite</span>
-                        <span class="value unique">SR.<b>150</b></span>
+                        <span class="value">SR.<b>150</b></span>
                       </li>
                       <li>
                         <span class="title">Total Cost</span>
@@ -281,6 +384,152 @@
           </div>
         </div>
       </section>
+
+      <!-- MODALS -->
+      <!-- Modal#1 - Calculate Delivery Cost -->
+      <div class="modal fade" id="calcDelivery" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="calcDeliveryLabel" aria-hidden="true" data-value="#deliveryCost">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="calc-delivery">
+              <div class="modal-header">
+                <h5 class="modal-title" id="calcDeliveryLabel">Calculate Delivery Cost</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="header-img">
+                  <img class="w-100" src="../assets/img/delivery-img.png" alt="">
+                </div>
+                <div class="body">
+                  <p class="mt-4">Please enter the city where you would like us to deliver your vehicle.</p>
+                  <select class="form-control" name="city" id="city" required>
+                    <option value="" disabled selected>--City--</option>
+                    <option value="Riyadh" data-cost="500">Riyadh</option>
+                    <option value="Jeddah" data-cost="700">Jeddah</option>
+                    <option value="Dammam" data-cost="900">Dammam</option>
+                    <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
+                    <option value="Mekkah" data-cost="1,300">Mekkah</option>
+                    <option value="Abha" data-cost="1,500">Abha</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer border-0 justify-content-between">
+                <button type="submit" role="button" class="btn btn-primary m-auto">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#2 - Select Warranty -->
+      <div class="modal fade" id="selectWarranty" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="selectWarrantyLabel" aria-hidden="true" data-value="#warrantyCost"> 
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="warranty">
+              <div class="modal-header">
+                <h5 class="modal-title" id="selectWarrantyLabel">Protect Your Purchase</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="dark">All Motorcity vehicles come with our 30 Day 1,500 km Warranty for no extra charge.</p>
+                <p class="light">An extended warranty keeps you covered from unexpected events so you don't have to worry about costly repairs and service.</p>
+                <div class="body">
+                  <label for="12-month">
+                    <div>
+                      <span class="d-block month">12 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.2,295.00</b></span>
+                    </div>
+                    <input type="radio" name="month" id="12-month" data-cost="2,295" required>
+                  </label>
+                  <label for="24-month">
+                    <div>
+                      <span class="d-block month">24 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.3,295.00</b></span>
+                    </div>
+                    <input type="radio" name="month" id="24-month" data-cost="3,295" required>
+                  </label>
+                  <label for="36-month">
+                    <div>
+                      <span class="d-block month">36 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.4,295.00</b></span>
+                    </div>
+                    <input type="radio" name="month" id="36-month" data-cost="4,295" required>
+                  </label>
+                  <label for="48-month">
+                    <div>
+                      <span class="d-block month">48 Months | 40,000 km</span>
+                      <span class="d-block price"><b>SR.5,295.00</b></span>
+                    </div>
+                    <input type="radio" name="month" id="48-month" data-cost="5,295" required>
+                  </label>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-role="cancel">
+                  <span class="bg">
+                    <span class="text">Clear All</span>
+                  </span>
+                </button>
+                <button type="submit" role="button" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal#4 - Add On -->
+      <div class="modal fade" id="addOn" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="addOnLabel" aria-hidden="true" data-value="#addOnCost">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form data-check="add-on" aria-required="true">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addOnLabel">Protect Your Purchase</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="dark">All MotorsCity vehicles come with our 30 Day 1,500 km Warranty for no extra charge.</p>
+                <p class="light">An extended warranty keeps you covered from unexpected events, so you don't have to worry about costly repairs and service.</p>
+                <div class="body">
+                  <label for="vehicle-repair">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/vehicle-repair.svg" alt="vehicle-repair">
+                      <div>
+                        <h6>Vehicle Repair Coverage</h6>
+                        <span class="total"><b>SR.2,295</b></span>
+                      </div>
+                    </div>
+                    <input type="checkbox" name="add-on" id="vehicle-repair" class="d-none" data-cost="2,295">
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                  <label for="extended-warranty-coverage">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../assets/img/icons/window-tinting.svg" alt="window-tinting">
+                      <div>
+                        <h6>Window Tinting</h6>
+                        <span class="total"><b>SR.3,294</b></span>
+                      </div>
+                    </div>
+                    <input type="checkbox" name="add-on" id="extended-warranty-coverage" class="d-none" data-cost="3,295">
+                    <span class="icon">
+                      <i class="bi bi-circle circle"></i>
+                      <i class="bi bi-check-circle-fill check d-none"></i>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-role="cancel">
+                  <span class="bg">
+                    <span class="text">Clear All</span>
+                  </span>
+                </button>
+                <button type="submit" role="button" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- MODALS -->
       <!-- START FOOTER -->
       <footer>
         <div class="container">
@@ -362,6 +611,23 @@
     <script src="../assets/plugins/js/jquery-3.6-min.js"></script>
     <!-- Custom Js -->
     <script src="../assets/js/main.js"></script>
-
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        var mapOne = new google.maps.Map(
+            document.getElementById('map-1'), {zoom: 4, center: uluru});
+        var mapTwo = new google.maps.Map(
+            document.getElementById('map-2'), {zoom: 4, center: uluru});
+        // The marker, positioned at Uluru
+        var markerOne = new google.maps.Marker({position: uluru, map: mapOne});
+        var markerTwo = new google.maps.Marker({position: uluru, map: mapTwo});
+      }
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBruMo1G1FPq8YbVgyGwxQLCPPiJVZeg8&callback=initMap">
+    </script>
   </body>
 </html>
