@@ -216,11 +216,12 @@ $(window).resize(function () {
 });
 
 //Show car details when clicking th "show details button"
-$('.purchase-info .show-details').click(function() {
-  $('#checkout .payment-details').addClass('show')
+$('a.show-details').click(function() {
+  $(this).parents('body').find('.payment-details').addClass('show')
 })
+
 //Hide car details when clicking the "close" icon
-$('#checkout .payment-details .close').click(function() {
+$('.payment-details .close').click(function() {
   $(this).parents('.payment-details').removeClass('show')
 })
 
