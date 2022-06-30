@@ -235,6 +235,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   right: 0;
   left: initial;
 }
+
+.sticky-top {
+  z-index: 888;
+}
 /********** [ 1 ] HEADER **********/
 #header {
   position: sticky;
@@ -3490,6 +3494,19 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
 
 
 @media screen and (max-width: 767px) {
+  .btn {
+    font-size: 14px;
+    padding: 12px 50px;
+  }
+
+  .btn-secondary {
+    padding: 2px;
+  }
+
+  .btn-secondary span.bg {
+    padding: 12px 50px;
+  }
+
   #home .home-content h1 {
     font-size: 25px;
   }
@@ -3709,7 +3726,7 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
     background-color: rgb(0 0 0 / .5);
     height: 0;
   }
