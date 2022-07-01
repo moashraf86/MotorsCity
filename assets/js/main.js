@@ -81,10 +81,20 @@ $('input[type=number]').each(function() {
 $('aside .form-check').on('click', function(e) {
   if($(this).find('input').attr('checked')) {
     $(this).find('input').removeAttr('checked');
-    $(this).removeClass('active')
+    $(this).removeClass('active');
   } else {
     $(this).find('input').attr('checked', 'checked');
-    $(this).addClass('active')
+    $(this).addClass('active');
+  }
+
+
+  if($(this).parent('.accordion-body').find('.form-check.active').length < 1) {
+    $(this).parents('.make .accordion-item').removeClass('active');
+    $(this).parents('.make .accordion-item').find('.filter-num').addClass('d-none')
+  } else {
+    $(this).parents('.make .accordion-item').addClass('active');
+    $(this).parents('.make .accordion-item').find('.filter-num').removeClass('d-none')
+    $(this).parents('.make .accordion-item').find('.filter-num').text($(this).parent('.accordion-body').find('.form-check.active').length)
   }
 })
 

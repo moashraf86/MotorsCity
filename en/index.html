@@ -36,7 +36,7 @@
               <i class="bi bi-list navbar-toggler-icon"></i>
             </button>
             <!-- Nav items -->
-            <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
@@ -69,25 +69,29 @@
                 </li>
               </ul>
               <ul class="navbar-nav register gap-3">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hi, <span class="name">Mohamed</span>
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">My Profile</a></li>
-                    <li><a class="dropdown-item" href="#">My Vehicles</a></li>
-                    <li><a class="dropdown-item" href="./checkout.html">My Orders</a></li>
-                    <li><a class="dropdown-item" href="#">Finance</a></li>
-                    <li><a class="dropdown-item" href="#">Favorite</a></li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
-                  </ul>
-                </li>
                 <li class="nav-item d-none">
                   <a class="nav-link active" href="#">Log in</a>
                 </li>
                 <li class="nav-item d-none">
                   <a class="nav-link signup" href="#">Sign Up</a>
                 </li>
+              </ul>
+            </div>
+            <!-- User info -->
+            <div class="dropdown order-2 order-lg-0">
+              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="d-none d-lg-inline-block">Hi, <span class="name">Mohamed</span></span>
+                <span class="user d-lg-none">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Vehicles</a></li>
+                <li><a class="dropdown-item" href="./checkout.html">My Orders</a></li>
+                <li><a class="dropdown-item" href="#">Finance</a></li>
+                <li><a class="dropdown-item" href="#">Favorite</a></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
               </ul>
             </div>
           </nav>

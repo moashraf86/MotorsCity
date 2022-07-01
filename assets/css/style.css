@@ -239,6 +239,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .sticky-top {
   z-index: 888;
 }
+
+.accordion-button:not(.collapsed) {
+  color: var(--sky);
+}
 /********** [ 1 ] HEADER **********/
 #header {
   position: sticky;
@@ -253,7 +257,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 #header .navbar-nav .nav-link {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--dark-grey)
 }
 
@@ -290,6 +294,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   color: var(--white);
 }
 
+#header .dropdown .dropdown-toggle:hover {
+  color: var(--purple);
+}
+
 #header .navbar-light .navbar-toggler {
   border: none;
 }
@@ -305,6 +313,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-size: 36px;
   color: var(--purple);
 }
+
 /********** [ 2 ] HOME **********/
 
 #home {
@@ -1064,6 +1073,33 @@ body::-webkit-scrollbar-thumb,
   border-bottom: 1px solid #ededed;
 }
 
+.sidebar-filter .tab-content .accordion .accordion-item.active .accordion-button { 
+  color: var(--sky);
+  font-weight: 700;
+}
+
+.sidebar-filter .tab-content .make .accordion .accordion-item .accordion-button .title{ 
+  display: block;
+  margin-right: auto;
+}
+
+.sidebar-filter .tab-content .make .accordion .accordion-item .accordion-button .filter-num{ 
+  width: 15px;
+  height: 15px;
+  background: var(--sky);
+  display: flex;
+  padding: 10px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.sidebar-filter .tab-content .make .accordion .accordion-item .accordion-button::after {
+  margin-left: 10px;
+}
+
 .sidebar-filter .tab-content .accordion .accordion-button,
 .sidebar-filter .tab-content .accordion .accordion-button:focus {
   box-shadow: none;
@@ -1106,7 +1142,16 @@ body::-webkit-scrollbar-thumb,
   border: none;
 }
 
-.sidebar-filter .refine-search .form-check {
+.sidebar-filter .refine-search .make .accordion-button {
+  padding: 0
+}
+.sidebar-filter .refine-search .make .accordion-body {
+  margin-top: 25px;
+  padding-bottom: 0;
+}
+
+.sidebar-filter .refine-search .form-check,
+.sidebar-filter .refine-search .make .accordion-item {
   padding: 10px 10px;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -3231,6 +3276,15 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
 
   #header .navbar-brand img {
     max-width: 150px;
+  }
+
+  #header .dropdown-toggle::after {
+    display: none;
+  }
+
+  #header .dropdown span.user .bi{
+    font-size: 20px;
+    color: var(--purple);
   }
 
   #home {

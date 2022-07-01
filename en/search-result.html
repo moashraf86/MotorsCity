@@ -25,14 +25,14 @@
           <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
             <!-- LOGO -->
             <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
-              <img src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+              <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
             </a>
             <!-- Menu Toggler Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <i class="bi bi-list navbar-toggler-icon"></i>
             </button>
             <!-- Nav items -->
-            <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
@@ -65,12 +65,29 @@
                 </li>
               </ul>
               <ul class="navbar-nav register gap-3">
-                <li class="nav-item">
+                <li class="nav-item d-none">
                   <a class="nav-link active" href="#">Log in</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none">
                   <a class="nav-link signup" href="#">Sign Up</a>
                 </li>
+              </ul>
+            </div>
+            <!-- User info -->
+            <div class="dropdown order-2 order-lg-0">
+              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="d-none d-lg-inline-block">Hi, <span class="name">Mohamed</span></span>
+                <span class="user d-lg-none">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Vehicles</a></li>
+                <li><a class="dropdown-item" href="./checkout.html">My Orders</a></li>
+                <li><a class="dropdown-item" href="#">Finance</a></li>
+                <li><a class="dropdown-item" href="#">Favorite</a></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
               </ul>
             </div>
           </nav>
@@ -144,15 +161,15 @@
                     <p class="desc">Additional loan customizations can be adjusted for each vehicle. Terms based on a 60 month loan,  average credit score, and 6.95% APR.</p>
                     <div class="refine-search">
                       <h6>Refine Your Search</h6>
-                      <div class="accordion" id="accordionExample">
+                      <div class="accordion" id="accordionFinance">
                         <!-- Make & Model -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h2 class="accordion-header" id="headingOneF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneF" aria-expanded="true" aria-controls="collapseOneF">
                               Make & Model
                             </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div id="collapseOneF" class="accordion-collapse collapse" aria-labelledby="headingOneF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div class="make">
                                 <h6>Make</h6>
@@ -162,135 +179,225 @@
                                   </label>
                                   <input class="form-check-input" type="checkbox" id="all" checked>
                                 </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="toyota">
-                                    Toyota (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="toyota">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="ford">
-                                    Ford (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="ford">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="honda">
-                                    Honda (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="honda">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="nissan">
-                                    Nissan (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="nissan">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="jeep">
-                                    Jeep (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="jeep">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="chevorlet">
-                                    Chevorlet (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="chevorlet">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="hyundai">
-                                    Hyundai (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="hyundai">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="mercedes-benz">
-                                    Mercedes-Benz (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="mercedes-benz">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="bmw">
-                                    Bmw (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="bmw">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="lexus">
-                                    Lexus (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="lexus">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="audi">
-                                    Audi (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="audi">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="cadillac">
-                                    Cadillac (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="cadillac">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="kia">
-                                    Kia (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="kia">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="volvo">
-                                    Volvo (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="volvo">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="mazda">
-                                    Mazda (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="mazda">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="lincolen">
-                                    Lincolen (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="lincolen">
-                                </div>
-                              </div>
-                              <div class="model d-none">
-                                <h6>Model</h6>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a3">
-                                    A3 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a3" >
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a4">
-                                    A4 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a4" >
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a5">
-                                    A5 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a5" >
+                                <div class="accordion" id="accordionExample2">
+                                  <!-- Toyota -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingToyota">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToyota" aria-expanded="false" aria-controls="collapseToyota">
+                                        <span class="title">Toyota</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseToyota" class="accordion-collapse collapse" aria-labelledby="headingToyota" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="86">
+                                            86
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="86">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="corolla-altis">
+                                            Corolla Altis
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="corolla-altis">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="harrier">
+                                            Harrier
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="harrier">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="wish">
+                                            Wish
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="wish">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="toyota">
+                                            Toyota
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="toyota">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="c-hr">
+                                            C-hr
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="c-hr">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="vios">
+                                            Vios
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="vios">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="sienta">
+                                            Sienta
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="sienta">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Ford -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFord">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFord" aria-expanded="false" aria-controls="collapseFord">
+                                        <span class="title">Ford</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseFord" class="accordion-collapse collapse" aria-labelledby="headingFord" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="focus">
+                                            Focus
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="focus">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="mustang">
+                                            Mustang
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="mustang">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Honda -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingHonda">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHonda" aria-expanded="false" aria-controls="collapseHonda">
+                                        <span class="title">Honda</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseHonda" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="visil">
+                                            Visil
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="visil">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="jazz">
+                                            Jazz
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="jazz">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="fit">
+                                            Fit
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="fit">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="shuttle">
+                                            Shuttle
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="shuttle">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Nissan -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingNissan">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNissan" aria-expanded="false" aria-controls="collapseNissan">
+                                        <span class="title">Nissan</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseNissan" class="accordion-collapse collapse " aria-labelledby="headingNissan" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="qashqai">
+                                            Qashqai
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="qashqai">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="note">
+                                            Note
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="note">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="sylphy">
+                                            Sylphy
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="sylphy">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Jeep -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingJeep">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJeep" aria-expanded="false" aria-controls="collapseJeep">
+                                        <span class="title">Jeep</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseJeep" class="accordion-collapse collapse" aria-labelledby="headingJeep" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="renegade">
+                                            Renegade
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="renegade">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="wrangler">
+                                            Wrangler
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="wrangler">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Chevorlet -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingChevorlet">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChevorlet" aria-expanded="false" aria-controls="collapseChevorlet">
+                                        <span class="title">Chevorlet</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseChevorlet" class="accordion-collapse collapse" aria-labelledby="headingChevorlet" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="cruze">
+                                            Cruze
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="cruze">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="orlando">
+                                            Orlando
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="orlando">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
+
                         <!--  Body Style & Color -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          <h2 class="accordion-header" id="headingTwoF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoF" aria-expanded="true" aria-controls="collapseTwoF">
                               Body Style & Color
                             </button>
                           </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div id="collapseTwoF" class="accordion-collapse collapse" aria-labelledby="headingTwoF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div class="body-style">
                                 <h6>Body Style</h6>
@@ -427,12 +534,12 @@
                         </div>
                         <!-- Year & Mileage -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <h2 class="accordion-header" id="headingThreeF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeF" aria-expanded="false" aria-controls="collapseThreeF">
                               Year & Mileage
                             </button>
                           </h2>
-                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div id="collapseThreeF" class="accordion-collapse collapse" aria-labelledby="headingThreeF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div id="year" class="mb-4">
                                 <div class="d-flex justify-content-between">
@@ -453,12 +560,12 @@
                         </div>
                         <!-- Fuel Type -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                          <h2 class="accordion-header" id="headingFourF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourF" aria-expanded="true" aria-controls="collapseFourF">
                               Fuel Type 
                             </button>
                           </h2>
-                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div id="collapseFourF" class="accordion-collapse collapse" aria-labelledby="headingFourF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div class="fuel-type">
                                 <div class="form-check d-flex justify-content-between active">
@@ -509,12 +616,12 @@
                         </div>
                         <!-- Drive Type & Engine -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                          <h2 class="accordion-header" id="headingFiveF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveF" aria-expanded="true" aria-controls="collapseFiveF">
                               Drive Type & Engine 
                             </button>
                           </h2>
-                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div id="collapseFiveF" class="accordion-collapse collapse" aria-labelledby="headingFiveF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div class="fuel-type mb-4">
                                 <h6>Fuel Type</h6>
@@ -596,12 +703,12 @@
                         </div>
                         <!-- Features -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                          <h2 class="accordion-header" id="headingSixF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixF" aria-expanded="true" aria-controls="collapseSixF">
                               Features
                             </button>
                           </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div id="collapseSixF" class="accordion-collapse collapse" aria-labelledby="headingSixF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div class="form-check d-flex justify-content-between active">
                                 <label class="form-check-label" for="alloy-wheel">
@@ -630,15 +737,14 @@
                             </div>
                           </div>
                         </div>
-                      
                         <!-- Other Filters -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingSeven">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                          <h2 class="accordion-header" id="headingSevenF">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSevenF" aria-expanded="true" aria-controls="collapseSevenF">
                               Other Filters
                             </button>
                           </h2>
-                          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                          <div id="collapseSevenF" class="accordion-collapse collapse" aria-labelledby="headingSevenF" data-bs-parent="#accordionFinance">
                             <div class="accordion-body">
                               <div id="min-seat-cap" class="mb-3">
                                 <div class="d-flex justify-content-between">
@@ -671,7 +777,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                    </div>
+                    
                   <div class="tab-pane fade" id="nav-cash" role="tabpanel" aria-labelledby="nav-cash-tab" tabindex="0">
                     <!-- Finance tab content -->
                     <form id="payment">
@@ -697,7 +804,7 @@
                     <p class="desc">Additional loan customizations can be adjusted for each vehicle. Terms based on a 60 month loan,  average credit score, and 6.95% APR.</p>
                     <div class="refine-search">
                       <h6>Refine Your Search</h6>
-                      <div class="accordion" id="accordionExample">
+                      <div class="accordion" id="accordionCash">
                         <!-- Make & Model -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
@@ -705,7 +812,7 @@
                               Make & Model
                             </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div class="make">
                                 <h6>Make</h6>
@@ -715,122 +822,211 @@
                                   </label>
                                   <input class="form-check-input" type="checkbox" id="all" checked>
                                 </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="toyota">
-                                    Toyota (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="toyota">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="ford">
-                                    Ford (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="ford">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="honda">
-                                    Honda (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="honda">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="nissan">
-                                    Nissan (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="nissan">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="jeep">
-                                    Jeep (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="jeep">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="chevorlet">
-                                    Chevorlet (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="chevorlet">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="hyundai">
-                                    Hyundai (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="hyundai">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="mercedes-benz">
-                                    Mercedes-Benz (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="mercedes-benz">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="bmw">
-                                    Bmw (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="bmw">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="lexus">
-                                    Lexus (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="lexus">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="audi">
-                                    Audi (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="audi">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="cadillac">
-                                    Cadillac (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="cadillac">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="kia">
-                                    Kia (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="kia">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="volvo">
-                                    Volvo (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="volvo">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="mazda">
-                                    Mazda (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="mazda">
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="lincolen">
-                                    Lincolen (10)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" value="" id="lincolen">
-                                </div>
-                              </div>
-                              <div class="model d-none">
-                                <h6>Model</h6>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a3">
-                                    A3 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a3" >
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a4">
-                                    A4 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a4" >
-                                </div>
-                                <div class="form-check d-flex justify-content-between">
-                                  <label class="form-check-label" for="a5">
-                                    A5 (4)
-                                  </label>
-                                  <input class="form-check-input" type="checkbox" id="a5" >
+                                <div class="accordion" id="accordionExample2">
+                                  <!-- Toyota -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingToyota">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToyota" aria-expanded="false" aria-controls="collapseToyota">
+                                        <span class="title">Toyota</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseToyota" class="accordion-collapse collapse" aria-labelledby="headingToyota" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="86">
+                                            86
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="86">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="corolla-altis">
+                                            Corolla Altis
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="corolla-altis">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="harrier">
+                                            Harrier
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="harrier">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="wish">
+                                            Wish
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="wish">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="toyota">
+                                            Toyota
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="toyota">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="c-hr">
+                                            C-hr
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="c-hr">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="vios">
+                                            Vios
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="vios">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="sienta">
+                                            Sienta
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="sienta">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Ford -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFord">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFord" aria-expanded="false" aria-controls="collapseFord">
+                                        <span class="title">Ford</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseFord" class="accordion-collapse collapse" aria-labelledby="headingFord" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="focus">
+                                            Focus
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="focus">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="mustang">
+                                            Mustang
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="mustang">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Honda -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingHonda">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHonda" aria-expanded="false" aria-controls="collapseHonda">
+                                        <span class="title">Honda</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseHonda" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="visil">
+                                            Visil
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="visil">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="jazz">
+                                            Jazz
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="jazz">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="fit">
+                                            Fit
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="fit">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="shuttle">
+                                            Shuttle
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="shuttle">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Nissan -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingNissan">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNissan" aria-expanded="false" aria-controls="collapseNissan">
+                                        <span class="title">Nissan</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseNissan" class="accordion-collapse collapse " aria-labelledby="headingNissan" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="qashqai">
+                                            Qashqai
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="qashqai">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="note">
+                                            Note
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="note">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="sylphy">
+                                            Sylphy
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="sylphy">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Jeep -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingJeep">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJeep" aria-expanded="false" aria-controls="collapseJeep">
+                                        <span class="title">Jeep</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseJeep" class="accordion-collapse collapse" aria-labelledby="headingJeep" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="renegade">
+                                            Renegade
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="renegade">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="wrangler">
+                                            Wrangler
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="wrangler">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <!-- Chevorlet -->
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingChevorlet">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChevorlet" aria-expanded="false" aria-controls="collapseChevorlet">
+                                        <span class="title">Chevorlet</span>
+                                        <span class="filter-num d-none">0</span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseChevorlet" class="accordion-collapse collapse" aria-labelledby="headingChevorlet" data-bs-parent="#accordionExample2">
+                                      <div class="accordion-body">
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="cruze">
+                                            Cruze
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="cruze">
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between">
+                                          <label class="form-check-label" for="orlando">
+                                            Orlando
+                                          </label>
+                                          <input class="form-check-input" type="checkbox" value="" id="orlando">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
                                 </div>
                               </div>
                             </div>
@@ -843,7 +1039,7 @@
                               Body Style & Color
                             </button>
                           </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div class="body-style">
                                 <h6>Body Style</h6>
@@ -985,7 +1181,7 @@
                               Year & Mileage
                             </button>
                           </h2>
-                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div id="year" class="mb-4">
                                 <div class="d-flex justify-content-between">
@@ -1011,7 +1207,7 @@
                               Fuel Type 
                             </button>
                           </h2>
-                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div class="fuel-type">
                                 <div class="form-check d-flex justify-content-between active">
@@ -1067,7 +1263,7 @@
                               Drive Type & Engine 
                             </button>
                           </h2>
-                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div class="fuel-type mb-4">
                                 <h6>Fuel Type</h6>
@@ -1154,7 +1350,7 @@
                               Features
                             </button>
                           </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div class="form-check d-flex justify-content-between active">
                                 <label class="form-check-label" for="alloy-wheel">
@@ -1191,7 +1387,7 @@
                               Other Filters
                             </button>
                           </h2>
-                          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionCash">
                             <div class="accordion-body">
                               <div id="min-seat-cap" class="mb-3">
                                 <div class="d-flex justify-content-between">
@@ -1225,7 +1421,6 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
               <!-- Sticky Button -->
