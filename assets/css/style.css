@@ -1164,7 +1164,8 @@ body::-webkit-scrollbar-thumb,
   background-color: rgb(130 172 212 / .33)
 }
 
-.sidebar-filter .refine-search .form-check label{
+.sidebar-filter .refine-search .form-check label,
+.sidebar-filter .refine-search .form-check input{
   color: black;
   pointer-events: none;
 }
