@@ -3818,6 +3818,13 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
     font-size: 12px;
   }
 
+  .sidebar-filter .refine-search .form-check:not(.all-global) label {
+    font-size: 14px;
+  }
+  .sidebar-filter .refine-search .form-check:not(.all-global) {
+    padding: 6px 10px;
+  }
+
   footer .sign-up .btn {
     width: 100%;
   }
