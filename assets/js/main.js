@@ -87,14 +87,31 @@ $('aside .form-check').on('click', function(e) {
     $(this).addClass('active');
   }
 
-
-  if($(this).parent('.accordion-body').find('.form-check.active').length < 1) {
+  //checked itesms indicator number 
+  if($(this).parent('.accordion-body').find('.form-check.active:not(.all)').length < 1) {
     $(this).parents('.make .accordion-item').removeClass('active');
     $(this).parents('.make .accordion-item').find('.filter-num').addClass('d-none')
   } else {
     $(this).parents('.make .accordion-item').addClass('active');
     $(this).parents('.make .accordion-item').find('.filter-num').removeClass('d-none')
-    $(this).parents('.make .accordion-item').find('.filter-num').text($(this).parent('.accordion-body').find('.form-check.active').length)
+    $(this).parents('.make .accordion-item').find('.filter-num').text($(this).parent('.accordion-body').find('.form-check.active:not(.all)').length)
+  }
+
+  // Check all models of particular car
+  if($(this).hasClass('all')) {
+    if($(this).find('input').attr('checked')) {
+      $(this).parent('.accordion-body, div').children('.form-check:not(.active)').trigger('click')
+    } else {
+      $(this).parent('.accordion-body, div').children('.form-check.active').trigger('click')
+    }
+  }
+  //check all models of all cars
+  if($(this).hasClass('all-global')) {
+    if($(this).find('input').attr('checked')) {
+      $(this).siblings('.accordion').find('.accordion-body').children('.form-check.all:not(.active)').trigger('click')
+    } else {
+      $(this).siblings('.accordion').find('.accordion-body').children('.form-check.all.active').trigger('click')
+    }
   }
 })
 
