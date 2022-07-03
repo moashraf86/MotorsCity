@@ -113,6 +113,29 @@ $('aside .form-check').on('click', function(e) {
       $(this).siblings('.accordion').find('.accordion-body').children('.form-check.all.active').trigger('click')
     }
   }
+
+  // check whether one element at least is unchecked
+  if($(this).parent('.accordion-body, div').find('.form-check:not(.all):not(.active)').length == 0) {
+    $(this).parent('.accordion-body, div').find('.form-check.all').addClass('active')
+    $(this).parent('.accordion-body, div').find('.form-check.all').find('input').attr('checked', 'checked');
+    $('.form-check.all-global').addClass('active');
+    $('.form-check.all-global').find('input').attr('checked', 'checked')
+  } else {
+    $(this).parent('.accordion-body, div').find('.form-check.all').removeClass('active');
+    $(this).parent('.accordion-body, div').find('.form-check.all').find('input').attr('checked', false);
+    $('.form-check.all-global').removeClass('active')
+    $('.form-check.all-global').find('input').attr('checked', false)
+  }
+  
+  //remove class checked from "All" in make
+  if($(this).parents('.make').find('.form-check:not(.all):not(.active)').length == 0) {
+    $('.form-check.all-global').addClass('active')
+    $('.form-check.all-global').find('input').attr('checked', 'checked')
+  } else {
+    $('.form-check.all-global').removeClass('active');
+    $('.form-check.all-global').find('input').attr('checked', false)
+  }
+
 })
 
 // Show & hide adjust terms box

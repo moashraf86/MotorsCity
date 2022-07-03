@@ -1145,9 +1145,19 @@ body::-webkit-scrollbar-thumb,
 .sidebar-filter .refine-search .make .accordion-button {
   padding: 0
 }
+
+.sidebar-filter .refine-search .make .accordion {
+  margin-top: 10px;
+}
+
 .sidebar-filter .refine-search .make .accordion-body {
   margin-top: 25px;
   padding-bottom: 0;
+  /* new */
+  padding: 0 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .sidebar-filter .refine-search .form-check,
@@ -1159,6 +1169,13 @@ body::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
+.sidebar-filter .refine-search .make .form-check:not(.all-global) {
+  flex: 0 1 calc(50% - 5px);
+  justify-content: center !important;
+  margin-bottom: 0;
+
+}
+
 .sidebar-filter .refine-search .form-check.active {
   border-color: var(--sky);
   background-color: rgb(130 172 212 / .33)
@@ -1168,6 +1185,10 @@ body::-webkit-scrollbar-thumb,
 .sidebar-filter .refine-search .form-check input{
   color: black;
   pointer-events: none;
+}
+
+.sidebar-filter .refine-search .make .form-check input {
+  display: none;
 }
 
 .sidebar-filter .refine-search .body-style label img {
@@ -3821,7 +3842,7 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
   .sidebar-filter .refine-search .form-check:not(.all-global) label {
     font-size: 14px;
   }
-  .sidebar-filter .refine-search .form-check:not(.all-global) {
+  .sidebar-filter .refine-search .make .form-check:not(.all-global) {
     padding: 6px 10px;
   }
 
