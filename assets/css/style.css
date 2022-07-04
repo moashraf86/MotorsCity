@@ -1878,6 +1878,15 @@ body::-webkit-scrollbar-thumb,
   min-height: 750px;
 }
 
+#car-details .modal-dialog .download-report {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sky);
+}
+
 #car-details .modal-dialog  .modal-body{
   background-color: var(--white-100);
 }
@@ -1961,6 +1970,7 @@ body::-webkit-scrollbar-thumb,
   align-items: center;
   border-bottom: 1px solid #ededed;
   padding: 1rem 0;
+  gap: 15px;
 }
 
 #car-details .modal-dialog  .card-body_nav li:last-of-type{
@@ -1978,9 +1988,6 @@ body::-webkit-scrollbar-thumb,
   font-size: 14px;
   line-height: 14px;
   color: var(--sky);
-}
-
-#car-details .modal-dialog  .card-body_nav li span{
 }
 
 #car-details #dent-map {
