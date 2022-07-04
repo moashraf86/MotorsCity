@@ -508,7 +508,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-secondary">
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#report-details">
             <span class="bg">
               <span class="text">View full Details</span>
             </span>
@@ -516,6 +516,313 @@
         </div>
       </section>
       <!-- REPORT -->
+
+      <!-- FULL REPORT MODAL -->
+      <!-- Modal -->
+      <div class="modal fade" id="report-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-md-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModal">Inspection Report</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <ul class="modal-body_nav nav nav-tabs d-flex items-center gap-2 pt-3 pb-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="exterior-tab" data-bs-toggle="tab" data-bs-target="#exterior-tab-pane" type="button" role="tab" aria-controls="exterior-tab-pane" aria-selected="true">
+                    Exterior
+                    <span class="issue">4</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="interior-tab" data-bs-toggle="tab" data-bs-target="#interior-tab-pane" type="button" role="tab" aria-controls="interior-tab-pane" aria-selected="true">
+                    Interior
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="engine-tab" data-bs-toggle="tab" data-bs-target="#engine-tab-pane" type="button" role="tab" aria-controls="engine-tab-pane" aria-selected="true">
+                    Engine
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="road-tab" data-bs-toggle="tab" data-bs-target="#road-tab-pane" type="button" role="tab" aria-controls="road-tab-pane" aria-selected="true">
+                    Road Test
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <!-- Exterior -->
+                <div class="tab-pane fade show active" id="exterior-tab-pane" role="tabpanel" aria-labelledby="exterior-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/car.svg" alt="car">
+                      <h6>Exterior</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>No body parts have been repaired</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>No corrosion in body panels</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>No body parts have been replaced</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>No body parts have cracks</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>No cracks in rims and alloys</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>No repair in pillars</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Turn signal lights working fine</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>There is dent on Roof and Boot/Dicky door</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="one">View</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="one" 
+                                data-caption="There is dent on Roof and Boot/Dicky door" 
+                                href="../assets/img/defects/front/1.webp">
+                              <img class="rounded" src="../assets/img/defects/front/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <p>There is scratch on Bonnet,Front Right Fender,Left Quarter panel and Boot/Dicky door</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="two">View</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="two" 
+                                data-caption="There is scratch on Bonnet,Front Right Fender,Left Quarter panel and Boot/Dicky door" 
+                                href="../assets/img/defects/back/1.webp">
+                              
+                              <img class="rounded" src="../assets/img/defects/back/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Left headlight has faded</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="three">View</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="three" 
+                                data-caption="Left headlight has faded" 
+                                href="../assets/img/defects/top-back/1.webp">
+                              <img class="rounded" src="../assets/img/defects/top-back/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Interior -->
+                <div class="tab-pane fade" id="interior-tab-pane" role="tabpanel" aria-labelledby="interior-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/seat.svg" alt="seat">
+                      <h6>Interior</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>Upholstery is in good condition</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Roof lining is in good condition</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Carpet and floor mats are free of cuts and tears</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>All functions in cluster panel are working fine</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>AC blower operates as designed</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Engine -->
+                <div class="tab-pane fade" id="engine-tab-pane" role="tabpanel" aria-labelledby="engine-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/engine.svg" alt="engine">
+                      <h6>Engine</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>Car has no white or black smoke</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Engine has no abnormal noise</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Engine has no back compression</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Radiator is in good condition</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Coolant is free of foreign material</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Ignition system is working fine</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Engine starting in single crank</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Battery is in good condition</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Steering system working properly</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Alternator belt is working smoothly</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Wiper working smoothly</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>AC compressor is working smoothly</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Road Test -->
+                <div class="tab-pane fade" id="road-tab-pane" role="tabpanel" aria-labelledby="road-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/road.svg" alt="engine">
+                      <h6>Road Test</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>Steering is perfectly aligned</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Power steering operates as designed</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Engine exhibits appropriate power</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>Gear shift is operating smoothly</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FULL REPORT MODAL -->
 
       <!-- DENT MAP -->
       <section id="dent-map">
