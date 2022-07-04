@@ -16,6 +16,7 @@
   --gray      : #555555;
   --dark-grey : #353535;
   --green     : #4fb5ae;
+  --success   : #00b362;
   --sky       : #057ac1;
   --purple    : #595da9;
   --danger    : rgb(245 66 54 / 80%);
@@ -1334,19 +1335,11 @@ body::-webkit-scrollbar-thumb,
 }
 
 .search-result-main #results .card .adjust-terms {
-  background-color: var(--white-100);
+  background-color: var(--success);
   padding: 8px 10px;
   text-align: center;
   font-size: 14px;
-  color: var(--purple);
-}
-
-.search-result-main #results .card .adjust-terms {
-  background-color: var(--white-100);
-  padding: 8px 10px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--purple);
+  color: var(--white);
 }
 
 .search-result-main #results .card label.favorite {
@@ -1380,20 +1373,20 @@ body::-webkit-scrollbar-thumb,
 }
 
 .search-result-main #results .card .terms-box h6{
-  font-weight: 400;
+  font-weight: 600;
   color: var(--white);
 }
 
-.search-result-main #results .card .terms-box .cash{
-  font-weight: 400;
-  color: rgb(255 255 255 / 80%);
-  font-size: 12px;
+.search-result-main #results .card .terms-box ul{
+  padding-left: 1rem;
+  list-style: disc
 }
 
-.search-result-main #results .card .terms-box p.tiny{
+.search-result-main #results .card .terms-box ul li{
   font-weight: 300;
-  color: rgb(255 255 255 / 40%);
-  font-size: 12px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: rgb(224 225 255);
 }
 
 .search-result-main #results .card .terms-box label span{
@@ -2604,7 +2597,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 #reservation .exerpt-info  .card  ul li.deposite {
-  background-color: #00b362;
+  background-color: var(--success);
   border: 12px solid #fff;
   border-top: 0;
   border-bottom: 0;
@@ -2833,7 +2826,7 @@ body::-webkit-scrollbar-thumb,
 
 
 #checkout .checkout-process .upload-box .message.success {
-  color: #00b362;
+  color: var(--success);
   font-weight: 500;
 }
 
@@ -3096,6 +3089,21 @@ html[dir=rtl] .sidebar-filter .refine-search .body-style label img {
 html[dir=rtl] .search-result-main .test-drive {
   margin-left: 0;
   margin-right: 30px;
+}
+
+html[dir=rtl] .search-result-main #results .card .terms-box ul{
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+html[dir=rtl] .sidebar-filter .tab-content .make .accordion .accordion-item .accordion-button .title {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir=rtl] .sidebar-filter .tab-content .make .accordion .accordion-item .accordion-button::after {
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 html[dir=rtl] .accordion-button::after {
