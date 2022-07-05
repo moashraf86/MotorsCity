@@ -194,6 +194,44 @@ try {
   }
 });
 
+// view full details modal on car-details page
+// $('#car-details .modal-body_nav .nav-link').click(function() {
+//   $(this).parents('.nav-item').siblings().find('.nav-link').removeClass('active');
+//   let pos = $(`${$(this).parent('a').attr('data-href')}`).prevAll();
+//   pos.each(function() {
+//     console.log(pos.offset().top - pos.parents('.modal-body').offset().top);
+//   })
+//   $(".modal-body").animate({
+//     scrollTop: pos.offset().top - pos.parents('.modal-body').offset().top - 73
+//   }, 100)
+// })
+
+document.querySelectorAll('#car-details .modal-body_nav .nav-link').forEach((e) => {
+  e.addEventListener('click', function() {
+    document.querySelectorAll('#car-details .modal-body_nav .nav-link').forEach((e) => {
+      e.classList.remove('active')
+    })
+    e.classList.add('active')
+    let eleId = `${e.parentElement.getAttribute('data-href')}`;
+    let pos   = document.querySelector(eleId).offsetTop - 73
+    $('.modal-body').animate({
+      scrollTop: pos
+    }, 200)
+  })
+})
+
+// Show/Hide full overview details on report modal
+$('.overview_nav #toggle-show').click(function() {
+  if($(this).attr('data-hidden') == 'true') {
+    $(this).parent().addClass('active');
+    $(this).attr('data-hidden', 'false');
+    $(this).text('Show')
+  } else {
+    $(this).parent().removeClass('active');
+    $(this).attr('data-hidden', 'true');
+    $(this).text('Hide')
+  }
+})
 // Select between Finance Providers 
 $('.providers li').click( function() {
   $(this).addClass('active').siblings().removeClass('active');

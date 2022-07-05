@@ -1889,7 +1889,16 @@ body::-webkit-scrollbar-thumb,
 
 #car-details .modal-dialog  .modal-body{
   background-color: var(--white-100);
+  scroll-behavior: smooth;
 }
+
+#car-details .modal-dialog  .modal-body_nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--white-100);
+}
+
 
 #car-details .modal-dialog  .nav-tabs .nav-link{
   background-color: var(--white);
@@ -1905,6 +1914,7 @@ body::-webkit-scrollbar-thumb,
   gap: 10px;
   border-radius: 4px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 #car-details .modal-dialog  .nav-tabs .nav-link.active{
@@ -1930,41 +1940,86 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--success);
 }
 
-#car-details .modal-dialog  .nav-tabs .nav-link span.issue,
-#car-details .modal-dialog  .card-body_nav li span.issue {
+#car-details .modal-dialog .nav-tabs .nav-link span.issue,
+#car-details .modal-dialog .card-body_nav li span.issue {
   background-color: var(--danger);
 }
 
-#car-details .modal-dialog  .nav-tabs .nav-link span .bi,
-#car-details .modal-dialog  .card-body_nav li span .bi {
+#car-details .modal-dialog .nav-tabs .nav-link span .bi,
+#car-details .modal-dialog .card-body_nav li span .bi {
   color: var(--white);
   font-size: 16px;
 }
 
-#car-details .modal-dialog  .card{
-  padding: 15px 20px;
+#car-details .modal-dialog .card{
+  padding: 30px 30px;
 }
 
-#car-details .modal-dialog  .card-head{
+#car-details .modal-dialog .card-head{
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#car-details .modal-dialog  .card-head img{
+#car-details .modal-dialog .card-head img{
   width: 30px;
   object-fit: contain;
 }
 
-#car-details .modal-dialog  .card-head h6{
+#car-details .modal-dialog .card-head h6{
   margin-bottom: 0;
 }
 
-#car-details .modal-dialog  .card-body{
+#car-details .modal-dialog .card-head .date{
+  color: #000;
+  font-size: 14px;
+}
+
+#car-details .modal-dialog .card-body{
   padding: 1rem 0 0;
 }
 
-#car-details .modal-dialog  .card-body_nav li{
+#car-details .modal-dialog .card-body .overview_nav{
+  flex: 1 0 calc(50% - 1rem);
+}
+
+#car-details .modal-dialog .card-body .overview_nav li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ededed;
+}
+
+#car-details .modal-dialog .card-body .overview_nav li:last-of-type{
+  border-bottom: 0
+}
+
+#car-details .modal-dialog .card-body .overview_nav.active .hide{
+  display: none;
+}
+
+#car-details .modal-dialog .card-body .overview_nav li#toggle-show{
+  background-color: var(--white-100);
+  border-radius: 5px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: .5rem 0;
+  cursor: pointer;
+  color: #000;
+  font-weight: 500;
+}
+
+#car-details .modal-dialog .card-body .overview_nav li span {
+  font-size: 14px;
+  color: #000;
+}
+
+#car-details .modal-dialog .card-body .overview_nav li .value {
+  font-weight: 600;
+}
+
+#car-details .modal-dialog .card-body_nav li{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1973,18 +2028,24 @@ body::-webkit-scrollbar-thumb,
   gap: 15px;
 }
 
-#car-details .modal-dialog  .card-body_nav li:last-of-type{
+#car-details .modal-dialog .card-body_nav li.sub-card {
+  padding: 1rem;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+}
+
+#car-details .modal-dialog .card-body_nav li:not(.sub-card):last-of-type{
   border-bottom: 0;
   padding: 1rem 0 0;
 }
 
-#car-details .modal-dialog  .card-body_nav li p{
+#car-details .modal-dialog .card-body_nav li p{
   margin-bottom: 0;
   font-size: 14px;
   color: #000;
 }
 
-#car-details .modal-dialog  .card-body_nav li a{
+#car-details .modal-dialog .card-body_nav li a{
   font-size: 14px;
   line-height: 14px;
   color: var(--sky);
@@ -3883,6 +3944,10 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
     font-size: 16px;
   }
 
+  #car-details .modal-fullscreen-md-down {
+    margin-top: 2rem;
+  }
+
   #payment-process #car-overview .info {
     flex: 1 0 100%;
     padding-bottom: 10px
@@ -4041,6 +4106,15 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
   #payment-process #calc-payment ul.providers li img {
     width: 100px;
     height: 50px;
+  }
+
+  #car-details .modal-dialog  .modal-body_nav {
+    flex-flow: nowrap;
+    overflow-x: scroll;
+  }
+
+  #car-details .modal-dialog  .modal-body_nav .nav-link{
+    font-size: 14px;
   }
 
   #reservation  .purchase-info .accordion .btn {
