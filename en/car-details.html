@@ -918,11 +918,17 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-12 col-lg-8">
               <div class="map">
-                <img class="w-100" src="../assets/img/dent-map.svg" alt="Dent Map">
-                <span class="defect" num="one"    data-fancybox-trigger="front">1</span>
-                <span class="defect" num="two"    data-fancybox-trigger="back">2</span>
-                <span class="defect" num="three"  data-fancybox-trigger="top-front">3</span>
-                <span class="defect" num="four"   data-fancybox-trigger="top-back">4</span>
+                <img class="w-100" src="../assets/img/dent-map.svg" alt="Dent Map" usemap="#dentMap">
+                <map name="dentMap">
+                  <area shape="circle" coords="40,325,30" data-value="1" data-num="one" data-fancybox-trigger="front">
+                  <area shape="circle" coords="808,325,30" data-value="2" data-num="two" data-fancybox-trigger="back">
+                  <area shape="circle" coords="225,325,30" data-value="3" data-num="three" data-fancybox-trigger="top-front">
+                  <area shape="circle" coords="655,325,30" data-value="4" data-num="four" data-fancybox-trigger="top-back">
+                </map>
+                <!-- <span class="defect" num="one"    data-fancybox-trigger="front">1</span> -->
+                <!-- <span class="defect" num="two"    data-fancybox-trigger="back">2</span> -->
+                <!-- <span class="defect" num="three"  data-fancybox-trigger="top-front">3</span> -->
+                <!-- <span class="defect" num="four"   data-fancybox-trigger="top-back">4</span> -->
               </div>
               
               <div class="defects-gallery" style="display:none">

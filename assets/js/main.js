@@ -168,13 +168,13 @@ $(window).on('scroll', function() {
       $('#vehicle-nav a[href="' + '#' + bId + '"]').addClass('active');
     }
   });
-  
+
   // Show/hide vehicle-nav & car title on tob of the page
-  // if($(window).scrollTop() >= $('#hero h3').offset().top - 1) {
-  //   $('#vehicle-nav').addClass('show')
-  // } else {
-  //   $('#vehicle-nav').removeClass('show')
-  // }
+  if($(window).scrollTop() >= $('#hero h3').offset().top - 1) {
+    $('#vehicle-nav').addClass('show')
+  } else {
+    $('#vehicle-nav').removeClass('show')
+  }
 
   //Show/hide sticky "Purchase" button
     if($(window).scrollTop() >= $('#calc-payment').offset().top ) {
@@ -183,7 +183,13 @@ $(window).on('scroll', function() {
       $('#car-details #calc-payment .calc-result').removeClass('show')
     }
 
-
+    $("#dent-map map area").click(function(e){
+    var parentOffset = $(this).parent().parent().offset(); 
+    //or $(this).offset(); if you really just want the current element's offset
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    console.log(relX);
+});
   // Show & Hide Bottom "Book Now" Button
   // if($(window).scrollTop() > $('#calc-payment .card').offset().top ) {
   //   $('#calc-payment .calc-result').addClass('show')

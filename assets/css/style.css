@@ -2055,10 +2055,6 @@ body::-webkit-scrollbar-thumb,
   padding-top: 80px;
 }
 
-#car-details #dent-map svg.hidden {
-  visibility: hidden;
-}
-
 #car-details #features {
   padding-top: 80px;
 }
@@ -2078,6 +2074,48 @@ body::-webkit-scrollbar-thumb,
 
 #car-details #dent-map .map{
   position: relative;
+}
+
+#car-details #dent-map map area {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--green);
+  cursor: pointer;
+  
+}
+
+#car-details #dent-map map area[data-num=one] {
+  top: 50%;
+  left: 3%;
+}
+#car-details #dent-map map area[data-num=two] {
+  top: 50%;
+  right: 4%;
+}
+#car-details #dent-map map area[data-num=three] {
+  top: 50%;
+  left: 25%;
+}
+#car-details #dent-map map area[data-num=four] {
+  top: 50%;
+  right: 22%;
+}
+
+#car-details #dent-map map area::after {
+  position: absolute;
+  content: attr(data-value);
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30px;
 }
 
 #car-details #dent-map .map .defect{
