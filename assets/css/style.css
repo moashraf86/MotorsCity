@@ -1874,10 +1874,6 @@ body::-webkit-scrollbar-thumb,
   max-width: 750px;
 }
 
-#car-details .modal-dialog .modal-content {
-  min-height: 750px;
-}
-
 #car-details .modal-dialog .download-report {
   display: flex;
   align-items: center;
@@ -4216,19 +4212,6 @@ html[dir=rtl] #checkout .details-card .card a.show-details {
   }
 }
 
-@media screen and (min-width: 768px) {
-  #car-details .modal-dialog{
-    margin: 6rem auto;
-  }
-
-  #car-details .modal-dialog-centered {
-    min-height: calc(100% - 12rem);
-  }
-
-  #car-details .modal-dialog-scrollable {
-    height: calc(100% - 12rem);
-  }
-}
 /* only TABLET */
 @media (min-width:992px)  {
   #car-details #hero .prices .total {
