@@ -183,13 +183,6 @@ $(window).on('scroll', function() {
       $('#car-details #calc-payment .calc-result').removeClass('show')
     }
 
-    $("#dent-map map area").click(function(e){
-    var parentOffset = $(this).parent().parent().offset(); 
-    //or $(this).offset(); if you really just want the current element's offset
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
-    console.log(relX);
-});
   // Show & Hide Bottom "Book Now" Button
   // if($(window).scrollTop() > $('#calc-payment .card').offset().top ) {
   //   $('#calc-payment .calc-result').addClass('show')
@@ -361,6 +354,18 @@ $('form#delivery').on('submit', function(e) {
 $('form#delivery select').on('change', function(e) {
   $('span[data-value=delivery-cost]').text($(this).find('option:selected').attr('data-cost'))
 });
+
+// Hide Contact address form if it'sidentical to billing address at "My Profie" page
+$('#billing-info #contact-address').on('input', function() {
+  if($(this).attr('checked')) {
+    $(this).parents('.contact-address').find('.form-group').removeClass('d-none')
+    $(this).attr('checked', false)
+  }else {
+    $(this).parents('.contact-address').find('.form-group').addClass('d-none')
+    $(this).attr('checked', 'checked')
+  }
+})
+
 
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers

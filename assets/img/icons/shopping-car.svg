@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="408" height="214" viewBox="0 0 408 214">
+    <defs>
+        <rect id="b" width="53" height="50" rx="3"/>
+        <filter id="a" width="420.8%" height="440%" x="-160.4%" y="-130%" filterUnits="objectBoundingBox">
+            <feOffset dy="20" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="25"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0.0394669801 0 0 0 0 0.166638361 0 0 0 0.0550972465 0"/>
+        </filter>
+        <rect id="d" width="65.9" height="64" rx="3.9"/>
+        <filter id="c" width="435.4%" height="445.3%" x="-167.7%" y="-132%" filterUnits="objectBoundingBox">
+            <feOffset dy="26" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="32.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0.0394669801 0 0 0 0 0.166638361 0 0 0 0.0550972465 0"/>
+        </filter>
+        <rect id="f" width="25.44" height="24" rx="1.44"/>
+        <filter id="e" width="422.3%" height="441.7%" x="-161.2%" y="-129.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0.0394669801 0 0 0 0 0.166638361 0 0 0 0.0550972465 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#C0C6CF" d="M146.968 125.396c7.556 0 13.682-6.134 13.682-13.7 0-7.567-6.126-13.701-13.682-13.701s-13.682 6.134-13.682 13.7c0 7.567 6.126 13.701 13.682 13.701zm0-30.78c9.42 0 17.056 7.646 17.056 17.08 0 9.433-7.636 17.08-17.056 17.08-9.42 0-17.057-7.647-17.057-17.08 0-9.434 7.637-17.08 17.057-17.08zm129.338 30.689c7.656 0 13.863-6.216 13.863-13.883 0-7.668-6.207-13.884-13.863-13.884-7.658 0-13.865 6.216-13.865 13.884 0 7.667 6.207 13.883 13.865 13.883zm0-30.964c9.42 0 17.055 7.647 17.055 17.08 0 9.434-7.636 17.08-17.055 17.08-9.42 0-17.057-7.646-17.057-17.08 0-9.433 7.637-17.08 17.057-17.08zm-9.638-19.122c.621-.306.528-1.22-.142-1.394-3.612-.937-11.561-2.896-17.625-3.657l-8.277-1.12-.165-.023h-.005c-9.356-1.26-34.13-2.55-55.177 14.356l53.54-1.827 1.369-.091s16.053-.594 16.235-.96c.138-.275 6.925-3.647 10.247-5.284zm52.962 32.732s.547 3.014-3.1 5.023c0 0-2.646 3.106-21.617 4.75.567-1.817.874-3.75.874-5.754 0-10.624-8.599-19.236-19.208-19.236-10.609 0-19.209 8.612-19.209 19.236 0 2.724.567 5.314 1.587 7.663l-1.897.1-90.39.64h-.15c.037-3.813-.128-9.517-1.24-13.375-1.987-8.282-9.431-14.438-18.312-14.438-10.403 0-18.835 8.445-18.835 18.862a18.8 18.8 0 0 0 2.252 8.95h-.474c-.365 0-8.209-.456-8.209-.456s-6.082-4.016-5.809-4.016c.274 0 .884-1.19.884-1.19l-1.179-3.773a6.66 6.66 0 0 1-.098-3.626l-.464-1.644s-.54-6.85 2.562-13.061c0 0 8.574-10.687 57.828-11.874 0 0 26.816-16.167 43.325-16.35 0 0 32.562-3.38 68.956 9.956l23.44 7.855s7.206-1.278 4.652 4.933c0 0 1.004 7.215 2.28 8.22l.318.252c.487.386.758.985.727 1.607l-.405 7.914.911 2.832z"/>
+        <g transform="translate(305 95)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFF" xlink:href="#b"/>
+        </g>
+        <text fill="#979FAD" font-family="Metropolis-Regular, Metropolis" font-size="28" letter-spacing=".373" transform="translate(305 95)">
+            <tspan x="19" y="34">+</tspan>
+        </text>
+        <g transform="translate(64 38)">
+            <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+            <use fill="#FFF" xlink:href="#d"/>
+        </g>
+        <text fill="#979FAD" font-family="Metropolis-Regular, Metropolis" font-size="36.4" letter-spacing=".485" transform="translate(64 38)">
+            <tspan x="24.7" y="43.8">+</tspan>
+        </text>
+        <g>
+            <g transform="translate(238 46)">
+                <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+                <use fill="#FFF" xlink:href="#f"/>
+            </g>
+            <text fill="#979FAD" font-family="Metropolis-SemiBold, Metropolis" font-size="13.44" font-weight="500" letter-spacing=".179" transform="translate(238 46)">
+                <tspan x="9.12" y="16.88">+</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
