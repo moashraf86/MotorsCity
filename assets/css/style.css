@@ -311,18 +311,41 @@ input[type=range]:focus::-moz-range-track {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
 }
 
-#header .navbar .dropdown-menu.profile {
+#header .navbar .dropdown-menu.profile,
+#header .navbar .dropdown-menu.login {
   min-width: 20rem;
   padding-top: 0;
+}
+
+#header .navbar .dropdown-menu.login .dropdown-item.head:active {
+  color: var(--dark-grey);
+}
+
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head) {
+  color: var(--gray);
+}
+
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head):hover,
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head):active,
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head):focus{
+  background-color: transparent;
+  color: var(--gray);
+  pointer-events: none;
 }
 
 #header .navbar-nav .dropdown-menu .dropdown-item{
   font-weight: 600;
 }
 
-#header .dropdown span.user .bi{
+#header .right-nav span .bi{
   font-size: 20px;
   color: var(--purple);
+}
+
+#header .right-nav .favorite .bi{
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 #header .navbar-nav .dropdown-menu .dropdown-item:hover{
@@ -343,13 +366,31 @@ input[type=range]:focus::-moz-range-track {
   margin-bottom: 20px;
 }
 
-#header .navbar .dropdown-menu.profile .dropdown-item {
+#header .navbar .dropdown-menu.profile .dropdown-item,
+#header .navbar .dropdown-menu.login .dropdown-item {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#header .navbar .dropdown-menu.profile .dropdown-item.logout {
+#header .dropdown-item.head .nav-link.login{
+  width: 100%;
+  text-align: center;
+  background: var(--purple);
+  color: #fff;
+}
+
+#header .dropdown-item.head .register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+#header .navbar .dropdown-menu.profile .dropdown-item.logout,
+#header .navbar .dropdown-menu.login .dropdown-item.logout {
   padding: 15px 1rem;
   margin-top: 20px;
   border-top: 1px solid #ededed;
@@ -358,6 +399,11 @@ input[type=range]:focus::-moz-range-track {
 #header .navbar .dropdown-menu.profile .dropdown-item .icon .bi{
   font-size: 20px;
   color: var(--purple);
+}
+
+#header .navbar .dropdown-menu.login .dropdown-item .icon .bi{
+  font-size: 20px;
+  color: var(--gray);
 }
 
 #header .dropdown .dropdown-toggle:hover {
@@ -3424,6 +3470,10 @@ body::-webkit-scrollbar-thumb,
   margin-bottom: 8px;
 }
 
+#my-profile .profile form h6{
+  min-width: 170px;
+}
+
 #my-profile .form-group{
   display: flex;
   justify-content: space-between;
@@ -3443,6 +3493,7 @@ body::-webkit-scrollbar-thumb,
 
 #my-profile .profile form label[for=contact-address]{
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 /********************* Footer ***********************/
@@ -3583,7 +3634,8 @@ html[dir=rtl] .search-result-main .test-drive {
   margin-right: 30px;
 }
 
-html[dir=rtl] .search-result-main #results .card .terms-box ul{
+html[dir=rtl] .search-result-main #results .card .terms-box ul,
+html[dir=rtl]  #favorite-cars #results .card .terms-box ul{
   padding-left: 0;
   padding-right: 1rem;
 }
@@ -3684,6 +3736,11 @@ html[dir=rtl] #trusted .box:first-of-type{
 }
 
 html[dir=rtl] #checkout .details-card .card a.show-details {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir=rtl] #my-orders .orders .order_details .total-price {
   margin-left: 0;
   margin-right: auto;
 }

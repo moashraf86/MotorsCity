@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,12 +11,12 @@
     <!-- Font type -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Style.css -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Motores City</title>
   </head>
-  <body class="orders-page">
+  <body>
     <div class="wrapper" id="my-orders">
       <!-- START HEADER -->
       <header id="header">
@@ -64,136 +64,86 @@
                   </ul>
                 </li>
               </ul>
-              <!-- <ul class="navbar-nav register gap-3">
+              <ul class="navbar-nav register gap-3">
                 <li class="nav-item d-none">
                   <a class="nav-link active" href="#">Log in</a>
                 </li>
                 <li class="nav-item d-none">
                   <a class="nav-link signup" href="#">Sign Up</a>
                 </li>
-              </ul> -->
+              </ul>
             </div>
             <!-- User info -->
-            <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
-              <!-- VISIBLE IF USER HAVE SIGNED UP -->
-              <div class="dropdown">
-                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="user">
-                    <i class="bi bi-person"></i>
-                  </span>
-                  <span class="d-none d-lg-inline-block ms-2">Profile</span>
-                </a>
-                <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item head gap-3"  href="#">
-                      <div class="dropdown-head_title">
-                        <h6 class="full-name mb-0">Mohamed Zain</h6>
-                        <span class="email">example@gmail.com</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./my-orders.html">
-                      <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./favorite-cars.html">
-                      <span class="icon"><i class="bi bi-heart"></i></span>
-                      Favorite Cars
-                    </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-bank"></i></span>
-                    Finance
-                  </a>
-                  </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-bookmark"></i></span>
-                    Saved Searches
-                  </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./my-profile.html">
-                      <span class="icon"><i class="bi bi-person"></i></span>
-                      My Profile
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item logout" href="#">
-                      <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
-                      Log Out
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- IF USER HAVEN'T SIGN UP -->
-              <div class="dropdown d-none">
-                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="user">
-                    <i class="bi bi-person"></i>
-                  </span>
-                  <span class="d-none d-lg-inline-block ms-2">Log in</span>
-                </a>
-                <ul class="dropdown-menu login" aria-labelledby="navbarDropdown">
-                  <li class="dropdown-item head gap-3 flex-column">
-                    <a class="nav-link login" href="#">Log in</a>
-                    <span class="register">Don’t have an account? <a class="nav-link" href="#">Register</a></span>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" disabled>
-                      <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./favorite-cars.html">
-                      <span class="icon"><i class="bi bi-heart"></i></span>
-                      Favorite Cars
-                    </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-bank"></i></span>
-                    Finance
-                  </a>
-                  </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-bookmark"></i></span>
-                    Saved Searches
-                  </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" disabled>
-                      <span class="icon"><i class="bi bi-person"></i></span>
-                      My Profile
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <a class="favorite" href="./favorite-cars.html">
-                <span class="icon"><i class="bi bi-heart"></i></span>
+            <div class="dropdown order-2 order-lg-0">
+              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="user">
+                  <i class="bi bi-person"></i>
+                </span>
+                <span class="d-none d-lg-inline-block ms-2">Profile</span>
               </a>
+              <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item head gap-3"  href="#">
+                    <div class="dropdown-head_title">
+                      <h6 class="full-name mb-0">Mohamed Zain</h6>
+                      <span class="email">example@gmail.com</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./my-orders.html">
+                    <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-heart"></i></span>
+                    Favorite Cars
+                  </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <span class="icon"><i class="bi bi-bank"></i></span>
+                  Finance
+                </a>
+                </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <span class="icon"><i class="bi bi-bookmark"></i></span>
+                  Saved Searches
+                </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-person"></i></span>
+                    My Profile
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item logout" href="#">
+                    <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                    Log Out
+                  </a>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
       </header>
       <!-- END HEADER -->
 
-      <section class="orders">
+            <section class="orders">
         <div class="container-fluid container-xl">
           <!-- IF EMPTY -->
           <div class="empty-state text-center d-none">
             <img src="../assets/img/icons/shopping-car.svg" alt="shopping-car">
-            <p class="mb-0">Here you will see cars in transaction process.</p>
+            <p class="mb-0">هنا السيارات قيد المعالجة.</p>
           </div>
           <!-- IF EMPTY -->
 
           <!-- ORDERS -->
           <div class="orders_in-progress">
-            <h2 class="mb-5">Orders in Progress</h2>
+            <h2 class="mb-5">طلبات قيد التنفيذ</h2>
             <div class="order">
               <div class="card">
                 <div class="order_info flex-column flex-md-row">
@@ -202,27 +152,27 @@
                       <img class="w-100 h-100" src="../assets/img/cars/car-placeholder.jfif" alt="">
                     </div>
                     <div class="py-1 py-sm-3">
-                      <h5>Porsche Macan 280 kW</h5>
-                      <span class="d-block"><b>Order:</b> 1234</span>
+                      <h5> بورش ماكان  280 kW</h5>
+                      <span class="d-block"><b>الطلب:</b> 1234</span>
                     </div>
                   </div>
-                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Click to continue your payment." data-bs-placement="top">
+                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="إضغط للإستمرار في عملية الدفع" data-bs-placement="top">
                     <span><i class="bi bi-clock-history"></i></span>
-                    <span class="status">Order in Progress</span>
+                    <span class="status">الطلب قيد التنفيذ</span>
                   </a>
                 </div>
                 <div class="order_details">
                   <div class="ordered-date d-none d-lg-flex">
-                    <span class="details_title d-block">Ordered:</span>
+                    <span class="details_title d-block">تم الطلب في: </span>
                     <span class="value d-flex gap-3">
                       <i class="bi bi-calendar"></i>
                       <span class="date">7.7.2022</span>
                     </span>
                   </div>
                   <div class="total-price">
-                    <span class="details_title d-block">Total:</span>
+                    <span class="details_title d-block">الإجمالي:</span>
                     <span class="value d-flex gap-3">
-                      SR2,000
+                      2,000﷼
                     </span>
                   </div>
                 </div>
@@ -236,27 +186,27 @@
                       <img class="w-100 h-100" src="../assets/img/cars/car-placeholder.jfif" alt="">
                     </div>
                     <div class="py-1 py-sm-3">
-                      <h5>Porsche Macan 280 kW</h5>
-                      <span class="d-block"><b>Order:</b> 1234</span>
+                      <h5> بورش ماكان  280 kW</h5>
+                      <span class="d-block"><b>الطلب:</b> 1234</span>
                     </div>
                   </div>
-                  <a class="order_status" href="#" tabindex="1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Click to continue your payment." data-bs-placement="top">
+                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="إضغط للإستمرار في عملية الدفع" data-bs-placement="top">
                     <span><i class="bi bi-clock-history"></i></span>
-                    <span class="status">Order in Progress</span>
+                    <span class="status">الطلب قيد التنفيذ</span>
                   </a>
                 </div>
                 <div class="order_details">
                   <div class="ordered-date d-none d-lg-flex">
-                    <span class="details_title d-block">Ordered:</span>
+                    <span class="details_title d-block">تم الطلب في: </span>
                     <span class="value d-flex gap-3">
                       <i class="bi bi-calendar"></i>
                       <span class="date">7.7.2022</span>
                     </span>
                   </div>
                   <div class="total-price">
-                    <span class="details_title d-block">Total:</span>
+                    <span class="details_title d-block">الإجمالي:</span>
                     <span class="value d-flex gap-3">
-                      SR2,000
+                      2,000﷼
                     </span>
                   </div>
                 </div>
@@ -264,7 +214,7 @@
             </div>
           </div>
           <div class="orders_completed">
-            <h2 class="mb-5">Orders Complted</h2>
+            <h2 class="mb-5">طلبات مكتملة</h2>
             <div class="order">
               <div class="card">
                 <div class="order_info flex-column flex-md-row">
@@ -273,27 +223,27 @@
                       <img class="w-100 h-100" src="../assets/img/cars/car-placeholder.jfif" alt="">
                     </div>
                     <div class="py-1 py-sm-3">
-                      <h5>Porsche Macan 280 kW</h5>
-                      <span class="d-block"><b>Order:</b> 1234</span>
+                      <h5> بورش ماكان  280 kW</h5>
+                      <span class="d-block"><b>الطلب:</b> 1234</span>
                     </div>
                   </div>
-                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Click to track your order." data-bs-placement="top">
+                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="إضغط لتتبع طلبك." data-bs-placement="top">
                     <span><i class="bi bi-check-circle"></i></span>
-                    <span class="status">Order Completed</span>
+                    <span class="status">تم تأكيد الطلب</span>
                   </a>
                 </div>
                 <div class="order_details">
                   <div class="ordered-date d-none d-lg-flex">
-                    <span class="details_title d-block">Ordered:</span>
+                    <span class="details_title d-block">تم الطلب في:</span>
                     <span class="value d-flex gap-3">
                       <i class="bi bi-calendar"></i>
                       <span class="date">7.7.2022</span>
                     </span>
                   </div>
                   <div class="total-price">
-                    <span class="details_title d-block">Total:</span>
+                    <span class="details_title d-block">الإجمالى:</span>
                     <span class="value d-flex gap-3">
-                      SR2,000
+                      2,000﷼
                     </span>
                   </div>
                 </div>
@@ -307,27 +257,27 @@
                       <img class="w-100 h-100" src="../assets/img/cars/car-placeholder.jfif" alt="">
                     </div>
                     <div class="py-1 py-sm-3">
-                      <h5>Porsche Macan 280 kW</h5>
-                      <span class="d-block"><b>Order:</b> 1234</span>
+                      <h5> بورش ماكان  280 kW</h5>
+                      <span class="d-block"><b>الطلب:</b> 1234</span>
                     </div>
                   </div>
-                  <a class="order_status" href="#" tabindex="1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Click to track your order." data-bs-placement="top">
+                  <a class="order_status" href="#" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="إضغط لتتبع طلبك." data-bs-placement="top">
                     <span><i class="bi bi-check-circle"></i></span>
-                    <span class="status" aria-label="xx" aria-details="xx">Order Completed</span>
+                    <span class="status">تم تأكيد الطلب</span>
                   </a>
                 </div>
                 <div class="order_details">
                   <div class="ordered-date d-none d-lg-flex">
-                    <span class="details_title d-block">Ordered:</span>
+                    <span class="details_title d-block">تم الطلب في:</span>
                     <span class="value d-flex gap-3">
                       <i class="bi bi-calendar"></i>
                       <span class="date">7.7.2022</span>
                     </span>
                   </div>
                   <div class="total-price">
-                    <span class="details_title d-block">Total:</span>
+                    <span class="details_title d-block">الإجمالى:</span>
                     <span class="value d-flex gap-3">
-                      SR2,000
+                      2,000﷼
                     </span>
                   </div>
                 </div>
@@ -339,13 +289,13 @@
           <!-- Pagination -->
           <div class="results-pagination d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap mt-4">
             <div class="d-flex align-items-center gap-2">
-              <div class="pag"> <i class="bi bi-chevron-left"></i>  <span>First</span></div>
-              <div class="pag"> <i class="bi bi-chevron-left"></i> <span>Prev</span></div>
+              <div class="pag"> <i class="bi bi-chevron-right"></i> <span class="">الأولي</span> </div>
+              <div class="pag"> <i class="bi bi-chevron-right"></i> <span class="d-none d-md-inline">السابقة</span> </div>
             </div>
-            <p class="mb-0 order-2 order-sm-0 mt-3 mt-sm-0 text-center w-100">45-65 of 25,370 results</p>
+            <p class="mb-0 order-2 order-sm-0 mt-3 mt-sm-0 text-center w-100">45-65 من 25,370 نتيجة</p>
             <div class="d-flex align-items-center gap-2">
-              <div class="pag"><span>Next</span> <i class="bi bi-chevron-right"></i></div>
-              <div class="pag"><span>Last</span> <i class="bi bi-chevron-right"></i></div>
+              <div class="pag"> <span class="d-none d-md-inline">التالية</span> <i class="bi bi-chevron-left"></i>  </div>
+              <div class="pag"> <span class="">الأخيرة </span>  <i class="bi bi-chevron-left"></i> </div>
             </div>
           </div>
           <!-- Pagination -->
@@ -392,13 +342,13 @@
                       </a>
                     </li>
                   </ul>
-                  <div class="sign-up text-center text-md-start">
-                    <h6 class="mb-4">Join our Email Club </h6>
+                  <div class="sign-up text-center text-md-end">
+                    <h6 class="mb-4">انضم إلى نادي البريد الإلكتروني </h6>
                     <form>
-                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="Email.." class="form-control mb-4">
+                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="بريدك الإلكتروني" class="form-control mb-4">
                       <button class="btn btn-secondary">
                         <span class="bg">
-                          <span class="text">Sign Up</span>
+                          <span class="text">تسجيل دخول</span>
                         </span>
                       </button>
                     </form>
@@ -408,7 +358,7 @@
             </div>
           </div>
           <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
-            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 Copyright. All rights reserved.</p>
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 حقوق الطبع والنشر. كل الحقوق محفوظة.</p>
             <ul class="social-icons d-flex align-items-center gap-4">
               <li>
                 <a href="#">
