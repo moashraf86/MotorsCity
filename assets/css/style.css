@@ -2120,7 +2120,8 @@ body::-webkit-scrollbar-thumb,
   border-bottom: 0
 }
 
-#car-details .modal-dialog .card-body .overview_nav.active .hide{
+#car-details .modal-dialog .card-body .overview_nav.active .hide,
+#car-details .modal-dialog .card-body .overview_nav:not(.active) .show{
   display: none;
 }
 
@@ -4156,13 +4157,14 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     max-width: 400px;
     margin: auto;
   }
-  #header .navbar .dropdown-menu.profile {
+  #header .navbar .dropdown-menu.profile,
+  #header .navbar .dropdown-menu.login {
     width: 100vw;
     border: 0;
     border-radius: 0;
     margin-top: 18px;
     box-shadow: 0 1px 5px rgb(0 0 0 / .1);
-    transform: translateX(12px);
+    transform: translateX(46px);
   }
   #how-it-works .steps .step{
     display: flex;

@@ -506,7 +506,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-secondary">
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#report-details">
             <span class="bg">
               <span class="text">عرض كل التفاصيل</span>
             </span>
@@ -514,6 +514,400 @@
         </div>
       </section>
       <!-- REPORT -->
+      
+            <!-- FULL REPORT MODAL -->
+      <!-- Modal -->
+      <div class="modal fade" id="report-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-md-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModal">تقرير الفحص</h5>
+              <div class="d-flex align-items-center gap-3">
+                <a href="#" class="download-report">
+                  <i class="bi bi-download"></i> تحميل التقرير
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+              <ul class="modal-body_nav nav nav-tabs d-flex items-center justify-content-start gap-2 pt-3 pb-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a data-href="#overview-tab-pane">
+                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab" aria-controls="overview-tab-pane" aria-selected="true">
+                    نظرة عامة
+                  </button>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a data-href="#exterior-tab-pane">
+                    <button class="nav-link" id="exterior-tab" data-bs-toggle="tab" data-bs-target="#exterior-tab-pane" type="button" role="tab" aria-controls="exterior-tab-pane" aria-selected="true">
+                    خارجي
+                    <span class="issue">4</span>
+                  </button>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a data-href="#interior-tab-pane">
+                    <button class="nav-link" id="interior-tab" data-bs-toggle="tab" data-bs-target="#interior-tab-pane" type="button" role="tab" aria-controls="interior-tab-pane" aria-selected="true">
+                    داخلي
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a data-href="#engine-tab-pane">
+                    <button class="nav-link" id="engine-tab" data-bs-toggle="tab" data-bs-target="#engine-tab-pane" type="button" role="tab" aria-controls="engine-tab-pane" aria-selected="true">
+                    المحرك
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a data-href="#road-tab-pane">
+                    <button class="nav-link" id="road-tab" data-bs-toggle="tab" data-bs-target="#road-tab-pane" type="button" role="tab" aria-controls="road-tab-pane" aria-selected="true">
+                    إختبار الطريق
+                    <span><i class="bi bi-check"></i></span>
+                  </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <!-- Overview -->
+                <div class="mb-3" id="overview-tab-pane" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head justify-content-between flex-wrap flex-sm-nowrap mb-4">
+                      <h6>160 نقطة تم فحصها</h6>
+                      <div class="date d-flex items-center justify-content-between flex-grow-1 flex-sm-grow-0 gap-sm-3">
+                        <p class="mb-0">تاريخ الفحص</p>
+                        <span class="fw-bold">25 May 2022</span>
+                      </div>
+                    </div>
+                    <div class="card-body pt-0">
+                      <ul class="card-body_nav mb-4">
+                        <li class="sub-card d-flex items-center flex-grow-1 justify-content-evenly">
+                          <div class="d-flex align-items-center gap-2"><span><i class="bi bi-check"></i></span> 130 تم الإجتياز</div>
+                          <div class="d-flex align-items-center gap-2"><span class="issue"><i class="bi bi-exclamation"></i></span>4  ملاحظات</div>
+                        </li>
+                      </ul>
+                      <div class="overview">
+                        <h6>تفاصيل المركبة كاملة</h6>
+                        <div class="overview_nav-wrapper d-flex align-items-start justify-content-between gap-4">
+                          <ul class="overview_nav active">
+                            <li>
+                              <span class="title">الماركة</span>
+                              <span class="value">هوندا</span>
+                            </li>
+                            <li>
+                              <span class="title">الموديل</span>
+                              <span class="value">Civic</span>
+                            </li>
+                            <li>
+                              <span class="title">اللون</span>
+                              <span class="value">فضى</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">الحالة</span>
+                              <span class="value">جديدة</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">سنة الصنع:</span>
+                              <span class="value">2015</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">ناقل الحركة:</span>
+                              <span class="value">آلي</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">نوع الوقود:</span>
+                              <span class="value">بنزين</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">حجم المحرك: </span>
+                              <span class="value">3.6 لتر</span>
+                            </li>
+                            <li class="hide">
+                              <span class="title">عدد الأميال:</span>
+                              <span class="value">74,185 كلم</span>
+                            </li>
+                            <li id="toggle-show" data-hidden="false">
+                              <span class="show">عرض</span>
+                              <span class="hide">إخفاء</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Exterior -->
+                <div class="mb-3" id="exterior-tab-pane" role="tabpanel" aria-labelledby="exterior-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/car.svg" alt="car">
+                      <h6>خارجي</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>لم يتم إصلاح أي أجزاء من الجسم</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>لا تآكل في ألواح الهيكل</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>لم يتم استبدال أي أجزاء من الجسم</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>لا توجد شقوق في أجزاء الجسم</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>لا تشققات في الحافات والسبائك</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>لا يوجد إصلاح في الأعمدة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>أضواء إشارة الانعطاف تعمل بشكل جيد</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يوجد انبعاج على السطح وباب صندوق الأمتعة</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="one">عرض</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="one" 
+                                data-caption="There is dent on Roof and Boot/Dicky door" 
+                                href="../assets/img/defects/front/1.webp">
+                              <img class="rounded" src="../assets/img/defects/front/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يوجد خدش على غطاء المحرك ، الحاجز الأيمن الأمامي ، لوحة الربع الأيسر وباب صندوق الأمتعة</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="two">عرض</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="two" 
+                                data-caption="There is scratch on Bonnet,Front Right Fender,Left Quarter panel and Boot/Dicky door" 
+                                href="../assets/img/defects/back/1.webp">
+                              
+                              <img class="rounded" src="../assets/img/defects/back/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <p>المصباح الأيسر قد تلاشى</p>
+                          <div class="d-flex items-center gap-2">
+                            <a href="#" data-fancybox-trigger="three">عرض</a>
+                            <span class="issue"><i class="bi bi-dash"></i></span>
+                          </div>
+                          <div class="exterior-defects-gallery" style="display:none">
+                            <a  data-fancybox="three" 
+                                data-caption="Left headlight has faded" 
+                                href="../assets/img/defects/top-back/1.webp">
+                              <img class="rounded" src="../assets/img/defects/top-back/1.webp" />
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Interior -->
+                <div class="mb-3" id="interior-tab-pane" role="tabpanel" aria-labelledby="interior-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/seat.svg" alt="seat">
+                      <h6>داخلي</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>التنجيد في حالة جيدة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>بطانة السقف في حالة جيدة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>السجاد والأرضيات خالية من القطع</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>جميع الوظائف في لوحة الكتلة تعمل بشكل جيد</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يعمل منفاخ التيار المتردد بشكل جيد</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Engine -->
+                <div class="mb-3" id="engine-tab-pane" role="tabpanel" aria-labelledby="engine-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/engine.svg" alt="engine">
+                      <h6>المحرك</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>السيارة ليس بها دخان أبيض أو أسود</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>المحرك ليس له ضوضاء غير طبيعية</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>المحرك ليس لديه ضغط خلفي</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>المبرد في حالة جيدة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>المبرد خالي من المواد الغريبة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>نظام الإشعال يعمل بشكل جيد</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>بدء تشغيل المحرك في كرنك واحد</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>البطارية في حالة جيدة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>نظام التوجيه يعمل بشكل صحيح</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>حزام المولد يعمل بسلاسة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>الممسحة تعمل بسلاسة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يعمل ضاغط مكيف الهواء بسلاسة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Road Test -->
+                <div class="" id="road-tab-pane" role="tabpanel" aria-labelledby="road-tab" tabindex="0">
+                  <div class="card">
+                    <div class="card-head">
+                      <img src="../assets/img/icons/road.svg" alt="engine">
+                      <h6>إختبار الطريق</h6>
+                    </div>
+                    <div class="card-body">
+                      <ul class="card-body_nav">
+                        <li>
+                          <p>يتم محاذاة التوجيه بشكل مثالي</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يعمل التوجيه المعزز حسب التصميم</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يعرض المحرك القوة المناسبة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                        <li>
+                          <p>يعمل ناقل الحركة بسلاسة</p>
+                          <div class="d-flex items-center gap-2">
+                            <span><i class="bi bi-check"></i></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FULL REPORT MODAL -->
       
       <!-- DENT MAP -->
       <section id="dent-map">
@@ -675,6 +1069,7 @@
                 <div class="card">
                   <div class="btn-group mb-4 ">
                     <div class="btn btn-primary justify-content-center justify-content-sm-between">
+                      <img class="loading-spinner d-none" width="30" height="30" src="../assets/img/icons/Spinner.gif" alt="loading">
                       <span><span data-value="monthly-value">724</span>﷼ <br class="d-sm-none"> <sub>شهريا</sub></span>
                       <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                         data-bs-toggle="popover" 
@@ -686,6 +1081,7 @@
                       </i>
                     </div>
                     <div class="btn btn-primary justify-content-center justify-content-sm-between">
+                      <img class="loading-spinner d-none" width="30" height="30" src="../assets/img/icons/Spinner.gif" alt="loading">
                       <span><span id="cash-value">5000</span>﷼ <br class="d-sm-none"> <sub>دفعة أولي</sub></span>
                       <i tabindex="0" role="button" class="bi bi-question-circle d-none d-sm-block" 
                         data-bs-toggle="popover" 

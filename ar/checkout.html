@@ -52,7 +52,7 @@
         <div class="container-fluid container-xl">
           <div class="row">
             <!-- FINANCE & CASH TABS -->
-            <ul class="nav nav-tabs primary gap-0 mb-3" id="myTab" role="tablist">
+            <ul class="col-12 col-md nav nav-tabs primary gap-0 mb-3" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="true">
                   تمويل
@@ -64,6 +64,10 @@
                 </button>
               </li>
             </ul>
+            <!-- Space placeholder -->
+            <div class="col-12 col-md-5"></div>
+          </div>
+          <div class="row">
             <div class="col-12 col-md">
               <!-- checkout Process -->
               <div class="checkout-process">
@@ -176,7 +180,7 @@
                           </form>
                         </div>
                         <div class="tab-pane fade" id="document-tab-pane" role="tabpanel" aria-labelledby="document-tab" tabindex="0">
-                          <form>
+                          <form id="document">
                             <div class="upload-box">
                               <div class="img">
                                 <img class="w-100" src="../assets/img/icons/driver-license-2.jpg" alt="">
@@ -216,6 +220,7 @@
                                 <span class="message">No file choosen</span>
                               </label>
                             </div>
+                            <button type="submit" class="btn btn-primary d-block ms-auto">حفظ</button>
                           </form>
                         </div>
                       </div>

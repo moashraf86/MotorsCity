@@ -222,11 +222,11 @@ $('.overview_nav #toggle-show').click(function() {
   if($(this).attr('data-hidden') == 'true') {
     $(this).parent().addClass('active');
     $(this).attr('data-hidden', 'false');
-    $(this).text('Show')
+    // $(this).text('Show')
   } else {
     $(this).parent().removeClass('active');
     $(this).attr('data-hidden', 'true');
-    $(this).text('Hide')
+    // $(this).text('Hide')
   }
 })
 // Select between Finance Providers 
@@ -237,7 +237,14 @@ $('.providers li').click( function() {
   $(this).parent().siblings('.card').find('input#monthly-payment, input#monthly-range').val(dataMonthly)
   $(this).parent().siblings('.card, .calc-result').find('span[data-value=monthly-value]').text(dataMonthly);
   $(this).parent().siblings('.card').find('input#cash-down, input#cash-range').val(dataCash)
-  $(this).parent().siblings('.card').find('span#cash-value').text(dataCash)
+  $(this).parent().siblings('.card').find('span#cash-value').text(dataCash);
+  //show loading spinner for 1s
+  $('.loading-spinner').removeClass('d-none')
+  $('.loading-spinner').siblings('span').addClass('d-none')
+  setTimeout(() => {
+    $('.loading-spinner').addClass('d-none')
+    $('.loading-spinner').siblings('span').removeClass('d-none')
+  }, 1000)
 })
 
 //check tabs when submitting the form on the modal
@@ -340,6 +347,7 @@ $('form#personal-info').on('submit', function(e) {
   } else {
     $(this).parents('.card').find('#fin-delivery-tab, #cash-delivery-tab').removeAttr('disabled').trigger('click');
     $(this).parents('.card').find('#app-tab, #ID-tab').addClass('completed');
+    $(window).scrollTop(0)
   }
 });
 
@@ -347,7 +355,8 @@ $('form#personal-info').on('submit', function(e) {
 $('form#delivery').on('submit', function(e) {
   e.preventDefault();
   $(this).parents('.card').find('#document-tab, #checkout-tab').removeAttr('disabled').trigger('click');
-  $(this).parents('.card').find('#fin-delivery-tab, #cash-delivery-tab').addClass('completed')
+  $(this).parents('.card').find('#fin-delivery-tab, #cash-delivery-tab').addClass('completed');
+  $(window).scrollTop(0)
 });
 
 // Move to next step when submitting the "Delivery" Form
