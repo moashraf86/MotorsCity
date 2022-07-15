@@ -3612,6 +3612,14 @@ html[dir=rtl] .popover {
   font-family: 'Noto Kufi Arabic', sans-serif;
 }
 
+html[dir=rtl] .form-switch .form-check-input {
+  background-position: right center;
+}
+
+html[dir=rtl] .form-switch .form-check-input:checked {
+  background-position: left center;
+}
+
 html[dir=rtl] #header .navbar-nav .nav-link,
 html[dir=rtl] #header .right-nav .dropdown-toggle span {
   font-size: 14px;
