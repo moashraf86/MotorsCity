@@ -238,6 +238,45 @@ input[type=range]:focus::-moz-range-track {
   background: var(--green)
 }
 
+.slider.slider-horizontal {
+  width: 100%;
+  height: 5px;
+}
+
+.slider.slider-horizontal .slider-track {
+  height: 2.5px;
+}
+
+.slider-selection {
+  background-image: linear-gradient(to right, var(--green), var(--sky),  var(--purple))
+}
+
+.slider-handle {
+  width: 20px;
+  height: 20px;
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid var(--sky);
+  top: -10px;
+}
+
+.slider-handle::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-3px,-3px);
+  border-radius: 50%;
+  background-color: var(--sky);
+}
+
+
+.slider.slider-horizontal .tooltip{
+  display: none;
+}
+
 .popover {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--dark-grey);
@@ -3573,7 +3612,8 @@ html[dir=rtl] .popover {
   font-family: 'Noto Kufi Arabic', sans-serif;
 }
 
-html[dir=rtl] #header .navbar-nav .nav-link {
+html[dir=rtl] #header .navbar-nav .nav-link,
+html[dir=rtl] #header .right-nav .dropdown-toggle span {
   font-size: 14px;
 }
 
@@ -3770,7 +3810,8 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
 /* TABLET */
 @media screen  and (max-width: 1200px){
 
-  #header .navbar-nav .nav-link {
+  #header .navbar-nav .nav-link,
+  #header .right-nav .dropdown-toggle span {
     font-size: 14px;
   }
 
@@ -3805,7 +3846,8 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     right: -70px;
   }
 
-  html[dir=rtl] #header .navbar-nav .nav-link {
+  html[dir=rtl] #header .navbar-nav .nav-link,
+  html[dir=rtl] #header .right-nav .dropdown-toggle span {
     font-size: 12px;
   }
 }
@@ -4157,6 +4199,7 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     max-width: 400px;
     margin: auto;
   }
+
   #header .navbar .dropdown-menu.profile,
   #header .navbar .dropdown-menu.login {
     width: 100vw;
@@ -4166,6 +4209,12 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     box-shadow: 0 1px 5px rgb(0 0 0 / .1);
     transform: translateX(46px);
   }
+
+  html[dir=rtl] #header .navbar .dropdown-menu.profile,
+  html[dir=rtl] #header .navbar .dropdown-menu.login {
+    transform: translateX(-46px);
+  }
+
   #how-it-works .steps .step{
     display: flex;
     gap: 20px;

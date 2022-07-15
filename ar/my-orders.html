@@ -35,97 +35,139 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
+                  <a class="nav-link active" aria-current="page" href="#">سيارات للبيع</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sell/Trade</a>
+                  <a class="nav-link" href="#">بيع سيارتك </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Financing</a>
+                  <a class="nav-link" href="#">التمويل</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Why MotorsCity
+                    ليش موتروزسيتي؟
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Recources
+                    المصادر
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
+                    <li><a class="dropdown-item" href="#">رابط</a></li>
                   </ul>
-                </li>
-              </ul>
-              <ul class="navbar-nav register gap-3">
-                <li class="nav-item d-none">
-                  <a class="nav-link active" href="#">Log in</a>
-                </li>
-                <li class="nav-item d-none">
-                  <a class="nav-link signup" href="#">Sign Up</a>
                 </li>
               </ul>
             </div>
             <!-- User info -->
-            <div class="dropdown order-2 order-lg-0">
-              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="user">
-                  <i class="bi bi-person"></i>
-                </span>
-                <span class="d-none d-lg-inline-block ms-2">Profile</span>
+            <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
+              <!-- VISIBLE IF USER HAVE SIGNED UP -->
+              <div class="dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2"> هلا, محمد</span>
+                </a>
+                <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item head gap-3"  href="#">
+                      <div class="dropdown-head_title">
+                        <h6 class="full-name mb-0">محمد زين</h6>
+                        <span class="email">example@gmail.com</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-orders.html">
+                      <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      السيارات المفضلة
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    التمويل
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    المحفوظات
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-profile.html">
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      الملف الشخصي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item logout" href="#">
+                      <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                      تجسيل خروج
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- IF USER HAVEN'T SIGN UP -->
+              <div class="dropdown d-none">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2">تسجيل دخول</span>
+                </a>
+                <ul class="dropdown-menu login" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-item head gap-3 flex-column">
+                    <a class="nav-link login" href="#">نسجيل دخول</a>
+                    <span class="register">لا تمتلك حساب ؟ <a class="nav-link" href="#">سجل الآن</a></span>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      السيارات المفضلة
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    التمويل
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    المحفوظات
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      الملف الشخصي
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a class="favorite" href="./favorite-cars.html">
+                <span class="icon"><i class="bi bi-heart"></i></span>
               </a>
-              <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item head gap-3"  href="#">
-                    <div class="dropdown-head_title">
-                      <h6 class="full-name mb-0">Mohamed Zain</h6>
-                      <span class="email">example@gmail.com</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./my-orders.html">
-                    <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-heart"></i></span>
-                    Favorite Cars
-                  </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <span class="icon"><i class="bi bi-bank"></i></span>
-                  Finance
-                </a>
-                </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <span class="icon"><i class="bi bi-bookmark"></i></span>
-                  Saved Searches
-                </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-person"></i></span>
-                    My Profile
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item logout" href="#">
-                    <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
-                    Log Out
-                  </a>
-                </li>
-              </ul>
             </div>
           </nav>
         </div>
