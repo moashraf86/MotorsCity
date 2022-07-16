@@ -1,33 +1,37 @@
-//Double range slider input
-var doubleSlider  = $('.double-range-input').slider({
-  formatter:function() {
-    let input = $('[data-slider-id='+ $(this).attr('id') +']');
-    var values = input.slider('getValue');
-    input.parents('form').find('input#min-payment').val(values[0])
-    input.parents('form').find('input#max-payment').val(values[1])
-  }
-});
-var double_initial_values = $('.double-range-input').slider('getValue');
-let minPayment = double_initial_values[0]
-let maxPayment = double_initial_values[1]
-//set initial values for Min & Max payment
-$('.filter input#min-payment').val(minPayment)
-$('.filter input#max-payment').val(maxPayment)
+try {
+  //Double range slider input
+  var doubleSlider  = $('.double-range-input').slider({
+    formatter:function() {
+      let input = $('[data-slider-id='+ $(this).attr('id') +']');
+      var values = input.slider('getValue');
+      input.parents('form').find('input#min-payment').val(values[0])
+      input.parents('form').find('input#max-payment').val(values[1])
+    }
+  });
+  var double_initial_values = $('.double-range-input').slider('getValue');
+  let minPayment = double_initial_values[0]
+  let maxPayment = double_initial_values[1]
+  //set initial values for Min & Max payment
+  $('.filter input#min-payment').val(minPayment)
+  $('.filter input#max-payment').val(maxPayment)
 
 
-// Single Range slider Input 
-var singleSlider  = $('.single-range-input').slider({
-  formatter:function() {
-    let input = $('[data-slider-id='+ $(this).attr('id') +']');
-    var value = input.slider('getValue');
-    // var value = $('.single-range-input').slider('getValue');
-    input.parent().find('input[type=number]').val(value)
-    input.parent().find('.range-val').text(value)
-  }
-});
-//set initial values for Min & Max payment
-var single_initial_value = $('.single-range-input').slider('getValue');
-$('.single-range-input').parent().find('input[type=number]').val(single_initial_value)
+  // Single Range slider Input 
+  var singleSlider  = $('.single-range-input').slider({
+    formatter:function() {
+      let input = $('[data-slider-id='+ $(this).attr('id') +']');
+      var value = input.slider('getValue');
+      // var value = $('.single-range-input').slider('getValue');
+      input.parent().find('input[type=number]').val(value)
+      input.parent().find('.range-val').text(value)
+    }
+  });
+  //set initial values for Min & Max payment
+  var single_initial_value = $('.single-range-input').slider('getValue');
+  $('.single-range-input').parent().find('input[type=number]').val(single_initial_value)
+} catch (error) {
+  console.warn(error);
+}
 
 // Make Driver Seats Slider works when click on nav-tabs
 $('#driver-seat .nav-tabs .nav-link').each(function() {
@@ -43,6 +47,7 @@ $('#driver-seat .nav-tabs .nav-link').each(function() {
     $(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active')
   })
 })
+
 $('.swiper-pagination .swiper-pagination-bullet').each(function() {
   $(this).on('click', function() {
     if($(this).attr('aria-label') == 'Go to slide 1') {
