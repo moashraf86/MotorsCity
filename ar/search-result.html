@@ -219,20 +219,20 @@
                           <label for="min-payment" class="form-label">الحد الأدني للدفع</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">﷼</span>
-                            <input type="number" class="form-control" id="min-payment" value="" >
+                            <input type="number" class="form-control min" id="min-payment" value="" >
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-2">
                           <label for="max-payment" class="form-label">الحد الأقصي للدفع</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">﷼</span>
-                            <input type="number" class="form-control" id="max-payment" value="">
+                            <input type="number" class="form-control max" id="max-payment" value="">
                           </div>
                         </div>
                       </div>
                       <!-- Double Range  -->
                       <div class="double-range mb-4">
-                        <input class="double-range-input" data-slider-id="fin_double" type="text" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="10" data-slider-value="[250,1000]"/> 
+                        <input class="payment-range-input" data-slider-id="fin_double" type="text" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="10" data-slider-value="[250,1000]"/> 
                       </div>
 
                       <div class="d-flex flex-column gap-2 flex-grow-1 mb-3">
@@ -662,16 +662,27 @@
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFinance">
-                            <div class="accordion-body">
-                              <div id="year" class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                  <span>السنه</span>
-                                  <span class="range-val">2019</span>
+                            <div class="accordion-body form">
+                              <div class="d-flex justify-content-between align-items-center gap-2">
+                                <div class="d-flex flex-column gap-2">
+                                  <label for="min-year" class="form-label">من</label>
+                                  <div class="input-group">
+                                    <input type="number" class="form-control min" id="min-year" value="" >
+                                  </div>
                                 </div>
-                                <input class="single-range-input" data-slider-id='fin-year' type="text" data-slider-min="2015" data-slider-max="2025" data-slider-step="1" data-slider-value="2019"/>
+                                <div class="d-flex flex-column gap-2">
+                                  <label for="max-year" class="form-label">إلى</label>
+                                  <div class="input-group">
+                                    <input type="number" class="form-control max" id="max-year" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Double Range  -->
+                              <div class="double-range mb-4">
+                                <input class="year-range-input" data-slider-id="fin_year_double" type="text" value="" data-slider-min="2015" data-slider-max="2025" data-slider-step="1" data-slider-value="[2015,2025]"/> 
                               </div>
                               <div id="mileage">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between mb-3">
                                   <span>الحد الأقصي لعدد الأميال</span>
                                   <span class="range-val">140,000</span>
                                 </div>
@@ -901,7 +912,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="cash-finance" role="tabpanel" aria-labelledby="cash-finance-tab" tabindex="0">
+                  <div class="tab-pane fade" id="nav-cash" role="tabpanel" aria-labelledby="nav-cash-tab" tabindex="0">
                     <!-- Cash tab content -->
                     <form id="payment">
                       <div class="d-flex justify-content-between flex-wra align-items-center gap-2">
@@ -909,32 +920,22 @@
                           <label for="min-payment" class="form-label">الحد الأدني للدفع</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">﷼</span>
-                            <input type="number" class="form-control" id="min-payment" value="" >
+                            <input type="number" class="form-control min" id="min-payment" value="" >
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-2">
                           <label for="max-payment" class="form-label">الحد الأقصي للدفع</label>
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">﷼</span>
-                            <input type="number" class="form-control" id="max-payment" value="">
+                            <input type="number" class="form-control max" id="max-payment" value="">
                           </div>
                         </div>
                       </div>
                       <!-- Double Range  -->
                       <div class="double-range mb-4">
-                        <input class="double-range-input" data-slider-id="fin_double" type="text" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="10" data-slider-value="[250,1000]"/> 
-                      </div>
-
-                      <div class="d-flex flex-column gap-2 flex-grow-1 mb-3">
-                        <label for="cash-down" class="form-label">دفعة أولي</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon1">﷼</span>
-                          <input type="number" class="form-control" id="cash-down" value="">
-                        </div>
-                        <input class="single-range-input" data-slider-id='cash-down' type="text" data-slider-min="0" data-slider-max="4000" data-slider-step="10" data-slider-value="400"/>
+                        <input class="payment-range-input" data-slider-id="cash_double" type="text" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="10" data-slider-value="[250,1000]"/> 
                       </div>
                     </form>
-                    <p class="desc"> يمكن تعديل تخصيصات التمويل الإضافية لكل مركبة. تعتمد الشروط على التمويل لمدة 60 شهرا، ومعدل نسبة سنوي APR 6.95%</p>
                     <div class="refine-search">
                       <h6>حدد بحثك</h6>
                       <div class="accordion" id="accordionCash">
@@ -1352,20 +1353,31 @@
                             </button>
                           </h2>
                           <div id="collapseThreeC" class="accordion-collapse collapse" aria-labelledby="headingThreeC" data-bs-parent="#accordionCash">
-                            <div class="accordion-body">
-                              <div id="year" class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                  <span>السنه</span>
-                                  <span class="range-val">2019</span>
+                            <div class="accordion-body form">
+                              <div class="d-flex justify-content-between align-items-center gap-2">
+                                <div class="d-flex flex-column gap-2">
+                                  <label for="min-year" class="form-label">من</label>
+                                  <div class="input-group">
+                                    <input type="number" class="form-control min" id="min-year" value="" >
+                                  </div>
                                 </div>
-                                <input class="single-range-input" data-slider-id='fin-year' type="text" data-slider-min="2015" data-slider-max="2025" data-slider-step="1" data-slider-value="2019"/>
+                                <div class="d-flex flex-column gap-2">
+                                  <label for="max-year" class="form-label">إلى</label>
+                                  <div class="input-group">
+                                    <input type="number" class="form-control max" id="max-year" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Double Range  -->
+                              <div class="double-range mb-4">
+                                <input class="year-range-input" data-slider-id="cash_year_double" type="text" value="" data-slider-min="2015" data-slider-max="2025" data-slider-step="1" data-slider-value="[2015,2025]"/> 
                               </div>
                               <div id="mileage">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between mb-3">
                                   <span>الحد الأقصي لعدد الأميال</span>
                                   <span class="range-val">140,000</span>
                                 </div>
-                                <input class="single-range-input" data-slider-id='fin-mileage' type="text" data-slider-min="0" data-slider-max="150000" data-slider-step="1000" data-slider-value="400"/>
+                                <input class="single-range-input" data-slider-id='cash-mileage' type="text" data-slider-min="0" data-slider-max="150000" data-slider-step="1000" data-slider-value="400"/>
                               </div>
                             </div>
                           </div>

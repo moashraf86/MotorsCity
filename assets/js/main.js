@@ -1,19 +1,25 @@
 try {
   //Double range slider input
-  var doubleSlider  = $('.double-range-input').slider({
+  let doubleSlider  = $('.payment-range-input, .year-range-input').slider({
     formatter:function() {
       let input = $('[data-slider-id='+ $(this).attr('id') +']');
       var values = input.slider('getValue');
-      input.parents('form').find('input#min-payment').val(values[0])
-      input.parents('form').find('input#max-payment').val(values[1])
+      input.parents('form, .form').find('input.min').val(values[0])
+      input.parents('form, .form').find('input.max').val(values[1])
     }
   });
-  var double_initial_values = $('.double-range-input').slider('getValue');
-  let minPayment = double_initial_values[0]
-  let maxPayment = double_initial_values[1]
+
+  let payment_initial_values = $('.payment-range-input').slider('getValue');
+  let year_initial_values    = $('.year-range-input').slider('getValue');
+  let minPayment = payment_initial_values[0]
+  let maxPayment = payment_initial_values[1]
+  let minYear    = year_initial_values[0]
+  let maxYear    = year_initial_values[1]
   //set initial values for Min & Max payment
   $('.filter input#min-payment').val(minPayment)
   $('.filter input#max-payment').val(maxPayment)
+  $('.filter input#min-year').val(minYear)
+  $('.filter input#max-year').val(maxYear)
 
 
   // Single Range slider Input 
@@ -86,6 +92,7 @@ $('input[type=number]').each(function() {
   let intialVal = $(this).parent().siblings('input[type=range]').val();
   $(this).attr('value', intialVal)
 })
+
 $('.range-val').each(function() {
   let intialVal = $(this).parent().siblings('input').val();
   $(this).text(intialVal);

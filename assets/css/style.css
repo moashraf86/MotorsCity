@@ -257,7 +257,7 @@ input[type=range]:focus::-moz-range-track {
   background-image: none;
   background-color: transparent;
   border: 1px solid var(--sky);
-  top: -10px;
+  top: -11px;
 }
 
 .slider-handle::before {
@@ -267,7 +267,7 @@ input[type=range]:focus::-moz-range-track {
   left: 50%;
   width: 6px;
   height: 6px;
-  transform: translate(-3px,-3px);
+  transform: translate(-3px,-3.5px);
   border-radius: 50%;
   background-color: var(--sky);
 }
