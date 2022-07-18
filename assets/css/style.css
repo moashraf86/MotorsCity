@@ -360,16 +360,16 @@ input[type=range]:focus::-moz-range-track {
   color: var(--dark-grey);
 }
 
-#header .navbar .dropdown-menu.login .dropdown-item:not(.head) {
-  color: var(--gray);
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head),
+#header .navbar .dropdown-menu.login .dropdown-item:not(.head) .icon .bi {
+  color: #a6a6a6;
 }
 
 #header .navbar .dropdown-menu.login .dropdown-item:not(.head):hover,
 #header .navbar .dropdown-menu.login .dropdown-item:not(.head):active,
 #header .navbar .dropdown-menu.login .dropdown-item:not(.head):focus{
   background-color: transparent;
-  color: var(--gray);
-  pointer-events: none;
+  color: #a6a6a6;
 }
 
 #header .navbar-nav .dropdown-menu .dropdown-item{
