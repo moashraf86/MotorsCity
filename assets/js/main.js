@@ -339,13 +339,27 @@ if($(window).innerWidth() <= 768) {
   target.prependTo('#calc-payment .host');
 }
 
+if($(window).innerWidth() <= 992) {
+  $('#track-order .progress-tracker').removeClass('progress-tracker--center')
+  $('#track-order .progress-tracker').addClass('progress-tracker--vertical')
+}
+
 // Change position of blue box containing "monthly-payment" & "down payment"
 $(window).resize(function () { 
+  if($(this).innerWidth() <= 992) {
+    $('#track-order .progress-tracker').removeClass('progress-tracker--center')
+    $('#track-order .progress-tracker').addClass('progress-tracker--vertical')
+  } else {
+    $('#track-order .progress-tracker').addClass('progress-tracker--center')
+    $('#track-order .progress-tracker').removeClass('progress-tracker--vertical')
+  }
+
   if($(this).innerWidth() <= 768) {
     target.prependTo('#calc-payment .host');
   } else {
     target.prependTo('#calc-payment .home');
   }
+
 });
 
 //Show car details when clicking th "show details button"
@@ -416,6 +430,7 @@ $('#billing-info #contact-address').on('input', function() {
   }
 })
 
+// Track order timeline
 
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers

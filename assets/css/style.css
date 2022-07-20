@@ -2329,6 +2329,11 @@ body::-webkit-scrollbar-thumb,
   border-radius: 5px;
 }
 
+#checkout .nav-tabs.primary .nav-link,
+#payment-process #calc-payment .nav-tabs .nav-link {
+  background-color: var(--white);
+}
+
 #car-details #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 #payment-process #calc-payment .nav-tabs .nav-item:first-child .nav-link,
 #reservation .purchase-info .nav-tabs .nav-item:first-child .nav-link,
@@ -2561,12 +2566,6 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
-#payment-process #calc-payment .nav-tabs .nav-link{
-  background-color: var(--white);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.02);
-}
-
-
 #payment-process #calc-payment ul.providers{
   margin-top: 0;
 }
@@ -2782,12 +2781,14 @@ body::-webkit-scrollbar-thumb,
 }
 
 #reservation  .payment-details .card .title,
-#checkout  .payment-details .card .title {
+#checkout  .payment-details .card .title,
+#track-order  .payment-details .card .title {
   padding-bottom: 10px;
 }
 
 #reservation  .payment-details .card .title .close,
-#checkout  .payment-details .card .title .close{
+#checkout  .payment-details .card .title .close,
+#track-order  .payment-details .card .title .close{
   cursor: pointer;
   display: flex;
   width: 35px;
@@ -2797,24 +2798,28 @@ body::-webkit-scrollbar-thumb,
 }
 
 #reservation  .payment-details .card .title .bi:before,
-#checkout .payment-details .card .title .bi:before{
+#checkout .payment-details .card .title .bi:before,
+#track-order .payment-details .card .title .bi:before{
   font-weight: 600 !important;
   color: #000;
 }
 
 #reservation  .payment-details .card .head,
-#checkout  .payment-details .card .head {
+#checkout  .payment-details .card .head ,
+#track-order  .payment-details .card .head {
   border-top: 1px solid var(--white-200);
   border-bottom: 1px solid var(--white-200);
 }
 
 #reservation  .payment-details .card .head img,
-#checkout  .payment-details .card .head img{
+#checkout  .payment-details .card .head img,
+#track-order  .payment-details .card .head img{
   border-radius: 5px;
 }
 
 #reservation .card  ul li,
-#checkout .card  ul li {
+#checkout .card  ul li,
+#track-order  .payment-details .card  ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2841,7 +2846,8 @@ body::-webkit-scrollbar-thumb,
 }
 
 #reservation .card ul li .value.unique,
-#checkout .card ul li .value.unique{
+#checkout .card ul li .value.unique,
+#track-order .card ul li .value.unique{
   color: var(--sky);
   font-weight: 700;
 }
@@ -3075,22 +3081,25 @@ body::-webkit-scrollbar-thumb,
 
 
 /********************* Checkout page  ********************/
-#checkout .checkout-wrapper{
+#checkout .checkout-wrapper,
+#track-order .track-order_wrapper{
   padding: 50px 0;
   background-color: var(--white-100);
 }
 
-#checkout .details-card .card {
+#checkout .details-card .card ,
+#track-order .details-card .card {
   padding: 20px 10px;
-  border-radius: 0;
+  border-radius: 10px;
   border: 0;
-  box-shadow: none;
+  /* box-shadow: none; */
   margin-bottom: 30px;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 }
 
-#checkout .details-card .card a.show-details {
+#checkout .details-card .card a.show-details,
+#track-order .details-card .card a.show-details {
   font-size: 14px;
   color: var(--sky);
   padding: 5px 10px;
@@ -3101,7 +3110,8 @@ body::-webkit-scrollbar-thumb,
   margin-left: auto;
 }
 
-#checkout .details-card .card a.show-details:hover {
+#checkout .details-card .card a.show-details:hover,
+#track-order .details-card .card a.show-details:hover {
   background-color: var(--sky);
   color: var(--white);
 } 
@@ -3115,6 +3125,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 #checkout .card .nav-tabs .nav-link {
+  position: relative;
   font-size: 16px;
   color: var(--gray);
   font-weight: 500;
@@ -3542,6 +3553,86 @@ body::-webkit-scrollbar-thumb,
   margin-bottom: 20px;
 }
 
+
+
+/********************* Track Order ***********************/
+#track-order .details-card .card {
+  padding: 60px 30px;
+}
+
+#track-order .progress-tracker {
+  margin: 60px 0 auto;
+  width: 100%;
+}
+
+#track-order  .payment-details .card {
+  padding: 30px;
+}
+
+.progress-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress-link {
+  font-size: 12px;
+  color: var(--sky);
+  display: inline-block;
+  background-color:rgba(5,122,193,.15);
+  border-radius: 10px;
+  padding: 1px 15px;
+}
+
+.progress-link:hover {
+  background-color: var(--sky);
+  color: var(--white);
+}
+
+.progress-step.is-active .progress-marker::before {
+  background-color: #0d9af2;
+}
+
+.progress-step.is-complete .progress-marker::before, .progress-step.is-progress .progress-marker::before {
+  background-color: var(--sky);
+}
+
+.progress-step.is-complete .progress-marker::after, .progress-step.is-progress .progress-marker::after {
+  background-color: var(--sky);
+}
+
+  #track-order  .payment-details {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(0 0 0 / .5);
+    height: 0;
+  }
+
+  #track-order  .payment-details .card{
+    position: fixed;
+    right: -200vh;
+    top: 0;
+    bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 400px;
+    left: 100%;
+    transition: all 300ms ease-in-out ;
+  }
+  
+  #track-order  .payment-details.show {
+    height: 100vh;
+  }
+
+  #track-order  .payment-details.show .card {
+    right: 0;
+    left: calc(100% - 400px);
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -3790,7 +3881,8 @@ html[dir=rtl] #trusted .box:first-of-type{
   border-left: 1px solid rgb(85 85 85 / .1);
 }
 
-html[dir=rtl] #checkout .details-card .card a.show-details {
+html[dir=rtl] #checkout .details-card .card a.show-details,
+html[dir=rtl] #track-order .details-card .card a.show-details {
   margin-left: 0;
   margin-right: auto;
 }
@@ -4229,11 +4321,6 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     transform: translateX(-46px);
   }
 
-  #how-it-works .steps .step{
-    display: flex;
-    gap: 20px;
-  }
-
   #how-it-works .steps .step h4{
     margin-bottom: 10px;
   }
@@ -4433,7 +4520,8 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
   }
 
   #reservation  .payment-details,
-  #checkout  .payment-details {
+  #checkout  .payment-details,
+  #track-order  .payment-details {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -4445,7 +4533,8 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
   }
 
   #reservation  .payment-details .card,
-  #checkout  .payment-details .card{
+  #checkout  .payment-details .card,
+  #track-order  .payment-details .card{
     position: fixed;
     bottom: -200vh;
     left: 0;
@@ -4453,28 +4542,34 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     transition: bottom 300ms ease-in-out ;
+    top: auto;
+    width: 100vw;
   }
   
   #reservation  .payment-details.show,
-  #checkout  .payment-details.show {
+  #checkout  .payment-details.show ,
+  #track-order  .payment-details.show {
     height: 100vh;
-    /* opacity: 1; */
   }
 
   #reservation  .payment-details.show .card,
-  #checkout  .payment-details.show .card {
+  #checkout  .payment-details.show .card,
+  #track-order  .payment-details.show .card {
     bottom: 0;
   }
 
-  #checkout  .payment-details.show .card {
+  #checkout  .payment-details.show .card,
+  #track-order  .payment-details.show .card {
     bottom: 0;
     overflow-y: scroll;
     max-height: 100vh;
+    left: 0;
   }
 
   #checkout .card .nav-tabs .nav-link {
     font-size: 12px;
   }
+
   #my-orders .orders .card,
   #my-profile .profile form {
     padding: 20px;
@@ -4489,6 +4584,14 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
   }
   .sidebar-filter .refine-search .make .form-check:not(.all-global) {
     padding: 6px 10px;
+  }
+
+  #track-order .details-card .card {
+    padding: 20px 10px;
+  }
+
+  #track-order .container-fluid{
+    padding: 0
   }
 
   footer .sign-up .btn {

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap-5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--  Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Font type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Progress Tracker -->
+    <link rel="stylesheet" href="../assets/plugins/progress-tracker/progress-tracker.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Motores City</title>
+  </head>
+  <body>
+    <div class="wrapper" id="track-order">
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
+              <img src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+            </a>
+          </nav>   
+        </div>
+      </header>
+      <!-- END HEADER -->
+      <section class="track-order_wrapper">
+        <div class="container-fluid container-xl">
+          <h2 class="mb-4">Track your Orders</h2>
+          <!-- Sticky-top details card -->
+          <div class="details-card">
+            <div class="card">
+              <div class="info d-flex align-items-start gap-1 gap-sm-4">
+                <img src="../assets/img/cars/CAR-8.png" alt="chevrolet">
+                <div class="title">
+                  <h5>2016 Jeep Renegade</h5>
+                  <span class="d-block driven mb-1">96,369 KM</span>
+                  <span class="ad">Ad Number: 1234</span>
+                </div>
+                <a class="show-details">View Details</a>
+              </div>
+              <!-- Order Tracker -->
+              <ul class="progress-tracker progress-tracker--text progress-tracker--center">
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">Order Placed</h4>
+                      <span>We have Recieved your order</span>
+                  </div>
+                </li>
+
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">Sign Documents</h4>
+                    <a href="#" class="progress-link">View Document</a>
+                  </div>
+                </li>
+
+                <li class="progress-step is-active" aria-current="step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">Vehicle Preparation</h4>
+                    <span>Registration, Title Transfer</span>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">Ready for Delivery</h4>
+                    <a href="#" class="progress-link">View Document</a>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">On the Way</h4>
+                    <span>Your car is on the way</span>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">Deliverd</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Sticky-top details card -->
+          <!-- Car details -->
+          <div class="payment-details">
+            <div class="card">
+              <div class="title d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Payment Details</h5>
+                <span class="close"><i class="bi bi-x-lg"></i></span>
+              </div>
+              <div class="head py-3 d-flex align-items-start gap-3">
+                <img src="../assets/img/cars/CAR-8.png" alt="">
+                <div>
+                  <h5>BMW 120S</h5>
+                  <span>97,000 KM</span>
+                  <span class="d-block">AD Number: 1234</span>
+                </div>
+              </div>
+              <div class="body">
+                <ul class="vehicle-info">
+                  <li>
+                    <span class="title">Vehicle Price</span>
+                    <span class="value">SR.<b>90,000</b></span>
+                  </li>
+                  <li>
+                    <span class="title">Registration & Title Transfer</span>
+                    <span class="value">SR.<b>500</b></span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      Delivery
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#calcDelivery">Change</a>
+                    </span>
+                    <span class="value" id="deliveryCost" data-value="delivery-cost">Free</span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      Warranty
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#selectWarranty">Change</a>
+                    </span>
+                    <span class="value" id="warrantyCost">Free</span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      Add on
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#addOn">Change</a>
+                    </span>
+                    <span class="value" id="addOnCost">Free</span>
+                  </li>
+                  <li>
+                    <span class="title">Taxes(15%)</span>
+                    <span class="value"><b>13,500</b></span>
+                  </li>
+                  <li>
+                    <span class="title">Paid deposite</span>
+                    <span class="value">SR.<b>150</b></span>
+                  </li>
+                  <li>
+                    <span class="title">Total Cost</span>
+                    <span class="value unique">SR.<b>103.850</b></span>
+                  </li>   
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row gap-xl-5">
+              <div class="col-12 col-xl-2 mb-5 mb-xl-0">
+                <div class="footer-logo text-center">
+                  <img src="../assets/img/logo-pattern.png" alt="LOGO">
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="footer-nav d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 px-lg-0">
+                  <ul class="location mb-3 mb-lg-0">
+                    <li>
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>12039 Smith Avenue <br> Santa Fe Springs, CA 90670</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="contact">
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Toll-free 0877 338 0999 </span>
+                      </a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Fax 562 236 9429</span>
+                      </a>
+                    </li>
+                    <li class="mb-5 mb-lg-0">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-envelope"></i>
+                        <span>Info@motorscity.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="sign-up text-center text-md-start">
+                    <h6 class="mb-4">Join our Email Club </h6>
+                    <form>
+                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="Email.." class="form-control mb-4">
+                      <button class="btn btn-secondary">
+                        <span class="bg">
+                          <span class="text">Sign Up</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 Copyright. All rights reserved.</p>
+            <ul class="social-icons d-flex align-items-center gap-4">
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </div>
+
+    <!-- Bootstrap-5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Jquery 3.6 min -->
+    <script src="../assets/plugins/js/jquery-3.6-min.js"></script>
+    <!-- Custom Js -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
