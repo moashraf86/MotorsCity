@@ -3572,6 +3572,12 @@ body::-webkit-scrollbar-thumb,
 .progress-title {
   font-size: 18px;
   font-weight: 600;
+  color: #999;
+}
+
+.progress-step.is-active .progress-title,
+.progress-step.is-complete .progress-title {
+  color: #000;
 }
 
 .progress-link {
