@@ -1190,7 +1190,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 #search-result-wrapper section.result {
-  flex: 1 1 auto
+  flex: 1 1 calc(100% - 350px)
 }
 
 #search-result-wrapper .sidebar-filter .form-group {
