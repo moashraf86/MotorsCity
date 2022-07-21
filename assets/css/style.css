@@ -20,6 +20,7 @@
   --completed : #0095b3;
   --progress  : #ffe14d;
   --sky       : #057ac1;
+  --sky-light : rgba(5,122,193,.15);
   --purple    : #595da9;
   --danger    : rgb(245 66 54 / 80%);
   --danger-l  : rgb(245 66 54 / 30%);
@@ -512,7 +513,7 @@ input[type=range]:focus::-moz-range-track {
 /******[ 3 ] TRUSTED SECTION ******/
 #trusted {
   padding: 30px 0;
-  background: linear-gradient(180deg, rgba(5,122,193,.15), #FFF)
+  background: linear-gradient(180deg, var(--sky-light), #FFF)
 }
 
 #trusted .box {
@@ -2646,7 +2647,7 @@ body::-webkit-scrollbar-thumb,
 #payment-process #calc-payment .card .btn-group .btn-primary{
   background: none;
   filter: none;
-  background-color: rgb(5 122 193 / 20%);
+  background-color: var(--sky-light);
   color: var(--dark-grey);
   border-radius: 5px;
   display: flex;
@@ -3103,11 +3104,12 @@ body::-webkit-scrollbar-thumb,
   font-size: 14px;
   color: var(--sky);
   padding: 5px 10px;
-  background-color: rgba(5,122,193,.15);
+  background-color: var(--sky-light);
   border-radius: 4px;
   cursor: pointer;
   display: block;
   margin-left: auto;
+  text-align: center;
 }
 
 #checkout .details-card .card a.show-details:hover,
@@ -3584,7 +3586,7 @@ body::-webkit-scrollbar-thumb,
   font-size: 12px;
   color: var(--sky);
   display: inline-block;
-  background-color:rgba(5,122,193,.15);
+  background-color: var(--sky-light);
   border-radius: 10px;
   padding: 1px 15px;
 }
@@ -3606,39 +3608,144 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--sky);
 }
 
-  #track-order  .payment-details {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 999;
-    background-color: rgb(0 0 0 / .5);
-    height: 0;
-  }
+.progress-step .progress-link, 
+.progress-step .progress-desc {
+  display: none;
+}
 
-  #track-order  .payment-details .card{
-    position: fixed;
-    right: -200vh;
-    top: 0;
-    bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 400px;
-    left: 100%;
-    transition: all 300ms ease-in-out ;
-  }
-  
-  #track-order  .payment-details.show {
-    height: 100vh;
-  }
+.progress-step.is-active .progress-link, 
+.progress-step.is-active .progress-desc, 
+.progress-step.is-complete .progress-link,
+.progress-step.is-complete .progress-desc {
+  display: inline-block;
+}
 
-  #track-order  .payment-details.show .card {
-    right: 0;
-    left: calc(100% - 400px);
-    overflow-y: scroll;
-    max-height: 100vh;
-  }
+#track-order .payment-details {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(0 0 0 / .5);
+  height: 0;
+}
+
+#track-order .payment-details .card{
+  position: fixed;
+  right: -200vh;
+  top: 0;
+  bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 400px;
+  left: 100%;
+  transition: all 300ms ease-in-out ;
+}
+
+#track-order .payment-details.show {
+  height: 100vh;
+}
+
+#track-order .payment-details.show .card {
+  right: 0;
+  left: calc(100% - 400px);
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+#track-order .details-card .alert {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sky-light);
+  border-color: var(--sky-light);
+  color: var(--dark-grey);
+  margin-top: 40px;
+}
+
+#track-order .details-card .alert a{
+  background-color: var(--sky-light);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--sky);
+}
+
+#track-order .help a { 
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: var(--sky);
+}
+
+#track-order .help a.primary {
+  background: var(--sky-light);
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#track-order .help a.secondary {
+  background: transparent;
+  border: 1px solid var(--sky-light);
+}
+
+#track-order .delivery-date-picker {
+  max-width: 692px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+#track-order .delivery-date-picker .booking-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding: 20px;
+}
+
+#track-order .delivery-date-picker .booking-day,
+#track-order .delivery-date-picker .booking-day .times{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#track-order .delivery-date-picker .booking-day{
+  width: 140px;
+  min-width: 140px;
+}
+
+#track-order .delivery-date-picker .booking-day .day{
+  padding: 10px;
+  background-color: var(--sky);
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+#track-order .delivery-date-picker .booking-day .time{
+  padding: 10px;
+  background-color: var(--white-200);
+  width: 100%;
+  text-align: center;
+  color: var(--dark-grey);
+  border: 2px solid #e6e6e6;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#track-order .delivery-date-picker .booking-day .time:hover{
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -4593,11 +4700,7 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
   }
 
   #track-order .details-card .card {
-    padding: 20px 10px;
-  }
-
-  #track-order .container-fluid{
-    padding: 0
+    padding: 30px 15px;
   }
 
   footer .sign-up .btn {

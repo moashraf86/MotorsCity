@@ -39,14 +39,17 @@
           <!-- Sticky-top details card -->
           <div class="details-card">
             <div class="card">
-              <div class="info d-flex align-items-start gap-1 gap-sm-4">
+              <div class="info d-flex align-items-start gap-3 gap-sm-4 flex-wrap flex-sm-nowrap">
                 <img src="../assets/img/cars/CAR-8.png" alt="chevrolet">
                 <div class="title">
                   <h5>2016 Jeep Renegade</h5>
                   <span class="d-block driven mb-1">96,369 KM</span>
-                  <span class="ad">Ad Number: 1234</span>
+                  <span class="ad">Order #: 1234</span>
                 </div>
-                <a class="show-details">View Details</a>
+                <div class="ms-auto d-flex d-sm-block justify-content-between flex-grow-1 flex-sm-grow-0">
+                  <a class="show-details mb-3 ms-0 ms-sm-auto">View Details</a>
+                  <span>Oct,22 | 8:00AM</span>
+                </div>
               </div>
               <!-- Order Tracker -->
               <ul class="progress-tracker progress-tracker--text progress-tracker--center">
@@ -54,7 +57,7 @@
                   <div class="progress-marker"></div>
                   <div class="progress-text">
                     <h4 class="progress-title">Order Placed</h4>
-                      <span>We have Recieved your order</span>
+                      <span class="progress-desc">We have received your order</span>
                   </div>
                 </li>
 
@@ -69,8 +72,8 @@
                 <li class="progress-step is-active" aria-current="step">
                   <div class="progress-marker"></div>
                   <div class="progress-text">
-                    <h4 class="progress-title">Vehicle Preparation</h4>
-                    <span>Registration, Title Transfer</span>
+                    <h4 class="progress-title">Processing</h4>
+                    <span class="progress-desc">Registration, Title Transfer</span>
                   </div>
                 </li>
 
@@ -86,7 +89,7 @@
                   <div class="progress-marker"></div>
                   <div class="progress-text">
                     <h4 class="progress-title">On the Way</h4>
-                    <span>Your car is on the way</span>
+                    <span class="progress-desc">Your car is on the way</span>
                   </div>
                 </li>
 
@@ -94,10 +97,191 @@
                   <div class="progress-marker"></div>
                   <div class="progress-text">
                     <h4 class="progress-title">Deliverd</h4>
+                    <span class="progress-desc">Congratulation!</span>
                   </div>
                 </li>
               </ul>
+              <!-- Sign document alert -->
+              <div class="alert alert-primary flex-wrap flex-sm-nowrap gap-3 gap-sm-0" role="alert">
+                <span>To continue your Vehicle registration and titles transfer you need <br class="d-none d-md-block"> to sign the declaration document PDF</span>
+                <a href="#">View Docuemnt</a>
+              </div>
+              <!--Slider -->
+              <div class="delivery-date-picker">
+                <h4>Pick a delivery slot</h4>
+                <!-- Navigation -->
+                <div class="navigation"></div>
+                <div class="booking-wrapper">
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="booking-day">
+                    <div class="day">
+                      <span>Mon</span>
+                      <br>
+                      <span>10</span>
+                    </div>
+                    <div class="times">
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                      <button class="time">8:00AM - 12:00PM</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Slider -->
             </div>
+          </div>
+          <!-- Help -->
+          <div class="help">
+            <h4>Have Issues?</h4>
+            <a href="#" class="primary">Contact us</a>
+            <a href="#" class="secondary">FAQ</a>
           </div>
           <!-- Sticky-top details card -->
           <!-- Car details -->
@@ -239,7 +423,6 @@
       </footer>
       <!-- END FOOTER -->
     </div>
-
     <!-- Bootstrap-5 Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Jquery 3.6 min -->
