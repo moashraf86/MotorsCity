@@ -3692,17 +3692,42 @@ body::-webkit-scrollbar-thumb,
 }
 
 #track-order .delivery-date-picker {
-  max-width: 692px;
+  width: 690px;
+  max-width: 100%;
   margin: auto;
   padding: 0 20px;
+  overflow: clip;
 }
 
 #track-order .delivery-date-picker .booking-wrapper {
   display: flex;
-  gap: 25px;
   flex-wrap: nowrap;
-  overflow: scroll;
-  padding: 20px;
+  gap: 30px;
+  transition: transform 300ms ease-in-out;
+}
+
+#track-order .delivery-date-picker .booking-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#track-order .delivery-date-picker .navigation button{
+  background-color: transparent;
+  border: none;
+  color: var(--sky);
+  font-weight: 500;
+}
+
+#track-order .delivery-date-picker .navigation button:disabled {
+  background-color: transparent;
+  color: #999;
+  pointer-events: none;
+}
+
+#track-order .delivery-date-picker .navigation .months {
+  color: var(--dark-grey);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 #track-order .delivery-date-picker .booking-day,
@@ -3711,6 +3736,7 @@ body::-webkit-scrollbar-thumb,
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 #track-order .delivery-date-picker .booking-day{
@@ -3746,6 +3772,11 @@ body::-webkit-scrollbar-thumb,
   background-color: #f0f0f0;
   cursor: pointer;
 }
+
+#track-order .delivery-date-picker .booking-day .time.active{
+  border-color: var(--sky);
+}
+
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -4702,7 +4733,18 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
   #track-order .details-card .card {
     padding: 30px 15px;
   }
-
+  #track-order .delivery-date-picker {
+    padding: 0;
+  }
+  #track-order .delivery-date-picker .booking-day {
+    min-width: 135px;
+  }
+  #track-order .delivery-date-picker #booking {
+    overflow-x: scroll;
+  }
+  #track-order .delivery-date-picker .booking-wrapper {
+    gap: 10px;
+  }
   footer .sign-up .btn {
     width: 100%;
   }

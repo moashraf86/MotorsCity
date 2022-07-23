@@ -430,8 +430,178 @@ $('#billing-info #contact-address').on('input', function() {
   }
 })
 
-// Track order timeline
+// Pick Delivery date slider on Desktop
+const bookingWrapper = $('.booking-wrapper');
+const bookingDayColWidth = $('.booking-wrapper .booking-day').innerWidth() + 10;
+const wrapperWidth   = $('.booking-wrapper').innerWidth() + 30
 
+// Pick delivery date slider on Mobile
+if(window.innerWidth < 767) {
+
+  // const wrapperWidth   = $('.booking-wrapper').innerWidth()
+  // //On Mobile 
+  // $('#track-order .navigation button').each(function() {
+  //   $(this).click(function() {
+  //     //identify which button you click on
+  //     if($(this).hasClass('later')) {
+  //       // If wrapper in phase #1
+  //       if(bookingWrapper.attr('data-phase') == '1') {
+  //         bookingWrapper.css('transform', `translateX(-${2 * bookingDayColWidth}px)`);
+  //         // switch to phase 2
+  //         bookingWrapper.attr('data-phase', '2')
+  //         //Enable "Earlier" button
+  //         $('#track-order .navigation button.earlier').attr('disabled', false)
+  //         // If wrapper in phase #2
+  //       } else if (bookingWrapper.attr('data-phase') == '2') {
+  //         bookingWrapper.css('transform', `translateX(-${4 * bookingDayColWidth}px)`);
+  //         // switch to phase 3
+  //         bookingWrapper.attr('data-phase', '3')
+  //         // If wrapper in phase #3
+  //       } else if (bookingWrapper.attr('data-phase') == '3') {
+  //         bookingWrapper.css('transform', `translateX(-${6 * bookingDayColWidth}px)`);
+  //         // switch to phase 4
+  //         bookingWrapper.attr('data-phase', '4')
+  //       } else if (bookingWrapper.attr('data-phase') == '4') {
+  //         bookingWrapper.css('transform', `translateX(-${8 * bookingDayColWidth}px)`);
+  //         // switch to phase 5
+  //         bookingWrapper.attr('data-phase', '5')
+  //       } else if (bookingWrapper.attr('data-phase') == '5') {
+  //         bookingWrapper.css('transform', `translateX(-${(10 * bookingDayColWidth) - 80}px)`);
+  //         // switch to phase 6
+  //         bookingWrapper.attr('data-phase', '6')
+  //       }
+  //     }
+
+  //     if($(this).hasClass('earlier')) {
+  //       // If wrapper in phase #1
+  //       if(bookingWrapper.attr('data-phase') == '3') {
+  //         bookingWrapper.css('transform', `translateX(-${wrapperWidth}px)`);
+  //         // switch to phase 2
+  //         bookingWrapper.attr('data-phase', '2')
+  //         //Enable "Earlier" button
+  //         $('#track-order .navigation button.later').attr('disabled', false)
+  //         // If wrapper in phase #2
+  //       } else if (bookingWrapper.attr('data-phase') == '2') {
+  //         bookingWrapper.css('transform', `translateX(-${0*wrapperWidth}px)`);
+  //         // switch to phase 2
+  //         bookingWrapper.attr('data-phase', '1')
+  //         //Enable "Earlier" button
+  //         $('#track-order .navigation button.earlier').attr('disabled', true)
+  //       }
+  //     }
+  //   })
+  // })
+} else {
+  $('#track-order .navigation button').each(function() {
+    $(this).click(function() {
+      //identify which button you click on
+      if($(this).hasClass('later')) {
+        // If wrapper in phase #1
+        if(bookingWrapper.attr('data-phase') == '1') {
+          bookingWrapper.css('transform', `translateX(-${wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '2')
+          //Enable "Earlier" button
+          $('#track-order .navigation button.earlier').attr('disabled', false)
+          // If wrapper in phase #2
+        } else if (bookingWrapper.attr('data-phase') == '2') {
+          bookingWrapper.css('transform', `translateX(-${2*wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '3')
+          //Enable "Earlier" button
+          $('#track-order .navigation button.later').attr('disabled', true)
+        }
+      }
+
+      if($(this).hasClass('earlier')) {
+        // If wrapper in phase #1
+        if(bookingWrapper.attr('data-phase') == '3') {
+          bookingWrapper.css('transform', `translateX(-${wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '2')
+          //Enable "Earlier" button
+          $('#track-order .navigation button.later').attr('disabled', false)
+          // If wrapper in phase #2
+        } else if (bookingWrapper.attr('data-phase') == '2') {
+          bookingWrapper.css('transform', `translateX(-${0*wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '1')
+          //Enable "Earlier" button
+          $('#track-order .navigation button.earlier').attr('disabled', true)
+        }
+      }
+    })
+  })
+}
+
+$(window).resize(function() {
+  if($(this).innerWidth >= 768) {
+    bookingWrapper.css('transform', 'translateX()')
+    $('#track-order .navigation button').each(function() {
+      $(this).click(function() {
+        //identify which button you click on
+        if($(this).hasClass('later')) {
+          // If wrapper in phase #1
+          if(bookingWrapper.attr('data-phase') == '1') {
+            bookingWrapper.css('transform', `translateX(-${wrapperWidth}px)`);
+            // switch to phase 2
+            bookingWrapper.attr('data-phase', '2')
+            //Enable "Earlier" button
+            $('#track-order .navigation button.earlier').attr('disabled', false)
+            // If wrapper in phase #2
+          } else if (bookingWrapper.attr('data-phase') == '2') {
+            bookingWrapper.css('transform', `translateX(-${2*wrapperWidth}px)`);
+            // switch to phase 2
+            bookingWrapper.attr('data-phase', '3')
+            //Enable "Earlier" button
+            $('#track-order .navigation button.later').attr('disabled', true)
+          }
+        }
+
+        if($(this).hasClass('earlier')) {
+          // If wrapper in phase #1
+          if(bookingWrapper.attr('data-phase') == '3') {
+            bookingWrapper.css('transform', `translateX(-${wrapperWidth}px)`);
+            // switch to phase 2
+            bookingWrapper.attr('data-phase', '2')
+            //Enable "Earlier" button
+            $('#track-order .navigation button.later').attr('disabled', false)
+            // If wrapper in phase #2
+          } else if (bookingWrapper.attr('data-phase') == '2') {
+            bookingWrapper.css('transform', `translateX(-${0*wrapperWidth}px)`);
+            // switch to phase 2
+            bookingWrapper.attr('data-phase', '1')
+            //Enable "Earlier" button
+            $('#track-order .navigation button.earlier').attr('disabled', true)
+          }
+        }
+      })
+    })
+  } else {
+    bookingWrapper.css('transform', 'translateX(0)')
+  }
+})
+//Pick delivery date slider on mobile
+document.querySelector('#booking').addEventListener('scroll', function() {
+  let secondChild = this.firstElementChild.firstElementChild.nextElementSibling;
+  let parentPos  = this.getBoundingClientRect();
+  let secChildPos   = secondChild.getBoundingClientRect(); 
+
+  let secondChildPosLeft = secChildPos.left - parentPos.left;
+  if(secondChildPosLeft < 10) {
+    $('#track-order .navigation button.earlier').attr('disabled', false)
+  } else {
+    $('#track-order .navigation button.earlier').attr('disabled', true)
+  }
+  
+})
+
+// Set active class to the selected time and unselect others
+$('#booking .time').click(function(e) {
+  $('#booking .time').removeClass('active');
+  $(e.target).addClass('active');
+  $('.navigation .months').text($(e.target).attr('aria-date'))
+})
 // ALYWAYS BE ON BOTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
