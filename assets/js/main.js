@@ -371,6 +371,13 @@ $('a.show-details').click(function() {
 $('.payment-details .close').click(function() {
   $(this).parents('.payment-details').removeClass('show')
 })
+// Hide payment details on click anywhere outside the card
+$('.payment-details').click(function() {
+  $(this).removeClass('show')
+})
+$('.payment-details .card').click(function(e) {
+  e.stopPropagation()
+})
 
 // Open "Pay" tab when submit the "add info form"
 $('.purchase-info form.buyer-info').submit(function(e) {
