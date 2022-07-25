@@ -4078,8 +4078,7 @@ html[dir=rtl] #trusted .box:first-of-type{
   border-left: 1px solid rgb(85 85 85 / .1);
 }
 
-html[dir=rtl] #checkout .details-card .card a.show-details,
-html[dir=rtl] #track-order .details-card .card a.show-details {
+html[dir=rtl] #checkout .details-card .card a.show-details {
   margin-left: 0;
   margin-right: auto;
 }
@@ -4087,6 +4086,11 @@ html[dir=rtl] #track-order .details-card .card a.show-details {
 html[dir=rtl] #my-orders .orders .order_details .total-price {
   margin-left: 0;
   margin-right: auto;
+}
+
+html[dir=rtl] #track-order .btn{  
+  margin-right: auto;
+  margin-left: 0;
 }
 /******************************* MEDIA QUERR *********************************/
 

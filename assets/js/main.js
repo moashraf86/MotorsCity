@@ -499,7 +499,7 @@ if(window.innerWidth < 767) {
   //   })
   // })
 } else {
-  $('#track-order .navigation button').each(function() {
+  $('html[dir=ltr] #track-order .navigation button').each(function() {
     $(this).click(function() {
       //identify which button you click on
       if($(this).hasClass('later')) {
@@ -509,14 +509,14 @@ if(window.innerWidth < 767) {
           // switch to phase 2
           bookingWrapper.attr('data-phase', '2')
           //Enable "Earlier" button
-          $('#track-order .navigation button.earlier').attr('disabled', false)
+          $('html[dir=ltr] #track-order .navigation button.earlier').attr('disabled', false)
           // If wrapper in phase #2
         } else if (bookingWrapper.attr('data-phase') == '2') {
           bookingWrapper.css('transform', `translateX(-${2*wrapperWidth}px)`);
           // switch to phase 2
           bookingWrapper.attr('data-phase', '3')
           //Enable "Earlier" button
-          $('#track-order .navigation button.later').attr('disabled', true)
+          $('html[dir=ltr] #track-order .navigation button.later').attr('disabled', true)
         }
       }
 
@@ -527,14 +527,55 @@ if(window.innerWidth < 767) {
           // switch to phase 2
           bookingWrapper.attr('data-phase', '2')
           //Enable "Earlier" button
-          $('#track-order .navigation button.later').attr('disabled', false)
+          $('html[dir=ltr] #track-order .navigation button.later').attr('disabled', false)
           // If wrapper in phase #2
         } else if (bookingWrapper.attr('data-phase') == '2') {
           bookingWrapper.css('transform', `translateX(-${0*wrapperWidth}px)`);
           // switch to phase 2
           bookingWrapper.attr('data-phase', '1')
           //Enable "Earlier" button
-          $('#track-order .navigation button.earlier').attr('disabled', true)
+          $('html[dir=ltr] #track-order .navigation button.earlier').attr('disabled', true)
+        }
+      }
+    })
+  })
+  // Arabic Version
+  $('html[dir=rtl] #track-order .navigation button').each(function() {
+    $(this).click(function() {
+      //identify which button you click on
+      if($(this).hasClass('later')) {
+        // If wrapper in phase #1
+        if(bookingWrapper.attr('data-phase') == '1') {
+          bookingWrapper.css('transform', `translateX(${wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '2')
+          //Enable "Earlier" button
+          $('html[dir=rtl] #track-order .navigation button.earlier').attr('disabled', false)
+          // If wrapper in phase #2
+        } else if (bookingWrapper.attr('data-phase') == '2') {
+          bookingWrapper.css('transform', `translateX(${2*wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '3')
+          //Enable "Earlier" button
+          $('html[dir=rtl] #track-order .navigation button.later').attr('disabled', true)
+        }
+      }
+
+      if($(this).hasClass('earlier')) {
+        // If wrapper in phase #1
+        if(bookingWrapper.attr('data-phase') == '3') {
+          bookingWrapper.css('transform', `translateX(${wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '2')
+          //Enable "Earlier" button
+          $('html[dir=rtl] #track-order .navigation button.later').attr('disabled', false)
+          // If wrapper in phase #2
+        } else if (bookingWrapper.attr('data-phase') == '2') {
+          bookingWrapper.css('transform', `translateX(${0*wrapperWidth}px)`);
+          // switch to phase 2
+          bookingWrapper.attr('data-phase', '1')
+          //Enable "Earlier" button
+          $('html[dir=rtl] #track-order .navigation button.earlier').attr('disabled', true)
         }
       }
     })
@@ -588,6 +629,7 @@ $(window).resize(function() {
     bookingWrapper.css('transform', 'translateX(0)')
   }
 })
+
 //Pick delivery date slider on mobile
 document.querySelector('#booking').addEventListener('scroll', function() {
   let secondChild = this.firstElementChild.firstElementChild.nextElementSibling;

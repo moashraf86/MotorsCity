@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap-5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--  Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Bootstrap Input Slider -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-slider/bootstrap-slider-min.css">
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="../assets/plugins/css/fontawesome-5-min.css">
+    <!-- Font type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Progress Tracker -->
+    <link rel="stylesheet" href="../assets/plugins/progress-tracker/progress-tracker.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Motores City</title>
+  </head>
+  <body>
+    <div class="wrapper" id="track-order">
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="#">
+              <img src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+            </a>
+          </nav>   
+        </div>
+      </header>
+      <!-- END HEADER -->
+      <section class="track-order_wrapper">
+        <div class="container-fluid container-xl">
+          <h2 class="mb-4">تتبع طلباتك</h2>
+          <!-- Sticky-top details card -->
+          <div class="details-card">
+            <div class="card">
+              <div class="info d-flex align-items-start gap-3 gap-sm-4 flex-wrap flex-sm-nowrap">
+                <img src="../assets/img/cars/CAR-8.png" alt="chevrolet">
+                <div class="title">
+                  <h5> جيب 2016</h5>
+                  <span class="d-block driven mb-1">كلم 96,369</span>
+                  <span class="ad">رقم الطلب #: 1234</span>
+                </div>
+                <div class="me-auto d-flex d-sm-block justify-content-between flex-grow-1 flex-sm-grow-0">
+                  <a class="show-details mb-3 ms-0 ms-sm-auto">عرض التفاصيل</a>
+                  <span>Oct,22 | 8:00AM</span>
+                </div>
+              </div>
+              <!-- Order Tracker -->
+              <ul class="progress-tracker progress-tracker--text progress-tracker--center">
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">تم تسجيل طلبك</h4>
+                      <span class="progress-desc">لقد قمنا بإستلام ونتسجبل طلبك</span>
+                  </div>
+                </li>
+
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">التوقيع</h4>
+                    <a href="#" class="progress-link">عرض التفاصيل</a>
+                  </div>
+                </li>
+
+                <li class="progress-step is-active" aria-current="step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">قيد التنفيذ</h4>
+                    <span class="progress-desc">التسجيل ونقل الملكية</span>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">جاهز لتتوصل</h4>
+                    <a href="#" class="progress-link">عرض التفاصيل</a>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">في الطريق</h4>
+                    <span class="progress-desc">سيارتك في طريقها إليك</span>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title">تم التوصيل</h4>
+                    <span class="progress-desc">مبروك!</span>
+                  </div>
+                </li>
+              </ul>
+              <!-- Sign document alert -->
+              <div class="alert alert-primary flex-wrap flex-sm-nowrap gap-3 gap-sm-0" role="alert">
+                <span>لمواصلة تسجيل مركبتك ونقل الملكية ، تحتاج إلى توقيع وثيقة الإقرار بصيغة PDF</span>
+                <a href="#">عرض التفاصيل</a>
+              </div>
+              <!--Slider -->
+              <div class="delivery-date-picker">
+                <h4>إختر ميعاد الإستلام</h4>
+                <!-- Navigation -->
+                <div class="navigation d-none d-sm-flex justify-content-between align-items-center mb-4">
+                  <button class="earlier" disabled>
+                    <span> 
+                      <i class="bi bi-chevron-right"></i> قبل
+                    </span>
+                  </button>
+                  <!-- <p class="months"></p> -->
+                  <button class="later">
+                    <span>
+                      بعد <i class="bi bi-chevron-left"></i>
+                    </span>
+                  </button>
+                </div>
+                <form >
+                  <div class="form-wrapper" id="booking">
+                    <div class="booking-wrapper" data-phase="1">
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Sat</span>
+                          <br>
+                          <span>23, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button" aria-date="July 23 - 8am to 10am" disabled>8am - 10am</button>
+                          <button class="time" role="option" type="button" aria-date="July 23 - 10am to 12pm" disabled>10am - 12pm</button>
+                          <button class="time" role="option" type="button" aria-date="July 23 - 12pm to 2pm" disabled>12pm - 2pm</button>
+                          <button class="time" role="option" type="button" aria-date="July 23 - 2pm to 4pm">2pm - 4pm</button>
+                          <button class="time" role="option" type="button" aria-date="July 23 - 4pm to 6pm">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Sun</span>
+                          <br>
+                          <span>24, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Mon</span>
+                          <br>
+                          <span>25, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Tue</span>
+                          <br>
+                          <span>26, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Wed</span>
+                          <br>
+                          <span>27, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Thu</span>
+                          <br>
+                          <span>28, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Fri</span>
+                          <br>
+                          <span>29, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Sat</span>
+                          <br>
+                          <span>30, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Sun</span>
+                          <br>
+                          <span>31, July</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Mon</span>
+                          <br>
+                          <span>1, Aug</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Tue</span>
+                          <br>
+                          <span>2, Aug</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                      <!-- Column -->
+                      <div class="booking-day">
+                        <div class="day">
+                          <span>Wed</span>
+                          <br>
+                          <span>3, Aug</span>
+                        </div>
+                        <div class="times">
+                          <button class="time" role="option" type="button">8am - 10am</button>
+                          <button class="time" role="option" type="button">10am - 12pm</button>
+                          <button class="time" role="option" type="button">12pm - 2pm</button>
+                          <button class="time" role="option" type="button">2pm - 4pm</button>
+                          <button class="time" role="option" type="button">4pm - 6pm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" role="button" type="submit">تأكيد</button>
+                </form>
+              </div>
+              <!--Slider -->
+            </div>
+          </div>
+          <!-- Help -->
+          <div class="help">
+            <h4>هل تواجة أي مشاكل؟</h4>
+            <a href="#" class="primary">إتصل بنا</a>
+            <a href="#" class="secondary">الأسئلة الشائعه</a>
+          </div>
+          <!-- Sticky-top details card -->
+          <!-- Car details -->
+          <div class="payment-details">
+            <div class="card">
+                  <div class="title d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">تفاصيل الدفع</h5>
+                    <span class="close"><i class="bi bi-x-lg d-md-none"></i></span>
+                  </div>
+                  <div class="head py-3 d-flex align-items-start gap-3">
+                    <img src="../assets/img/cars/CAR-8.png" alt="">
+                    <div>
+                      <h5>بي إم دبليو 120S</h5>
+                      <span>97,000 كلم</span>
+                      <span class="d-block">رقم الإعلان: 1234</span>
+                    </div>
+                  </div>
+                  <div class="body">
+                    <ul class="vehicle-info">
+                      <li>
+                        <span class="title">سعر السيارة</span>
+                        <span class="value"><b>90,000</b>﷼</span>
+                      </li>
+                      <li>
+                        <span class="title">التسجيل ونقل الملكية</span>
+                        <span class="value"><b>500</b>﷼</span>
+                      </li>
+                      <li>
+                        <span class="title">
+                          التوصيل
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#calcDelivery">تغير</a>
+                        </span>
+                        <span class="value" id="deliveryCost" data-value="delivery-cost">مجانا</span>
+                      </li>
+                      <li>
+                        <span class="title">
+                          الضمان
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#selectWarranty">تغير</a>
+                        </span>
+                        <span class="value" id="warrantyCost">مجانا</span>
+                      </li>
+                      <li>
+                        <span class="title">
+                          خدمات إضافية
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#addOn">تغير</a>
+                        </span>
+                        <span class="value" id="addOnCost">مجانا</span>
+                      </li>
+                      <li>
+                        <span class="title">الضرائب (15%)</span>
+                        <span class="value"><b>13,500</b></span>
+                      </li>
+                      <li>
+                        <span class="title">عربون (تم الدفع)</span>
+                        <span class="value">SR.<b>150</b></span>
+                      </li>
+                      <li>
+                        <span class="title">إجمالى التكلفة</span>
+                        <span class="value unique">SR.<b>103.850</b></span>
+                      </li>   
+                    </ul>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row gap-xl-5">
+              <div class="col-12 col-xl-2 mb-5 mb-xl-0">
+                <div class="footer-logo text-center">
+                  <img src="../assets/img/logo-pattern.png" alt="LOGO">
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="footer-nav d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 px-lg-0">
+                  <ul class="location mb-3 mb-lg-0">
+                    <li>
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>12039 Smith Avenue <br> Santa Fe Springs, CA 90670</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="contact">
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Toll-free 0877 338 0999 </span>
+                      </a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Fax 562 236 9429</span>
+                      </a>
+                    </li>
+                    <li class="mb-5 mb-lg-0">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-envelope"></i>
+                        <span>Info@motorscity.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="sign-up text-center text-md-end">
+                    <h6 class="mb-4">انضم إلى نادي البريد الإلكتروني </h6>
+                    <form>
+                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="بريدك الإلكتروني" class="form-control mb-4">
+                      <button class="btn btn-secondary">
+                        <span class="bg">
+                          <span class="text">تسجيل دخول</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 حقوق الطبع والنشر. كل الحقوق محفوظة.</p>
+            <ul class="social-icons d-flex align-items-center gap-4">
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </div>
+    <!-- Bootstrap-5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Jquery 3.6 min -->
+    <script src="../assets/plugins/js/jquery-3.6-min.js"></script>
+    <!-- Custom Js -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
