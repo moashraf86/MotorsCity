@@ -3813,8 +3813,8 @@ body::-webkit-scrollbar-thumb,
 }
 
 #track-order .delivery-date-picker .booking-day .time:disabled{
- background-color: #f0f0f0;
- border-color: #f0f0f0;
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
 }
 
 #track-order .btn{  
@@ -3828,6 +3828,48 @@ body::-webkit-scrollbar-thumb,
 #track-order .btn:hover{  
   box-shadow: none;
   filter: none;
+}
+
+.review textarea {
+  width: 100%;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.review textarea:focus-visible {
+  outline: 2px solid var(--sky);
+}
+
+.review form {
+  transform: rotate(180deg);
+  transform-origin: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input.star { display: none; }
+
+label.star {
+transform: rotate(-180deg);
+  font-size: 24px;
+  color: #ccc;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+label.star:before {
+  content: "\f588";
+  font-family: bootstrap-icons !important;
+}
+
+input.star:checked ~ label.star:before {
+  content: "\f586";
+  color: #FD4;
+  transition: all .25s;
 }
 
 /********************* Footer ***********************/
@@ -4091,6 +4133,11 @@ html[dir=rtl] #my-orders .orders .order_details .total-price {
 html[dir=rtl] #track-order .btn{  
   margin-right: auto;
   margin-left: 0;
+}
+
+html[dir=rtl] #track-order .help a.primary {
+  margin-left: 10px;
+  margin-right: 0;
 }
 /******************************* MEDIA QUERR *********************************/
 

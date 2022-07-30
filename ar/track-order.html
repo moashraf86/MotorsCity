@@ -318,11 +318,77 @@
                 </form>
               </div>
               <!--Slider -->
+              <!-- Write a Review -->
+              <div class="review">
+                <h4 class="mb-4">أكتب مراجعة</h4>
+                <!-- Buyer Review -->
+                <div class="seller-rating">
+                  <h5>تقييم البائع</h5>
+                  <form action="" class="seller-rating">
+                    <input class="star star-5" id="seller-star-5" type="radio" name="seller"/>
+                    <label class="star star-5" for="seller-star-5"></label>
+                    <input class="star star-4" id="seller-star-4" type="radio" name="seller"/>
+                    <label class="star star-4" for="seller-star-4"></label>
+                    <input class="star star-3" id="seller-star-3" type="radio" name="seller"/>
+                    <label class="star star-3" for="seller-star-3"></label>
+                    <input class="star star-2" id="seller-star-2" type="radio" name="seller"/>
+                    <label class="star star-2" for="seller-star-2"></label>
+                    <input class="star star-1" id="seller-star-1" type="radio" name="seller"/>
+                    <label class="star star-1" for="seller-star-1"></label>
+                  </form>
+                  <div class="clearfix"></div>
+                  <div class="message">
+                    <h6>أكتب تجربتك</h6>
+                    <textarea id="buyer-messaga" cols="30" rows="4"></textarea>
+                  </div>
+                </div>
+                <div class="delivery-review mt-5">
+                  <h5>تقييم التوصيل</h5>
+                  <form action="" class="delivery-rating">
+                    <input class="star" id="delivery-star-5" type="radio" name="delivery"/>
+                    <label class="star" for="delivery-star-5"></label>
+                    <input class="star" id="delivery-star-4" type="radio" name="delivery"/>
+                    <label class="star" for="delivery-star-4"></label>
+                    <input class="star" id="delivery-star-3" type="radio" name="delivery"/>
+                    <label class="star" for="delivery-star-3"></label>
+                    <input class="star" id="delivery-star-2" type="radio" name="delivery"/>
+                    <label class="star" for="delivery-star-2"></label>
+                    <input class="star" id="delivery-star-1" type="radio" name="delivery"/>
+                    <label class="star" for="delivery-star-1"></label>
+                  </form>
+                  <div class="clearfix"></div>
+                  <div class="message">
+                    <h6>أكتب تجربتك</h6>
+                    <textarea id="buyer-messaga" cols="30" rows="4"></textarea>
+                  </div>
+                </div>
+                <div class="cleanliness-review mt-5">
+                  <h5 >تقييم نظافة السيارة</h5>
+                  <form action="" class="delivery-rating">
+                    <input class="star" id="cleanliness-star-5" type="radio" name="cleanliness"/>
+                    <label class="star" for="cleanliness-star-5"></label>
+                    <input class="star" id="cleanliness-star-4" type="radio" name="cleanliness"/>
+                    <label class="star" for="cleanliness-star-4"></label>
+                    <input class="star" id="cleanliness-star-3" type="radio" name="cleanliness"/>
+                    <label class="star" for="cleanliness-star-3"></label>
+                    <input class="star" id="cleanliness-star-2" type="radio" name="cleanliness"/>
+                    <label class="star" for="cleanliness-star-2"></label>
+                    <input class="star" id="cleanliness-star-1" type="radio" name="cleanliness"/>
+                    <label class="star" for="cleanliness-star-1"></label>
+                  </form>
+                  <div class="clearfix"></div>
+                  <div class="message">
+                    <h6>أكتب تجربتك</h6>
+                    <textarea id="buyer-messaga" cols="30" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- Write a Review -->
             </div>
           </div>
           <!-- Help -->
           <div class="help">
-            <h4>هل تواجة أي مشاكل؟</h4>
+            <h4 class="mb-3">هل تواجة أى مشاكل؟</h4>
             <a href="#" class="primary">إتصل بنا</a>
             <a href="#" class="secondary">الأسئلة الشائعه</a>
           </div>
@@ -330,64 +396,64 @@
           <!-- Car details -->
           <div class="payment-details">
             <div class="card">
-                  <div class="title d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">تفاصيل الدفع</h5>
-                    <span class="close"><i class="bi bi-x-lg d-md-none"></i></span>
-                  </div>
-                  <div class="head py-3 d-flex align-items-start gap-3">
-                    <img src="../assets/img/cars/CAR-8.png" alt="">
-                    <div>
-                      <h5>بي إم دبليو 120S</h5>
-                      <span>97,000 كلم</span>
-                      <span class="d-block">رقم الإعلان: 1234</span>
-                    </div>
-                  </div>
-                  <div class="body">
-                    <ul class="vehicle-info">
-                      <li>
-                        <span class="title">سعر السيارة</span>
-                        <span class="value"><b>90,000</b>﷼</span>
-                      </li>
-                      <li>
-                        <span class="title">التسجيل ونقل الملكية</span>
-                        <span class="value"><b>500</b>﷼</span>
-                      </li>
-                      <li>
-                        <span class="title">
-                          التوصيل
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#calcDelivery">تغير</a>
-                        </span>
-                        <span class="value" id="deliveryCost" data-value="delivery-cost">مجانا</span>
-                      </li>
-                      <li>
-                        <span class="title">
-                          الضمان
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#selectWarranty">تغير</a>
-                        </span>
-                        <span class="value" id="warrantyCost">مجانا</span>
-                      </li>
-                      <li>
-                        <span class="title">
-                          خدمات إضافية
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#addOn">تغير</a>
-                        </span>
-                        <span class="value" id="addOnCost">مجانا</span>
-                      </li>
-                      <li>
-                        <span class="title">الضرائب (15%)</span>
-                        <span class="value"><b>13,500</b></span>
-                      </li>
-                      <li>
-                        <span class="title">عربون (تم الدفع)</span>
-                        <span class="value">SR.<b>150</b></span>
-                      </li>
-                      <li>
-                        <span class="title">إجمالى التكلفة</span>
-                        <span class="value unique">SR.<b>103.850</b></span>
-                      </li>   
-                    </ul>
-                  </div>
+              <div class="title d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">تفاصيل الدفع</h5>
+                <span class="close"><i class="bi bi-x-lg d-md-none"></i></span>
+              </div>
+              <div class="head py-3 d-flex align-items-start gap-3">
+                <img src="../assets/img/cars/CAR-8.png" alt="">
+                <div>
+                  <h5>بي إم دبليو 120S</h5>
+                  <span>97,000 كلم</span>
+                  <span class="d-block">رقم الإعلان: 1234</span>
                 </div>
+              </div>
+              <div class="body">
+                <ul class="vehicle-info">
+                  <li>
+                    <span class="title">سعر السيارة</span>
+                    <span class="value"><b>90,000</b>﷼</span>
+                  </li>
+                  <li>
+                    <span class="title">التسجيل ونقل الملكية</span>
+                    <span class="value"><b>500</b>﷼</span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      التوصيل
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#calcDelivery">تغير</a>
+                    </span>
+                    <span class="value" id="deliveryCost" data-value="delivery-cost">مجانا</span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      الضمان
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#selectWarranty">تغير</a>
+                    </span>
+                    <span class="value" id="warrantyCost">مجانا</span>
+                  </li>
+                  <li>
+                    <span class="title">
+                      خدمات إضافية
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#addOn">تغير</a>
+                    </span>
+                    <span class="value" id="addOnCost">مجانا</span>
+                  </li>
+                  <li>
+                    <span class="title">الضرائب (15%)</span>
+                    <span class="value"><b>13,500</b></span>
+                  </li>
+                  <li>
+                    <span class="title">عربون (تم الدفع)</span>
+                    <span class="value">SR.<b>150</b></span>
+                  </li>
+                  <li>
+                    <span class="title">إجمالى التكلفة</span>
+                    <span class="value unique">SR.<b>103.850</b></span>
+                  </li>   
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -651,7 +651,9 @@ $('#booking .time').click(function(e) {
   $(e.target).addClass('active');
   $('.navigation .months').text($(e.target).attr('aria-date'))
 })
-// ALYWAYS BE ON BOTOM OF THE PAGE
+
+
+// ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
