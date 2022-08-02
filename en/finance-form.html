@@ -17,7 +17,7 @@
     <title>Motores City</title>
   </head>
   <body>
-    <div class="wrapper" id="order-confirmed">
+    <div class="wrapper">
       <!-- START HEADER -->
       <header id="header">
         <div class="container-fluid">
@@ -68,7 +68,7 @@
             <!-- User info -->
             <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
               <!-- VISIBLE IF USER HAVE SIGNED UP -->
-              <div class="dropdown">
+              <div class="dropdown d-none">
                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="user">
                     <i class="bi bi-person"></i>
@@ -122,7 +122,7 @@
                 </ul>
               </div>
               <!-- IF USER HAVEN'T SIGN UP -->
-              <div class="dropdown d-none">
+              <div class="dropdown">
                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="user">
                     <i class="bi bi-person"></i>
@@ -140,7 +140,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./favorite-cars.html">
+                    <a class="dropdown-item" aria-readonly="true">
                       <span class="icon"><i class="bi bi-heart"></i></span>
                       Favorite Cars
                     </a>
@@ -173,38 +173,134 @@
         </div>
       </header>
       <!-- END HEADER -->
-      
-      <section id="confirmed-message">
-        <div class="container">
-          <h3>Congratulation! we got your order</h3>
-          <p class="mb-5">Get excited-here's what happens next.</p>
-          <div class="card">
-            <img class="mb-4" src="../assets/img/cars/hatchback.png" alt="">
-            <h6 class="mb-3">We'll contact you shortly to confirm your details and coordinate paperwork delivery!</h6>
-            <span class="car-name mb-1">2019 Jeep</span>
-            <span class="info mb-3">Limited | 53,400 KM</span>
-            <span class="order-number">Order: <b>#12345</b></span>
-            <a href="#" class="mt-5">
-              <button type="button" class="btn btn-primary">View Order</button>
-            </a>
+
+      <!-- Finace Form -->
+      <section id="finance-form">
+        <div class="container-fluid container-xl">
+          <h3>Get Pre-Qualified For Financing</h3>
+          <p>See if pre-qualify for an auto loan in seconds with <br> <b>no impact to your credit score</b></p>
+          <!-- Features -->
+          <div class="features my-3 my-lg-5">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card">
+                  <img src="../assets/img/icons/giftbox.svg" alt="giftbox">
+                  <h5>Get personalized loan terms</h5>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card">
+                  <img src="../assets/img/icons/cellphone.svg" alt="cellphone">
+                  <h5>See your monthly payment</h5>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card">
+                  <img src="../assets/img/icons/vehicle.svg" alt="vehicle">
+                  <h5>Search vehicles in your budget</h5>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="contact-info">
-            <p class="mb-5">*Business hours are Saturday - Thursday: 8:00 am - 5:00 pm. Ordered outside of business hours? We'll call you within the first hour of the following business day.</p>
-            <ul>
-              <li>
-                <h6>What's Next?</h6>
-                <span>we'll send paperwork for you to sign.</span>
-                <span>We drop off your ride & hand you the keys!</span>
-              </li>
-              <li>
-                <h6>Questions?</h6>
-                <span>Have a question about your order? Give us a ring or start chat with our team.</span>
-                <a href="tel:+966 50 123 1234">Call us on: +966 50 123 1234</a>
-              </li>
-            </ul>
+          <!-- Form -->
+          <form>
+            <div class="personal-info mb-5">
+              <h4>Personal information</h4>
+              <p class="mb-4">To ensure accurate terms, use the information that matches your driver’s license or other government issued IDs.</p>
+              <div class="card">
+                <div class="group">
+                  <label for="first-name">First Name</label>
+                  <input class="form-control" type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                </div>
+                <div class="group">
+                  <label for="middle-name">Middle Name (optional)</label>
+                  <input class="form-control" type="text" name="middle-name" id="middle-name" placeholder="middle name">
+                </div>
+                <div class="group">
+                  <label for="last-name">Last Name</label>
+                  <input class="form-control" type="text" name="last-name" id="last-name" placeholder="last name">
+                </div>
+                <div class="group">
+                  <label for="date-of-birth">Date of birth</label>
+                  <input class="form-control" type="date" name="date-of-birth" id="date-of-birth" placeholder="last name">
+                </div>
+                <div class="form-group d-flex justify-content-between align-items-center gap-3">
+                  <div class="group">
+                    <label for="city">City</label>
+                    <select class="form-control" name="city" id="city" required>
+                      <option value="" disabled selected>--City--</option>
+                      <option value="Riyadh" data-cost="500">Riyadh</option>
+                      <option value="Jeddah" data-cost="700">Jeddah</option>
+                      <option value="Dammam" data-cost="900">Dammam</option>
+                      <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
+                      <option value="Mekkah" data-cost="1,300">Mekkah</option>
+                      <option value="Abha" data-cost="1,500">Abha</option>
+                    </select>
+                  </div>
+                  <div class="group">
+                    <label for="state">State</label>
+                    <select class="form-control" name="state" id="state" required>
+                      <option value="" disabled selected>--state--</option>
+                      <option value="Riyadh" data-cost="500">Riyadh</option>
+                      <option value="Jeddah" data-cost="700">Jeddah</option>
+                      <option value="Dammam" data-cost="900">Dammam</option>
+                      <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
+                      <option value="Mekkah" data-cost="1,300">Mekkah</option>
+                      <option value="Abha" data-cost="1,500">Abha</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="financial-info">
+              <h4>Financial information</h4>
+              <p class="mb-4">Your data is secure and only used to verify your identity. Your credit score will not be impacted.</p>
+              <div class="card">
+                <div class="form-group d-flex justify-content-between align-items-center gap-3">
+                  <div class="group">
+                    <label for="monthly-income">Monthly income (SR)</label>
+                    <input class="form-control" type="number" id="monthly-income">
+                  </div>
+                  <div class="group">
+                    <label for="monthly-commitments">Monthly Commitments (SR)</label>
+                    <input class="form-control" type="number" id="monthly-commitments">
+                  </div>
+                </div>
+                <div class="group">
+                  <label for="salary-transfer">Salary Transfer(Bank)</label>
+                  <input class="form-control" type="number" id="salary-transfer">
+                </div>
+              </div>
+              <div class="form-check d-flex gap-3 p-0 mt-4">
+                <input class="form-check-input" type="checkbox" id="terms">
+                <label class="form-check-label" for="terms">
+                  I have read and accepted the pre-Qualification <a href="#">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-primary my-5" type="submit">Get Pre-qualified</button>
+          </form>
+          <!-- Features - 2  -->
+          <div class="features-2 my-3 my-lg-5">
+            <div class="row mb-5">
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <img src="../assets/img/icons/credit-score.svg" alt="credit-score">
+                <h5>No impact to your credit score</h5>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <img src="../assets/img/icons/credit-shield.svg" alt="credit-shield">
+                <h5>No impact to your credit score</h5>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <img src="../assets/img/icons/signature.svg" alt="signature">
+                <h5>No impact to your credit score</h5>
+              </div>
+            </div>
+            <p>Want to learn more about Finacing? <a href="#">View our Finance FAQs</a></p>
           </div>
         </div>
       </section>
+      <!-- Finace Form -->
 
       <!-- START FOOTER -->
       <footer>

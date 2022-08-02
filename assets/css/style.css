@@ -2866,18 +2866,19 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
-#reservation .purchase-info form.buyer-info label{
+#reservation .purchase-info form.buyer-info label,
+#finance-form form label{
   font-weight: 600;
   color: var(--dark-grey);
   margin-bottom: 5px;
 }
 
-#reservation .purchase-info form.buyer-info input{
+#reservation .purchase-info form.buyer-info input,
+#finance-form form .form-control{
   border: 1px solid #ededed;
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 20px;
-  color: var(--sky);
   font-weight: 600;
 }
 
@@ -3842,19 +3843,22 @@ body::-webkit-scrollbar-thumb,
 }
 
 .review form {
-  transform: rotate(180deg);
-  transform-origin: center;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
+  flex-direction: row-reverse;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.review h5 {
+  min-width: 210px;
 }
 
 input.star { display: none; }
 
 label.star {
-transform: rotate(-180deg);
+  float: right;
   font-size: 24px;
   color: #ccc;
   transition: all .2s;
@@ -3872,6 +3876,103 @@ input.star:hover ~ label.star:before {
   color: #FD4;
   transition: all .25s;
 }
+
+/********************* Finance Form ***********************/
+#finance-form   {
+  padding: 150px 0 50px;
+  text-align: center;
+  position: relative;
+}
+
+#finance-form::after   {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: var(--white-200);
+  z-index: -1;
+}
+
+#finance-form .features  {
+  max-width: 1250px;
+  padding: 0 150px;
+  margin: auto;
+  background: url('../img/features-pattern.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#finance-form .features .card {
+  padding: 50px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#finance-form .features img {
+  width: 90px;
+  object-fit: contain;
+  height: 90px;
+  margin: auto;
+}
+
+#finance-form form .card {
+  padding: 50px;
+  text-align: left;
+}
+
+#finance-form form > div {
+  max-width: 900px;
+  margin: auto;
+}
+
+#finance-form form > div h4,
+#finance-form form > div p {
+  text-align: left;
+}
+
+#finance-form form .card .form-group .group{
+  flex: 1;
+}
+
+#finance-form form label.terms{
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+#finance-form form .form-check input,
+#finance-form form .form-check label{
+  cursor: pointer;
+}
+
+#finance-form form .form-check a{
+  color: var(--sky);
+}
+
+#finance-form .features-2{
+  max-width: 900px;
+  margin: auto;
+}
+
+#finance-form .features-2 img{
+  margin-bottom: 20px;
+}
+
+#finance-form .features-2 .row {
+  justify-content: space-between;
+}
+
+#finance-form .features-2 .row > div{
+  max-width: 200px;
+}
+
+#finance-form .features-2 p a{
+  color: var(--green);
+}
+/********************* Finance Form ***********************/
+
 
 /********************* Footer ***********************/
 footer {
@@ -4518,6 +4619,14 @@ html[dir=rtl] #track-order .help a.primary {
     gap: 2rem;
   }
 
+  #track-order .review h5 {
+    min-width: 170px;
+  }
+
+  #finance-form .features {
+    padding: 0;
+  }
+
   footer .sign-up  {
     width: 100%;
   }
@@ -4729,7 +4838,8 @@ html[dir=rtl] #track-order .help a.primary {
     margin-bottom: 0;
   }
 
-  #payment-process #calc-payment .card {
+  #payment-process #calc-payment .card,
+  #finance-form form .card {
     padding: 20px;
   }
 
@@ -4853,6 +4963,10 @@ html[dir=rtl] #track-order .help a.primary {
 
   #track-order .delivery-date-picker .booking-wrapper {
     gap: 10px;
+  }
+
+  #track-order .review h5 {
+    min-width: auto;
   }
 
   footer .sign-up .btn {
