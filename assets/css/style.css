@@ -3936,20 +3936,20 @@ input.star:hover ~ label.star:before {
   flex: 1;
 }
 
-#finance-form form label.terms{
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
 #finance-form form .form-check input,
 #finance-form form .form-check label{
   cursor: pointer;
+  text-align: left;
 }
 
 #finance-form form .form-check a{
   color: var(--sky);
 }
+
+#finance-form form .form-check .form-check-input{
+  min-width: 1em;
+}
+
 
 #finance-form .features-2{
   max-width: 900px;
@@ -3966,11 +3966,28 @@ input.star:hover ~ label.star:before {
 
 #finance-form .features-2 .row > div{
   max-width: 200px;
+  position: relative;
 }
 
 #finance-form .features-2 p a{
   color: var(--green);
 }
+
+#finance-form .features-2 img{
+  position: relative;
+}
+
+#finance-form .features-2 .row > div:not(:first-of-type)::after{
+  position: absolute;
+  content: '';
+  width: 215px;
+  height: 2px;
+  top: 25%;
+  left: -95%;
+  background: linear-gradient(to right, var(--green), var(--sky),  var(--purple));
+  z-index: 100;
+}
+
 /********************* Finance Form ***********************/
 
 
@@ -4627,6 +4644,10 @@ html[dir=rtl] #track-order .help a.primary {
     padding: 0;
   }
 
+  #finance-form .features-2 .row > div:not(:first-of-type)::after{ 
+    display: none;
+  }
+  
   footer .sign-up  {
     width: 100%;
   }
@@ -4967,6 +4988,19 @@ html[dir=rtl] #track-order .help a.primary {
 
   #track-order .review h5 {
     min-width: auto;
+  }
+
+  #finance-form {
+    padding: 50px 0;
+  }
+
+  #finance-form .features-2 .row > div {
+    max-width: inherit;
+  }
+
+  #finance-form .features .card {
+    padding: 25px;
+    border-radius: 35px;
   }
 
   footer .sign-up .btn {
