@@ -4024,6 +4024,11 @@ input.star:hover ~ label.star:before {
   color: #fff;
 }
 
+#contact .card_icon i.bi-whatsapp{
+  font-size: 25px;
+  color: #4ce652;
+}
+
 #contact .contact_card h5{
   margin-bottom: 20px;
 }
