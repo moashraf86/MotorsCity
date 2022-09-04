@@ -3508,7 +3508,8 @@ body::-webkit-scrollbar-thumb,
 
 /********************* My Profile Page ***********************/
 
-#my-profile .profile {
+#my-profile .profile,
+#contact .contact-us {
   padding: 50px 0;
   background-color: var(--white-100);
 }
@@ -3522,7 +3523,8 @@ body::-webkit-scrollbar-thumb,
   padding: 30px;
 }
 
-#my-profile .profile form .group{
+#my-profile .profile form .group,
+#contact .contact-us form .group{
   flex: 1;
 }
 
@@ -3540,13 +3542,15 @@ body::-webkit-scrollbar-thumb,
   align-items: center;
 }
 
-#my-profile .form-control{
+#my-profile .form-control,
+#contact .contact-us  .form-control{
   border: 1px solid #ededed;
   padding: 10px 15px;
   font-weight: 600;
 }
 
-#my-profile .profile form .btn{
+#my-profile .profile form .btn,
+#contact .contact-us form .btn{
   display: block;
   margin-left: auto;
 }
@@ -3989,6 +3993,62 @@ input.star:hover ~ label.star:before {
 }
 
 /********************* Finance Form ***********************/
+
+
+/********************* Conatact Us  ***********************/
+#contact .contact-us form {
+  padding: 30px;
+}
+#contact .contact-us form label{
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#contact .contact_card {
+  padding: 30px;
+  height: 100%;
+}
+
+#contact .card_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  background-color: var(--sky);
+  margin-bottom: 20px;
+}
+
+#contact .card_icon i{
+  font-size: 20px;
+  color: #fff;
+}
+
+#contact .contact_card h5{
+  margin-bottom: 20px;
+}
+
+#contact .contact_card .phone a{
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--sky);
+  margin-bottom: 20px;
+  display: block;
+}
+
+#contact .contact_card .email a{
+  color: var(--sky);
+}
+
+#contact .whatsapp_qr{
+  width: 130px;
+  height: 130px;
+}
+
+#contact .whatsapp a{
+  color: var(--sky);
+}
+/********************* Conatact Us  ***********************/
 
 
 /********************* Footer ***********************/
@@ -5001,6 +5061,14 @@ html[dir=rtl] #track-order .help a.primary {
   #finance-form .features .card {
     padding: 25px;
     border-radius: 35px;
+  }
+
+  #contact .contact_card .phone a {
+    font-size: 24px;
+  }
+
+  #contact .contact_card .phone + p {
+    font-size: 14px;
   }
 
   footer .sign-up .btn {

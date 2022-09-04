@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap-5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--  Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Font type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Motores City</title>
+  </head>
+  <body>
+    <div class="wrapper" id="contact">
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="./index.html">
+              <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+            </a>
+            <!-- Menu Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <!-- Nav items -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Search Cars</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sell/Trade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Financing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Why MotorsCity
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Recources
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- User info -->
+            <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
+              <!-- VISIBLE IF USER HAVE SIGNED UP -->
+              <div class="dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2">Profile</span>
+                </a>
+                <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item head gap-3"  href="#">
+                      <div class="dropdown-head_title">
+                        <h6 class="full-name mb-0">Mohamed Zain</h6>
+                        <span class="email">example@gmail.com</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-orders.html">
+                      <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      Favorite Cars
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    Finance
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    Saved Searches
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-profile.html">
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item logout" href="#">
+                      <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                      Log Out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- IF USER HAVEN'T SIGN UP -->
+              <div class="dropdown d-none">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2">Log in</span>
+                </a>
+                <ul class="dropdown-menu login" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-item head gap-3 flex-column">
+                    <a class="nav-link login" href="#">Log in</a>
+                    <span class="register">Don’t have an account? <a class="nav-link" href="#">Register</a></span>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-cart2"></i></span> My Orders
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      Favorite Cars
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    Finance
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    Saved Searches
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      My Profile
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a class="favorite" href="./favorite-cars.html">
+                <span class="icon"><i class="bi bi-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- END HEADER -->
+
+      <section class="contact-us">
+        <div class="container-fluid container-xl">
+          <h2 class="mb-2">Contact Us</h2>
+          <p class="mb-4">To ask a question or offer feedback, please use the fields below.</p>
+          <div class="row">
+            <div class="col-12 col-lg-8 mb-4">
+              <div class="contact-us_form">
+                <div class="card">
+                  <form id="contact-us">
+                    <div class="group mb-4">
+                      <label for="firstName">How can we help you?</label>
+                      <select class="form-control" name="city" id="city" required="">
+                        <option value="" disabled="" selected="">--City--</option>
+                        <option value="Riyadh" data-cost="500">Riyadh</option>
+                        <option value="Jeddah" data-cost="700">Jeddah</option>
+                        <option value="Dammam" data-cost="900">Dammam</option>
+                        <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
+                        <option value="Mekkah" data-cost="1,300">Mekkah</option>
+                        <option value="Abha" data-cost="1,500">Abha</option>
+                      </select>
+                    </div>
+                    <div class="group mb-4">
+                      <label for="firstName">Where on motorscity.com?</label>
+                      <select class="form-control" name="city" id="city" required="">
+                        <option value="" disabled="" selected="">--City--</option>
+                        <option value="Riyadh" data-cost="500">Riyadh</option>
+                        <option value="Jeddah" data-cost="700">Jeddah</option>
+                        <option value="Dammam" data-cost="900">Dammam</option>
+                        <option value="Al-Madinah" data-cost="1,100">Al Madinah</option>
+                        <option value="Mekkah" data-cost="1,300">Mekkah</option>
+                        <option value="Abha" data-cost="1,500">Abha</option>
+                      </select>
+                    </div>
+                    <div class="form-group d-flex justify-content-between align-items-center gap-3 mb-4">
+                      <div class="group">
+                        <label for="first-name">First Name</label>
+                        <input class="form-control" type="text" name="first-name" id="first-name" placeholder="First name">
+                      </div>
+                      <div class="group">
+                        <label for="last-name">Last Name</label>
+                        <input class="form-control" type="text" name="last-name" id="last-name" placeholder="last name">
+                      </div>
+                    </div>
+                    <div class="group mb-4">
+                      <label for="email">Email Address</label>
+                      <input class="form-control" type="email" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="group">
+                      <label for="message">Leave your message</label>
+                      <textarea class="form-control" name="message" id="message" cols="30" rows="7" ></textarea>
+                    </div>
+                    <p class="my-4">If your feedback pertains to a specific page on motorscity.com, please paste the URL in the Comments box.</p>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg">
+              <div class="contact-us_cards">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-lg-12 mb-4">
+                    <div class="card contact_card">
+                      <div class="card_icon">
+                        <i class="bi bi-chat-left-text-fill"></i>
+                      </div>
+                      <div class="card_title">
+                        <h5>General Feedback</h5>
+                      </div>
+                      <div class="card_body">
+                        <div class="phone">
+                          <a href="tel:+0877 338 0999">0877 338 0999</a>
+                        </div>
+                        <p>9:00am — 6:00pm (Mon – Sun)</p>
+                        <div class="email">
+                          <a href="mailto:Info@motorscity.com">Info@motorscity.com</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-12 mb-4">
+                    <div class="card contact_card">
+                      <div class="card_icon">
+                        <i class="bi bi-whatsapp"></i>
+                      </div>
+                      <div class="card_title">
+                        <h5>Chat with us directly</h5>
+                      </div>
+                      <div class="card_body">
+                        <div class="whatsapp d-flex align-items-center flex-wrap gap-4">
+                          <img class="whatsapp_qr" src="../assets/img/icons/wa-my.png" alt="whatsapp-QR">
+                          <div>
+                            <h6 class="whatsapp_title">WhatsApp ID</h6>
+                            <a href="http://wa.me/603-2771-7048" target="_blank">+603-2771-7048</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-12">
+                    <div class="card contact_card">
+                      <div class="card_icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                      </div>
+                      <div class="card_title">
+                        <h5>Corporate Office Address</h5>
+                      </div>
+                      <div class="card_body">
+                        <div class="location">
+                          <b>177401 King Fahad Highway</b> <br>
+                          Al Khobar, Kingdom of Saudi Arabia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row gap-xl-5">
+              <div class="col-12 col-xl-2 mb-5 mb-xl-0">
+                <div class="footer-logo text-center">
+                  <img src="../assets/img/logo-pattern.png" alt="LOGO">
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="footer-nav d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 px-lg-0">
+                  <ul class="location mb-3 mb-lg-0">
+                    <li>
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>12039 Smith Avenue <br> Santa Fe Springs, CA 90670</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="contact">
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Toll-free 0877 338 0999 </span>
+                      </a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-telephone"></i>
+                        <span>Fax 562 236 9429</span>
+                      </a>
+                    </li>
+                    <li class="mb-5 mb-lg-0">
+                      <a href="#" class="d-flex gap-3">
+                        <i class="bi bi-envelope"></i>
+                        <span>Info@motorscity.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="sign-up text-center text-md-start">
+                    <h6 class="mb-4">Join our Email Club </h6>
+                    <form>
+                      <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" name="signup" id="signup" placeholder="Email.." class="form-control mb-4">
+                      <button class="btn btn-secondary">
+                        <span class="bg">
+                          <span class="text">Sign Up</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <p class="mb-0 order-2 mt-4 order-lg-0 mt-lg-0"> © 2022 Copyright. All rights reserved.</p>
+            <ul class="social-icons d-flex align-items-center gap-4">
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </div>
+
+
+    <!-- Bootstrap-5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Jquery 3.6 min -->
+    <script src="../assets/plugins/js/jquery-3.6-min.js"></script>
+    <!-- Custom Js -->
+    <script src="../assets/js/main.js"></script>
+
+  </body>
+</html>
