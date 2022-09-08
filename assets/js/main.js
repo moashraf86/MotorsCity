@@ -631,19 +631,23 @@ $(window).resize(function() {
 })
 
 //Pick delivery date slider on mobile
-document.querySelector('#booking').addEventListener('scroll', function() {
-  let secondChild = this.firstElementChild.firstElementChild.nextElementSibling;
-  let parentPos  = this.getBoundingClientRect();
-  let secChildPos   = secondChild.getBoundingClientRect(); 
+try {
+  document.querySelector('#booking').addEventListener('scroll', function() {
+    let secondChild = this.firstElementChild.firstElementChild.nextElementSibling;
+    let parentPos  = this.getBoundingClientRect();
+    let secChildPos   = secondChild.getBoundingClientRect(); 
 
-  let secondChildPosLeft = secChildPos.left - parentPos.left;
-  if(secondChildPosLeft < 10) {
-    $('#track-order .navigation button.earlier').attr('disabled', false)
-  } else {
-    $('#track-order .navigation button.earlier').attr('disabled', true)
-  }
-  
-})
+    let secondChildPosLeft = secChildPos.left - parentPos.left;
+    if(secondChildPosLeft < 10) {
+      $('#track-order .navigation button.earlier').attr('disabled', false)
+    } else {
+      $('#track-order .navigation button.earlier').attr('disabled', true)
+    }
+    
+  })
+} catch (error) {
+  console.error(error);
+}
 
 // Set active class to the selected time and unselect others
 $('#booking .time').click(function(e) {
@@ -652,6 +656,21 @@ $('#booking .time').click(function(e) {
   $('.navigation .months').text($(e.target).attr('aria-date'))
 })
 
+// Calculator Buttons toggle active class
+$('.calculator_buttons .calc_btn').click(function(e) {
+  $(e.target).addClass('active').siblings().removeClass('active')
+  if($(this).hasClass('vehicle')) {
+    $('.calculator #vehicle-price-slider ').css('display', 'none')
+    $('.calculator #monthly-payment-slider ').css('display', 'block')
+    $('.vehicle-price .title').html('Monthly Payment')
+    $('.vehicle-price .range-val').html($('.single-range-input.monthly').attr('data-value'))
+  }else if ($(this).hasClass('monthly')) {
+    $('.vehicle-price .title').html('Vehicle Price');
+    $('.calculator #vehicle-price-slider ').css('display', 'block')
+    $('.calculator #monthly-payment-slider ').css('display', 'none');
+    $('.vehicle-price .range-val').html($('.single-range-input.vehicle').attr('data-value'))
+  }
+})
 
 // ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers

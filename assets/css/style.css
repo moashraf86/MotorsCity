@@ -3509,7 +3509,8 @@ body::-webkit-scrollbar-thumb,
 /********************* My Profile Page ***********************/
 
 #my-profile .profile,
-#contact .contact-us {
+#contact .contact-us,
+#payment-calculator .calculator {
   padding: 50px 0;
   background-color: var(--white-100);
 }
@@ -3543,7 +3544,8 @@ body::-webkit-scrollbar-thumb,
 }
 
 #my-profile .form-control,
-#contact .contact-us  .form-control{
+#contact .contact-us  .form-control,
+.calculator  .form-control{
   border: 1px solid #ededed;
   padding: 10px 15px;
   font-weight: 600;
@@ -4054,6 +4056,83 @@ input.star:hover ~ label.star:before {
   color: var(--sky);
 }
 /********************* Conatact Us  ***********************/
+
+
+
+/********************* payment-calculator ***********************/
+
+
+.calculator_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.calculator_buttons .calc_btn {
+  background-color: var(--white);
+  padding: 12px 50px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-grey);
+  border: 0;
+}
+
+.calculator_buttons .calc_btn.active {
+  background: linear-gradient(78.7deg, #4FB5AE 20%, #007CC2 80%, #595CA9 95%);
+  color: var(--white);
+}
+
+.calculator_buttons .calc_btn:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.calculator_buttons .calc_btn:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.calculator .card {
+  padding: 30px;
+}
+
+.calculator .card .val{
+  /* color: var(--dark-grey); */
+  font-weight: bold;
+}
+
+.calculator .card_results {
+  background-color: var(--sky);
+  color: var(--white);
+}
+
+.calculator .card_results h6,
+.calculator .card_results .final-result {
+  color: var(--white);
+}
+
+.card_results_buttons a {
+  display: block;
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  border: 2px solid var(--white);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.card_results_buttons a.primary {
+  color: var(--dark-grey);
+  background-color: var(--progress);
+  border-color: var(--progress);
+}
+
+.calculator #monthly-payment-slider {
+  display: none;
+}
+/********************* payment-calculator ***********************/
 
 
 /********************* Footer ***********************/
@@ -5068,6 +5147,10 @@ html[dir=rtl] #track-order .help a.primary {
     border-radius: 35px;
   }
 
+  #contact .contact-us form {
+    padding: 20px;
+  }
+
   #contact .contact_card .phone a {
     font-size: 24px;
   }
@@ -5250,7 +5333,8 @@ html[dir=rtl] #track-order .help a.primary {
     scroll-behavior: smooth;
     padding-bottom: 0;
   }
+
   #my-profile .profile form{
-  gap: 10rem;
-}
+    gap: 10rem;
+  }
 }
