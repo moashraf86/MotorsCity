@@ -2462,12 +2462,14 @@ body::-webkit-scrollbar-thumb,
   font-size: 16px;
 }
 #car-details #calc-payment .months,
-#payment-process #calc-payment .months {
+#payment-process #calc-payment .months,
+#payment-calculator .months {
   border: none;
 }
 
 #car-details #calc-payment .months span,
-#payment-process #calc-payment .months span {
+#payment-process #calc-payment .months span,
+#payment-calculator .months span {
   font-size: 16px;
   font-weight: 600;
   width: 65px;
@@ -2483,8 +2485,10 @@ body::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
+
 #car-details #calc-payment .months::after,
-#payment-process #calc-payment .months::after {
+#payment-process #calc-payment .months::after,
+#payment-calculator  .months::after {
   position: absolute;
   content: '';
   top: 50%;
@@ -2497,7 +2501,8 @@ body::-webkit-scrollbar-thumb,
 }
 
 #car-details #calc-payment .months input:checked + span,
-#payment-process #calc-payment .months input:checked + span {
+#payment-process #calc-payment .months input:checked + span,
+#payment-calculator .months input:checked + span {
   border-color: var(--purple);
   color: var(--purple);
 }
@@ -4136,6 +4141,42 @@ input.star:hover ~ label.star:before {
 .calculator #monthly-payment-slider {
   display: none;
 }
+
+.calculator select#finance-provider {
+  background-image: url('../img/icons/Al-Jabr\ SVG.svg');
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: 95% center;
+}
+
+.calculator select#finance-provider.jabr {
+  background-image: url('../img/icons/Al-Jabr\ SVG.svg');
+}
+
+.calculator select#finance-provider.snb {
+  background-image: url('../img/icons/saudi-arabia.svg');
+  background-size: 45px;
+}
+
+.calculator select#finance-provider.rajhi {
+  background-image: url('../img/icons/al-rajhi-bank.svg');
+}
+
+.calculator .modal-body {
+  color: var(--dark-grey);
+  text-align: left;
+  font-size: 14px;
+}
+
+.calculator .modal-body ul{
+  list-style: inherit;
+  padding: inherit;
+}
+
+.calculator .card_estimated-title i{
+  cursor: pointer;
+}
+
 /********************* payment-calculator ***********************/
 
 
@@ -4406,6 +4447,39 @@ html[dir=rtl] #track-order .help a.primary {
   margin-left: 10px;
   margin-right: 0;
 }
+html[dir=rtl] .calculator_buttons .calc_btn:first-of-type {
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+html[dir=rtl] .calculator_buttons .calc_btn:last-of-type {
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[dir=rtl] .calculator .modal-body {
+  text-align: right;
+}
+
+@media (min-width: 576px)
+{
+  html[dir=rtl]  .offset-sm-2 {
+    margin-left: 0;
+    margin-right: 16.66666667%;
+  }
+}
+
+@media (min-width: 768px)
+{
+  html[dir=rtl] .offset-md-0 {
+    margin-right: 0;
+  }
+}
+
+html[dir=rtl] .calculator select#finance-provider {
+  background-position: 1rem center;
+}
 /******************************* MEDIA QUERR *********************************/
 
 /* LAPTOP */
@@ -4524,7 +4598,6 @@ html[dir=rtl] #track-order .help a.primary {
   #header .dropdown-toggle::after {
     display: none;
   }
-
 
   #home {
     padding-bottom: 60px;
@@ -4796,6 +4869,12 @@ html[dir=rtl] #track-order .help a.primary {
     display: none;
   }
   
+  #payment-calculator .months span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
   footer .sign-up  {
     width: 100%;
   }
@@ -4941,7 +5020,8 @@ html[dir=rtl] #track-order .help a.primary {
   }
 
   #car-details #calc-payment .months span,
-  #payment-process #calc-payment .months span {
+  #payment-process #calc-payment .months span,
+  #payment-calculator .months span {
     width: 30px;
     height: 30px;
     font-size: 12px;
@@ -5278,6 +5358,12 @@ html[dir=rtl] #track-order .help a.primary {
     font-size: 12px;
   }
 
+  .calculator_buttons .calc_btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+  }
+
   html[dir=rtl] #trusted .box:first-of-type {
     border-left: 0;
   }
@@ -5308,6 +5394,10 @@ html[dir=rtl] #track-order .help a.primary {
     gap: 5rem;
     width: calc(75% - 20px);
   }
+  .calculator .modal-dialog {
+    min-width: 600px;
+  }
+
   footer .footer-nav .btn {
     width: 100%;
   }

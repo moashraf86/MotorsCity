@@ -661,17 +661,33 @@ $('.calculator_buttons .calc_btn').click(function(e) {
   $(e.target).addClass('active').siblings().removeClass('active')
   if($(this).hasClass('vehicle')) {
     $('.calculator #vehicle-price-slider ').css('display', 'none')
-    $('.calculator #monthly-payment-slider ').css('display', 'block')
+    $('.calculator #monthly-payment-slider ').css('display', 'inline-block')
     $('.vehicle-price .title').html('Monthly Payment')
+    $('.estimated-title_word').html('Vehicle Price')
+    $('html[dir=rtl] .vehicle-price .title').html('القسط الشهري')
+    $('html[dir=rtl] .estimated-title_word').html('سعر السيارة')
     $('.vehicle-price .range-val').html($('.single-range-input.monthly').attr('data-value'))
-  }else if ($(this).hasClass('monthly')) {
-    $('.vehicle-price .title').html('Vehicle Price');
-    $('.calculator #vehicle-price-slider ').css('display', 'block')
+  } else if ($(this).hasClass('monthly')) {
+    $('.vehicle-price .title').html('Vehicle Price')
+    $('.estimated-title_word').html('Monthly Payment')
+    $('html[dir=rtl] .vehicle-price .title').html('سعر السيارة')
+    $('html[dir=rtl] .estimated-title_word').html('القسط الشهري')
+    $('.calculator #vehicle-price-slider ').css('display', 'inline-block')
     $('.calculator #monthly-payment-slider ').css('display', 'none');
     $('.vehicle-price .range-val').html($('.single-range-input.vehicle').attr('data-value'))
   }
 })
 
+// Changee finance-provider logos on Clalulator
+$('select#finance-provider').on('change', function() {
+  if($(this).val() == 'jabr') {
+    $(this).attr('class', 'form-control jabr')
+  } else if ($(this).val() == 'snb') {
+    $(this).attr('class', 'form-control snb')
+  } else if ($(this).val() == 'rajhi') {
+    $(this).attr('class', 'form-control rajhi')
+  }
+})
 // ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
