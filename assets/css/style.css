@@ -453,10 +453,51 @@ input[type=range]:focus::-moz-range-track {
 
 #header .navbar-light .navbar-toggler {
   border: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
 }
 
 #header .navbar-light .navbar-toggler:focus {
   box-shadow: none;
+}
+
+#header .navbar-light .navbar-toggler span {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 2px;
+  background-color: var(--purple);
+  z-index: 100;
+  left: 0;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#header .navbar-light .navbar-toggler span.top {
+  top: 20%;
+}
+
+#header .navbar-light .navbar-toggler span.middle {
+  top: 50%;
+}
+
+#header .navbar-light .navbar-toggler span.bottom {
+  top: 80%;
+}
+
+#header .navbar-light .navbar-toggler.active span.top {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+#header .navbar-light .navbar-toggler.active span.middle {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+#header .navbar-light .navbar-toggler.active span.bottom {
+  transform: rotate(-45deg);
+  top: 50%;
 }
 
 #header .navbar-light .navbar-toggler-icon {
@@ -1436,10 +1477,24 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
-.search-result-main #results .card .year,
 .search-result-main #results .card .specifications,
 #favorite-cars #results .card .specifications{
   font-size: 12px;
+  color: var(--dark-grey);
+}
+
+.search-result-main #results .card .model .year {
+  font-size: 12px;
+  font-weight: 800;
+  background: var(--sky);
+  padding: 1px 7px;
+  border-radius: 4px;
+  color: var(--white);
+}
+
+.search-result-main #results .card .model .name{
+  font-size: 12px;
+  font-weight: 800;
   color: var(--dark-grey);
 }
 

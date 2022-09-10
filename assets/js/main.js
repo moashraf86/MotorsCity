@@ -39,6 +39,10 @@ try {
   console.warn(error);
 }
 
+//Navbaar toggler animation
+$('.navbar-toggler').click(function() {
+  $(this).toggleClass('active')
+})
 // Make Driver Seats Slider works when click on nav-tabs
 $('#driver-seat .nav-tabs .nav-link').each(function() {
   $(this).on('click', function() {
@@ -687,7 +691,8 @@ $('select#finance-provider').on('change', function() {
   } else if ($(this).val() == 'rajhi') {
     $(this).attr('class', 'form-control rajhi')
   }
-})
+});
+
 // ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
