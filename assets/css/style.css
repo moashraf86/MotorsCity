@@ -1483,7 +1483,8 @@ body::-webkit-scrollbar-thumb,
   color: var(--dark-grey);
 }
 
-.search-result-main #results .card .model .year {
+.search-result-main #results .card .model .year,
+#car-details #hero .model .year {
   font-size: 12px;
   font-weight: 800;
   background: var(--sky);
