@@ -698,37 +698,8 @@ $('.single-range-input').on('change', function() {
   let final_result = parseInt($('.card_results #vehicle-price .val').html())  - parseInt($('.card_results #down-payment .val').html())
   $('.card_results #total-price .val').html(final_result);
 
-  //Add Comma to number greater than 1000
-  // function numberWithCommas(number) {
-  //   var parts = number.toString().split(".");
-  //   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  //   return parts.join(".");
-  // }
-
-  // $(document).ready(function() {
-  //   $(".val.comma").each(function() {
-  //     var num = $(this).text();
-  //     var commaNum = numberWithCommas(num);
-  //     $(this).text(commaNum);
-  //   });
-  // });
-
 })
 
-//Add Comma to number greater than 1000
-// function numberWithCommas(number) {
-//     var parts = number.toString().split(".");
-//     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//     return parts.join(".");
-// }
-
-// $(document).ready(function() {
-//   $(".val").each(function() {
-//     var num = $(this).text();
-//     var commaNum = numberWithCommas(num);
-//     $(this).text(commaNum);
-//   });
-// });
 
 // Changee finance-provider logos on Clalulator
 $('select#finance-provider').on('change', function() {
