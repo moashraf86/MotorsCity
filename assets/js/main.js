@@ -670,10 +670,12 @@ $('.calculator_buttons .calc_btn').click(function(e) {
     $('.estimated-title_word').html('Vehicle Price')
     $('html[dir=rtl] .vehicle-price .title').html('القسط الشهري')
     $('html[dir=rtl] .estimated-title_word').html('سعر السيارة')
+    $('.card_estimated-title .final-result .val').html('20000')
     $('.vehicle-price .range-val').html($('.single-range-input.monthly').attr('data-value'))
   } else if ($(this).hasClass('monthly')) {
     $('.vehicle-price .title').html('Vehicle Price')
     $('.estimated-title_word').html('Monthly Payment')
+    $('.card_estimated-title .final-result .val').html('250')
     $('html[dir=rtl] .vehicle-price .title').html('سعر السيارة')
     $('html[dir=rtl] .estimated-title_word').html('القسط الشهري')
     $('.calculator #vehicle-price-slider ').css('display', 'inline-block')
@@ -681,6 +683,52 @@ $('.calculator_buttons .calc_btn').click(function(e) {
     $('.vehicle-price .range-val').html($('.single-range-input.vehicle').attr('data-value'))
   }
 })
+
+// Sync vehicle price with with results card
+$('.single-range-input.vehicle').on('change', function() {
+  $('.card_results #vehicle-price .val').html($(this).val())
+})
+
+$('.single-range-input.down-payment').on('change', function() {
+  $('.card_results #down-payment .val').html($(this).val())
+})
+
+$('.single-range-input').on('change', function() {
+  
+  let final_result = parseInt($('.card_results #vehicle-price .val').html())  - parseInt($('.card_results #down-payment .val').html())
+  $('.card_results #total-price .val').html(final_result);
+
+  //Add Comma to number greater than 1000
+  // function numberWithCommas(number) {
+  //   var parts = number.toString().split(".");
+  //   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  //   return parts.join(".");
+  // }
+
+  // $(document).ready(function() {
+  //   $(".val.comma").each(function() {
+  //     var num = $(this).text();
+  //     var commaNum = numberWithCommas(num);
+  //     $(this).text(commaNum);
+  //   });
+  // });
+
+})
+
+//Add Comma to number greater than 1000
+// function numberWithCommas(number) {
+//     var parts = number.toString().split(".");
+//     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     return parts.join(".");
+// }
+
+// $(document).ready(function() {
+//   $(".val").each(function() {
+//     var num = $(this).text();
+//     var commaNum = numberWithCommas(num);
+//     $(this).text(commaNum);
+//   });
+// });
 
 // Changee finance-provider logos on Clalulator
 $('select#finance-provider').on('change', function() {

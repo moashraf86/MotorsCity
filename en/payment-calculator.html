@@ -202,9 +202,9 @@
                 <div class="down-payment mb-3">
                   <div class="d-flex justify-content-between mb-3">
                     <span>Down Payment</span>
-                    <span class="range-val fw-bold">2500</span>
+                    <span class="range-val fw-bold"></span>
                   </div>
-                  <input class="single-range-input" data-slider-id='down-payment' type="text" data-slider-min="0" data-slider-max="15000" data-slider-step="100" data-slider-value="2500"/>
+                  <input class="single-range-input down-payment" data-slider-id='down-payment' type="text" data-slider-min="0" data-slider-max="15000" data-slider-step="100" data-slider-value="2500"/>
                 </div>
                 <!-- Credit Score -->
                 <div class="group mb-4">
@@ -217,7 +217,7 @@
                 </div>
                 <!-- APR -->
                 <div class="d-flex justify-content-between mb-4">
-                  <span>APR</span>
+                  <span>Annual Percentage Rate (APR)</span>
                   <span class="apr-val fw-bold">6%</span>
                 </div>
                 <!-- Term Length -->
@@ -254,17 +254,17 @@
                 <div class="card_body">
                   <div class="d-flex justify-content-between mb-3">
                     <span>Vehicle Price</span>
-                    <span id="vehicle-price" class="fw-bold">SR<span class="val">25,000</span></span>
+                    <span id="vehicle-price" class="fw-bold">SR<span class="val comma">25000</span></span>
                   </div>
 
                   <div class="d-flex justify-content-between mb-3">
                     <span>Down Payment</span>
-                    <span id="down-payment" class="fw-bold">-SR<span class="val">2,500</span></span>
+                    <span id="down-payment" class="fw-bold">-SR<span class="val comma">2500</span></span>
                   </div>
                   
                   <div class="d-flex justify-content-between mb-3">
                     <span>Total Price</span>
-                    <span id="total-price" class="fw-bold">SR<span class="val">20,000</span></span>
+                    <span id="total-price" class="fw-bold">SR<span class="val comma">20000</span></span>
                   </div>
                   <hr class="my-4">
                   <div class="card_estimated-title text-center">
@@ -292,7 +292,7 @@
                         </div>
                       </div>
                     </div>
-                    <h3 class="final-result mb-3">SR25,000</h3>
+                    <h3 class="final-result mb-3">SR<span class="val comma">250</span></h3>
                   </div>
                   <div class="card_results_buttons">
                     <a class="primary mb-3" href="#">Shop with Budget</a>
