@@ -186,122 +186,124 @@
             <button class="calc_btn active monthly" type="button">Monthly Payment</button>
             <button class="calc_btn vehicle" type="button">Vehicle Price</button>
           </div>
-            <div class="row gap-3 gap-lg-4">
-              <div class="col-12 col-sm-8 offset-sm-2 col-md offset-md-0">
-                <div class="card">
-                  <!-- Vehicle Price -->
-                  <div class="vehicle-price mb-3">
-                    <div class="d-flex justify-content-between mb-3">
-                      <span class="title">Vehicle Price</span>
-                      <span class="range-val fw-bold"></span>
-                  </div>
-                    <input class="single-range-input vehicle" data-slider-id='vehicle-price-slider' type="text" data-slider-min="10000" data-slider-max="150000" data-slider-step="1000" data-slider-value="25000"/>
-                    <input class="single-range-input monthly" data-slider-id='monthly-payment-slider' type="text" data-slider-min="100" data-slider-max="5000" data-slider-step="100" data-slider-value="200"/>
-                  </div>
-                  <!-- Down Payment -->
-                  <div class="down-payment mb-3">
-                    <div class="d-flex justify-content-between mb-3">
-                      <span>Down Payment</span>
-                      <span class="range-val fw-bold">2500</span>
-                    </div>
-                    <input class="single-range-input" data-slider-id='down-payment' type="text" data-slider-min="0" data-slider-max="15000" data-slider-step="100" data-slider-value="2500"/>
-                  </div>
-                  <!-- Credit Score -->
-                  <div class="group mb-4">
-                    <label for="finance-provider" class="mb-3">Finance Provider/Bank</label>
-                    <select class="form-control" name="finance-provider" id="finance-provider" required="">
-                      <option value="jabr" > Al Jabr Finance</option>
-                      <option value="snb" >Saudi National Bank</option>
-                      <option value="rajhi" >Al-Rajhi Bank</option>
-                    </select>
-                  </div>
-                  <!-- APR -->
-                  <div class="d-flex justify-content-between mb-4">
-                    <span>APR</span>
-                    <span class="apr-val fw-bold">6%</span>
-                  </div>
-                  <!-- Term Length -->
-                  <div class="term-length">
-                    <span class="d-block mb-3">Term Length</span>
-                    <div class="input-group months d-flex items justify-content-between">
-                      <label for="12">
-                        <input type="radio" name="month" id="12" class="d-none">
-                        <span>12</span>
-                      </label>
-                      <label for="24">
-                        <input type="radio" name="month" id="24" class="d-none" checked="">
-                        <span>24</span>
-                      </label>
-                      <label for="36">
-                        <input type="radio" name="month" id="36" class="d-none">
-                        <span>36</span>
-                      </label>
-                      <label for="48">
-                        <input type="radio" name="month" id="48" class="d-none">
-                        <span>48</span>
-                      </label>
-                      <label for="60">
-                        <input type="radio" name="month" id="60" class="d-none">
-                        <span>60</span>
-                      </label>
-                    </div>
-                  </div>
+          <div class="row gap-3 gap-lg-4">
+            <div class="col-12 col-sm-8 offset-sm-2 col-md offset-md-0">
+              <div class="card">
+                <!-- Vehicle Price -->
+                <div class="vehicle-price mb-3">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span class="title">Vehicle Price</span>
+                    <span class="range-val fw-bold"></span>
                 </div>
-              </div>
-              <div class="col-12 col-sm-8 offset-sm-2 col-md offset-md-0">
-                <div class="card card_results">
-                  <h6>Summary</h6>
-                  <div class="card_body">
-                    <div class="d-flex justify-content-between mb-3">
-                      <span>Vehicle Price</span>
-                      <span id="vehicle-price" class="fw-bold">SR<span class="val">25,000</span></span>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-3">
-                      <span>Down Payment</span>
-                      <span id="down-payment" class="fw-bold">-SR<span class="val">2,500</span></span>
-                    </div>
-                    
-                    <div class="d-flex justify-content-between mb-3">
-                      <span>Total Price</span>
-                      <span id="total-price" class="fw-bold">SR<span class="val">20,000</span></span>
-                    </div>
-                    <hr class="my-4">
-                    <div class="card_estimated-title text-center">
-                      <div class="d-flex justify-content-center gap-3">
-                        <h6>Estimated <span class="estimated-title_word">Monthly Payment</span></h6>
-                        <i class="bi bi-question-circle-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">How we calculated this</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <p class="mb-0">Estimated budget is based on:</p>
-                                <ul>
-                                  <li class="mb-2">A finance amount of SR25,200, minus estimated KS tax, title, and fees of $2,800</li>
-                                  <li class="mb-2">APR of 4% and a term of 72 months</li>
-                                  <li>Information you provided</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <h3 class="final-result mb-3">SR25,000</h3>
-                    </div>
-                    <div class="card_results_buttons">
-                      <a class="primary mb-3" href="#">Shop with Budget</a>
-                      <a  href="#">Get Pre-appreoved</a>
-                    </div>
+                  <input class="single-range-input vehicle" data-slider-id='vehicle-price-slider' type="text" data-slider-min="10000" data-slider-max="150000" data-slider-step="1000" data-slider-value="25000"/>
+                  <input class="single-range-input monthly" data-slider-id='monthly-payment-slider' type="text" data-slider-min="100" data-slider-max="5000" data-slider-step="100" data-slider-value="200"/>
+                </div>
+                <!-- Down Payment -->
+                <div class="down-payment mb-3">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Down Payment</span>
+                    <span class="range-val fw-bold">2500</span>
+                  </div>
+                  <input class="single-range-input" data-slider-id='down-payment' type="text" data-slider-min="0" data-slider-max="15000" data-slider-step="100" data-slider-value="2500"/>
+                </div>
+                <!-- Credit Score -->
+                <div class="group mb-4">
+                  <label for="finance-provider" class="mb-3">Finance Provider/Bank</label>
+                  <select class="form-control" name="finance-provider" id="finance-provider" required="">
+                    <option value="jabr" > Al Jabr Finance</option>
+                    <option value="snb" >Saudi National Bank</option>
+                    <option value="rajhi" >Al-Rajhi Bank</option>
+                  </select>
+                </div>
+                <!-- APR -->
+                <div class="d-flex justify-content-between mb-4">
+                  <span>APR</span>
+                  <span class="apr-val fw-bold">6%</span>
+                </div>
+                <!-- Term Length -->
+                <div class="term-length">
+                  <span class="d-block mb-3">Term Length</span>
+                  <div class="input-group months d-flex items justify-content-between">
+                    <label for="12">
+                      <input type="radio" name="month" id="12" class="d-none">
+                      <span>12</span>
+                    </label>
+                    <label for="24">
+                      <input type="radio" name="month" id="24" class="d-none" checked="">
+                      <span>24</span>
+                    </label>
+                    <label for="36">
+                      <input type="radio" name="month" id="36" class="d-none">
+                      <span>36</span>
+                    </label>
+                    <label for="48">
+                      <input type="radio" name="month" id="48" class="d-none">
+                      <span>48</span>
+                    </label>
+                    <label for="60">
+                      <input type="radio" name="month" id="60" class="d-none">
+                      <span>60</span>
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-12 col-sm-8 offset-sm-2 col-md offset-md-0">
+              <div class="card card_results">
+                <h6>Summary</h6>
+                <div class="card_body">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Vehicle Price</span>
+                    <span id="vehicle-price" class="fw-bold">SR<span class="val">25,000</span></span>
+                  </div>
+
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Down Payment</span>
+                    <span id="down-payment" class="fw-bold">-SR<span class="val">2,500</span></span>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Total Price</span>
+                    <span id="total-price" class="fw-bold">SR<span class="val">20,000</span></span>
+                  </div>
+                  <hr class="my-4">
+                  <div class="card_estimated-title text-center">
+                    <div class="d-flex justify-content-center gap-3">
+                      <h6>Estimated <span class="estimated-title_word">Monthly Payment</span></h6>
+                      <i class="bi bi-question-circle-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">How we calculated this</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="mb-0">Estimated budget is based on:</p>
+                              <ul>
+                                <li class="mb-2">A finance amount of SR25,200, minus estimated KS tax, title, and fees of $2,800</li>
+                                <li class="mb-2">APR of 4% and a term of 72 months</li>
+                                <li>Information you provided</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 class="final-result mb-3">SR25,000</h3>
+                  </div>
+                  <div class="card_results_buttons">
+                    <a class="primary mb-3" href="#">Shop with Budget</a>
+                    <a  href="#">Get Pre-appreoved</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mt-4">*Estimated payments and terms shown are estimation only and do not constitute an actual offer or commitment to finance by the finance provider.</p>
+          <p>*These estimates do not include tax, registration fees, or any other fees that may be imposed by a governmental agency in connection with the sale and financing of the vehicle.</p>
         </div>
       </section>
       <!-- END CALCULATOR -->
