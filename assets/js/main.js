@@ -712,6 +712,37 @@ $('select#finance-provider').on('change', function() {
   }
 });
 
+//close menu when user click close icon
+$('.navbar_close-icon').click(function() {
+  $('.navbar-toggler').trigger('click')
+});
+
+// Close mobile menu when user click any where except inside the menu
+$('.navbar-collapse').click(function(e) {
+  $('.navbar-toggler').trigger('click');
+  $('body, body .wrapper').css('overflow-y', 'auto')
+})
+
+$('.navbar-nav').click(function(e) {
+    e.stopPropagation()
+})
+
+//close mobile menu when user clicks any link on the menu
+$('.navbar-nav .nav-link:not(".dropdown-toggle")').click(function() {
+  $('.navbar-toggler').trigger('click')
+  $('body, body .wrapper').css('overflow-y', 'auto')
+})
+
+//set active class to nav-links when user clicks on it
+$('.navbar-nav .nav-link').click(function() {
+  $(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active')
+});
+
+//stop scrolling-y when user opens the mobile menu
+$('.navbar-toggler').click(function() {
+  $('body, body .wrapper').css('overflow-y', 'hidden')
+})
+
 // ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')

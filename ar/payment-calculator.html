@@ -37,19 +37,38 @@
             </button>
             <!-- Nav items -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-xl-4 pt-2 pt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">سيارات للبيع</a>
+              <ul class="navbar-nav mb-2 mb-lg-0  gap-xl-4 pt-lg-0">
+                <li class="nav-item d-lg-none">
+                  <!-- LOGO -->
+                  <a class="nav-link navbar-brand justify-content-center m-0" href="./index.html">
+                    <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+                  </a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <div class="nav-link d-block">
+                    <h5 class="mb-0">أهلا, <span class="full-name">محمد زين</span></h5>
+                  <span class="email">mz@gmail.com</span></div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">بيع سيارتك </a>
+                  <a class="nav-link active" href="#">
+                    <i class="bi bi-search d-lg-none"></i> سيارات للبيع
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">التمويل</a>
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-shop d-lg-none"></i>
+                    بيع سيارتك
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-bar-chart-line d-lg-none"></i>
+                    التمويل
+                  </a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    ليش موتروزسيتي؟
+                    <i class="bi bi-question-circle d-lg-none"></i>ليش موتروزسيتي؟
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">رابط</a></li>
@@ -59,7 +78,7 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    المصادر
+                    <i class="bi bi-journals d-lg-none"></i> المصادر
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">رابط</a></li>
@@ -67,6 +86,25 @@
                     <li><a class="dropdown-item" href="#">رابط</a></li>
                   </ul>
                 </li>
+                <div class="navbar_menu-btns d-flex flex-wrap gap-4 mt-auto d-lg-none">
+                  <button class="btn tel">
+                    <a href="tel:+01064136500">
+                      <i class="bi bi-telephone"></i>
+                      01064136500
+                    </a>
+                  </button>
+                  <button class="btn btn-primary">
+                    <a href="#">تسجيل دخول</a>
+                  </button>
+                  <button class="btn btn-secondary">
+                    <span class="bg">
+                      <a href="#">إنشاء حساب</a>
+                    </span>
+                  </button>
+                </div>
+                <!-- <span class="navbar_close-icon d-lg-none">
+                  <i class="bi bi-x-lg"></i>
+                </span> -->
               </ul>
             </div>
             <!-- User info -->
@@ -178,7 +216,7 @@
       </header>
       <!-- END HEADER -->
 
-            <!-- START CALCULATOR -->
+      <!-- START CALCULATOR -->
       <section class="calculator">
         <div class="container-md">
           <h2 class="mb-4">إحسب سعر سيارتك</h2>
