@@ -343,6 +343,15 @@ input[type=range]:focus::-moz-range-track {
   color: var(--sky)
 }
 
+#header .navbar-nav .nav-link.dropdown-toggle .bi-chevron-down{
+  transition: all 300ms ease-in-out;
+}
+
+#header .navbar-nav .nav-link.dropdown-toggle.show .bi-chevron-down{
+  transform: rotate(180deg);
+  transition: all 300ms ease-in-out;
+}
+
 #header .navbar-nav.register .nav-link.signup {
   background-color: var(--purple);
   color: var(--white);
@@ -395,11 +404,11 @@ input[type=range]:focus::-moz-range-track {
 
 #header .navbar-nav .dropdown-menu .dropdown-item:hover{
   background-color: #e7eff3;
-  color: var(--dark-grey);
+  color: var(--sky);
 }
 
 #header .navbar-nav .dropdown-menu .dropdown-item:active{
-  background-color: var(--purple);
+  background-color: var(--sky);
   color: var(--white);
 }
 
@@ -4561,10 +4570,10 @@ html[dir=rtl] .calculator select#finance-provider {
 /* TABLET */
 @media screen  and (max-width: 1200px){
 
-  #header .navbar-nav .nav-link,
+  /* #header .navbar-nav .nav-link,
   #header .right-nav .dropdown-toggle span {
     font-size: 14px;
-  }
+  } */
 
   #driver-seat .tab-content .finance .swiper-slide h3{
     font-size: 30px;
@@ -4597,10 +4606,6 @@ html[dir=rtl] .calculator select#finance-provider {
     right: -70px;
   }
 
-  html[dir=rtl] #header .navbar-nav .nav-link,
-  html[dir=rtl] #header .right-nav .dropdown-toggle span {
-    font-size: 12px;
-  }
 }
 
 
@@ -4675,7 +4680,7 @@ html[dir=rtl] .calculator select#finance-provider {
     z-index: 9999;
     overflow-y: auto;
     transform: translateX(-130%);
-    transition: all 300ms ease-in-out;
+    /* transition: all 300ms ease-in-out; */
     left: 0;
     background: linear-gradient(to bottom, #DFEBF6, #FFF);
     border-bottom: 4px solid var(--sky);
@@ -4695,8 +4700,14 @@ html[dir=rtl] .calculator select#finance-provider {
   .navbar .navbar-collapse .navbar-nav .nav-item {
     width: 100%;
   }
+  
+  .navbar .navbar-collapse .navbar-nav .nav-item a,
+  .navbar .navbar-collapse .navbar-nav .top-btns a {
+    font-size: 14px;
+  }
 
-  .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  .navbar .navbar-collapse .navbar-nav .nav-item .nav-link,
+  .navbar .navbar-collapse .navbar-nav .radio-group {
     width: 100%;
     padding: 15px 20px;
     border-bottom: 1px solid #D8E6F2;
@@ -4704,6 +4715,35 @@ html[dir=rtl] .calculator select#finance-provider {
     gap: 10px;
     align-items: center;
     border-left: 3px solid transparent;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .radio-group .form-check-label{
+    font-weight: 700;
+    color: var(--dark-grey);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .top-btns{
+    padding: 15px 20px;
+    border-bottom: 1px solid #D8E6F2;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .top-btns a{
+    padding: 5px 10px;
+    border: 1px solid var(--sky);
+    border-radius: 3px;
+    color: var(--sky);
+    display: flex;
+    gap: 7px;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .top-btns a:hover{
+    background-color: var(--sky);
+    color: var(--white);
   }
 
   html[dir=rtl] .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {

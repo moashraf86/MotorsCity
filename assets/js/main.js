@@ -734,7 +734,7 @@ $('.navbar-nav .nav-link:not(".dropdown-toggle")').click(function() {
 })
 
 //set active class to nav-links when user clicks on it
-$('.navbar-nav .nav-link').click(function() {
+$('.navbar-nav .nav-link:not(".info")').click(function() {
   $(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active')
 });
 
