@@ -988,7 +988,8 @@ body::-webkit-scrollbar-thumb,
   /* transform: translateY(-70%); */
 }
 
-#mockup::before {
+#mockup::before,
+.about-us .features.values::before {
   position: absolute;
   content: '';
   top: 50px;
@@ -999,7 +1000,10 @@ body::-webkit-scrollbar-thumb,
   background-size: contain;
   z-index: 999;
 }
-#mockup::after, .why-motors #home::after {
+
+#mockup::after, .why-motors #home::after ,
+.about-us #home::after ,
+.about-us .features.values::after {
   position: absolute;
   content: '';
   top: 50%;
@@ -1010,6 +1014,10 @@ body::-webkit-scrollbar-thumb,
   background: url('../img/bg-pattern-5.png') no-repeat;
   background-size: cover;
   z-index: 1;
+}
+.about-us .features.values::after,
+.about-us .features.values::before  {
+  width: 300px;
 }
 
 #mockup h2,
@@ -4246,7 +4254,8 @@ input.star:hover ~ label.star:before {
 
 
 /********************* Why Motors ***********************/
-.why-motors #home {
+.why-motors #home,
+.about-us #home {
   background-image: url('../img/curved-bg.svg');
   background-color: transparent;
   background-size: cover;
@@ -4255,37 +4264,47 @@ input.star:hover ~ label.star:before {
   /* min-height: 100vh; */
 }
 
-.why-motors .logo-pattern img {
+.why-motors .logo-pattern img,
+.about-us .logo-pattern img {
   max-width: 100px;
   filter: opacity(.2);
 }
 
 .why-motors #home h1,
+.about-us #home h1,
 .why-motors #home p,
-.why-motors #home span {
+.about-us #home p,
+.why-motors #home span,
+.about-us #home span {
   color: #FFF
 }
 
-.why-motors #home span.title {
+.why-motors #home span.title,
+.about-us #home span.title {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.why-motors .btn-group .btn {
+.why-motors .btn-group .btn,
+.about-us .btn-group .btn {
   filter: none
 }
 
-.why-motors .btn-group .btn:hover {
+.why-motors .btn-group .btn:hover ,
+.about-us .btn-group .btn:hover {
   filter: drop-shadow(0 2px rgba(0, 0, 0, .25))
 }
 
 .why-motors .home-img,
-.why-motors .home-img img{
+.about-us .home-img,
+.why-motors .home-img img,
+.about-us .home-img img{
   position: relative;
   z-index: 100;
 }
 
-.why-motors .home-img::after {
+.why-motors .home-img::after,
+.about-us .home-img::after {
   position: absolute;
   content: '';
   top: 25px;
@@ -4297,7 +4316,8 @@ input.star:hover ~ label.star:before {
   z-index: 1;
 }
 
-.why-motors .features {
+.why-motors .features,
+.about-us .features {
   padding: 100px 0;
 }
 
@@ -4323,12 +4343,71 @@ input.star:hover ~ label.star:before {
   padding: 5px 0;
 }
 
-.why-motors .features-content ul li p{
+.why-motors .features-content ul li p,
+.about-us .features-content ul li p{
   margin-bottom: 0;
 }
 
 .why-motors .features-content ul li p{
   margin-bottom: 0;
+}
+
+.about-us .features ul li{
+  padding: 25px;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.08);
+}
+
+.about-us .features ul li img{
+  width: 45px;
+}
+
+.about-us .features.values{
+  position: relative;
+  background-color: var(--purple);
+}
+
+.about-us .features.values .head h3,
+.about-us .features.values .head p{
+  color: #fff;
+}
+
+.about-us .features ul li .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #EBEBEB;
+  border-radius: 50%;
+  color: var(--purple);
+}
+
+.about-us .accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.about-us .accordion-item button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about-us .accordion-item button,
+.about-us .accordion-body{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.about-us .accordion-button:not(.collapsed),
+.about-us .accordion-button:focus {
+  box-shadow: none;
+  background-color: initial;
+}
+
+.about-us .FAQ {
+  padding: 100px 0;
 }
 /********************* Why Motors ***********************/
 
@@ -4342,6 +4421,7 @@ footer {
 #search footer,
 #reservation footer,
 #order-confirmed footer,
+.about-us footer,
 .why-motors footer {
   background-color: var(--white-100);
 }
@@ -4349,6 +4429,7 @@ footer {
 #search footer .sign-up .form-control,
 #reservation footer .sign-up .form-control,
 #order-confirmed footer .sign-up .form-control,
+.about-us footer .sign-up .form-control,
 .why-motors footer .sign-up .form-control{
   background-color: var(--white-100);
   border-bottom-color: #bcbcbc;
@@ -5056,7 +5137,8 @@ html[dir=rtl] .calculator select#finance-provider {
   #mockup h2 span {
     font-size: 24px;
   }
-  #mockup::before {
+  #mockup::before,
+  .about-us .features.values::before {
     width: 300px;
   }
 
@@ -5319,7 +5401,8 @@ html[dir=rtl] .calculator select#finance-provider {
     margin: auto;
   }
 
-  #mockup::after {
+  #mockup::after,
+  .about-us .features.values::after {
     display: none;
   }
 
