@@ -1015,6 +1015,14 @@ body::-webkit-scrollbar-thumb,
   background-size: cover;
   z-index: 1;
 }
+
+html[dir=rtl] .why-motors #home::after ,
+html[dir=rtl] .about-us #home::after {
+  right: initial;
+  left: 0;
+  transform: translateY(180deg);
+}
+
 .about-us .features.values::after,
 .about-us .features.values::before  {
   width: 300px;
@@ -4509,8 +4517,14 @@ html[dir=rtl] .dropdown-menu[data-bs-popper] {
   left: 0;
   right: initial;
 }
+
 html[dir=rtl] #home {
   background-image: url('../img/home-bg-ar.png');
+}
+
+html[dir=rtl] .why-motors #home,
+html[dir=rtl] .about-us #home {
+  background-image: url('../img/curved-bg.svg');
 }
 
 html[dir=rtl] #home .home-img img{
