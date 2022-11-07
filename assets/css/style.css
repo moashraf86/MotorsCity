@@ -4309,6 +4309,7 @@ input.star:hover ~ label.star:before {
 .about-us .home-img img{
   position: relative;
   z-index: 100;
+  border-radius: 16px;
 }
 
 .why-motors .home-img::after,
@@ -4341,6 +4342,10 @@ input.star:hover ~ label.star:before {
   align-items: flex-start;
   column-gap: 25px;
   margin-bottom: 35px;
+}
+
+.why-motors .features-content h5 span{
+  font-weight: 400;
 }
 
 .why-motors .features-content ul li:last-of-type {
