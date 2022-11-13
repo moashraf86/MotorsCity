@@ -4275,7 +4275,6 @@ input.star:hover ~ label.star:before {
 .why-motors .logo-pattern img,
 .about-us .logo-pattern img {
   max-width: 100px;
-  filter: opacity(.2);
 }
 
 .why-motors #home h1,
@@ -4370,6 +4369,7 @@ input.star:hover ~ label.star:before {
   border-radius: 16px;
   background-color: var(--white);
   box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.08);
+  height: 100%;
 }
 
 .about-us .features ul li img{
@@ -4534,6 +4534,10 @@ html[dir=rtl] .about-us #home {
 
 html[dir=rtl] #home .home-img img{
   transform: scaleX(-1);
+}
+
+html[dir=rtl] .why-motors #home .home-img img{
+  transform: scaleX(1);
 }
 
 html[dir=rtl] #testimonials .swiper .review {
