@@ -4536,7 +4536,8 @@ html[dir=rtl] #home .home-img img{
   transform: scaleX(-1);
 }
 
-html[dir=rtl] .why-motors #home .home-img img{
+html[dir=rtl] .why-motors #home .home-img img,
+html[dir=rtl] .about-us #home .home-img img{
   transform: scaleX(1);
 }
 
