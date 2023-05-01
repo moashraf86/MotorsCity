@@ -90,6 +90,12 @@ ul {
   direction: rtl;
 }
 
+.navbar-collapse.collapsing {
+  height: inherit;
+  overflow: inherit;
+  transition: inherit;
+}
+
 .btn {
   color: var(--white);
   font-weight: 800;
@@ -3628,7 +3634,7 @@ html[dir=rtl] .about-us #home::after {
 #my-profile .profile form .group,
 #contact .contact-us form .group,
 #request-vehicle-info .request-info form .group{
-  flex: 1;
+  flex-grow: 1;
 }
 
 #my-profile .profile form label{
@@ -5728,10 +5734,6 @@ html[dir=rtl] .calculator select#finance-provider {
   #finance-form .features .card {
     padding: 25px;
     border-radius: 35px;
-  }
-
-  #contact .contact-us form {
-    padding: 20px;
   }
 
   #contact .contact_card .phone a {
