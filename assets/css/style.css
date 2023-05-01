@@ -86,6 +86,10 @@ ul {
   margin: 0;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 .btn {
   color: var(--white);
   font-weight: 800;
@@ -1490,7 +1494,8 @@ html[dir=rtl] .about-us #home::after {
 }
 
 .search-result-main #results .card,
-#favorite-cars #results .card{
+#favorite-cars #results .card,
+#request-vehicle-info .request-info .car-card{
   box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 15%);
   border-radius: 10px;
   border: none;
@@ -1503,7 +1508,8 @@ html[dir=rtl] .about-us #home::after {
 }
 
 .search-result-main #results .card .specifications,
-#favorite-cars #results .card .specifications{
+#favorite-cars #results .card .specifications,
+#request-vehicle-info .request-info .car-card .specifications{
   font-size: 12px;
   color: var(--dark-grey);
 }
@@ -1525,13 +1531,15 @@ html[dir=rtl] .about-us #home::after {
 }
 
 .search-result-main #results .card .compare .text,
-#favorite-cars #results .card .compare .text{
+#favorite-cars #results .card .compare .text,
+#request-vehicle-info .request-info .car-card .compare .text{
   font-size: 12px;
   color: var(--gray);
 }
 
 .search-result-main #results .card .compare input[type=checkbox] + span ,
-#favorite-cars #results .card .compare input[type=checkbox] + span {
+#favorite-cars #results .card .compare input[type=checkbox] + span,
+#request-vehicle-info .request-info .car-card .compare input[type=checkbox] + span {
   width: 12px;
   height: 12px;
   display: block;
@@ -1541,7 +1549,8 @@ html[dir=rtl] .about-us #home::after {
 }
 
 .search-result-main #results .card .compare input[type=checkbox]:checked + span::after,
-#favorite-cars #results .card .compare input[type=checkbox]:checked + span::after {
+#favorite-cars #results .card .compare input[type=checkbox]:checked + span::after,
+#request-vehicle-info .request-info .car-card .compare input[type=checkbox]:checked + span::after {
   position: absolute;
   content: '';
   top: 2px;
@@ -1553,33 +1562,38 @@ html[dir=rtl] .about-us #home::after {
 }
 
 .search-result-main #results .card .specifications ,
-#favorite-cars #results .card .specifications {
+#favorite-cars #results .card .specifications,
+#request-vehicle-info .request-info .car-card .specifications {
   border-bottom: 1px solid #ededed;
 }
 
 .search-result-main #results .card .price .total,
-#favorite-cars #results .card .price .total {
+#favorite-cars #results .card .price .total,
+#request-vehicle-info .request-info .car-card .price .total {
   font-size: 20px;
   font-weight: 800;
   color: var(--dark-grey);
 }
 
 .search-result-main #results .card .price .monthly ,
-#favorite-cars #results .card .price .monthly {
+#favorite-cars #results .card .price .monthly,
+#request-vehicle-info .request-info .car-card .price .monthly {
   font-size: 14px;
   font-weight: 700;
   color: var(--purple);
 }
 
 .search-result-main #results .card .price .cash ,
-#favorite-cars #results .card .price .cash {
+#favorite-cars #results .card .price .cash,
+#request-vehicle-info .request-info .car-card .price .cash {
   font-size: 12px;
   font-weight: 400;
   color: var(--gray);
 }
 
 .search-result-main #results .card .adjust-terms,
-#favorite-cars #results .card .adjust-terms {
+#favorite-cars #results .card .adjust-terms,
+#request-vehicle-info .request-info .car-card .adjust-terms {
   background-color: var(--success);
   padding: 8px 10px;
   text-align: center;
@@ -3596,7 +3610,8 @@ html[dir=rtl] .about-us #home::after {
 
 #my-profile .profile,
 #contact .contact-us,
-#payment-calculator .calculator {
+#payment-calculator .calculator,
+#request-vehicle-info .request-info {
   padding: 50px 0;
   background-color: var(--white-100);
 }
@@ -3611,7 +3626,8 @@ html[dir=rtl] .about-us #home::after {
 }
 
 #my-profile .profile form .group,
-#contact .contact-us form .group{
+#contact .contact-us form .group,
+#request-vehicle-info .request-info form .group{
   flex: 1;
 }
 
@@ -3631,7 +3647,8 @@ html[dir=rtl] .about-us #home::after {
 
 #my-profile .form-control,
 #contact .contact-us  .form-control,
-.calculator  .form-control{
+.calculator  .form-control,
+.request-info  .form-control{
   border: 1px solid #ededed;
   padding: 10px 15px;
   font-weight: 600;
@@ -4083,8 +4100,8 @@ input.star:hover ~ label.star:before {
 /********************* Finance Form ***********************/
 
 
-/********************* Conatact Us  ***********************/
-#contact .contact-us form {
+/********************* Contact Us  ***********************/
+#contact .contact-us .card {
   padding: 30px;
 }
 #contact .contact-us form label{
@@ -4141,7 +4158,7 @@ input.star:hover ~ label.star:before {
 #contact .whatsapp a{
   color: var(--sky);
 }
-/********************* Conatact Us  ***********************/
+/********************* Contact Us  ***********************/
 
 
 
@@ -4422,7 +4439,28 @@ input.star:hover ~ label.star:before {
 .about-us .FAQ {
   padding: 100px 0;
 }
-/********************* Why Motors ***********************/
+/************************** Why Motors ****************************/
+
+/********************* Request Vehicle Info  ***********************/
+#request-vehicle-info  .request-info #request-info {
+  padding: 30px;
+}
+
+#request-vehicle-info .request-info #request-info label{
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: var(--dark-grey)
+}
+
+#request-vehicle-info .request-info #request-info .form-check label{
+  font-size: 14px;
+}
+
+#request-vehicle-info .request-info #request-info .form-check input{
+  min-width: 15px;
+}
+
+/********************* Request Vehicle Info  ***********************/
 
 
 /********************* Footer ***********************/
@@ -5895,5 +5933,22 @@ html[dir=rtl] .calculator select#finance-provider {
 
   #my-profile .profile form{
     gap: 10rem;
+  }
+}
+
+/* only for REQUEST VEHICLE INFO PAGE */
+@media (min-width: 567px) and (max-width: 991px) {
+  #request-vehicle-info .request-info .car-card{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #request-vehicle-info .request-info .car-card .card-head{
+    width: 200px;
+  }
+
+  #request-vehicle-info .request-info .car-card .card-head img{
+    height: 100%;
+    object-fit: cover;
   }
 }
