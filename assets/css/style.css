@@ -4567,7 +4567,7 @@ span.category,
   margin-bottom: 32px;
 }
 
-#news .recent-posts_container .post:not(.main) a {
+#news .recent-posts_container .post:not(.main) {
   display: flex;
   gap: 24px;
 }
@@ -6102,7 +6102,7 @@ html[dir=rtl] .calculator select#finance-provider {
   }
 
   
-  #news .recent-posts_container .post:not(.main)  a{
+  #news .recent-posts_container .post:not(.main) {
     display: block;
     gap: 24px;
   }
