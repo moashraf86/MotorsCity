@@ -4636,6 +4636,10 @@ span.category,
   text-align: center;
 }
 
+#post .post_date {
+  color: var(--purple);
+  font-weight: 600;
+}
 #post .post_header .post_categories {
   justify-content: center;
 }
