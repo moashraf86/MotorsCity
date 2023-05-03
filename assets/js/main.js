@@ -743,6 +743,15 @@ $('.navbar-toggler').click(function() {
   $('body, body .wrapper').css('overflow-y', 'hidden')
 })
 
+//copy link button change icon after clicked
+$('.post_share-icons .copy-link').on('click', function() {
+  $(this).addClass('checked')
+  setTimeout(() => {
+    $(this).removeClass('checked')
+  },2000)
+}) 
+
+
 // ALYWAYS BE ON BOTTOM OF THE PAGE
 // Initialize popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')

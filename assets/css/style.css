@@ -14,7 +14,9 @@
   --white-100 : #F5F5F5;
   --white-200 : #F6F6F6;
   --gray      : #555555;
+  --gray      : #667085;
   --dark-grey : #353535;
+  --dark-grey : #101828;
   --green     : #4fb5ae;
   --success   : #00b362;
   --completed : #0095b3;
@@ -2361,7 +2363,7 @@ html[dir=rtl] .about-us #home::after {
 }
 #car-details #dent-map map area[data-num=two] {
   top: 50%;
-  right: 4%;
+  right: 3%;
 }
 #car-details #dent-map map area[data-num=three] {
   top: 50%;
@@ -4469,6 +4471,345 @@ input.star:hover ~ label.star:before {
 /********************* Request Vehicle Info  ***********************/
 
 
+/********************* NEWS PAGE  ***********************/
+#news .intro {
+  background-color: var(--white-100);
+  padding: 50px 0;
+  text-align: center;
+}
+
+#news .post a {
+  color: var(--gray);
+  font-weight: initial;
+}
+
+#news a.category,
+#post a.category,
+span.category,
+#post .tag {
+  display: inline-block;
+  font-size: 14px;
+  padding: 4px 12px;
+  color: var(--purple) !important;
+  background-color: #e8e0f5;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+#news .intro .category {
+  margin-bottom: 16px;
+}
+
+#news #news-search {
+  max-width: 520px;
+  margin: auto;
+}
+
+#news #news-search .input-group {
+  background-color: #FFF;
+  border-radius: 8px;
+  border: 1px solid #D0D5DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+#news .input-group-text,
+#news .form-control {
+  background: none;
+}
+
+#news .input-group-text .bi,
+#news .form-control::placeholder,
+#news .form-control::-webkit-input-placeholder {
+  color: var(--gray)
+}
+
+#news .recent-posts {
+  padding: 96px 0 48px 0;
+}
+
+#news .post_head {
+  margin-bottom: 32px;
+}
+
+#news .post_head img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+#news .post_meta {
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#news .post_title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#news .post_title .bi {
+  font-size: 36px;
+  color: var(--dark-grey);
+  transform: rotate(-45deg);
+}
+
+.post_categories,
+.post_tags {
+  display: flex;
+  gap: 10px;
+}
+
+#news  .post {
+  margin-bottom: 32px;
+}
+
+#news .recent-posts_container .post:not(.main) a {
+  display: flex;
+  gap: 24px;
+}
+
+#news .post:not(.main):first-of-type {
+  margin-bottom: 32px;
+}
+
+#news .recent-posts_container .post:not(.main) .post_head {
+  flex: 1 0 50%;
+  margin-bottom: 0;
+}
+
+#news .recent-posts_container .post .post_head img {
+  max-height: 188px;
+  object-fit: cover;
+}
+
+#news .recent-posts_container .post:not(.main) .post_head img {
+  width: 100%;
+  height: 100%;
+}
+
+#news .all-posts_container {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #EAECF0;
+}
+
+#news .results-pagination {
+  padding: 30px 0;
+}
+
+#news .results-pagination .pag{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  column-gap: 10px;
+  color: var(--gray);
+}
+
+#news .results-pagination .pag:hover{
+  color: var(--sky);
+}
+
+#news .results-pagination .pag .bi{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#news .results-pagination .pages a span{
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+#news .results-pagination .pages a.active span{
+  background-color: #f9f5f5;
+  color: var(--gray);
+}
+/********************* NEWS PAGE  ***********************/
+
+/********************* POST PAGE  ***********************/
+#post .post_header {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#post .post_header .post_categories {
+  justify-content: center;
+}
+
+#post .post_header .post_thumbnail {
+  margin-top: 32px;
+}
+
+#post .post_header .post_thumbnail img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+#post .post_content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+  border-bottom: 2px solid #EAECF0;
+}
+
+#post .post_content h4{
+  margin-bottom: 24px;
+}
+
+#post .post_content p{
+  font-size: 18px;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+#post .post_content a{
+  text-decoration: underline;
+  color: var(--sky);
+}
+
+#post .post_content img{
+  width: 100%;
+  max-height: 480px;
+  margin-bottom: 48px;
+}
+
+#post .post_content blockquote{
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-grey);
+  border-left: 2px solid var(--purple);
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+#post .post_content q {
+  display: block;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+#post .post_content blockquote figure{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray);
+  position: relative;
+  padding-left: 15px;
+}
+
+#post .post_content blockquote figure::before{
+  position: absolute;
+  content: '— ';
+  top: -2px;
+  left: 0;
+}
+
+#post .post_content ol {
+  padding-left: 1rem;
+  margin-bottom: 32px;
+}
+
+#post .post_content ol li{
+  margin-bottom: 5px;
+}
+
+#post .post_content .post_conclusion {
+  background-color: #F9FAFB;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+#post .post_content .post_conclusion p:last-of-type {
+  margin-bottom: 0;
+}
+
+#post .post_share-block{
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px 12px;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+
+#post .post_share-block,
+#post .post_share-block .post_auther,
+#post .post_share-block .post_share-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#post .post_share-block .post_auther{
+  column-gap: 16px;
+}
+
+#post .post_share-block .post_auther .auther_name{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+#post .post_share-icons {
+  column-gap: 12px;
+}
+
+#post .post_share-block .copy-link,
+#post .post_share-block .share-icon {
+  padding: 10px 16px;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);;
+}
+
+#post .post_share-block .copy-link {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  color: var(--dark-grey);
+  cursor: pointer;
+}
+
+#post .post_share-block .copy-link span{
+  font-weight: 500;
+  color: var(--dark-grey);
+}
+
+#post .post_share-block .share-icon {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+}
+
+#post .post_share-block .copy-link abbr{
+  cursor: pointer;
+}
+
+#post .post_share-block .copy-link #check{
+  display: none;
+}
+
+#post .post_share-block .copy-link.checked #check{
+  display: inline-block;
+}
+
+#post .post_share-block .copy-link.checked #clipboard{
+  display: none;
+}
+
+#post .tags {
+  margin-top: 32px;
+}
+/********************* POST PAGE  ***********************/
+
+
 /********************* Footer ***********************/
 footer {
   padding: 100px 0 0;
@@ -4479,7 +4820,8 @@ footer {
 #reservation footer,
 #order-confirmed footer,
 .about-us footer,
-.why-motors footer {
+.why-motors footer,
+#news footer {
   background-color: var(--white-100);
 }
 
@@ -4487,7 +4829,8 @@ footer {
 #reservation footer .sign-up .form-control,
 #order-confirmed footer .sign-up .form-control,
 .about-us footer .sign-up .form-control,
-.why-motors footer .sign-up .form-control{
+.why-motors footer .sign-up .form-control,
+#news footer .sign-up .form-control {
   background-color: var(--white-100);
   border-bottom-color: #bcbcbc;
 }
@@ -5379,6 +5722,12 @@ html[dir=rtl] .calculator select#finance-provider {
     line-height: 45px;
   }
 
+  #news .post:not(.main) .post_head img {
+    height: 180px;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
   footer .sign-up  {
     width: 100%;
   }
@@ -5748,6 +6097,21 @@ html[dir=rtl] .calculator select#finance-provider {
     padding: 40px 0
   }
 
+  
+  #news .recent-posts_container .post:not(.main)  a{
+    display: block;
+    gap: 24px;
+  }
+
+  #news .post .post_head img {
+    max-height: 225px;
+    object-fit: cover;
+  }
+
+  #news .recent-posts_container .post:not(.main) .post_head {
+    margin-bottom: 24px;
+  }
+
   footer .sign-up .btn {
     width: 100%;
   }
@@ -5867,6 +6231,12 @@ html[dir=rtl] .calculator select#finance-provider {
     flex: 1;
     padding: 12px;
     font-size: 14px;
+  }
+
+  #news .post .post_head img {
+    height: 180px;
+    max-height: 180px;
+    object-fit: cover;
   }
 
   html[dir=rtl] #trusted .box:first-of-type {
