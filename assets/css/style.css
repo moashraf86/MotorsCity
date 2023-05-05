@@ -4825,7 +4825,8 @@ footer {
 #order-confirmed footer,
 .about-us footer,
 .why-motors footer,
-#news footer {
+#news footer,
+#post footer {
   background-color: var(--white-100);
 }
 
@@ -4834,7 +4835,8 @@ footer {
 #order-confirmed footer .sign-up .form-control,
 .about-us footer .sign-up .form-control,
 .why-motors footer .sign-up .form-control,
-#news footer .sign-up .form-control {
+#news footer .sign-up .form-control,
+#post footer .sign-up .form-control {
   background-color: var(--white-100);
   border-bottom-color: #bcbcbc;
 }
@@ -5112,6 +5114,23 @@ html[dir=rtl] .calculator_buttons .calc_btn:last-of-type {
 html[dir=rtl] .calculator .modal-body {
   text-align: right;
 }
+
+html[dir=rtl] #post .post_content blockquote {
+  padding-left: 0;
+  padding-right: 20px;
+  border-left: 0;
+  border-right: 2px solid var(--purple);
+}
+
+html[dir=rtl] #post .post_content blockquote figure{
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+#post .post_content blockquote figure::before{
+  right: 0;
+}
+
 
 @media (min-width: 576px)
 {

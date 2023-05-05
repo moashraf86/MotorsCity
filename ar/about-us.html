@@ -22,222 +22,217 @@
 
 <body>
   <div class="wrapper about-us">
-    <!-- START HEADER -->
-    <header id="header">
-      <div class="container-fluid">
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
-          <!-- LOGO -->
-          <a class="navbar-brand me-0 order-1 order-lg-0" href="./index.html">
-            <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
-          </a>
-          <!-- Menu Toggler Button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
-          </button>
-          <!-- Nav items -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0  gap-xl-4 pt-lg-0">
-              <li class="nav-item d-lg-none">
-                <!-- LOGO -->
-                <a class="nav-link navbar-brand justify-content-center m-0" href="./index.html">
-                  <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
-                </a>
-              </li>
-              <li class="nav-item d-lg-none">
-                <div class="nav-link d-block">
-                  <h5 class="mb-0">أهلا, <span class="full-name">محمد زين</span></h5>
-                  <span class="email">mz@gmail.com</span>
-                </div>
-              </li>
-              <div class="top-btns d-flex justify-content-between w-100 gap-2 flex-wrap d-lg-none">
-                <a href="../en/my-orders.html">
-                  <i class="bi bi-cart"></i>
-                  طلباتي
-                </a>
-                <a href="../en/my-orders.html">
-                  <i class="bi bi-heart"></i>
-                  المفضلة
-                </a>
-                <a href="../en/my-orders.html" class="justify-content-center text-center flex-grow-1">
-                  <i class="bi bi-journal-text"></i>
-                  طلبات التمويل
-                </a>
-              </div>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <i class="bi bi-search d-lg-none"></i> سيارات للبيع
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <i class="bi bi-bank d-lg-none"></i>
-                  التمويل
-                  <i class="bi bi-chevron-down d-lg-none me-auto"></i>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="../en/finance-form.html">1. طلب تمويل</a></li>
-                  <li><a class="dropdown-item" href="../en/payment-calculator.html"> 2. حاسبة التمويل</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-question-circle d-lg-none"></i>ليش موتروزسيتي؟
-                </a>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-journals d-lg-none"></i> المصادر
-                </a>
-              </li>
-              <div class="radio-group d-flex gap-3 align-items-center d-lg-none">
-                <div class="form-check d-flex gap-2 ps-0">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    إنجليزي
-                  </label>
-                </div>
-                <div class="form-check d-flex gap-2">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    عربي
-                  </label>
-                </div>
-              </div>
-              <div class="navbar_menu-btns d-flex flex-wrap gap-4 mt-auto d-lg-none">
-                <button class="btn tel">
-                  <a href="tel:+01064136500">
-                    <i class="bi bi-telephone"></i>
-                    01064136500
-                  </a>
-                </button>
-                <button class="btn btn-primary">
-                  <a href="#">تسجيل دخول</a>
-                </button>
-                <button class="btn btn-secondary">
-                  <span class="bg">
-                    <a href="#">إنشاء حساب</a>
-                  </span>
-                </button>
-              </div>
-              <!-- <span class="navbar_close-icon d-lg-none">
-                      <i class="bi bi-x-lg"></i>
-                    </span> -->
-            </ul>
-          </div>
-          <!-- User info -->
-          <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
-            <!-- VISIBLE IF USER HAVE SIGNED UP -->
-            <div class="dropdown">
-              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="user">
-                  <i class="bi bi-person"></i>
-                </span>
-                <span class="d-none d-lg-inline-block ms-2"> هلا, محمد</span>
-              </a>
-              <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item head gap-3" href="#">
-                    <div class="dropdown-head_title">
-                      <h6 class="full-name mb-0">محمد زين</h6>
-                      <span class="email">example@gmail.com</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./my-orders.html">
-                    <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./favorite-cars.html">
-                    <span class="icon"><i class="bi bi-heart"></i></span>
-                    السيارات المفضلة
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-bank"></i></span>
-                    التمويل
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="icon"><i class="bi bi-bookmark"></i></span>
-                    المحفوظات
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./my-profile.html">
-                    <span class="icon"><i class="bi bi-person"></i></span>
-                    الملف الشخصي
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item logout" href="#">
-                    <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
-                    تجسيل خروج
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- IF USER HAVEN'T SIGN UP -->
-            <div class="dropdown d-none">
-              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="user">
-                  <i class="bi bi-person"></i>
-                </span>
-                <span class="d-none d-lg-inline-block ms-2">تسجيل دخول</span>
-              </a>
-              <ul class="dropdown-menu login" aria-labelledby="navbarDropdown">
-                <li class="dropdown-item head gap-3 flex-column">
-                  <a class="nav-link login" href="#">نسجيل دخول</a>
-                  <span class="register">لا تمتلك حساب ؟ <a class="nav-link" href="#">سجل الآن</a></span>
-                </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./favorite-cars.html">
-                    <span class="icon"><i class="bi bi-heart"></i></span>
-                    السيارات المفضلة
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-bank"></i></span>
-                    التمويل
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-bookmark"></i></span>
-                    المحفوظات
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" disabled>
-                    <span class="icon"><i class="bi bi-person"></i></span>
-                    الملف الشخصي
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <a class="favorite" href="./favorite-cars.html">
-              <span class="icon"><i class="bi bi-heart"></i></span>
+      <!-- START HEADER -->
+      <header id="header">
+        <div class="container-fluid">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0 gap-3 gap-xl-5">
+            <!-- LOGO -->
+            <a class="navbar-brand me-0 order-1 order-lg-0" href="./index.html">
+              <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
             </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- END HEADER -->
+            <!-- Menu Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </button>
+            <!-- Nav items -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0  gap-xl-4 pt-lg-0">
+                <li class="nav-item d-lg-none">
+                  <!-- LOGO -->
+                  <a class="nav-link navbar-brand justify-content-center m-0" href="./index.html">
+                    <img class="w-100" src="../assets/img/header-logo.svg" alt="MotoresCity-logo">
+                  </a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <div class="nav-link d-block">
+                    <h5 class="mb-0">أهلا, <span class="full-name">محمد زين</span></h5>
+                  <span class="email">mz@gmail.com</span></div>
+                </li>
+                <div class="top-btns d-flex justify-content-between w-100 gap-2 flex-wrap d-lg-none">
+                  <a href="../en/my-orders.html">
+                    <i class="bi bi-cart"></i>
+                    طلباتي
+                  </a>
+                  <a href="../en/my-orders.html">
+                    <i class="bi bi-heart"></i>
+                    المفضلة
+                  </a>
+                  <a href="../en/my-orders.html" class="justify-content-center text-center flex-grow-1">
+                    <i class="bi bi-journal-text"></i>
+                    طلبات التمويل
+                  </a>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link active" href="../ar/search-result.html">
+                    <i class="bi bi-search d-lg-none"></i> سيارات للبيع
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-bank d-lg-none"></i> 
+                    التمويل
+                    <i class="bi bi-chevron-down d-lg-none me-auto"></i>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="../en/finance-form.html">1. طلب تمويل</a></li>
+                    <li><a class="dropdown-item" href="../en/payment-calculator.html"> 2. حاسبة التمويل</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ar/why-motorscity.html">
+                    <i class="bi bi-question-circle d-lg-none"></i>ليش موتروزسيتي؟
+                  </a>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ar/news.html">
+                    <i class="bi bi-journals d-lg-none"></i> المصادر
+                  </a>
+                </li>
+                <div class="radio-group d-flex gap-3 align-items-center d-lg-none">
+                  <div class="form-check d-flex gap-2 ps-0">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      إنجليزي
+                    </label>
+                  </div>
+                  <div class="form-check d-flex gap-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      عربي
+                    </label>
+                  </div>
+                </div>
+                <div class="navbar_menu-btns d-flex flex-wrap gap-4 mt-auto d-lg-none">
+                  <button class="btn tel">
+                    <a href="tel:+01064136500">
+                      <i class="bi bi-telephone"></i>
+                      01064136500
+                    </a>
+                  </button>
+                  <button class="btn btn-primary">
+                    <a href="#">تسجيل دخول</a>
+                  </button>
+                  <button class="btn btn-secondary">
+                    <span class="bg">
+                      <a href="#">إنشاء حساب</a>
+                    </span>
+                  </button>
+                </div>
+                <!-- <span class="navbar_close-icon d-lg-none">
+                  <i class="bi bi-x-lg"></i>
+                </span> -->
+              </ul>
+            </div>
+            <!-- User info -->
+            <div class="right-nav d-flex align-items-center gap-3 order-2 order-lg-0">
+              <!-- VISIBLE IF USER HAVE SIGNED UP -->
+              <div class="dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2"> هلا, محمد</span>
+                </a>
+                <ul class="dropdown-menu profile" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item head gap-3"  href="#">
+                      <div class="dropdown-head_title">
+                        <h6 class="full-name mb-0">محمد زين</h6>
+                        <span class="email">example@gmail.com</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-orders.html">
+                      <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      السيارات المفضلة
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    التمويل
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    المحفوظات
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./my-profile.html">
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      الملف الشخصي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item logout" href="#">
+                      <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                      تجسيل خروج
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- IF USER HAVEN'T SIGN UP -->
+              <div class="dropdown d-none">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user">
+                    <i class="bi bi-person"></i>
+                  </span>
+                  <span class="d-none d-lg-inline-block ms-2">تسجيل دخول</span>
+                </a>
+                <ul class="dropdown-menu login" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-item head gap-3 flex-column">
+                    <a class="nav-link login" href="#">نسجيل دخول</a>
+                    <span class="register">لا تمتلك حساب ؟ <a class="nav-link" href="#">سجل الآن</a></span>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-cart2"></i></span> طلباتي
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./favorite-cars.html">
+                      <span class="icon"><i class="bi bi-heart"></i></span>
+                      السيارات المفضلة
+                    </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bank"></i></span>
+                    التمويل
+                  </a>
+                  </li>
+                <li>
+                  <a class="dropdown-item" disabled>
+                    <span class="icon"><i class="bi bi-bookmark"></i></span>
+                    المحفوظات
+                  </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" disabled>
+                      <span class="icon"><i class="bi bi-person"></i></span>
+                      الملف الشخصي
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a class="favorite" href="./favorite-cars.html">
+                <span class="icon"><i class="bi bi-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- END HEADER -->
 
     <!-- START HOME -->
     <section id="home">
