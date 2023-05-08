@@ -4561,6 +4561,7 @@ span.category,
 .post_tags {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 #news  .post {
@@ -4626,7 +4627,7 @@ span.category,
 
 #news .results-pagination .pages a.active span{
   background-color: #f9f5f5;
-  color: var(--gray);
+  color: var(--purple);
 }
 /********************* NEWS PAGE  ***********************/
 
@@ -6120,7 +6121,14 @@ html[dir=rtl] .calculator select#finance-provider {
     padding: 40px 0
   }
 
-  
+  #news .intro {
+    padding: 25px 0;
+  }
+
+  #news .recent-posts {
+    padding: 48px 0 24px 0;
+  }
+
   #news .recent-posts_container .post:not(.main) {
     display: block;
     gap: 24px;
