@@ -4533,6 +4533,12 @@ span.category,
   width: 100%;
 }
 
+#news .all-posts .post_head img {
+  height: 250px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
 #news .post_meta {
   color: var(--purple);
   font-size: 14px;
